@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  SplatStages
 //
-//  Created by mac on 2015-09-13.
+//  Created by mac on 2015-08-25.
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
@@ -14,9 +14,9 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // The Light status bar style is best, otherwise we can't read it!
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 
@@ -41,5 +41,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

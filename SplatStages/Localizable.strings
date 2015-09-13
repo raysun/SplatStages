@@ -1,0 +1,80 @@
+/*
+ Localizable.strings - English
+ SplatStages for iOS
+ */
+
+// Gamemodes / Rules
+"TURF_WAR" = "Turf War";
+"SPLAT_ZONES" = "Splat Zones";
+"TOWER_CONTROL" = "Tower Control";
+"RAINMAKER" = "Rainmaker";
+"UNKNOWN_GAMEMODE" = "Unknown Gamemode";
+
+// Modes - Unused
+"REGULAR_BATTLE" = "Regular";
+"RANKED_BATTLE" = "Ranked";
+
+// Stages
+"AROWANA_MALL" = "Arowana Mall";
+"BLACKBELLY_SKATEPARK" = "Blackbelly Skatepark";
+"BLUEFIN_DEPOT" = "Bluefin Depot";
+"CAMP_TRIGGERFISH" = "Camp Triggerfish";
+"FLOUNDER_HEIGHTS" = "Flounder Heights";
+"KELP_DOME" = "Kelp Dome";
+"MORAY_TOWERS" = "Moray Towers";
+"PORT_MACKEREL" = "Port Mackerel";
+"SALTSPRAY_RIG" = "Saltspray Rig";
+"URCHIN_UNDERPASS" = "Urchin Underpass";
+"WALLEYE_WAREHOUSE" = "Walleye Warehouse";
+"UNKNOWN_MAP" = "Unknown Map";
+
+// Map Rotation
+"ROTATION_COUNTDOWN" = "The next stage rotation is in %ld:%02ld:%02ld."; // Hours, Minutes, Seconds
+"ROTATION_UNKNOWN" = "The stage rotation is in an unknown amount of time.";
+"ROTATION_NOW" = "The stage rotation just happened!";
+"ROTATION_FUTURE" = "This is a future stage rotation.";
+
+// Splatfest
+"SPLATFEST_ANNOUNCED" = "The next Splatfest has been announced!";
+"SPLATFEST_UPCOMING_COUNTDOWN" = "The %@ vs. %@ Splatfest is in %@!"; // Team A, Team B, SPLATFEST_UPCOMING_COUNTDOWN_TIME
+"SPLATFEST_UPCOMING_COUNTDOWN_TIME" = "%02ld:%02ld:%02ld:%02ld"; // Days, Hours, Minutes, Seconds
+"SPLATFEST_FINISH_COUNTDOWN" = "The %@ vs. %@ Splatfest finishes in %@!"; // Team A, Team B, SPLATFEST_FINISH_COUNTDOWN_TIME
+"SPLATFEST_FINISH_COUNTDOWN_TIME" = "%02ld:%02ld:%02ld"; // Hours, Minutes, Seconds
+"SPLATFEST_FINISHED" = "The %@ vs. %@ Splatfest is over!";
+"SPLATFEST_SCORES_UNAVAILABLE" = "Splatfest results are not available at this time.";
+"SPLATFEST_STAGES_UNAVAILABLE" = "Splatfest stages are not available at this time.";
+"SPLATFEST_DATA_UNAVAILABLE" = "Splatfest data is not available at this time.";
+
+// Regions
+"REGION_NORTH_AMERICA" = "North America";
+"REGION_EUROPE" = "Europe & Oceania";
+"REGION_JAPAN" = "Japan";
+"REGION_DEBUG" = "Debug";
+
+// Settings
+"SETTINGS_CHANGE_REGION" = "Change Region";
+"SETTINGS_REFRESH_DATA" = "Refresh Data";
+"SETTINGS_ABOUT" = "About this App";
+"SETTINGS_CONFIRM_REGION_TITLE" = "Confirm Region";
+"SETTINGS_CONFIRM_REGION_TEXT" = "You are in the %@ region. Is this correct?";
+"SETTINGS_DONE_TITLE" = "Region Set";
+"SETTINGS_DONE_TEXT" = "The region has been set to %@.";
+"SETTINGS_DONE_TEXT_OUTDATED" = "(Please note that stage and score data for Splatfests in your region will not appear immediately after they are revealed in game.)";
+"SETTINGS_SELECT_REGION_FIRST_TITLE" = "Select a Region";
+"SETTINGS_SELECT_REGION_FIRST_TEXT" = "Please select a region first.";
+"SETTINGS_WELCOME_TITLE" = "Welcome";
+"SETTINGS_WELCOME_TEXT" = "Welcome to SplatStages! To begin, choose your Splatoon region.";
+"CONFIRM" = "OK";
+"CANCEL" = "Cancel";
+
+// About
+"ABOUT" = "SplatStages was written by OatmealDome. Special thanks goes to outadoc for the original app (SplatCompanion) and concept! This app contains MBProgressHUD (written by matej, licensed under MIT) and NSAttributedString+CCLFormat (written by Cocode Ltd, licensed under BSD). The Project Paintball font was created by JapanYoshi a.k.a. theFIZZYnator. Schedule data is provided by splatoon.ink, and Splatfest data is provided by myself. The source code for this app is available on GitHub under the username \"OatmealDome\" and is licensed under the !LIC! license. Splatoon and all its related assets are copyright of Nintendo. Nintendo does not have any involvement whatsoever in the SplatStages app.";
+
+// Errors
+"ERROR_TITLE" = "Error";
+"ERROR_DOWNLOADING_DATA" = "An error occurred while attempting to download the latest stage or Splatfest data.";
+"ERROR_PARSING_JSON" = "An error occurred while parsing the stage or Splatfest data.";
+"ERROR_CLEARING_IMAGE_CACHE" = "An error occurred while trying to clear the Splatfest image cache.";
+"ERROR_INTERNAL_DESCRIPTION" = "Internal description: ";
+"ERROR_TRY_AGAIN" = "You can try downloading data again by going to Settings and tapping on Refresh Data.";
+"ERROR_CONFIRM" = "OK";
