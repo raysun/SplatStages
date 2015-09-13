@@ -1,0 +1,13 @@
+PODS:
+  - MBProgressHUD (0.9.1)
+  - NSAttributedString+CCLFormat (1.1.1)
+
+DEPENDENCIES:
+  - MBProgressHUD (~> 0.9.1)
+  - NSAttributedString+CCLFormat
+
+SPEC CHECKSUMS:
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  NSAttributedString+CCLFormat: f3826cbae249afbdf322aba4932673b865454086
+
+COCOAPODS: 0.38.2
