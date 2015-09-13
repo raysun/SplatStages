@@ -79,9 +79,7 @@
     [self.countdownLabel setAttributedText:finishText];
 
     // Setup the results.
-    NSNumber* scoreTest = [[results objectAtIndex:0] objectForKey:@"final"];
-    NSLog(@"scoreTest: %@", scoreTest);
-    if (![scoreTest isEqualToValue:@(0)]) { // TODO: This is bugged, figure out what's wrong with it
+    if (![[[results objectAtIndex:0] objectForKey:@"final"] isEqualToNumber:[NSNumber numberWithInt:0]]) {
         // The results are available.
         [self setResultsVisbilities:true];
         [self setupResultsView:results team:0 opponents:1 teamLabel:self.teamAName popLabel:self.teamAPop winLabel:self.teamAWinPercent finalLabel:self.teamAFinalScore];
