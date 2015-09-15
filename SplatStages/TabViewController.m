@@ -14,7 +14,6 @@
 
 @interface TabViewController ()
 
-
 @end
 
 @implementation TabViewController
@@ -30,6 +29,11 @@
     // Setup the calendar stuff we need.
     self.calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     self.calendarUnits = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    
+    // Setup the NSURLSession.
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    self.urlSession = [NSURLSession sessionWithConfiguration:configuration];
     
     // Set the default last update date (in unix time, 0)
     self.lastStageDataUpdate = [NSDate dateWithTimeIntervalSince1970:0];
@@ -69,13 +73,10 @@
     [self downloadAndParseJson:@"https://splatoon.ink/schedule.json" completionHandler:^(NSDictionary* data) {
         // Check if the data is stale, and return if it is.
         NSDate* dataLastUpdated = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"updateTime"] longLongValue] / 1000];
-        NSLog(@"new data: %@ | old data: %@", dataLastUpdated, self.lastStageDataUpdate);
         if ([dataLastUpdated timeIntervalSinceDate:self.lastStageDataUpdate] <= 0.0) { // TODO something is wrong with the request timer
-            NSLog(@"Data still stale, trying again later.");
             return;
         }
         
-        NSLog(@"This data is fresh!");
         // Check for the rotation download timer and stops it.
         if (self.stageRequestTimer) {
             [self.stageRequestTimer invalidate];
@@ -174,10 +175,9 @@
 // Downloads a file and returns an NSData instance.
 - (void) downloadFile:(NSString*) urlString completionHandler:(void (^)(NSData* data)) completionHandler {
     NSURL* url = [NSURL URLWithString:urlString];
-    NSURLSession* session = [NSURLSession sharedSession];
     
     // Asynchronously request the data.
-    [[session dataTaskWithURL:url completionHandler:^(NSData* data, NSURLResponse* response, NSError* taskError) {
+    [[self.urlSession dataTaskWithURL:url completionHandler:^(NSData* data, NSURLResponse* response, NSError* taskError) {
         // Check for an error first
         if (taskError) {
             [self errorOccurred:taskError when:@"ERROR_DOWNLOADING_DATA"];
@@ -326,7 +326,6 @@
     RegularViewController* regularController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
     RankedViewController* rankedController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     
-    NSLog(@"Time to next rotation: %f", [self.nextRotation timeIntervalSinceDate:[NSDate date]]);
     if ([self.nextRotation timeIntervalSinceDate:[NSDate date]] <= 0.0) {
         // Rotating now! Update the UI first and update the schedule data in the background.
         NSString* rotatingNowText = NSLocalizedString(@"ROTATION_NOW", nil);

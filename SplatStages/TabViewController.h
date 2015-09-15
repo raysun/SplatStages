@@ -34,6 +34,9 @@
 // Setup
 @property BOOL needsInitialSetup;
 
+// Network
+@property NSURLSession* urlSession;
+
 - (void) getStageData;
 - (void) getSplatfestData;
 - (void) refreshAllData;
