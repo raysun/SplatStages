@@ -358,7 +358,7 @@
     RegularViewController* regularController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
     RankedViewController* rankedController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     
-    if ([self.nextRotation timeIntervalSinceDate:[NSDate date]] <= 0.0) {
+    if ([self.nextRotation timeIntervalSinceNow] <= 0.0) {
         // Rotating now! Update the UI first and update the schedule data in the background.
         NSString* rotatingNowText = NSLocalizedString(@"ROTATION_NOW", nil);
         [regularController.rotationCountdownLabel setText:rotatingNowText];

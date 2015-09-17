@@ -121,14 +121,13 @@
 }
 
 - (void) updateUpcomingTimer {
-    NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
-    
-    if ([components day] <= 0 && [components hour] <= 0 && [components minute] <= 0 && [components second] <= 0) {
+    if ([self.countdownDate timeIntervalSinceNow] <= 0.0) {
         TabViewController* rootController = (TabViewController*) [self tabBarController];
         [rootController getSplatfestData];
         [self.countdown invalidate];
         self.countdown = nil;
     } else {
+         NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
         NSString* countdownLocalized = NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN", nil);
         NSString* countdownTime = [NSString stringWithFormat:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN_TIME", nil), [components day], [components hour], [components minute], [components second]];
         NSAttributedString* countdownText = [NSAttributedString attributedStringWithFormat:countdownLocalized, self.teamANameString, self.teamBNameString, countdownTime];
@@ -137,14 +136,13 @@
 }
 
 - (void) updateFinishTimer {
-    NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
-    
-    if ([components hour] <= 0 && [components minute] <= 0 && [components second] <= 0) {
+    if ([self.countdownDate timeIntervalSinceNow] <= 0.0) {
         TabViewController* rootController = (TabViewController*) [self tabBarController];
         [rootController getSplatfestData];
         [self.countdown invalidate];
         self.countdown = nil;
     } else {
+        NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
         NSString* countdownLocalized = NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN", nil);
         NSString* countdownTime = [NSString stringWithFormat:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN_TIME", nil), [components hour], [components minute], [components second]];
         NSAttributedString* countdownText = [NSAttributedString attributedStringWithFormat:countdownLocalized, self.teamANameString, self.teamBNameString, countdownTime];
