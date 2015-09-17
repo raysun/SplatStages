@@ -281,10 +281,12 @@
 }
 
 - (void) setStageLoadingFinished {
-    RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
-    RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
-    [regularViewController loadingFinished];
-    [rankedViewController loadingFinished];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
+        RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
+        [regularViewController loadingFinished];
+        [rankedViewController loadingFinished];
+    });
 }
 
 - (void) removeCacheFilesExceptFor:(int) usedId {
