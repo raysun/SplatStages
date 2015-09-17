@@ -1,0 +1,8 @@
+/* 
+ InfoPlist.strings - English
+ SplatStages
+*/
+
+// This is what name the app will appear under on the user's home screen.
+// This is also used for the About dialog.
+"CFBundleDisplayName" = "SplatStages";

@@ -57,12 +57,14 @@
 }
 
 - (IBAction) showAbout:(id) sender {
-    // Temporary for debugging purposes
-    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults removeObjectForKey:@"setupFinished"];
-    [userDefaults synchronize];
-    NSLog(@"Reset setup flag.");
+    NSString* bundleVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSString* displayName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
+    NSString* aboutTitle = [NSString stringWithFormat:@"%@ %@", displayName, bundleVersion];
+    UIAlertView* aboutAlert = [[UIAlertView alloc] initWithTitle:aboutTitle message:NSLocalizedString(@"SETTINGS_ABOUT_TEXT", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
+    [aboutAlert show];
 }
+
+// スプラトーステージ
 
 - (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView.tag == 1) {
