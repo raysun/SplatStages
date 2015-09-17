@@ -65,7 +65,7 @@
 "SETTINGS_SELECT_REGION_FIRST_TEXT" = "Please select a region first.";
 "SETTINGS_WELCOME_TITLE" = "Welcome";
 "SETTINGS_WELCOME_TEXT" = "Welcome to SplatStages! To begin, choose your Splatoon region.";
-"SETTINGS_ABOUT_TEXT" = "SplatStages was written by OatmealDome. This app contains MBProgressHUD (written by matej, licensed under MIT) and NSAttributedString+CCLFormat (written by Cocode Ltd, licensed under BSD). The Project Paintball font was created by JapanYoshi a.k.a. theFIZZYnator. Schedule data is provided by splatoon.ink, and Splatfest data is provided by myself. The source code for this app is available on GitHub and licensed under the BSD 3-clause license. \n\nSplatoon and all its related assets are copyright of Nintendo. Nintendo does not have any involvement whatsoever in the SplatStages app.";
+"SETTINGS_ABOUT_TEXT" = "SplatStages was written by OatmealDome. This app contains MBProgressHUD (written by matej, licensed under MIT) and NSAttributedString+CCLFormat (written by Cocode Ltd, licensed under BSD). The Project Paintball font was created by JapanYoshi a.k.a. theFIZZYnator. Schedule data is provided by splatoon.ink, and Splatfest data is provided by myself. The settings icon was provided by icons8.com. Source code for this app is available on GitHub and licensed under the BSD 3-clause license. \n\nSplatoon and all its related assets are copyright of Nintendo. Nintendo does not have any involvement whatsoever in the SplatStages app.";
 
 // Errors
 "ERROR_TITLE" = "Error";
