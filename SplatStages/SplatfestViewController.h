@@ -68,15 +68,10 @@
 @property NSCalendar* calendar;
 @property int calendarUnits;
 
-// Loading HUD
-@property MBProgressHUD* loadingHud;
-
 - (void) preliminarySetup:(NSArray*) teams id:(int) id;
 - (void) setupViewSplatfestSoon:(NSDate*) startDate;
 - (void) setupViewSplatfestStarted:(NSDate*) endDate stages:(NSArray*) stages;
 - (void) setupViewSplatfestFinished:(NSArray*) results;
-- (void) setLoading:(MBProgressHUD*) hud;
-- (void) loadingFinished;
 
 @end
 

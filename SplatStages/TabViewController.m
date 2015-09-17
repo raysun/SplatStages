@@ -70,12 +70,10 @@
 // Sends requests for all the data we need
 - (void) getStageData {
     // Add an MBProgressHUD instance to each of our stage view controllers.
-    dispatch_async(dispatch_get_main_queue(), ^{
-        RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
-        RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
-        [regularViewController setLoading:[self generateLoadingHudWithView:[regularViewController view]]];
-        [rankedViewController setLoading:[self generateLoadingHudWithView:[rankedViewController view]]];
-    });
+    RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
+    RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
+    [self generateLoadingHudWithView:regularViewController.view];
+    [self generateLoadingHudWithView:rankedViewController.view];
     
     // Request stage data asynchronously
     [self downloadAndParseJson:@"https://splatoon.ink/schedule.json" completionHandler:^(NSDictionary* data) {
@@ -121,7 +119,7 @@
     // Add an MBProgressHUD instance to our Splatfest view controller.
     dispatch_async(dispatch_get_main_queue(), ^{
         SplatfestViewController* splatfestViewController = [self.viewControllers objectAtIndex:SPLATFEST_CONTROLLER];
-        [splatfestViewController setLoading:[self generateLoadingHudWithView:[splatfestViewController view]]];
+        [self generateLoadingHudWithView:[splatfestViewController view]];
     });
     
     // Request Splatfest data asynchronously
@@ -216,8 +214,8 @@
     RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     [regularViewController setupViewWithData:[chosenSchedule objectForKey:@"regular"]];
     [rankedViewController setupViewWithData:[chosenSchedule objectForKey:@"ranked"]];
-    [regularViewController loadingFinished];
-    [rankedViewController loadingFinished];
+    [MBProgressHUD hideHUDForView:regularViewController.view animated:true];
+    [MBProgressHUD hideHUDForView:rankedViewController.view animated:true];
 }
 
 - (void) setupSplatfestWithId:(int) splatfestId {
@@ -243,7 +241,7 @@
             // The Splatfest has ended.
             [splatfestViewController setupViewSplatfestFinished:[self.splatfestData objectForKey:@"results"]];
         }
-        [splatfestViewController loadingFinished];
+        [MBProgressHUD hideHUDForView:splatfestViewController.view animated:true];
     });
     
 }
@@ -273,19 +271,18 @@
     }
 }
 
-- (MBProgressHUD*) generateLoadingHudWithView:(UIView*) view {
+- (void) generateLoadingHudWithView:(UIView*) view {
     MBProgressHUD* loadingHud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     loadingHud.mode = MBProgressHUDModeIndeterminate;
     loadingHud.labelText = NSLocalizedString(@"LOADING", nil);
-    return loadingHud;
 }
 
 - (void) setStageLoadingFinished {
     dispatch_async(dispatch_get_main_queue(), ^{
         RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
         RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
-        [regularViewController loadingFinished];
-        [rankedViewController loadingFinished];
+        [MBProgressHUD hideHUDForView:regularViewController.view animated:true];
+        [MBProgressHUD hideHUDForView:rankedViewController.view animated:true];
     });
 }
 
