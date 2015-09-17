@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD/MBProgressHUD.h"
 
 @interface RankedViewController : UIViewController
 
@@ -16,8 +17,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *stageLabelTwo;
 @property (weak, nonatomic) IBOutlet UILabel *rotationCountdownLabel;
 @property (weak, nonatomic) IBOutlet UILabel *gamemodeLabel;
+@property MBProgressHUD* loadingHud;
 
 - (void) setupViewWithData:(NSDictionary*) data;
+- (void) setLoading:(MBProgressHUD*) hud;
+- (void) loadingFinished;
 
 @end
 

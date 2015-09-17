@@ -174,6 +174,18 @@
     [self.resultsUnavailableLabel setHidden:visibility];
 }
 
+- (void) setLoading:(MBProgressHUD*) hud {
+    self.loadingHud = hud;
+    [self.loadingHud show:true];
+}
+
+- (void) loadingFinished {
+    if (self.loadingHud) {
+        [self.loadingHud hide:true];
+        self.loadingHud = nil;
+    }
+}
+
 - (NSAttributedString*) getTeamName:(NSDictionary*) teamData {
     UIColor* teamColour = [self colorWithHexString:[teamData objectForKey:@"colour"]];
     NSAttributedString* string = [[NSAttributedString alloc] initWithString:[teamData objectForKey:@"name"] attributes:@{NSForegroundColorAttributeName: teamColour}];

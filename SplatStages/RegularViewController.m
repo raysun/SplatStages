@@ -40,4 +40,20 @@
     [self.gamemodeLabel setText:NSLocalizedString(@"TURF_WAR", nil)];
 }
 
+- (void) setLoading:(MBProgressHUD*) hud {
+    if (self.loadingHud) {
+        [self loadingFinished];
+    }
+    
+    self.loadingHud = hud;
+    [self.loadingHud show:true];
+}
+
+- (void) loadingFinished {
+    if (self.loadingHud) {
+        [self.loadingHud hide:true];
+        self.loadingHud = nil;
+    }
+}
+
 @end

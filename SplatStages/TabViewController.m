@@ -69,11 +69,20 @@
 
 // Sends requests for all the data we need
 - (void) getStageData {
+    // Add an MBProgressHUD instance to each of our stage view controllers.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
+        RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
+        [regularViewController setLoading:[self generateLoadingHudWithView:[regularViewController view]]];
+        [rankedViewController setLoading:[self generateLoadingHudWithView:[rankedViewController view]]];
+    });
+    
     // Request stage data asynchronously
     [self downloadAndParseJson:@"https://splatoon.ink/schedule.json" completionHandler:^(NSDictionary* data) {
         // Check if the data is stale, and return if it is.
         NSDate* dataLastUpdated = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"updateTime"] longLongValue] / 1000];
-        if ([dataLastUpdated timeIntervalSinceDate:self.lastStageDataUpdate] <= 0.0) { // TODO something is wrong with the request timer
+        if ([dataLastUpdated timeIntervalSinceDate:self.lastStageDataUpdate] <= 0.0) {
+            [self setStageLoadingFinished];
             return;
         }
         
@@ -109,6 +118,12 @@
 }
 
 - (void) getSplatfestData {
+    // Add an MBProgressHUD instance to our Splatfest view controller.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        SplatfestViewController* splatfestViewController = [self.viewControllers objectAtIndex:SPLATFEST_CONTROLLER];
+        [splatfestViewController setLoading:[self generateLoadingHudWithView:[splatfestViewController view]]];
+    });
+    
     // Request Splatfest data asynchronously
     [self downloadAndParseJson:@"https://oatmealdome.github.io/splatcompanion/splatfest.json" completionHandler:^(NSDictionary* data) {
         // Check for the Splatfest countdown timer.
@@ -201,6 +216,8 @@
     RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     [regularViewController setupViewWithData:[chosenSchedule objectForKey:@"regular"]];
     [rankedViewController setupViewWithData:[chosenSchedule objectForKey:@"ranked"]];
+    [regularViewController loadingFinished];
+    [rankedViewController loadingFinished];
 }
 
 - (void) setupSplatfestWithId:(int) splatfestId {
@@ -226,6 +243,7 @@
             // The Splatfest has ended.
             [splatfestViewController setupViewSplatfestFinished:[self.splatfestData objectForKey:@"results"]];
         }
+        [splatfestViewController loadingFinished];
     });
     
 }
@@ -255,6 +273,20 @@
     }
 }
 
+- (MBProgressHUD*) generateLoadingHudWithView:(UIView*) view {
+    MBProgressHUD* loadingHud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    loadingHud.mode = MBProgressHUDModeIndeterminate;
+    loadingHud.labelText = NSLocalizedString(@"LOADING", nil);
+    return loadingHud;
+}
+
+- (void) setStageLoadingFinished {
+    RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
+    RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
+    [regularViewController loadingFinished];
+    [rankedViewController loadingFinished];
+}
+
 - (void) removeCacheFilesExceptFor:(int) usedId {
     NSFileManager* fileManager = [NSFileManager defaultManager];
     NSString* cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -279,7 +311,7 @@
     
     // Create a UIAlertView on the UI thread
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR_TITLE", nil) message:alertText delegate:nil cancelButtonTitle:NSLocalizedString(@"SETUP_CONFIRM", nil) otherButtonTitles:nil, nil];
+        UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR_TITLE", nil) message:alertText delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
         [errorAlert show];
     });
     

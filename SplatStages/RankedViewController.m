@@ -54,4 +54,16 @@
     self.gamemodeLabel.text = localizedGamemode;
 }
 
+- (void) setLoading:(MBProgressHUD*) hud {
+    self.loadingHud = hud;
+    [self.loadingHud show:true];
+}
+
+- (void) loadingFinished {
+    if (self.loadingHud) {
+        [self.loadingHud hide:true];
+        self.loadingHud = nil;
+    }
+}
+
 @end

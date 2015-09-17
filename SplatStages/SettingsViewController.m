@@ -59,7 +59,7 @@
 - (IBAction) showAbout:(id) sender {
     NSString* bundleVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
     NSString* displayName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
-    NSString* aboutTitle = [NSString stringWithFormat:@"%@ %@", displayName, bundleVersion];
+    NSString* aboutTitle = [NSString stringWithFormat:@"%@ (%@)", displayName, bundleVersion];
     UIAlertView* aboutAlert = [[UIAlertView alloc] initWithTitle:aboutTitle message:NSLocalizedString(@"SETTINGS_ABOUT_TEXT", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
     [aboutAlert show];
 }
