@@ -7,51 +7,52 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "MBProgressHUD/MBProgressHUD.h"
 
 @interface SplatfestViewController : UIViewController
 
 // Countdown
-@property (weak, nonatomic) IBOutlet UILabel *countdownLabel;
+@property (weak, nonatomic) IBOutlet UILabel* countdownLabel;
 
 // Image Container
-@property (weak, nonatomic) IBOutlet UIView *imageContainer;
-@property (weak, nonatomic) IBOutlet UIImageView *splatfestImageOne;
+@property (weak, nonatomic) IBOutlet UIView* imageContainer;
+@property (weak, nonatomic) IBOutlet UIImageView* splatfestImageOne;
 
 // Stage One Container
-@property (weak, nonatomic) IBOutlet UIView *stageOneContainer;
-@property (weak, nonatomic) IBOutlet UIImageView *stageOneImage;
-@property (weak, nonatomic) IBOutlet UILabel *stageOneLabel;
+@property (weak, nonatomic) IBOutlet UIView* stageOneContainer;
+@property (weak, nonatomic) IBOutlet UIImageView* stageOneImage;
+@property (weak, nonatomic) IBOutlet UILabel* stageOneLabel;
 
 // Stage Two Container
-@property (weak, nonatomic) IBOutlet UIView *stageTwoContainer;
-@property (weak, nonatomic) IBOutlet UIImageView *stageTwoImage;
-@property (weak, nonatomic) IBOutlet UILabel *stageTwoLabel;
+@property (weak, nonatomic) IBOutlet UIView* stageTwoContainer;
+@property (weak, nonatomic) IBOutlet UIImageView* stageTwoImage;
+@property (weak, nonatomic) IBOutlet UILabel* stageTwoLabel;
 
 // Stage Three Container
-@property (weak, nonatomic) IBOutlet UIView *stageThreeContainer;
-@property (weak, nonatomic) IBOutlet UIImageView *stageThreeImage;
-@property (weak, nonatomic) IBOutlet UILabel *stageThreeLabel;
+@property (weak, nonatomic) IBOutlet UIView* stageThreeContainer;
+@property (weak, nonatomic) IBOutlet UIImageView* stageThreeImage;
+@property (weak, nonatomic) IBOutlet UILabel* stageThreeLabel;
 
 // Results Container
-@property (weak, nonatomic) IBOutlet UIView *resultsContainer;
-@property (weak, nonatomic) IBOutlet UIImageView *splatfestImageTwo;
-@property (weak, nonatomic) IBOutlet UILabel *resultsUnavailableLabel;
-@property (weak, nonatomic) IBOutlet UIView *labelsContainer;
+@property (weak, nonatomic) IBOutlet UIView* resultsContainer;
+@property (weak, nonatomic) IBOutlet UIImageView* splatfestImageTwo;
+@property (weak, nonatomic) IBOutlet UILabel* resultsUnavailableLabel;
+@property (weak, nonatomic) IBOutlet UIView* labelsContainer;
 
 // Team A Container
-@property (weak, nonatomic) IBOutlet UIView *teamAContainer;
-@property (weak, nonatomic) IBOutlet UILabel *teamAName;
-@property (weak, nonatomic) IBOutlet UILabel *teamAPop;
-@property (weak, nonatomic) IBOutlet UILabel *teamAWinPercent;
-@property (weak, nonatomic) IBOutlet UILabel *teamAFinalScore;
+@property (weak, nonatomic) IBOutlet UIView* teamAContainer;
+@property (weak, nonatomic) IBOutlet UILabel* teamAName;
+@property (weak, nonatomic) IBOutlet UILabel* teamAPop;
+@property (weak, nonatomic) IBOutlet UILabel* teamAWinPercent;
+@property (weak, nonatomic) IBOutlet UILabel* teamAFinalScore;
 
 // Team B Results
-@property (weak, nonatomic) IBOutlet UIView *teamBContainer;
-@property (weak, nonatomic) IBOutlet UILabel *teamBName;
-@property (weak, nonatomic) IBOutlet UILabel *teamBPop;
-@property (weak, nonatomic) IBOutlet UILabel *teamBWinPercent;
-@property (weak, nonatomic) IBOutlet UILabel *teamBFinalScore;
+@property (weak, nonatomic) IBOutlet UIView* teamBContainer;
+@property (weak, nonatomic) IBOutlet UILabel* teamBName;
+@property (weak, nonatomic) IBOutlet UILabel* teamBPop;
+@property (weak, nonatomic) IBOutlet UILabel* teamBWinPercent;
+@property (weak, nonatomic) IBOutlet UILabel* teamBFinalScore;
 
 // Data
 @property NSArray* teams;

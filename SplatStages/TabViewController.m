@@ -6,11 +6,11 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
-#import "TabViewController.h"
-#import "RegularViewController.h"
 #import "RankedViewController.h"
-#import "SplatfestViewController.h"
+#import "RegularViewController.h"
 #import "SettingsViewController.h"
+#import "SplatfestViewController.h"
+#import "TabViewController.h"
 
 @interface TabViewController ()
 

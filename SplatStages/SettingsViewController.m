@@ -35,7 +35,12 @@
 }
 
 - (NSInteger) pickerView:(UIPickerView *) pickerView numberOfRowsInComponent:(NSInteger) component {
+#ifdef DEBUG
     return self.pickerOptions.count;
+#else
+    // Hide the "Debug" region in release builds.
+    return self.pickerOptions.count - 1;
+#endif
 }
 
 - (NSAttributedString*) pickerView:(UIPickerView *) pickerView attributedTitleForRow:(NSInteger) row forComponent:(NSInteger) component {
@@ -63,8 +68,6 @@
     UIAlertView* aboutAlert = [[UIAlertView alloc] initWithTitle:aboutTitle message:NSLocalizedString(@"SETTINGS_ABOUT_TEXT", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
     [aboutAlert show];
 }
-
-// スプラトーステージ
 
 - (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView.tag == 1) {

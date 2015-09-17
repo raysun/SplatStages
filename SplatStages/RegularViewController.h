@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "MBProgressHUD/MBProgressHUD.h"
 
 @interface RegularViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *stageImageOne;
-@property (weak, nonatomic) IBOutlet UIImageView *stageImageTwo;
-@property (weak, nonatomic) IBOutlet UILabel *stageLabelOne;
-@property (weak, nonatomic) IBOutlet UILabel *stageLabelTwo;
-@property (weak, nonatomic) IBOutlet UILabel *rotationCountdownLabel;
-@property (weak, nonatomic) IBOutlet UILabel *gamemodeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView* stageImageOne;
+@property (weak, nonatomic) IBOutlet UIImageView* stageImageTwo;
+@property (weak, nonatomic) IBOutlet UILabel* stageLabelOne;
+@property (weak, nonatomic) IBOutlet UILabel* stageLabelTwo;
+@property (weak, nonatomic) IBOutlet UILabel* rotationCountdownLabel;
+@property (weak, nonatomic) IBOutlet UILabel* gamemodeLabel;
 
 - (void) setupViewWithData:(NSDictionary*) data;
 

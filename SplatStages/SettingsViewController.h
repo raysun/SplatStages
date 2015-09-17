@@ -10,10 +10,10 @@
 
 @interface SettingsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *rotationSelector;
-@property (weak, nonatomic) IBOutlet UIButton *refreshDataButton;
-@property (weak, nonatomic) IBOutlet UIButton *aboutButton;
+@property (weak, nonatomic) IBOutlet UIPickerView* pickerView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl* rotationSelector;
+@property (weak, nonatomic) IBOutlet UIButton* refreshDataButton;
+@property (weak, nonatomic) IBOutlet UIButton* aboutButton;
 @property NSArray* pickerOptions;
 @property NSArray* internalRegionStrings;
 

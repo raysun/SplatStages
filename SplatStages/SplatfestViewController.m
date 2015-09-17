@@ -127,7 +127,7 @@
         [self.countdown invalidate];
         self.countdown = nil;
     } else {
-         NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
+        NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
         NSString* countdownLocalized = NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN", nil);
         NSString* countdownTime = [NSString stringWithFormat:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN_TIME", nil), [components day], [components hour], [components minute], [components second]];
         NSAttributedString* countdownText = [NSAttributedString attributedStringWithFormat:countdownLocalized, self.teamANameString, self.teamBNameString, countdownTime];
