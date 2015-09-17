@@ -117,10 +117,8 @@
 
 - (void) getSplatfestData {
     // Add an MBProgressHUD instance to our Splatfest view controller.
-    dispatch_async(dispatch_get_main_queue(), ^{
-        SplatfestViewController* splatfestViewController = [self.viewControllers objectAtIndex:SPLATFEST_CONTROLLER];
-        [self generateLoadingHudWithView:[splatfestViewController view]];
-    });
+    SplatfestViewController* splatfestViewController = [self.viewControllers objectAtIndex:SPLATFEST_CONTROLLER];
+    [self generateLoadingHudWithView:[splatfestViewController view]];
     
     // Request Splatfest data asynchronously
     [self downloadAndParseJson:@"https://oatmealdome.github.io/splatcompanion/splatfest.json" completionHandler:^(NSDictionary* data) {
@@ -156,8 +154,11 @@
 }
 
 - (void) refreshAllData {
-    [self getStageData];
-    [self getSplatfestData];
+    // Make sure this is called on the main thread so we can update the UI.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self getStageData];
+        [self getSplatfestData];
+    });
 }
 
 // Schedules a timer to attempt to download Splatfest data every 60s.
