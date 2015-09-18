@@ -45,7 +45,7 @@
 - (void) setupStageView:(NSString*) nameEN nameJP:(NSString*) nameJP label:(UILabel*) label imageView:(UIImageView*) imageView;
 - (void) errorOccurred:(NSError*) error when:(NSString*) errorWhen;
 - (NSString*) toLocalizable:(NSString*) string;
-- (BOOL) isUserLangaugeJapanese;
+- (BOOL) isDeviceLangaugeJapanese;
 - (NSString*) getUserRegion;
 
 @end

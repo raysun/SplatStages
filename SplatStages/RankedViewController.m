@@ -48,7 +48,7 @@
             // We don't have the English name for this gamemode, so fallback to UNKNOWN_GAMEMODE.
             gamemode = NSLocalizedString(@"UNKNOWN_GAMEMODE", nil);
         }
-        localizedGamemode = ([rootController isUserLangaugeJapanese]) ? gamemodeJP : gamemode;
+        localizedGamemode = ([rootController isDeviceLangaugeJapanese]) ? gamemodeJP : gamemode;
         NSLog(@"No string for gamemode (en)\"%@\" (jp)\"%@\"!", gamemode, gamemodeJP);
     }
     self.gamemodeLabel.text = localizedGamemode;

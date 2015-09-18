@@ -165,13 +165,13 @@
     });
 }
 
-// Schedules a timer to attempt to download Splatfest data every 60s.
+/// Schedules a timer to attempt to download Splatfest data every 60s.
 - (void) scheduleStageDownloadTimer {
     self.stageRequestTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 target:self selector:@selector(getStageData) userInfo:nil repeats:true];
     [self.stageRequestTimer fire];
 }
 
-// Downloads the JSON data and then attempts to parse it into an NSDictionary.
+/// Downloads the JSON data and then attempts to parse it into an NSDictionary.
 - (void) downloadAndParseJson:(NSString*) urlString completionHandler:(void (^)(NSDictionary* dict)) completionHandler {
     [self downloadFile:urlString completionHandler:^(NSData* data) {
         // Attempt to parse the data.
@@ -186,11 +186,10 @@
         
         // Call the completion handler.
         completionHandler(jsonDict);
-        
     }];
 }
 
-// Downloads a file and returns an NSData instance.
+/// Downloads a file and returns an NSData instance.
 - (void) downloadFile:(NSString*) urlString completionHandler:(void (^)(NSData* data)) completionHandler {
     NSURL* url = [NSURL URLWithString:urlString];
     
@@ -219,6 +218,8 @@
     RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     [regularViewController setupViewWithData:[chosenSchedule objectForKey:@"regular"]];
     [rankedViewController setupViewWithData:[chosenSchedule objectForKey:@"ranked"]];
+    
+    // Clear any MBProgressHUDs currently attached to the views.
     [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
     [MBProgressHUD hideAllHUDsForView:rankedViewController.view animated:true];
 }
@@ -266,7 +267,7 @@
             nameEN = (temporaryMapping == nil) ? NSLocalizedString(@"UNKNOWN_MAP", nil) : temporaryMapping;
         }
         
-        [label setText:([self isUserLangaugeJapanese]) ? nameJP : nameEN];
+        [label setText:([self isDeviceLangaugeJapanese]) ? nameJP : nameEN];
         
         // Check if we have an image for this stage already. If we do, great! If not, default to
         // the generic question mark image.
@@ -338,28 +339,30 @@
     }
 }
 
-// Convert the string to a localizable
-// e.g. "Moray Towers" -> "MORAY_TOWERS"
+/// Convert the string to a localizable (e.g. "Moray Towers" -> "MORAY_TOWERS")
 - (NSString*) toLocalizable:(NSString*) string {
     return [[string stringByReplacingOccurrencesOfString:@" " withString:@"_"] uppercaseString];
 }
 
-- (BOOL) isUserLangaugeJapanese {
+/// Returns if the user's language is currently Japanese.
+- (BOOL) isDeviceLangaugeJapanese {
     NSString* deviceLanguage = [[NSLocale preferredLanguages] objectAtIndex:0];
     return [deviceLanguage isEqualToString:@"ja"];
 }
 
+// Returns the user's selected Splatoon region
 - (NSString*) getUserRegion {
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     return [userDefaults objectForKey:@"region"];
 }
 
+/// Returns the currently selected rotation (Current/0, Next/1, Later/2)
 - (NSInteger) getSelectedRotation {
-    // TODO change all references to this method to the ui selector's method
     SettingsViewController* settingsController = [self.viewControllers objectAtIndex:SETTINGS_CONTROLLER];
     return [settingsController.rotationSelector selectedSegmentIndex];
 }
 
+/// Sets the selected rotation.
 - (void) setSelectedRotation:(NSInteger) rotation {
     SettingsViewController* settingsController = [self.viewControllers objectAtIndex:SETTINGS_CONTROLLER];
     [settingsController.rotationSelector setSelectedSegmentIndex:rotation];
