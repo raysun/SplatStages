@@ -219,8 +219,8 @@
     RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     [regularViewController setupViewWithData:[chosenSchedule objectForKey:@"regular"]];
     [rankedViewController setupViewWithData:[chosenSchedule objectForKey:@"ranked"]];
-    [MBProgressHUD hideHUDForView:regularViewController.view animated:true];
-    [MBProgressHUD hideHUDForView:rankedViewController.view animated:true];
+    [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
+    [MBProgressHUD hideAllHUDsForView:rankedViewController.view animated:true];
 }
 
 - (void) setupSplatfestWithId:(int) splatfestId {
@@ -246,7 +246,7 @@
             // The Splatfest has ended.
             [splatfestViewController setupViewSplatfestFinished:[self.splatfestData objectForKey:@"results"]];
         }
-        [MBProgressHUD hideHUDForView:splatfestViewController.view animated:true];
+        [MBProgressHUD hideAllHUDsForView:splatfestViewController.view animated:true];
     });
     
 }
@@ -283,6 +283,10 @@
 }
 
 - (void) generateLoadingHudWithView:(UIView*) view {
+    // Remove any existing MBProgressHUD that's already attached to this view.
+    [MBProgressHUD hideAllHUDsForView:view animated:true];
+    
+    // Create a new MBProgressHUD attached to the view.
     MBProgressHUD* loadingHud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     loadingHud.mode = MBProgressHUDModeIndeterminate;
     loadingHud.labelText = NSLocalizedString(@"LOADING", nil);
@@ -292,8 +296,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
         RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
-        [MBProgressHUD hideHUDForView:regularViewController.view animated:true];
-        [MBProgressHUD hideHUDForView:rankedViewController.view animated:true];
+        [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
+        [MBProgressHUD hideAllHUDsForView:rankedViewController.view animated:true];
     });
 }
 
