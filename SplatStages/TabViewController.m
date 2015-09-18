@@ -263,7 +263,7 @@
             // Check our temporary stage mapping data to see if we can find the English name for this stage.
             // If there is no temporary mapping, then fall back to UNKNOWN_MAP.
             NSString* temporaryMapping = [self.temporaryStageMapping objectForKey:nameEN];
-            nameEN = (temporaryMapping == nil || [temporaryMapping isEqualToString:@""]) ? NSLocalizedString(@"UNKNOWN_MAP", nil) : temporaryMapping;
+            nameEN = (temporaryMapping == nil) ? NSLocalizedString(@"UNKNOWN_MAP", nil) : temporaryMapping;
         }
         
         [label setText:([self isUserLangaugeJapanese]) ? nameJP : nameEN];
@@ -271,8 +271,7 @@
         // Check if we have an image for this stage already. If we do, great! If not, default to
         // the generic question mark image.
         NSString* newLocalizable = [self toLocalizable:nameEN];
-        NSString* newLocalizedText = NSLocalizedString(newLocalizable, nil);
-        [imageView setImage:[UIImage imageNamed:([newLocalizedText isEqualToString:newLocalizable]) ? @"UNKNOWN_MAP" :newLocalizable]];
+        [imageView setImage:[UIImage imageNamed:([NSLocalizedString(newLocalizable, nil) isEqualToString:newLocalizable]) ? @"UNKNOWN_MAP" : newLocalizable]];
         
         NSLog(@"No data for stage (en) \"%@\" (jp) \"%@\"!", nameEN, nameJP);
     } else {

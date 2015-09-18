@@ -40,11 +40,11 @@
     NSString* gamemode = [rootController toLocalizable:[data objectForKey:@"rulesEN"]];
     NSString* gamemodeJP = [data objectForKey:@"rulesJP"];
     NSString* localizedGamemode = NSLocalizedString(gamemode, nil);
-    if (localizedGamemode == nil) {
+    if ([localizedGamemode isEqualToString:gamemode]) {
         // We don't have a localized string for this gamemode.
         // However, we have the Japanese (and maybe English) name(s)!
         // If the user's language is Japanese, great! If not, we'll just use the English name.
-        if (gamemode == nil || [gamemode isEqualToString:@""]) {
+        if (![gamemode canBeConvertedToEncoding:NSISOLatin1StringEncoding]) {
             // We don't have the English name for this gamemode, so fallback to UNKNOWN_GAMEMODE.
             gamemode = NSLocalizedString(@"UNKNOWN_GAMEMODE", nil);
         }
