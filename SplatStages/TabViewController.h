@@ -23,6 +23,7 @@
 @property NSDate* nextRotation;
 @property NSTimer* rotationTimer;
 @property NSTimer* stageRequestTimer;
+@property NSDictionary* temporaryStageMapping;
 
 // Splatfest
 @property NSDictionary* splatfestData;

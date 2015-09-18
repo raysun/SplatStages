@@ -75,44 +75,49 @@
     [self generateLoadingHudWithView:regularViewController.view];
     [self generateLoadingHudWithView:rankedViewController.view];
     
-    // Request stage data asynchronously
-    [self downloadAndParseJson:@"https://splatoon.ink/schedule.json" completionHandler:^(NSDictionary* data) {
-        // Check if the data is stale, and return if it is.
-        NSDate* dataLastUpdated = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"updateTime"] longLongValue] / 1000];
-        if ([dataLastUpdated timeIntervalSinceDate:self.lastStageDataUpdate] <= 0.0) {
-            [self setStageLoadingFinished];
-            return;
-        }
+    // Get the Temporary Stage Mapping, which contains the English names for maps that aren't supported by splatoon.ink yet.
+    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatcompanion/temporary-stage-mapping.json" completionHandler:^(NSDictionary* data) {
+        self.temporaryStageMapping = data;
         
-        // Check for the rotation download timer and stops it.
-        if (self.stageRequestTimer) {
-            [self.stageRequestTimer invalidate];
-            self.stageRequestTimer = nil;
-        }
-        
-        // Check for the stage rotation timer and get rid of it.
-        if (self.rotationTimer) {
-            [self.rotationTimer invalidate];
-            self.rotationTimer = nil;
-        }
-        
-        // Set all our data variables.
-        [self setSelectedRotation:0];
-        self.lastStageDataUpdate = dataLastUpdated;
-        self.schedule = [data objectForKey:@"schedule"];
-        
-        // splatoon.ink gives unix time in milliseconds, so we convert it into real unix time here
-        NSTimeInterval nextInEpoch = [[[self.schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000;
-        self.nextRotation = [NSDate dateWithTimeIntervalSince1970:nextInEpoch];
-        
-        // This needs to be called on the UI thread so we can update it.
-        // We also schedule the rotation timer here.
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self setStages];
-            self.rotationTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateRotationTimer) userInfo:nil repeats:true];
-        });
+        // Request stage data asynchronously
+        [self downloadAndParseJson:@"https://splatoon.ink/schedule.json" completionHandler:^(NSDictionary* data) {
+            // Check if the data is stale, and return if it is.
+            NSDate* dataLastUpdated = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"updateTime"] longLongValue] / 1000];
+            if ([dataLastUpdated timeIntervalSinceDate:self.lastStageDataUpdate] <= 0.0) {
+                [self setStageLoadingFinished];
+                return;
+            }
+            
+            // Check for the rotation download timer and stops it.
+            if (self.stageRequestTimer) {
+                [self.stageRequestTimer invalidate];
+                self.stageRequestTimer = nil;
+            }
+            
+            // Check for the stage rotation timer and get rid of it.
+            if (self.rotationTimer) {
+                [self.rotationTimer invalidate];
+                self.rotationTimer = nil;
+            }
+            
+            // Set all our data variables.
+            [self setSelectedRotation:0];
+            self.lastStageDataUpdate = dataLastUpdated;
+            self.schedule = [data objectForKey:@"schedule"];
+            
+            // splatoon.ink gives unix time in milliseconds, so we convert it into real unix time here
+            NSTimeInterval nextInEpoch = [[[self.schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000;
+            self.nextRotation = [NSDate dateWithTimeIntervalSince1970:nextInEpoch];
+            
+            // This needs to be called on the UI thread so we can update it.
+            // We also schedule the rotation timer here.
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self setStages];
+                self.rotationTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateRotationTimer) userInfo:nil repeats:true];
+            });
+        }];
     }];
-
+    
 }
 
 - (void) getSplatfestData {
@@ -152,7 +157,6 @@
         }];
     }];
 }
-
 - (void) refreshAllData {
     // Make sure this is called on the main thread so we can update the UI.
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -223,7 +227,7 @@
     // Get the time period of the Splatfest
     NSDate* splatfestStart = [NSDate dateWithTimeIntervalSince1970:[[self.splatfestData objectForKey:@"startTime"] longLongValue]];
     NSDate* splatfestEnd = [NSDate dateWithTimeIntervalSince1970:[[self.splatfestData objectForKey:@"endTime"] longLongValue]];
-
+    
     SplatfestViewController* splatfestViewController = [self.viewControllers objectAtIndex:SPLATFEST_CONTROLLER];
     
     // Do preliminary setup (set variables in the view controller)
@@ -250,21 +254,27 @@
 - (void) setupStageView:(NSString*) nameEN nameJP:(NSString*) nameJP label:(UILabel*) label imageView:(UIImageView*) imageView {
     NSString* localizable = [self toLocalizable:nameEN];
     NSString* localizedText = NSLocalizedString(localizable, nil);
-    if (localizedText == nil) {
-        // We don't have data for this stage!
-        // We have the Japanese (and maybe English) name(s) for this stage.
-        // If the user's language is Japanese, great! If not, we'll just use the English name.
-        if (nameEN == nil || [nameEN isEqualToString:@""]) {
-            // We don't have the English name for this stage... Use UNKNOWN_MAP instead.
-            nameEN = NSLocalizedString(@"UNKNOWN_MAP", nil);
+    if ([localizedText isEqualToString:localizable]) {
+        // We don't have data for this stage! We have the Japanese (and maybe English)
+        // name(s) for this stage. If the user's language is Japanese, great! If not, we'll
+        // try to use the English name.
+        if (![nameEN canBeConvertedToEncoding:NSISOLatin1StringEncoding]) {
+            // Uh-oh, splatoon.ink hasn't provided an English name and has instead repeated the Japanese name.
+            // Check our temporary stage mapping data to see if we can find the English name for this stage.
+            // If there is no temporary mapping, then fall back to UNKNOWN_MAP.
+            NSString* temporaryMapping = [self.temporaryStageMapping objectForKey:nameEN];
+            nameEN = (temporaryMapping == nil || [temporaryMapping isEqualToString:@""]) ? NSLocalizedString(@"UNKNOWN_MAP", nil) : temporaryMapping;
         }
         
         [label setText:([self isUserLangaugeJapanese]) ? nameJP : nameEN];
         
-        // We don't have a picture for this stage, so we'll use the default question mark image instead.
-        [imageView setImage:[UIImage imageNamed:@"UNKNOWN_MAP"]];
+        // Check if we have an image for this stage already. If we do, great! If not, default to
+        // the generic question mark image.
+        NSString* newLocalizable = [self toLocalizable:nameEN];
+        NSString* newLocalizedText = NSLocalizedString(newLocalizable, nil);
+        [imageView setImage:[UIImage imageNamed:([newLocalizedText isEqualToString:newLocalizable]) ? @"UNKNOWN_MAP" :newLocalizable]];
         
-        NSLog(@"No data for stage (en)\"%@\" (jp)\"%@\"!", nameEN, nameJP);
+        NSLog(@"No data for stage (en) \"%@\" (jp) \"%@\"!", nameEN, nameJP);
     } else {
         // Alright, we know this stage!
         label.text = localizedText;
