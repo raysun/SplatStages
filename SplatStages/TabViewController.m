@@ -105,6 +105,14 @@
             self.lastStageDataUpdate = dataLastUpdated;
             self.schedule = [data objectForKey:@"schedule"];
             
+            // Check if there's no schedule (for example, splatoon.ink returns nothing of value during Splatfests)
+            if ([self.schedule count] == 1) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self setStagesUnavailable];
+                });
+                return;
+            }
+            
             // splatoon.ink gives unix time in milliseconds, so we convert it into real unix time here
             NSTimeInterval nextInEpoch = [[[self.schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000;
             self.nextRotation = [NSDate dateWithTimeIntervalSince1970:nextInEpoch];
@@ -218,6 +226,38 @@
     RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     [regularViewController setupViewWithData:[chosenSchedule objectForKey:@"regular"]];
     [rankedViewController setupViewWithData:[chosenSchedule objectForKey:@"ranked"]];
+    
+    // Clear any MBProgressHUDs currently attached to the views.
+    [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
+    [MBProgressHUD hideAllHUDsForView:rankedViewController.view animated:true];
+}
+
+- (void) setStagesUnavailable {
+    // Setup a schedule dictionary with all unknowns
+    NSDictionary* unknown = @{
+                                @"maps" : @[
+                                            @{
+                                                @"nameEN" : @"UNKNOWN_MAP"
+                                            },
+                                            @{
+                                                @"nameEN" : @"UNKNOWN_MAP"
+                                            },
+                                            @{
+                                                @"nameEN" : @"UNKNOWN_MAP"
+                                            }
+                                        ],
+                                @"rulesEN" : @"UNKNOWN_GAMEMODE"
+                              };
+    
+    // Setup the views
+    RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
+    RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
+    [regularViewController setupViewWithData:unknown];
+    [rankedViewController setupViewWithData:unknown];
+    
+    // Set the rotation countdown labels
+    [regularViewController.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_SPLATFEST", nil)];
+    [rankedViewController.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_SPLATFEST", nil)];
     
     // Clear any MBProgressHUDs currently attached to the views.
     [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
