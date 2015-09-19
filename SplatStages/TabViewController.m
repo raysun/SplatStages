@@ -215,7 +215,7 @@
 }
 
 - (void) setStages {
-    if (self.schedule == nil) {
+    if (self.schedule == nil || [self.schedule count] == 1) {
         // Just in case.
         return;
     }
