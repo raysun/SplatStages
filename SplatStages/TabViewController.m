@@ -76,7 +76,7 @@
     [self generateLoadingHudWithView:rankedViewController.view];
     
     // Get the Temporary Stage Mapping, which contains the English names for maps that aren't supported by splatoon.ink yet.
-    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatcompanion/temporary-stage-mapping.json" completionHandler:^(NSDictionary* data) {
+    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/temporary-stage-mapping.json" completionHandler:^(NSDictionary* data) {
         self.temporaryStageMapping = data;
         
         // Request stage data asynchronously
@@ -134,7 +134,7 @@
     [self generateLoadingHudWithView:[splatfestViewController view]];
     
     // Request Splatfest data asynchronously
-    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatcompanion/splatfest.json" completionHandler:^(NSDictionary* data) {
+    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/splatfest.json" completionHandler:^(NSDictionary* data) {
         // Check for the Splatfest countdown timer.
         SplatfestViewController* viewController = [[self viewControllers] objectAtIndex:SPLATFEST_CONTROLLER];
         if (viewController.countdown) {
