@@ -21,3 +21,5 @@ Add the following repository to Cydia: ```http://oatmealdome.github.io/cydia/```
 
 ## License / Legalese
 This application is licensed under the 3-clause BSD license. Please refer to the LICENSE.md file you have recieved along with the source code. This application also includes MBProgressHUD (written by matej and licensed under the MIT license) and NSAttributedString+CCLFormat (written by Cocode Ltd, licensed under the BSD license).
+
+Splatoon and all its related assets are copyright of Nintendo. Nintendo does not have any involvement whatsoever in the SplatStages app.
