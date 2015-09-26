@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ASU-tv-LJT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ASU-tv-LJT">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -53,7 +53,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splatfest data is unavailable." textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="em5-fi-5TI" userLabel="Splatfest Countdown">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splatfest data is unavailable." textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="em5-fi-5TI" userLabel="Header">
                                 <rect key="frame" x="20" y="28" width="560" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.55000000000000004" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -84,7 +84,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SPLATFEST_UNKNOWN" translatesAutoresizingMaskIntoConstraints="NO" id="dTd-nz-ZcN">
                                         <rect key="frame" x="8" y="8" width="544" height="210"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splatfest results are not available at this time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OGW-Vg-ZEU" userLabel="Results Unavailable Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splatfest data is not available at this time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OGW-Vg-ZEU" userLabel="Message Label">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="226"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.55000000000000004" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="ProjectPaintball" family="Project Paintball" pointSize="32"/>
@@ -489,11 +489,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="Splatfest" image="SPLATFEST_TAB" id="7lx-eF-Qdw"/>
                     <connections>
-                        <outlet property="countdownLabel" destination="em5-fi-5TI" id="IRx-n5-LIc"/>
+                        <outlet property="headerLabel" destination="em5-fi-5TI" id="cBk-W6-fiV"/>
                         <outlet property="imageContainer" destination="siG-V3-kn6" id="f67-xt-ImU"/>
                         <outlet property="labelsContainer" destination="QYy-h1-akz" id="NBz-uu-S9S"/>
                         <outlet property="resultsContainer" destination="Y6l-EY-nKs" id="jvq-4D-8nv"/>
-                        <outlet property="resultsUnavailableLabel" destination="OGW-Vg-ZEU" id="Oeb-Hp-uJk"/>
+                        <outlet property="resultsMessageLabel" destination="OGW-Vg-ZEU" id="XAO-dM-qjr"/>
                         <outlet property="splatfestImageOne" destination="HpS-XH-QdO" id="tNO-kN-X5n"/>
                         <outlet property="splatfestImageTwo" destination="dTd-nz-ZcN" id="2Le-8F-qHo"/>
                         <outlet property="stageOneContainer" destination="o5t-Wi-dIh" id="CTM-zD-ush"/>

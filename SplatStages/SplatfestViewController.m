@@ -22,10 +22,6 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
-    // Setup Calendar Stuff
-    self.calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    self.calendarUnits = NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
-    
     // Set background
     UIImage* image = [UIImage imageNamed:@"BACKGROUND"];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
@@ -52,11 +48,15 @@
     [self setupImages];
     
     // Update header label.
-    [self.countdownLabel setText:NSLocalizedString(@"SPLATFEST_ANNOUNCED", nil)];
+    [self.headerLabel setText:NSLocalizedString(@"SPLATFEST_ANNOUNCED", nil)];
     
     // Schedule the countdown timer.
-    self.countdownDate = startDate;
-    self.countdown = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateUpcomingTimer) userInfo:nil repeats:true];
+    self.countdown = [[SplatTimer alloc] initFestivalTimerWithDate:startDate label:self.resultsMessageLabel textString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN_TIME", nil) teamA:self.teamANameString teamB:self.teamBNameString useThreeNumbers:false timerFinishedHandler:^() {
+        TabViewController* rootController = (TabViewController*) [self tabBarController];
+        [rootController getSplatfestData];
+        [self.countdown invalidate];
+        self.countdown = nil;
+    }];
 }
 
 // Splatfest has started.
@@ -69,8 +69,12 @@
     [rootController setupStageView:[stages objectAtIndex:1] nameJP:nil label:self.stageTwoLabel imageView:self.stageTwoImage];
     [rootController setupStageView:[stages objectAtIndex:2] nameJP:nil label:self.stageThreeLabel imageView:self.stageThreeImage];
     
-    self.countdownDate = endDate;
-    self.countdown = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateFinishTimer) userInfo:nil repeats:true];
+    self.countdown = [[SplatTimer alloc] initFestivalTimerWithDate:endDate label:self.headerLabel textString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN_TIME", nil) teamA:self.teamANameString teamB:self.teamBNameString useThreeNumbers:true timerFinishedHandler:^() {
+        TabViewController* rootController = (TabViewController*) [self tabBarController];
+        [rootController getSplatfestData];
+        [self.countdown invalidate];
+        self.countdown = nil;
+    }];
 }
 
 // Splatfest has finished.
@@ -83,7 +87,7 @@
     // Update header label.
     NSString* finishLocalized = NSLocalizedString(@"SPLATFEST_FINISHED", nil);
     NSAttributedString* finishText = [NSAttributedString attributedStringWithFormat:finishLocalized, self.teamANameString, self.teamBNameString];
-    [self.countdownLabel setAttributedText:finishText];
+    [self.headerLabel setAttributedText:finishText];
 
     // Setup the results.
     if (![[[results objectAtIndex:0] objectForKey:@"final"] isEqualToNumber:[NSNumber numberWithInt:0]]) {
@@ -94,7 +98,7 @@
     } else {
         // Results are not available yet.
         [self setResultsVisbilities:false];
-        [self.resultsUnavailableLabel setText:NSLocalizedString(@"SPLATFEST_SCORES_UNAVAILABLE", nil)];
+        [self.resultsMessageLabel setText:NSLocalizedString(@"SPLATFEST_SCORES_UNAVAILABLE", nil)];
     }
 }
 
@@ -126,41 +130,11 @@
     [self.splatfestImageTwo setImage:[UIImage imageWithContentsOfFile:imagePath]];
 }
 
-- (void) updateUpcomingTimer {
-    if ([self.countdownDate timeIntervalSinceNow] <= 0.0) {
-        TabViewController* rootController = (TabViewController*) [self tabBarController];
-        [rootController getSplatfestData];
-        [self.countdown invalidate];
-        self.countdown = nil;
-    } else {
-        NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
-        NSString* countdownLocalized = NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN", nil);
-        NSString* countdownTime = [NSString stringWithFormat:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN_TIME", nil), [components day], [components hour], [components minute], [components second]];
-        NSAttributedString* countdownText = [NSAttributedString attributedStringWithFormat:countdownLocalized, self.teamANameString, self.teamBNameString, countdownTime];
-        [self.resultsUnavailableLabel setAttributedText:countdownText];
-    }
-}
-
-- (void) updateFinishTimer {
-    if ([self.countdownDate timeIntervalSinceNow] <= 0.0) {
-        TabViewController* rootController = (TabViewController*) [self tabBarController];
-        [rootController getSplatfestData];
-        [self.countdown invalidate];
-        self.countdown = nil;
-    } else {
-        NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
-        NSString* countdownLocalized = NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN", nil);
-        NSString* countdownTime = [NSString stringWithFormat:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN_TIME", nil), [components hour], [components minute], [components second]];
-        NSAttributedString* countdownText = [NSAttributedString attributedStringWithFormat:countdownLocalized, self.teamANameString, self.teamBNameString, countdownTime];
-        [self.countdownLabel setAttributedText:countdownText];
-    }
-}
-
 - (void) setDefaultVisibilitiesAndText {
     // Set default settings for view visibility
     [self setStageVisibilies:false];
     [self setResultsVisbilities:false];
-    [self.resultsUnavailableLabel setText:NSLocalizedString(@"SPLATFEST_DATA_UNAVAILABLE", nil)];
+    [self.resultsMessageLabel setText:NSLocalizedString(@"SPLATFEST_DATA_UNAVAILABLE", nil)];
 }
 
 - (void) setStageVisibilies:(BOOL) visibility {
@@ -175,7 +149,7 @@
     [self.teamAContainer setHidden:!visibility];
     [self.labelsContainer setHidden:!visibility];
     [self.teamBContainer setHidden:!visibility];
-    [self.resultsUnavailableLabel setHidden:visibility];
+    [self.resultsMessageLabel setHidden:visibility];
 }
 
 - (NSAttributedString*) getTeamName:(NSDictionary*) teamData {
@@ -185,6 +159,7 @@
 }
 
 // Thanks WrightsCS on StackOverflow!
+// http://stackoverflow.com/questions/6207329/how-to-set-hex-color-code-for-background
 - (UIColor*) colorWithHexString:(NSString*) hex
 {
     NSString* cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];

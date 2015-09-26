@@ -6,6 +6,8 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
+#import <SplatStagesFramework/SplatTimer.h>
+
 #import <UIKit/UIKit.h>
 
 #import "MBProgressHUD/MBProgressHUD.h"
@@ -13,7 +15,7 @@
 @interface SplatfestViewController : UIViewController
 
 // Countdown
-@property (weak, nonatomic) IBOutlet UILabel* countdownLabel;
+@property (weak, nonatomic) IBOutlet UILabel* headerLabel;
 
 // Image Container
 @property (weak, nonatomic) IBOutlet UIView* imageContainer;
@@ -37,7 +39,7 @@
 // Results Container
 @property (weak, nonatomic) IBOutlet UIView* resultsContainer;
 @property (weak, nonatomic) IBOutlet UIImageView* splatfestImageTwo;
-@property (weak, nonatomic) IBOutlet UILabel* resultsUnavailableLabel;
+@property (weak, nonatomic) IBOutlet UILabel* resultsMessageLabel;
 @property (weak, nonatomic) IBOutlet UIView* labelsContainer;
 
 // Team A Container
@@ -56,18 +58,12 @@
 
 // Data
 @property NSArray* teams;
-@property NSDate* countdownDate;
-@property NSTimer* countdown;
+@property SplatTimer* countdown;
 @property int splatfestId;
-@property BOOL isFutureSplatfest;
 
 // Team Names
 @property NSAttributedString* teamANameString;
 @property NSAttributedString* teamBNameString;
-
-// Calendar Stuff
-@property NSCalendar* calendar;
-@property int calendarUnits;
 
 - (void) preliminarySetup:(NSArray*) teams id:(int) id;
 - (void) setupViewSplatfestSoon:(NSDate*) startDate;
