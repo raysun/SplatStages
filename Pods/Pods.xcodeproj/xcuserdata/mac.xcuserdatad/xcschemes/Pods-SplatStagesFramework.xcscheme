@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DCA2CBEFF5F57505F5AAF9C4"
-               BuildableName = "libNSAttributedString+CCLFormat.a"
-               BlueprintName = "NSAttributedString+CCLFormat"
+               BlueprintIdentifier = "36A80404F92EB25A36938C5E"
+               BuildableName = "libPods-SplatStagesFramework.a"
+               BlueprintName = "Pods-SplatStagesFramework"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

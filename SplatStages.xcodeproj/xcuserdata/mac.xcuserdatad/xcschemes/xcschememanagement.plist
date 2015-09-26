@@ -14,9 +14,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SplatStagesFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>047A5EC11BB5E09F00DD510D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>04EE0CBE1BA5D47D003BE6A9</key>
 		<dict>
 			<key>primary</key>
