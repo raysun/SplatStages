@@ -6,6 +6,8 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
+#import <SplatStagesFramework/SplatUtilities.h>
+
 #import "SettingsViewController.h"
 #import "TabViewController.h"
 
@@ -90,7 +92,7 @@
             [finishAlert show];
             
             // Save this setting.
-            NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+            NSUserDefaults* userDefaults = [SplatUtilities getUserDefaults];
             [userDefaults setObject:@1 forKey:@"setupFinished"];
             [userDefaults setObject:chosenRegionInternal forKey:@"region"];
             [userDefaults synchronize];

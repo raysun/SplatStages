@@ -6,6 +6,8 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
+#import <SplatStagesFramework/SplatUtilities.h>
+
 #import "NSAttributedString+CCLFormat.h"
 
 #import "SplatfestViewController.h"
@@ -35,6 +37,11 @@
     
     self.teamANameString = [self getTeamName:[self.teams objectAtIndex:0]];
     self.teamBNameString = [self getTeamName:[self.teams objectAtIndex:1]];
+    
+    if (self.countdown) {
+        [self.countdown invalidate];
+        self.countdown = nil;
+    }
 }
 
 // Splatfest is upcoming
@@ -113,9 +120,8 @@
 }
 
 - (void) setupImages {
-    TabViewController* rootController = (TabViewController*) [self tabBarController];
     NSString* cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString* imagePath = [cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"splatfest-%@-%i.jpg", [rootController getUserRegion], self.splatfestId]];
+    NSString* imagePath = [cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"splatfest-%@-%i.jpg", [SplatUtilities getUserRegion], self.splatfestId]];
     [self.splatfestImageOne setImage:[UIImage imageWithContentsOfFile:imagePath]];
     [self.splatfestImageTwo setImage:[UIImage imageWithContentsOfFile:imagePath]];
 }

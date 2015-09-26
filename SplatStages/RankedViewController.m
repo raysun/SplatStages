@@ -6,6 +6,8 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
+#import <SplatStagesFramework/SplatUtilities.h>
+
 #import "RankedViewController.h"
 #import "TabViewController.h"
 
@@ -37,7 +39,7 @@
     [rootController setupStageView:stageTwoEN nameJP:stageTwoJP label:self.stageLabelTwo imageView:self.stageImageTwo];
     
     // Ranked Battles have all the other gamemodes.
-    NSString* gamemode = [rootController toLocalizable:[data objectForKey:@"rulesEN"]];
+    NSString* gamemode = [SplatUtilities toLocalizable:[data objectForKey:@"rulesEN"]];
     NSString* gamemodeJP = [data objectForKey:@"rulesJP"];
     NSString* localizedGamemode = NSLocalizedString(gamemode, nil);
     if ([localizedGamemode isEqualToString:gamemode]) {
@@ -48,7 +50,7 @@
             // We don't have the English name for this gamemode, so fallback to UNKNOWN_GAMEMODE.
             gamemode = NSLocalizedString(@"UNKNOWN_GAMEMODE", nil);
         }
-        localizedGamemode = ([rootController isDeviceLangaugeJapanese]) ? gamemodeJP : gamemode;
+        localizedGamemode = ([SplatUtilities isDeviceLangaugeJapanese]) ? gamemodeJP : gamemode;
         NSLog(@"No string for gamemode (en)\"%@\" (jp)\"%@\"!", gamemode, gamemodeJP);
     }
     self.gamemodeLabel.text = localizedGamemode;

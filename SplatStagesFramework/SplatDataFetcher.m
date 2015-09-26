@@ -68,6 +68,9 @@
             // Check if the data is stale, and return if it is.
             NSDate* updateTime = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"updateTime"] longLongValue] / 1000];
             NSDate* storedDataUpdateTime = [storedData objectForKey:@"storedDataUpdateTime"];
+            if (!storedDataUpdateTime) {
+                storedDataUpdateTime = [NSDate dateWithTimeIntervalSince1970:0];
+            }
             if ([updateTime timeIntervalSinceDate:storedDataUpdateTime] <= 0.0) {
                 updateCallback(@1);
                 return;
@@ -96,7 +99,8 @@
 + (void) requestFestivalDataWithCallback:(void (^)()) updateCallback errorHandler:(void (^)(NSError* error)) errorHandler {
     NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
     [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/splatfest.json" completionHandler:^(NSDictionary* data) {
-        [storedData setObject:[data objectForKey:[SplatUtilities getUserRegion]] forKey:@"splatfestData"];
+        NSDictionary* splatfestData = [data objectForKey:[SplatUtilities getUserRegion]];
+        [storedData setObject:splatfestData forKey:@"splatfestData"];
         [storedData synchronize];
         
         updateCallback();
