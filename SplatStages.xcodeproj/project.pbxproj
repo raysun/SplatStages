@@ -13,6 +13,8 @@
 		047A5ECA1BB5E09F00DD510D /* SplatStagesFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */; settings = {ASSET_TAGS = (); }; };
 		047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED31BB6103D00DD510D /* SplatTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ED41BB6103D00DD510D /* SplatTimer.m */; settings = {ASSET_TAGS = (); }; };
 		04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC31BA5D47D003BE6A9 /* main.m */; };
 		04EE0CC71BA5D47D003BE6A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC61BA5D47D003BE6A9 /* AppDelegate.m */; };
 		04EE0CCD1BA5D47D003BE6A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CCB1BA5D47D003BE6A9 /* Main.storyboard */; };
@@ -26,6 +28,7 @@
 		04EE0CE91BA5D539003BE6A9 /* project_paintball_beta3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CE81BA5D539003BE6A9 /* project_paintball_beta3.otf */; settings = {ASSET_TAGS = (); }; };
 		04EE0CEB1BA5DAD4003BE6A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
 		9A84413964F4ED2D995BF5CF /* libPods-SplatStages.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */; };
+		E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,8 @@
 		047A5EC61BB5E09F00DD510D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatDataFetcher.m; sourceTree = "<group>"; };
 		047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatDataFetcher.h; sourceTree = "<group>"; };
+		047A5ED31BB6103D00DD510D /* SplatTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatTimer.h; sourceTree = "<group>"; };
+		047A5ED41BB6103D00DD510D /* SplatTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatTimer.m; sourceTree = "<group>"; };
 		04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplatStages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EE0CC31BA5D47D003BE6A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04EE0CC51BA5D47D003BE6A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,9 +84,12 @@
 		04EE0CE21BA5D4D6003BE6A9 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 		04EE0CE81BA5D539003BE6A9 /* project_paintball_beta3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = project_paintball_beta3.otf; sourceTree = "<group>"; };
 		04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesFramework/Pods-SplatStagesFramework.release.xcconfig"; sourceTree = "<group>"; };
 		406078D19F699FD6F4F180BF /* Pods-SplatStages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStages.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages.release.xcconfig"; sourceTree = "<group>"; };
+		802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F2E8C750242519572ABB41 /* Pods-SplatStages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages.debug.xcconfig"; sourceTree = "<group>"; };
+		D1104AE9B520422938A60319 /* Pods-SplatStagesFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesFramework/Pods-SplatStagesFramework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +119,8 @@
 				047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */,
 				047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */,
 				047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */,
+				047A5ED31BB6103D00DD510D /* SplatTimer.h */,
+				047A5ED41BB6103D00DD510D /* SplatTimer.m */,
 				047A5EC61BB5E09F00DD510D /* Info.plist */,
 			);
 			path = SplatStagesFramework;
@@ -175,6 +186,8 @@
 			children = (
 				A4F2E8C750242519572ABB41 /* Pods-SplatStages.debug.xcconfig */,
 				406078D19F699FD6F4F180BF /* Pods-SplatStages.release.xcconfig */,
+				D1104AE9B520422938A60319 /* Pods-SplatStagesFramework.debug.xcconfig */,
+				1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -183,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */,
+				802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,6 +210,7 @@
 			files = (
 				047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */,
 				047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */,
+				047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,10 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 047A5ECD1BB5E09F00DD510D /* Build configuration list for PBXNativeTarget "SplatStagesFramework" */;
 			buildPhases = (
+				9BA0579DE2504DBC27567816 /* Check Pods Manifest.lock */,
 				047A5EBD1BB5E09F00DD510D /* Sources */,
 				047A5EBE1BB5E09F00DD510D /* Frameworks */,
 				047A5EBF1BB5E09F00DD510D /* Headers */,
 				047A5EC01BB5E09F00DD510D /* Resources */,
+				B8BC37DECF30E8B1BE326F5A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,6 +349,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9BA0579DE2504DBC27567816 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B8BC37DECF30E8B1BE326F5A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplatStagesFramework/Pods-SplatStagesFramework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E646114C3C4628BE5C389012 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */,
 				047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +452,7 @@
 /* Begin XCBuildConfiguration section */
 		047A5ECB1BB5E09F00DD510D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1104AE9B520422938A60319 /* Pods-SplatStagesFramework.debug.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -423,6 +472,7 @@
 		};
 		047A5ECC1BB5E09F00DD510D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -558,6 +608,7 @@
 				047A5ECC1BB5E09F00DD510D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04EE0CBA1BA5D47D003BE6A9 /* Build configuration list for PBXProject "SplatStages" */ = {
 			isa = XCConfigurationList;
