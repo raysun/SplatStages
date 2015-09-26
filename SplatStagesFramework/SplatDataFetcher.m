@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import <SplatStagesFramework/SplatDataFetcher.h>
+#import <SplatStagesFramework/SplatUtilities.h>
 
 @interface SplatDataFetcher ()
 
@@ -36,7 +37,6 @@
 }
 
 + (void) downloadAndParseJson:(NSString*) urlString completionHandler:(void (^)(NSDictionary* dict)) completionHandler errorHandler:(void (^)(NSError* error)) errorHandler {
-    
     [self downloadFile:urlString completionHandler:^(NSData* data) {
         // Attempt to parse the data.
         NSError* jsonError;
@@ -56,7 +56,7 @@
 }
 
 + (void) requestStageDataWithCallback:(void (^)(NSNumber* mode)) updateCallback errorHandler:(void (^)(NSError* error)) errorHandler {
-    NSUserDefaults* storedData = [[NSUserDefaults alloc] initWithSuiteName:@"group.me.atmealdome.SplatStagesData"];
+    NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
     
     // Get the Temporary Stage Mapping, which contains the English names for maps that aren't supported by splatoon.ink yet.
     [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/temporary-stage-mapping.json" completionHandler:^(NSDictionary* data) {
@@ -88,6 +88,18 @@
         } errorHandler:^(NSError* error) {
             errorHandler(error);
         }];
+    } errorHandler:^(NSError* error) {
+        errorHandler(error);
+    }];
+}
+
++ (void) requestFestivalDataWithCallback:(void (^)()) updateCallback errorHandler:(void (^)(NSError* error)) errorHandler {
+    NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
+    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/splatfest.json" completionHandler:^(NSDictionary* data) {
+        [storedData setObject:[data objectForKey:[SplatUtilities getUserRegion]] forKey:@"splatfestData"];
+        [storedData synchronize];
+        
+        updateCallback();
     } errorHandler:^(NSError* error) {
         errorHandler(error);
     }];

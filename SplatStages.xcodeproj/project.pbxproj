@@ -15,6 +15,8 @@
 		047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED31BB6103D00DD510D /* SplatTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ED41BB6103D00DD510D /* SplatTimer.m */; settings = {ASSET_TAGS = (); }; };
+		047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 047B3FA41BB72875005BF2D0 /* SplatUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FA51BB72875005BF2D0 /* SplatUtilities.m */; settings = {ASSET_TAGS = (); }; };
 		04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC31BA5D47D003BE6A9 /* main.m */; };
 		04EE0CC71BA5D47D003BE6A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC61BA5D47D003BE6A9 /* AppDelegate.m */; };
 		04EE0CCD1BA5D47D003BE6A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CCB1BA5D47D003BE6A9 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatDataFetcher.h; sourceTree = "<group>"; };
 		047A5ED31BB6103D00DD510D /* SplatTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatTimer.h; sourceTree = "<group>"; };
 		047A5ED41BB6103D00DD510D /* SplatTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatTimer.m; sourceTree = "<group>"; };
+		047B3FA41BB72875005BF2D0 /* SplatUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatUtilities.h; sourceTree = "<group>"; };
+		047B3FA51BB72875005BF2D0 /* SplatUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatUtilities.m; sourceTree = "<group>"; };
 		04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplatStages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EE0CC31BA5D47D003BE6A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04EE0CC51BA5D47D003BE6A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */,
 				047A5ED31BB6103D00DD510D /* SplatTimer.h */,
 				047A5ED41BB6103D00DD510D /* SplatTimer.m */,
+				047B3FA41BB72875005BF2D0 /* SplatUtilities.h */,
+				047B3FA51BB72875005BF2D0 /* SplatUtilities.m */,
 				047A5EC61BB5E09F00DD510D /* Info.plist */,
 			);
 			path = SplatStagesFramework;
@@ -210,6 +216,7 @@
 			files = (
 				047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */,
 				047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */,
+				047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */,
 				047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +410,7 @@
 			files = (
 				047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */,
 				047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */,
+				047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
