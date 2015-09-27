@@ -258,7 +258,8 @@
             // Uh-oh, splatoon.ink hasn't provided an English name and has instead repeated the Japanese name.
             // Check our temporary stage mapping data to see if we can find the English name for this stage.
             // If there is no temporary mapping, then fall back to UNKNOWN_MAP.
-            NSString* temporaryMapping = @"";//[self.temporaryStageMapping objectForKey:nameEN];
+            NSDictionary* temporaryMappings = [[SplatUtilities getUserDefaults] objectForKey:@"temporaryMappings"];
+            NSString* temporaryMapping = [temporaryMappings objectForKey:nameEN];
             nameEN = (temporaryMapping == nil) ? NSLocalizedString(@"UNKNOWN_MAP", nil) : temporaryMapping;
         }
         
