@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ActionSheetPicker-3.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E99790A9A64ED29A34C03CA0CA25F86</key>
+		<key>1400DEEBDD692C84EE5B2798597E29E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8AE29758E80CB7FE9DC0A315EA56BD68</key>
+		<key>192F58EFC5688E7D920DDBDFCFDA203A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90ECC13FD4C3A60FFFBA75D7F6FDC96E</key>
+		<key>43341247DEE909D82EF275A6C0200112</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF7FFA4B00AD2AE3E384B2E23CA06883</key>
 		<dict>
 			<key>primary</key>
 			<true/>

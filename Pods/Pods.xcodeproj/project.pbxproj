@@ -7,85 +7,143 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15769B70DB8065D666ECC3F6012425BD /* NSAttributedString+CCLFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = F91040BDBE282C613D854FEE92184F1C /* NSAttributedString+CCLFormat.h */; };
-		17E232A543689C66D6C4AF73DFAB2DBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2629C6C2409DAE9FE4F9B7D310CE6558 /* Foundation.framework */; };
-		1C4AF368D7BCF9B78A4E9B6EE0310471 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903DA5D0EC9B6F2EA8F4F24DE5BFB620 /* CoreGraphics.framework */; };
-		3204B38E80CCD3C6FD6E56EF13B0F607 /* Pods-SplatStages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A23902BC2C11A4B37422D05A636824F9 /* Pods-SplatStages-dummy.m */; };
-		32C955F9307FD50822E2E584FB3F528D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2629C6C2409DAE9FE4F9B7D310CE6558 /* Foundation.framework */; };
-		3E2162230EBA7AD3677D46B4B8D70860 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 81707F2486D87636DBAF2E93FFF5A90D /* MBProgressHUD.h */; };
-		52FB52408D1910655BD113D4BB1D9959 /* NSAttributedString+CCLFormat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEBEAEF9349F954CE0EA5E527D5054B /* NSAttributedString+CCLFormat-dummy.m */; };
-		8E3607D10A0EA4B65D7AD4838F9640D9 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9D7A905E5E73E4E0B774F90D880CB /* MBProgressHUD-dummy.m */; };
-		CC0FEAC6EDF640D93BD82D1958F954F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2629C6C2409DAE9FE4F9B7D310CE6558 /* Foundation.framework */; };
+		06623A22325A60EC90C44E5D6631E548 /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 36A0E7ABB9451E0BD7340BB33CEB7D47 /* ActionSheetStringPicker.h */; };
+		082D739BECDDA2E9A55C5F7702C90B1B /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C98F641054EE587CE3E5E41E2EB2AA /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0CE45ABA4C6DB70913A6357CE7564456 /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62C84E64B3FD172C97DBDCF5157C5EC3 /* DistancePickerView.h */; };
+		19D3D0AF86F9A9F2E7F275FDC0BA3FF3 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CF832144CE975825C73BB55CA52B8849 /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1ED630702EB1F817A8AA39CB2E347B50 /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 68ECB138F343224435DAF13D6D442F66 /* ActionSheetPicker.h */; };
+		27E329557662B002D0CB39FD1A2644EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC4EAA0C6810500B0934E8F8CAFFBE5 /* UIKit.framework */; };
+		2FF11E1F6923A8852D35004BFD74217E /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E7062EDD38FF2053A30E3A6C2B1DDFC9 /* ActionSheetDatePicker.h */; };
+		327D30FE9CB914430335B109B3AC80DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
+		32DB0046433BC4F30BCDE7646DF56C01 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE78B14C8EF5280D6239D4B4ED85D93 /* AbstractActionSheetPicker.h */; };
+		36D727A27B7C05EEC0976DF4D3F594FF /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5DDE35B2577B44920E8735CD496897 /* ActionSheetDistancePicker.h */; };
+		46637C99A7AF65C823B55D8B05F49414 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = FC40F7CBF29C50FD821795305F3BDAD1 /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		494D46B3D653C5D60E4E0F53A9ACDAF2 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F815183B41F0A9FD9A083753E08EAB /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4D1AEB1F54F0E81255DF7D85CCD2C2A6 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 196E71B529B87A360B4848A88D3ABB21 /* ActionSheetCustomPickerDelegate.h */; };
+		5C15DB895282E34ABBDB3FEA3576A1C3 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = AA850FB64CACAC68BD0C8B9B6B85AD09 /* MBProgressHUD.h */; };
+		6165EDA75EB5EB47E390896D0F712C46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
+		65D008810B0EE1B06C32B59BEDD933A1 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E2542C22448652199BFE74D529F330B0 /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6E32EB2B2DA97B2BF41642E73074B34F /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BE53740B7A8939EB62D6EA1A9CC6510B /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6F150F6BC88A5939A5C9F6461B530419 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A9542516B4550B1F0B3D38AD770561F3 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		804E234604CDA5F4932784E4ABD487BE /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F2DA378C6C34A4087791380193600A0D /* ActionSheetMultipleStringPicker.h */; };
+		88983C19D4C8F3940EBEB0BDC9502BFE /* NSAttributedString+CCLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4CDCC5D84D5586D391169DC76081DE /* NSAttributedString+CCLFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8BB0C33C784331C522B2546CFECB02F3 /* NSAttributedString+CCLFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = EA124C1642CA26D219DB85A38AAE36A0 /* NSAttributedString+CCLFormat.h */; };
+		9E379577AE3AACA3C7D2FB3792A8FB22 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC37AA84769FC46FAAF0EC1BC6D064 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AED3AA4B9AF78BBDB1EFB34724A51781 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 128252DDE8F09486FE09954BE0AA08CE /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B21CA3F97A3EFB1FD57B8E095762602D /* Pods-SplatStages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40013D64B3EB7B8D6D1BB6ADA024F6A7 /* Pods-SplatStages-dummy.m */; };
+		B639E4793B7BFCF71E9133E7A31C6486 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5AF7956F3BD6FF63E88D39F2FACB3 /* ActionSheetMultipleStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BBC92A4659AC716D0BAAA752B44B0442 /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5ACFB64B4493D4506A55136C9E4E2 /* ActionSheetPicker-3.0-dummy.m */; };
+		CC0FEAC6EDF640D93BD82D1958F954F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
 		CE2A9688B7A9797B351FA19D957C45D7 /* Pods-SplatStagesFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C07980390D63ED28F337EBE85DEE7A06 /* Pods-SplatStagesFramework-dummy.m */; };
-		EB838F19494BF60549B28E5F3E2A1B1E /* NSAttributedString+CCLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF72471AE9DEF7CA318E31FB70AC93 /* NSAttributedString+CCLFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F2D03F3AF61BF02CF01D203A805CEFE7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EB417F49D979D12F173113C69A9046 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F719AD11C0F93C52AC91F4B057F121B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2629C6C2409DAE9FE4F9B7D310CE6558 /* Foundation.framework */; };
+		D6DEC947E6FC54002F5B9F3D8F6AC0DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358081C62D155F3F20224044EC2940EA /* CoreGraphics.framework */; };
+		DA5B6AB2F923DFD90231CEAAAACF2326 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = BC840935EEFDD4B3AAB140193DE101E8 /* ActionSheetCustomPicker.h */; };
+		DC82216A65BEEDEDD6D376C7BD1D70C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
+		DEEF10F224EEA23744606B6B2FC9A02B /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C774EEA6D3B29F7198D37287123D9186 /* MBProgressHUD-dummy.m */; };
+		E5A60060F98BC1AC5C457F30FB0AA41D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
+		E8ED52C16A8F246C7A56D3AF95DC6C57 /* NSAttributedString+CCLFormat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA781ABEB8320364635C4AE55DFEC58 /* NSAttributedString+CCLFormat-dummy.m */; };
+		F6196EDB9BC5CF8F5B9B1810FA7968F0 /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0B2B4578014CAC248FD6A4D0D40722 /* ActionSheetLocalePicker.h */; };
+		FA7D9A47F80AC8D2F43EA5847F1EDBE3 /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E94775B4CE8219C19320B7F96BED873 /* SWActionSheet.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4380D8686F517E56BD52FDB0939F85B9 /* PBXContainerItemProxy */ = {
+		3D0048A2E95E9357CA166B8D28303EA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 90ECC13FD4C3A60FFFBA75D7F6FDC96E;
+			remoteGlobalIDString = 43341247DEE909D82EF275A6C0200112;
+			remoteInfo = "NSAttributedString+CCLFormat";
+		};
+		6A63486C7F0AE9B136F056A7FA155B58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 192F58EFC5688E7D920DDBDFCFDA203A;
+			remoteInfo = "ActionSheetPicker-3.0";
+		};
+		F5BF8BB813EE86FB7CB837752D741296 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1400DEEBDD692C84EE5B2798597E29E3;
 			remoteInfo = MBProgressHUD;
-		};
-		61678BE459D5DBCFE08F3DAF0ACAF394 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7E99790A9A64ED29A34C03CA0CA25F86;
-			remoteInfo = "NSAttributedString+CCLFormat";
-		};
-		6E7C174698CFECD69D6A9879C0512230 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7E99790A9A64ED29A34C03CA0CA25F86;
-			remoteInfo = "NSAttributedString+CCLFormat";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A92517DA2F0706C5606B9858B1FBB8C /* libPods-SplatStages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EBF72471AE9DEF7CA318E31FB70AC93 /* NSAttributedString+CCLFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat.m"; sourceTree = "<group>"; };
+		028681853131462DC8152F5AE9BCBDCD /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F815183B41F0A9FD9A083753E08EAB /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		0CC5ACFB64B4493D4506A55136C9E4E2 /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		0EC4EAA0C6810500B0934E8F8CAFFBE5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		128252DDE8F09486FE09954BE0AA08CE /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
 		1513AC65BDEB8071AF27DA1264F4638A /* Pods-SplatStagesFramework-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SplatStagesFramework-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2629C6C2409DAE9FE4F9B7D310CE6558 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		196E71B529B87A360B4848A88D3ABB21 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		25A5AF7956F3BD6FF63E88D39F2FACB3 /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
+		26C319F18BBCB803945C567E302C7137 /* ActionSheetPicker-3.0-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0-Private.xcconfig"; sourceTree = "<group>"; };
 		30D2687729912CDD0E964E5EA2C5357E /* libPods-SplatStagesFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		358081C62D155F3F20224044EC2940EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		36A0E7ABB9451E0BD7340BB33CEB7D47 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		3F5920A29CE6399DF3429B6030AB92F7 /* NSAttributedString+CCLFormat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat-prefix.pch"; sourceTree = "<group>"; };
 		3FB3C4067E12331349041CD869A90EAF /* Pods-SplatStages-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStages-resources.sh"; sourceTree = "<group>"; };
+		40013D64B3EB7B8D6D1BB6ADA024F6A7 /* Pods-SplatStages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SplatStages-dummy.m"; sourceTree = "<group>"; };
+		4CA781ABEB8320364635C4AE55DFEC58 /* NSAttributedString+CCLFormat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat-dummy.m"; sourceTree = "<group>"; };
+		4CC3641E21B3AE2DF83981EBEAF7D64E /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		4E94775B4CE8219C19320B7F96BED873 /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		4EE617F4F192AF4CBB97A5A07C032335 /* libPods-SplatStages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		542D6B75B0614324FEC5E22593B5EEBF /* Pods-SplatStagesFramework-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SplatStagesFramework-acknowledgements.plist"; sourceTree = "<group>"; };
-		5641049D8067520C3DF485C4034253B5 /* Pods-SplatStages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStages.debug.xcconfig"; sourceTree = "<group>"; };
-		5AEBEAEF9349F954CE0EA5E527D5054B /* NSAttributedString+CCLFormat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat-dummy.m"; sourceTree = "<group>"; };
-		5C6B305597541B2CB887A2121293B866 /* libNSAttributedString+CCLFormat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSAttributedString+CCLFormat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C622BA9C29E91CD485FDB22C1512FF1 /* Pods-SplatStages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStages.release.xcconfig"; sourceTree = "<group>"; };
+		5C3C8F967DE97C6324A769A11D16E93F /* Pods-SplatStages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStages.release.xcconfig"; sourceTree = "<group>"; };
+		62C84E64B3FD172C97DBDCF5157C5EC3 /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		67FC37AA84769FC46FAAF0EC1BC6D064 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		68ECB138F343224435DAF13D6D442F66 /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
+		6AE78B14C8EF5280D6239D4B4ED85D93 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
 		6E36CF7DB4A41F1FD9B4048803A37398 /* Pods-SplatStagesFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStagesFramework.debug.xcconfig"; sourceTree = "<group>"; };
-		70E59A22378B57EBE9E0CD10396E54C7 /* NSAttributedString+CCLFormat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat-prefix.pch"; sourceTree = "<group>"; };
-		77BEA90B56D0A5BF1D33535069424D71 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7876BDB3D192339B858D1123D53561B7 /* MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
-		7DF9D7A905E5E73E4E0B774F90D880CB /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		81707F2486D87636DBAF2E93FFF5A90D /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		903DA5D0EC9B6F2EA8F4F24DE5BFB620 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		78241C88CB6082F66D8DC133355157A0 /* libActionSheetPicker-3.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libActionSheetPicker-3.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		885CE700881023F0012142D199F6648B /* ActionSheetPicker-3.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.xcconfig"; sourceTree = "<group>"; };
+		8C0A7424E4D1C8FD13E17F7FDAD5FACE /* libNSAttributedString+CCLFormat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSAttributedString+CCLFormat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91624DA6CDB56AF6F7F44DD703F4D538 /* Pods-SplatStages-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SplatStages-acknowledgements.markdown"; sourceTree = "<group>"; };
+		92C98F641054EE587CE3E5E41E2EB2AA /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		9A4CDCC5D84D5586D391169DC76081DE /* NSAttributedString+CCLFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat.m"; sourceTree = "<group>"; };
 		9AD047349AFF1407980FF36DF4E61401 /* Pods-SplatStagesFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStagesFramework.release.xcconfig"; sourceTree = "<group>"; };
-		A23902BC2C11A4B37422D05A636824F9 /* Pods-SplatStages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SplatStages-dummy.m"; sourceTree = "<group>"; };
-		AD2699B4094DCCC259BA89ECCC923215 /* NSAttributedString+CCLFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSAttributedString+CCLFormat.xcconfig"; sourceTree = "<group>"; };
+		A9542516B4550B1F0B3D38AD770561F3 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		AA850FB64CACAC68BD0C8B9B6B85AD09 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B7EB0A2150E4C0405E43F367A13C2DC4 /* MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
 		B9C0755BFA464123B413B80ED40655D9 /* Pods-SplatStagesFramework-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStagesFramework-resources.sh"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC840935EEFDD4B3AAB140193DE101E8 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		BE53740B7A8939EB62D6EA1A9CC6510B /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		BFB6250E69758149B5B6107779AB696C /* NSAttributedString+CCLFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSAttributedString+CCLFormat.xcconfig"; sourceTree = "<group>"; };
 		C07980390D63ED28F337EBE85DEE7A06 /* Pods-SplatStagesFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SplatStagesFramework-dummy.m"; sourceTree = "<group>"; };
-		E1879B1FC4BF406C2D368705ED29A201 /* NSAttributedString+CCLFormat-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSAttributedString+CCLFormat-Private.xcconfig"; sourceTree = "<group>"; };
-		E7EB417F49D979D12F173113C69A9046 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		C426F9042779AC2CCDCBD6F5A1736984 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		C774EEA6D3B29F7198D37287123D9186 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		C983C01C86B50966871C79AAB3449B5A /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
+		CD087B51C2B7603F3A2A372F99168A19 /* NSAttributedString+CCLFormat-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSAttributedString+CCLFormat-Private.xcconfig"; sourceTree = "<group>"; };
+		CF832144CE975825C73BB55CA52B8849 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DA5DDE35B2577B44920E8735CD496897 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		E2542C22448652199BFE74D529F330B0 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		E7062EDD38FF2053A30E3A6C2B1DDFC9 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
 		E875F7EA7CBBDFEA1C93AA713E122C2A /* Pods-SplatStages-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SplatStages-acknowledgements.plist"; sourceTree = "<group>"; };
-		F72FA0F7EAFBB50B88DADFF65640AEF0 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		F91040BDBE282C613D854FEE92184F1C /* NSAttributedString+CCLFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat.h"; sourceTree = "<group>"; };
-		FCD5C5CA607153ACA8EEF2EEFE819DAF /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		EA124C1642CA26D219DB85A38AAE36A0 /* NSAttributedString+CCLFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat.h"; sourceTree = "<group>"; };
+		ED0B2B4578014CAC248FD6A4D0D40722 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		F2DA378C6C34A4087791380193600A0D /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		FC40F7CBF29C50FD821795305F3BDAD1 /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		FCB6D5C46A14B0E7BF422901D0D902DE /* Pods-SplatStages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStages.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		27B8BA88B972732BA2C87C70C3A1DD6D /* Frameworks */ = {
+		1E33C11D7317B1703DDA7057977D92FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F719AD11C0F93C52AC91F4B057F121B3 /* Foundation.framework in Frameworks */,
+				6165EDA75EB5EB47E390896D0F712C46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E71A58CEB179E9BEF8DBD5284ABB126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				327D30FE9CB914430335B109B3AC80DA /* Foundation.framework in Frameworks */,
+				27E329557662B002D0CB39FD1A2644EE /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,26 +155,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D18498BD324CC98066FC9012AAEA0996 /* Frameworks */ = {
+		78A5B034B22408B29740DD2372BC1B1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C4AF368D7BCF9B78A4E9B6EE0310471 /* CoreGraphics.framework in Frameworks */,
-				17E232A543689C66D6C4AF73DFAB2DBC /* Foundation.framework in Frameworks */,
+				E5A60060F98BC1AC5C457F30FB0AA41D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1561BE2D9230BEFC78A619C3BBABF58 /* Frameworks */ = {
+		9282D8B754E76BC71ABE190DEEB3AC15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32C955F9307FD50822E2E584FB3F528D /* Foundation.framework in Frameworks */,
+				D6DEC947E6FC54002F5B9F3D8F6AC0DA /* CoreGraphics.framework in Frameworks */,
+				DC82216A65BEEDEDD6D376C7BD1D70C6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05197A104E4021740829026BC11358D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABDA610B65B9E5571A0C26B3A620EF3A /* ActionSheetPicker-3.0 */,
+				79146F8924B33D9E3D5AF9E161102528 /* MBProgressHUD */,
+				49FF75D7ADFF800420C93F44AB21C401 /* NSAttributedString+CCLFormat */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39CF33B2E976FD3E12A7D9F562B97919 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1ED449DF238AF2A828EE2A75C3C055C3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				885CE700881023F0012142D199F6648B /* ActionSheetPicker-3.0.xcconfig */,
+				26C319F18BBCB803945C567E302C7137 /* ActionSheetPicker-3.0-Private.xcconfig */,
+				0CC5ACFB64B4493D4506A55136C9E4E2 /* ActionSheetPicker-3.0-dummy.m */,
+				C983C01C86B50966871C79AAB3449B5A /* ActionSheetPicker-3.0-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
 		32FBBDBBD4633B34CF58F9BF324B817C /* Pods-SplatStagesFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,26 +219,28 @@
 			path = "Target Support Files/Pods-SplatStagesFramework";
 			sourceTree = "<group>";
 		};
+		39CF33B2E976FD3E12A7D9F562B97919 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				358081C62D155F3F20224044EC2940EA /* CoreGraphics.framework */,
+				D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */,
+				0EC4EAA0C6810500B0934E8F8CAFFBE5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		40010AC248991A2398C290D35983A90D /* Pods-SplatStages */ = {
 			isa = PBXGroup;
 			children = (
 				91624DA6CDB56AF6F7F44DD703F4D538 /* Pods-SplatStages-acknowledgements.markdown */,
 				E875F7EA7CBBDFEA1C93AA713E122C2A /* Pods-SplatStages-acknowledgements.plist */,
-				A23902BC2C11A4B37422D05A636824F9 /* Pods-SplatStages-dummy.m */,
+				40013D64B3EB7B8D6D1BB6ADA024F6A7 /* Pods-SplatStages-dummy.m */,
 				3FB3C4067E12331349041CD869A90EAF /* Pods-SplatStages-resources.sh */,
-				5641049D8067520C3DF485C4034253B5 /* Pods-SplatStages.debug.xcconfig */,
-				6C622BA9C29E91CD485FDB22C1512FF1 /* Pods-SplatStages.release.xcconfig */,
+				FCB6D5C46A14B0E7BF422901D0D902DE /* Pods-SplatStages.debug.xcconfig */,
+				5C3C8F967DE97C6324A769A11D16E93F /* Pods-SplatStages.release.xcconfig */,
 			);
 			name = "Pods-SplatStages";
 			path = "Target Support Files/Pods-SplatStages";
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9394A58D265A8CD1DEB9085F67D2619C /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		46A45845945610B6C3CA901CDDAC8D59 /* Targets Support Files */ = {
@@ -162,85 +252,96 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5D5F7C9EC918C78C458D5860245C21FA /* Support Files */ = {
+		49FF75D7ADFF800420C93F44AB21C401 /* NSAttributedString+CCLFormat */ = {
 			isa = PBXGroup;
 			children = (
-				AD2699B4094DCCC259BA89ECCC923215 /* NSAttributedString+CCLFormat.xcconfig */,
-				E1879B1FC4BF406C2D368705ED29A201 /* NSAttributedString+CCLFormat-Private.xcconfig */,
-				5AEBEAEF9349F954CE0EA5E527D5054B /* NSAttributedString+CCLFormat-dummy.m */,
-				70E59A22378B57EBE9E0CD10396E54C7 /* NSAttributedString+CCLFormat-prefix.pch */,
+				EA124C1642CA26D219DB85A38AAE36A0 /* NSAttributedString+CCLFormat.h */,
+				9A4CDCC5D84D5586D391169DC76081DE /* NSAttributedString+CCLFormat.m */,
+				BDA791F631AAE5EDA1C1BC11FD7BE6E8 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/NSAttributedString+CCLFormat";
+			path = "NSAttributedString+CCLFormat";
 			sourceTree = "<group>";
 		};
-		74ADBD2D16989187EE9E2AF7A3BB38A3 /* Pods */ = {
+		79146F8924B33D9E3D5AF9E161102528 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				A91D2303200B080C81C0C7AE073CE6D0 /* MBProgressHUD */,
-				800E8EB51F61A802ED142845B707A621 /* NSAttributedString+CCLFormat */,
+				AA850FB64CACAC68BD0C8B9B6B85AD09 /* MBProgressHUD.h */,
+				A9542516B4550B1F0B3D38AD770561F3 /* MBProgressHUD.m */,
+				EDC95F08C5F13DFB825B98F0F97F811E /* Support Files */,
 			);
-			name = Pods;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				74ADBD2D16989187EE9E2AF7A3BB38A3 /* Pods */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				05197A104E4021740829026BC11358D5 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				46A45845945610B6C3CA901CDDAC8D59 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		800E8EB51F61A802ED142845B707A621 /* NSAttributedString+CCLFormat */ = {
+		ABDA610B65B9E5571A0C26B3A620EF3A /* ActionSheetPicker-3.0 */ = {
 			isa = PBXGroup;
 			children = (
-				F91040BDBE282C613D854FEE92184F1C /* NSAttributedString+CCLFormat.h */,
-				0EBF72471AE9DEF7CA318E31FB70AC93 /* NSAttributedString+CCLFormat.m */,
-				5D5F7C9EC918C78C458D5860245C21FA /* Support Files */,
+				6AE78B14C8EF5280D6239D4B4ED85D93 /* AbstractActionSheetPicker.h */,
+				BE53740B7A8939EB62D6EA1A9CC6510B /* AbstractActionSheetPicker.m */,
+				BC840935EEFDD4B3AAB140193DE101E8 /* ActionSheetCustomPicker.h */,
+				E2542C22448652199BFE74D529F330B0 /* ActionSheetCustomPicker.m */,
+				196E71B529B87A360B4848A88D3ABB21 /* ActionSheetCustomPickerDelegate.h */,
+				E7062EDD38FF2053A30E3A6C2B1DDFC9 /* ActionSheetDatePicker.h */,
+				92C98F641054EE587CE3E5E41E2EB2AA /* ActionSheetDatePicker.m */,
+				DA5DDE35B2577B44920E8735CD496897 /* ActionSheetDistancePicker.h */,
+				03F815183B41F0A9FD9A083753E08EAB /* ActionSheetDistancePicker.m */,
+				ED0B2B4578014CAC248FD6A4D0D40722 /* ActionSheetLocalePicker.h */,
+				CF832144CE975825C73BB55CA52B8849 /* ActionSheetLocalePicker.m */,
+				F2DA378C6C34A4087791380193600A0D /* ActionSheetMultipleStringPicker.h */,
+				25A5AF7956F3BD6FF63E88D39F2FACB3 /* ActionSheetMultipleStringPicker.m */,
+				68ECB138F343224435DAF13D6D442F66 /* ActionSheetPicker.h */,
+				36A0E7ABB9451E0BD7340BB33CEB7D47 /* ActionSheetStringPicker.h */,
+				128252DDE8F09486FE09954BE0AA08CE /* ActionSheetStringPicker.m */,
+				62C84E64B3FD172C97DBDCF5157C5EC3 /* DistancePickerView.h */,
+				67FC37AA84769FC46FAAF0EC1BC6D064 /* DistancePickerView.m */,
+				4E94775B4CE8219C19320B7F96BED873 /* SWActionSheet.h */,
+				FC40F7CBF29C50FD821795305F3BDAD1 /* SWActionSheet.m */,
+				1ED449DF238AF2A828EE2A75C3C055C3 /* Support Files */,
 			);
-			path = "NSAttributedString+CCLFormat";
+			path = "ActionSheetPicker-3.0";
 			sourceTree = "<group>";
 		};
-		9394A58D265A8CD1DEB9085F67D2619C /* iOS */ = {
+		BDA791F631AAE5EDA1C1BC11FD7BE6E8 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				903DA5D0EC9B6F2EA8F4F24DE5BFB620 /* CoreGraphics.framework */,
-				2629C6C2409DAE9FE4F9B7D310CE6558 /* Foundation.framework */,
+				BFB6250E69758149B5B6107779AB696C /* NSAttributedString+CCLFormat.xcconfig */,
+				CD087B51C2B7603F3A2A372F99168A19 /* NSAttributedString+CCLFormat-Private.xcconfig */,
+				4CA781ABEB8320364635C4AE55DFEC58 /* NSAttributedString+CCLFormat-dummy.m */,
+				3F5920A29CE6399DF3429B6030AB92F7 /* NSAttributedString+CCLFormat-prefix.pch */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		A91D2303200B080C81C0C7AE073CE6D0 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				81707F2486D87636DBAF2E93FFF5A90D /* MBProgressHUD.h */,
-				E7EB417F49D979D12F173113C69A9046 /* MBProgressHUD.m */,
-				DDC0075C93455C58140D66DA09802F17 /* Support Files */,
-			);
-			path = MBProgressHUD;
+			name = "Support Files";
+			path = "../Target Support Files/NSAttributedString+CCLFormat";
 			sourceTree = "<group>";
 		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				77BEA90B56D0A5BF1D33535069424D71 /* libMBProgressHUD.a */,
-				5C6B305597541B2CB887A2121293B866 /* libNSAttributedString+CCLFormat.a */,
-				0A92517DA2F0706C5606B9858B1FBB8C /* libPods-SplatStages.a */,
+				78241C88CB6082F66D8DC133355157A0 /* libActionSheetPicker-3.0.a */,
+				028681853131462DC8152F5AE9BCBDCD /* libMBProgressHUD.a */,
+				8C0A7424E4D1C8FD13E17F7FDAD5FACE /* libNSAttributedString+CCLFormat.a */,
+				4EE617F4F192AF4CBB97A5A07C032335 /* libPods-SplatStages.a */,
 				30D2687729912CDD0E964E5EA2C5357E /* libPods-SplatStagesFramework.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DDC0075C93455C58140D66DA09802F17 /* Support Files */ = {
+		EDC95F08C5F13DFB825B98F0F97F811E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F72FA0F7EAFBB50B88DADFF65640AEF0 /* MBProgressHUD.xcconfig */,
-				7876BDB3D192339B858D1123D53561B7 /* MBProgressHUD-Private.xcconfig */,
-				7DF9D7A905E5E73E4E0B774F90D880CB /* MBProgressHUD-dummy.m */,
-				FCD5C5CA607153ACA8EEF2EEFE819DAF /* MBProgressHUD-prefix.pch */,
+				4CC3641E21B3AE2DF83981EBEAF7D64E /* MBProgressHUD.xcconfig */,
+				B7EB0A2150E4C0405E43F367A13C2DC4 /* MBProgressHUD-Private.xcconfig */,
+				C774EEA6D3B29F7198D37287123D9186 /* MBProgressHUD-dummy.m */,
+				C426F9042779AC2CCDCBD6F5A1736984 /* MBProgressHUD-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MBProgressHUD";
@@ -249,19 +350,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1E825732431D12B59C9EF59BE448A7FB /* Headers */ = {
+		432F33D826B6922FD043C3FCE9F7DC18 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E2162230EBA7AD3677D46B4B8D70860 /* MBProgressHUD.h in Headers */,
+				8BB0C33C784331C522B2546CFECB02F3 /* NSAttributedString+CCLFormat.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CCE54F90F90524951B884D3AF453A2A4 /* Headers */ = {
+		756E83A0A9E375BB2681A817E70E63E2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15769B70DB8065D666ECC3F6012425BD /* NSAttributedString+CCLFormat.h in Headers */,
+				32DB0046433BC4F30BCDE7646DF56C01 /* AbstractActionSheetPicker.h in Headers */,
+				DA5B6AB2F923DFD90231CEAAAACF2326 /* ActionSheetCustomPicker.h in Headers */,
+				4D1AEB1F54F0E81255DF7D85CCD2C2A6 /* ActionSheetCustomPickerDelegate.h in Headers */,
+				2FF11E1F6923A8852D35004BFD74217E /* ActionSheetDatePicker.h in Headers */,
+				36D727A27B7C05EEC0976DF4D3F594FF /* ActionSheetDistancePicker.h in Headers */,
+				F6196EDB9BC5CF8F5B9B1810FA7968F0 /* ActionSheetLocalePicker.h in Headers */,
+				804E234604CDA5F4932784E4ABD487BE /* ActionSheetMultipleStringPicker.h in Headers */,
+				1ED630702EB1F817A8AA39CB2E347B50 /* ActionSheetPicker.h in Headers */,
+				06623A22325A60EC90C44E5D6631E548 /* ActionSheetStringPicker.h in Headers */,
+				0CE45ABA4C6DB70913A6357CE7564456 /* DistancePickerView.h in Headers */,
+				FA7D9A47F80AC8D2F43EA5847F1EDBE3 /* SWActionSheet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CE6A2D849CA2CB9B81298E28ACAB4DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C15DB895282E34ABBDB3FEA3576A1C3 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,55 +397,20 @@
 			buildRules = (
 			);
 			dependencies = (
-				BED94C43245A3170D56F15235A8362C4 /* PBXTargetDependency */,
+				BBF12D609CFF31A5058BEA6143918026 /* PBXTargetDependency */,
 			);
 			name = "Pods-SplatStagesFramework";
 			productName = "Pods-SplatStagesFramework";
 			productReference = 30D2687729912CDD0E964E5EA2C5357E /* libPods-SplatStagesFramework.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		7E99790A9A64ED29A34C03CA0CA25F86 /* NSAttributedString+CCLFormat */ = {
+		1400DEEBDD692C84EE5B2798597E29E3 /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE7E2B2E5E39A127E0644AE2D3A85CA0 /* Build configuration list for PBXNativeTarget "NSAttributedString+CCLFormat" */;
+			buildConfigurationList = 35EB001A18C373470D335F4707541BBA /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
-				301DC86BAD1C45AC0964EAA2EB47A870 /* Sources */,
-				27B8BA88B972732BA2C87C70C3A1DD6D /* Frameworks */,
-				CCE54F90F90524951B884D3AF453A2A4 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "NSAttributedString+CCLFormat";
-			productName = "NSAttributedString+CCLFormat";
-			productReference = 5C6B305597541B2CB887A2121293B866 /* libNSAttributedString+CCLFormat.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		8AE29758E80CB7FE9DC0A315EA56BD68 /* Pods-SplatStages */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 20DD0FB53D5260B13CCF1C173EEE3F3A /* Build configuration list for PBXNativeTarget "Pods-SplatStages" */;
-			buildPhases = (
-				99462FE838D7D73F81511874D2FAD41E /* Sources */,
-				E1561BE2D9230BEFC78A619C3BBABF58 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6F6CDBC011531B957FD1C955A5E91C70 /* PBXTargetDependency */,
-				5185B1FF5C7C056C9319634AFA2A73D7 /* PBXTargetDependency */,
-			);
-			name = "Pods-SplatStages";
-			productName = "Pods-SplatStages";
-			productReference = 0A92517DA2F0706C5606B9858B1FBB8C /* libPods-SplatStages.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		90ECC13FD4C3A60FFFBA75D7F6FDC96E /* MBProgressHUD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 57E2ACF7DDF5F1CFAA22A885C76FA056 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
-			buildPhases = (
-				D087858DC95C3D959B5909F94DA0278C /* Sources */,
-				D18498BD324CC98066FC9012AAEA0996 /* Frameworks */,
-				1E825732431D12B59C9EF59BE448A7FB /* Headers */,
+				4EE3C7ADEBAB88DA03D0AEF1B6B0372C /* Sources */,
+				9282D8B754E76BC71ABE190DEEB3AC15 /* Frameworks */,
+				9CE6A2D849CA2CB9B81298E28ACAB4DD /* Headers */,
 			);
 			buildRules = (
 			);
@@ -334,7 +418,59 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = 77BEA90B56D0A5BF1D33535069424D71 /* libMBProgressHUD.a */;
+			productReference = 028681853131462DC8152F5AE9BCBDCD /* libMBProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		192F58EFC5688E7D920DDBDFCFDA203A /* ActionSheetPicker-3.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0823D661BAA94FC86CC8E04C55FD07E /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */;
+			buildPhases = (
+				25249F99A7DAFAE055388627E7D74247 /* Sources */,
+				2E71A58CEB179E9BEF8DBD5284ABB126 /* Frameworks */,
+				756E83A0A9E375BB2681A817E70E63E2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActionSheetPicker-3.0";
+			productName = "ActionSheetPicker-3.0";
+			productReference = 78241C88CB6082F66D8DC133355157A0 /* libActionSheetPicker-3.0.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		43341247DEE909D82EF275A6C0200112 /* NSAttributedString+CCLFormat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A051E15BE9B68E1749792616E524EC /* Build configuration list for PBXNativeTarget "NSAttributedString+CCLFormat" */;
+			buildPhases = (
+				41258840209E3455BBB5BDAF9B153663 /* Sources */,
+				78A5B034B22408B29740DD2372BC1B1F /* Frameworks */,
+				432F33D826B6922FD043C3FCE9F7DC18 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NSAttributedString+CCLFormat";
+			productName = "NSAttributedString+CCLFormat";
+			productReference = 8C0A7424E4D1C8FD13E17F7FDAD5FACE /* libNSAttributedString+CCLFormat.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EF7FFA4B00AD2AE3E384B2E23CA06883 /* Pods-SplatStages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED067FAADB25B5EEE96385B89E8E54B /* Build configuration list for PBXNativeTarget "Pods-SplatStages" */;
+			buildPhases = (
+				F1B97DB732FFF0C506838BD9186D13F3 /* Sources */,
+				1E33C11D7317B1703DDA7057977D92FF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9754F755B3A62F3DE492B37B5A9DC862 /* PBXTargetDependency */,
+				4B201109F95766D32F32D7CE69022C58 /* PBXTargetDependency */,
+			);
+			name = "Pods-SplatStages";
+			productName = "Pods-SplatStages";
+			productReference = 4EE617F4F192AF4CBB97A5A07C032335 /* libPods-SplatStages.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -358,21 +494,39 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90ECC13FD4C3A60FFFBA75D7F6FDC96E /* MBProgressHUD */,
-				7E99790A9A64ED29A34C03CA0CA25F86 /* NSAttributedString+CCLFormat */,
-				8AE29758E80CB7FE9DC0A315EA56BD68 /* Pods-SplatStages */,
+				192F58EFC5688E7D920DDBDFCFDA203A /* ActionSheetPicker-3.0 */,
+				1400DEEBDD692C84EE5B2798597E29E3 /* MBProgressHUD */,
+				43341247DEE909D82EF275A6C0200112 /* NSAttributedString+CCLFormat */,
+				EF7FFA4B00AD2AE3E384B2E23CA06883 /* Pods-SplatStages */,
 				12A16C6730F4E9624A67B230F8EE9BF4 /* Pods-SplatStagesFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		301DC86BAD1C45AC0964EAA2EB47A870 /* Sources */ = {
+		25249F99A7DAFAE055388627E7D74247 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FB52408D1910655BD113D4BB1D9959 /* NSAttributedString+CCLFormat-dummy.m in Sources */,
-				EB838F19494BF60549B28E5F3E2A1B1E /* NSAttributedString+CCLFormat.m in Sources */,
+				6E32EB2B2DA97B2BF41642E73074B34F /* AbstractActionSheetPicker.m in Sources */,
+				65D008810B0EE1B06C32B59BEDD933A1 /* ActionSheetCustomPicker.m in Sources */,
+				082D739BECDDA2E9A55C5F7702C90B1B /* ActionSheetDatePicker.m in Sources */,
+				494D46B3D653C5D60E4E0F53A9ACDAF2 /* ActionSheetDistancePicker.m in Sources */,
+				19D3D0AF86F9A9F2E7F275FDC0BA3FF3 /* ActionSheetLocalePicker.m in Sources */,
+				B639E4793B7BFCF71E9133E7A31C6486 /* ActionSheetMultipleStringPicker.m in Sources */,
+				BBC92A4659AC716D0BAAA752B44B0442 /* ActionSheetPicker-3.0-dummy.m in Sources */,
+				AED3AA4B9AF78BBDB1EFB34724A51781 /* ActionSheetStringPicker.m in Sources */,
+				9E379577AE3AACA3C7D2FB3792A8FB22 /* DistancePickerView.m in Sources */,
+				46637C99A7AF65C823B55D8B05F49414 /* SWActionSheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41258840209E3455BBB5BDAF9B153663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8ED52C16A8F246C7A56D3AF95DC6C57 /* NSAttributedString+CCLFormat-dummy.m in Sources */,
+				88983C19D4C8F3940EBEB0BDC9502BFE /* NSAttributedString+CCLFormat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,57 +538,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99462FE838D7D73F81511874D2FAD41E /* Sources */ = {
+		4EE3C7ADEBAB88DA03D0AEF1B6B0372C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3204B38E80CCD3C6FD6E56EF13B0F607 /* Pods-SplatStages-dummy.m in Sources */,
+				DEEF10F224EEA23744606B6B2FC9A02B /* MBProgressHUD-dummy.m in Sources */,
+				6F150F6BC88A5939A5C9F6461B530419 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D087858DC95C3D959B5909F94DA0278C /* Sources */ = {
+		F1B97DB732FFF0C506838BD9186D13F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E3607D10A0EA4B65D7AD4838F9640D9 /* MBProgressHUD-dummy.m in Sources */,
-				F2D03F3AF61BF02CF01D203A805CEFE7 /* MBProgressHUD.m in Sources */,
+				B21CA3F97A3EFB1FD57B8E095762602D /* Pods-SplatStages-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5185B1FF5C7C056C9319634AFA2A73D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "NSAttributedString+CCLFormat";
-			target = 7E99790A9A64ED29A34C03CA0CA25F86 /* NSAttributedString+CCLFormat */;
-			targetProxy = 6E7C174698CFECD69D6A9879C0512230 /* PBXContainerItemProxy */;
-		};
-		6F6CDBC011531B957FD1C955A5E91C70 /* PBXTargetDependency */ = {
+		4B201109F95766D32F32D7CE69022C58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
-			target = 90ECC13FD4C3A60FFFBA75D7F6FDC96E /* MBProgressHUD */;
-			targetProxy = 4380D8686F517E56BD52FDB0939F85B9 /* PBXContainerItemProxy */;
+			target = 1400DEEBDD692C84EE5B2798597E29E3 /* MBProgressHUD */;
+			targetProxy = F5BF8BB813EE86FB7CB837752D741296 /* PBXContainerItemProxy */;
 		};
-		BED94C43245A3170D56F15235A8362C4 /* PBXTargetDependency */ = {
+		9754F755B3A62F3DE492B37B5A9DC862 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ActionSheetPicker-3.0";
+			target = 192F58EFC5688E7D920DDBDFCFDA203A /* ActionSheetPicker-3.0 */;
+			targetProxy = 6A63486C7F0AE9B136F056A7FA155B58 /* PBXContainerItemProxy */;
+		};
+		BBF12D609CFF31A5058BEA6143918026 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "NSAttributedString+CCLFormat";
-			target = 7E99790A9A64ED29A34C03CA0CA25F86 /* NSAttributedString+CCLFormat */;
-			targetProxy = 61678BE459D5DBCFE08F3DAF0ACAF394 /* PBXContainerItemProxy */;
+			target = 43341247DEE909D82EF275A6C0200112 /* NSAttributedString+CCLFormat */;
+			targetProxy = 3D0048A2E95E9357CA166B8D28303EA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2114CCCB8010AD4E3ECCE92BD2B80D45 /* Debug */ = {
+		11FBF3A1D693B20406A8393CCE3FBE13 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7876BDB3D192339B858D1123D53561B7 /* MBProgressHUD-Private.xcconfig */;
+			baseConfigurationReference = FCB6D5C46A14B0E7BF422901D0D902DE /* Pods-SplatStages.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -457,12 +611,12 @@
 			};
 			name = Release;
 		};
-		86CB705C0DCAEF955CADB59E5ED00A5C /* Debug */ = {
+		500E7BF4D4CE282AD0DA605BF2203A05 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1879B1FC4BF406C2D368705ED29A201 /* NSAttributedString+CCLFormat-Private.xcconfig */;
+			baseConfigurationReference = 26C319F18BBCB803945C567E302C7137 /* ActionSheetPicker-3.0-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/NSAttributedString+CCLFormat/NSAttributedString+CCLFormat-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -473,9 +627,9 @@
 			};
 			name = Debug;
 		};
-		9C5C17BC44C4FE3729522A9DDA8B0E67 /* Release */ = {
+		A54ACEB418B7B7612BCA7EF834B73446 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C622BA9C29E91CD485FDB22C1512FF1 /* Pods-SplatStages.release.xcconfig */;
+			baseConfigurationReference = 5C3C8F967DE97C6324A769A11D16E93F /* Pods-SplatStages.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -528,9 +682,41 @@
 			};
 			name = Debug;
 		};
-		BC5AC88035D5B32B7D6CDF6D2CFA9595 /* Release */ = {
+		AB4ADCE52C3FE4186882A4B53CE9FCA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7876BDB3D192339B858D1123D53561B7 /* MBProgressHUD-Private.xcconfig */;
+			baseConfigurationReference = 26C319F18BBCB803945C567E302C7137 /* ActionSheetPicker-3.0-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AD57585FC9F7281D81022F9D89D57C95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7EB0A2150E4C0405E43F367A13C2DC4 /* MBProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D39539B6DF16FEA6059EF7A9600A2171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7EB0A2150E4C0405E43F367A13C2DC4 /* MBProgressHUD-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
@@ -544,9 +730,25 @@
 			};
 			name = Release;
 		};
-		D5D3C92C0FA754A4EF277B6B32E60D72 /* Release */ = {
+		DDD7084AF5D9F5D213C0C215D69D9281 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1879B1FC4BF406C2D368705ED29A201 /* NSAttributedString+CCLFormat-Private.xcconfig */;
+			baseConfigurationReference = CD087B51C2B7603F3A2A372F99168A19 /* NSAttributedString+CCLFormat-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NSAttributedString+CCLFormat/NSAttributedString+CCLFormat-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F0A1A95F7EFDD9679A0886AEDA84FA87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD087B51C2B7603F3A2A372F99168A19 /* NSAttributedString+CCLFormat-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/NSAttributedString+CCLFormat/NSAttributedString+CCLFormat-prefix.pch";
@@ -610,34 +812,9 @@
 			};
 			name = Debug;
 		};
-		FF61FD14A70FC264B92A640B89D436E7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5641049D8067520C3DF485C4034253B5 /* Pods-SplatStages.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20DD0FB53D5260B13CCF1C173EEE3F3A /* Build configuration list for PBXNativeTarget "Pods-SplatStages" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FF61FD14A70FC264B92A640B89D436E7 /* Debug */,
-				9C5C17BC44C4FE3729522A9DDA8B0E67 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -647,11 +824,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57E2ACF7DDF5F1CFAA22A885C76FA056 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+		35EB001A18C373470D335F4707541BBA /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2114CCCB8010AD4E3ECCE92BD2B80D45 /* Debug */,
-				BC5AC88035D5B32B7D6CDF6D2CFA9595 /* Release */,
+				AD57585FC9F7281D81022F9D89D57C95 /* Debug */,
+				D39539B6DF16FEA6059EF7A9600A2171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96A051E15BE9B68E1749792616E524EC /* Build configuration list for PBXNativeTarget "NSAttributedString+CCLFormat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDD7084AF5D9F5D213C0C215D69D9281 /* Debug */,
+				F0A1A95F7EFDD9679A0886AEDA84FA87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED067FAADB25B5EEE96385B89E8E54B /* Build configuration list for PBXNativeTarget "Pods-SplatStages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11FBF3A1D693B20406A8393CCE3FBE13 /* Debug */,
+				A54ACEB418B7B7612BCA7EF834B73446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -665,11 +860,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE7E2B2E5E39A127E0644AE2D3A85CA0 /* Build configuration list for PBXNativeTarget "NSAttributedString+CCLFormat" */ = {
+		E0823D661BAA94FC86CC8E04C55FD07E /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86CB705C0DCAEF955CADB59E5ED00A5C /* Debug */,
-				D5D3C92C0FA754A4EF277B6B32E60D72 /* Release */,
+				500E7BF4D4CE282AD0DA605BF2203A05 /* Debug */,
+				AB4ADCE52C3FE4186882A4B53CE9FCA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
