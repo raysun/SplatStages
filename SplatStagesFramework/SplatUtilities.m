@@ -6,10 +6,6 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
-#import "UIKit/UIKit.h"
-
-#import "NSAttributedString+CCLFormat.h"
-
 #import "SplatUtilities.h"
 
 @implementation SplatUtilities

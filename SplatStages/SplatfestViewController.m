@@ -102,12 +102,12 @@
 
 - (void) setupResultsView:(NSArray*) scores team:(int) team opponents:(int) opponents teamLabel:(UILabel*) teamLabel popLabel:(UILabel*) popLabel winLabel:(UILabel*) winLabel finalLabel:(UILabel*) finalLabel {
     // Get our team colour and the scores
-    UIColor* teamColour = [self colorWithHexString:[[self.teams objectAtIndex:team] objectForKey:@"colour"]];
+    UIColor* teamColour = [SplatUtilities colorWithHexString:[[self.teams objectAtIndex:team] objectForKey:@"colour"]];
     NSDictionary* teamScores = [scores objectAtIndex:team];
     NSDictionary* opposingScores = [scores objectAtIndex:opponents];
     
     // Set the team name label's text
-    [teamLabel setAttributedText:[self getTeamName:[self.teams objectAtIndex:team]]];
+    [teamLabel setAttributedText:[SplatUtilities getSplatfestTeamName:[self.teams objectAtIndex:team]]];
     
     // Get the colours we should set for the scores
     UIColor* popColour = ([[teamScores objectForKey:@"popularity"] compare:[opposingScores objectForKey:@"popularity"]] == NSOrderedDescending) ? teamColour : [UIColor whiteColor];

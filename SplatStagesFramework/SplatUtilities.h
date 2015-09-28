@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <UIKit/UIKit.h>
+
 @interface SplatUtilities : NSObject
 
 //! Convert the string to a localizable (e.g. "Moray Towers" -> "MORAY_TOWERS")
@@ -24,5 +26,8 @@
 
 //! Get the team name as a coloured NSAttributedString.
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData;
+
+//! Returns the hex string as a UIColor.
++ (UIColor*) colorWithHexString:(NSString*) hex;
 
 @end
