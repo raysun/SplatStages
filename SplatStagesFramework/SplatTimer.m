@@ -14,14 +14,13 @@
 
 @implementation SplatTimer
 
-- (id) initRotationTimerWithDate:(NSDate*) date labelOne:(UILabel*) labelOne labelTwo:(UILabel*) labelTwo textString:(NSString*) textString timeString:(NSString*) timeString timerFinishedHandler:(void (^)()) timerFinishedHandler {
+- (id) initRotationTimerWithDate:(NSDate*) date labelOne:(UILabel*) labelOne labelTwo:(UILabel*) labelTwo textString:(NSString*) textString timerFinishedHandler:(void (^)()) timerFinishedHandler {
     if (self = [super init]) {
         // Initialize variables
         self.countdownDate = date;
         self.labelOne = labelOne;
         self.labelTwo = labelTwo;
         self.textString = textString;
-        self.timeString = timeString;
         self.timerFinishedHandler = timerFinishedHandler;
         
         // Setup internals
@@ -33,7 +32,7 @@
     return self;
 }
 
-- (id) initFestivalTimerWithDate:(NSDate*) date label:(UILabel*) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)()) timerFinishedHandler {
+- (id) initFestivalTimerWithDate:(NSDate*) date label:(UILabel*) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)(NSAttributedString* teamA, NSAttributedString* teamB)) timerFinishedHandler {
     if (self = [super init]) {
         // Initialize variables
         self.countdownDate = date;
@@ -43,7 +42,7 @@
         self.teamA = teamA;
         self.teamB = teamB;
         self.useThreeNumbers = useThreeNumbers;
-        self.timerFinishedHandler = timerFinishedHandler;
+        self.festivalTimerFinishedHandler = timerFinishedHandler;
         
         // Setup internals
         self.calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
@@ -59,8 +58,8 @@
 
 - (void) runRotationTimer {
     if ([self.countdownDate timeIntervalSinceNow] <= 0.0) {
-        self.timerFinishedHandler();
         [self invalidate];
+        self.timerFinishedHandler();
     } else {
         NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
         NSString* rotationCountdownText = [NSString stringWithFormat:self.textString, [components hour], [components minute], [components second]];;
@@ -73,8 +72,8 @@
 
 - (void) runFestivalTimer {
     if ([self.countdownDate timeIntervalSinceNow] <= 0.0) {
-        self.timerFinishedHandler();
         [self invalidate];
+        self.festivalTimerFinishedHandler(self.teamA, self.teamB);
     } else {
         NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
         NSString* countdownTime;
@@ -90,10 +89,6 @@
 
 - (NSTimer*) createTimer {
     return [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:self.selector userInfo:nil repeats:true];
-}
-
-- (void) pause {
-    [self invalidate];
 }
 
 - (void) start {

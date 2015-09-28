@@ -19,6 +19,7 @@
 @property NSAttributedString* teamB;
 @property BOOL useThreeNumbers;
 @property (nonatomic, copy) void (^timerFinishedHandler)();
+@property (nonatomic, copy) void (^festivalTimerFinishedHandler)(NSAttributedString* teamA, NSAttributedString* teamB);
 
 // Internals
 @property NSCalendar* calendar;
@@ -26,9 +27,8 @@
 @property SEL selector;
 @property NSTimer* internalTimer;
 
-- (id) initRotationTimerWithDate:(NSDate*) date labelOne:(UILabel*) labelOne labelTwo:(UILabel*) labelTwo textString:(NSString*) textString timeString:(NSString*) timeString timerFinishedHandler:(void (^)()) timerFinishedHandler;
-- (id) initFestivalTimerWithDate:(NSDate*) date label:(UILabel*) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)()) timerFinishedHandler;
-- (void) pause;
+- (id) initRotationTimerWithDate:(NSDate*) date labelOne:(UILabel*) labelOne labelTwo:(UILabel*) labelTwo textString:(NSString*) textString timerFinishedHandler:(void (^)()) timerFinishedHandler;
+- (id) initFestivalTimerWithDate:(NSDate*) date label:(UILabel*) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)(NSAttributedString* teamA, NSAttributedString* teamB)) timerFinishedHandler;
 - (void) start;
 - (void) invalidate;
 

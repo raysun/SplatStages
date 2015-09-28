@@ -225,7 +225,7 @@
             [self.rotationTimer invalidate];
             self.rotationTimer = nil;
         }
-        self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:regularVC.rotationCountdownLabel labelTwo:rankedVC.rotationCountdownLabel textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timeString:nil timerFinishedHandler:^() {
+        self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:regularVC.rotationCountdownLabel labelTwo:rankedVC.rotationCountdownLabel textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timerFinishedHandler:^() {
             // Rotating now! Update the UI first and update the schedule data in the background.
             NSString* rotatingNowText = NSLocalizedString(@"ROTATION_NOW", nil);
             [regularVC.rotationCountdownLabel setText:rotatingNowText];
@@ -233,7 +233,6 @@
             [self setSelectedRotation:1];
             [self setStages];
             [self scheduleStageDownloadTimer];
-            [self.rotationTimer invalidate];
             self.rotationTimer = nil;
         }];
     } else {
