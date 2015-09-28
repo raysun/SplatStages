@@ -17,7 +17,7 @@
 
 @implementation SplatDataFetcher
 
-+ (void) downloadFile:(NSString*) urlString completionHandler:(void (^)(NSData* data)) completionHandler errorHandler:(void (^)(NSError* data)) errorHandler {
++ (void) downloadFile:(NSString*) urlString completionHandler:(void (^)(NSData* data)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
     // We need an NSURLSession instance that has caching turned off.
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
@@ -27,7 +27,7 @@
     [[session dataTaskWithURL:url completionHandler:^(NSData* data, NSURLResponse* response, NSError* taskError) {
         // Check for an error first
         if (taskError) {
-            errorHandler(taskError);
+            errorHandler(taskError, @"ERROR_DOWNLOADING_DATA");
             return;
         }
         
@@ -36,7 +36,7 @@
     }] resume];
 }
 
-+ (void) downloadAndParseJson:(NSString*) urlString completionHandler:(void (^)(NSDictionary* dict)) completionHandler errorHandler:(void (^)(NSError* error)) errorHandler {
++ (void) downloadAndParseJson:(NSString*) urlString completionHandler:(void (^)(NSDictionary* dict)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
     [self downloadFile:urlString completionHandler:^(NSData* data) {
         // Attempt to parse the data.
         NSError* jsonError;
@@ -44,18 +44,18 @@
         
         // Check for a error first
         if (jsonError) {
-            errorHandler(jsonError);
+            errorHandler(jsonError, @"ERROR_PARSING_JSON");
             return;
         }
         
         // Call the completion handler.
         completionHandler(jsonDict);
-    } errorHandler:^(NSError* error) {
-        errorHandler(error);
+    } errorHandler:^(NSError* error, NSString* when) {
+        errorHandler(error, when);
     }];
 }
 
-+ (void) requestStageDataWithCallback:(void (^)(NSNumber* mode)) updateCallback errorHandler:(void (^)(NSError* error)) errorHandler {
++ (void) requestStageDataWithCallback:(void (^)(NSNumber* mode)) updateCallback errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
     NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
     
     // Get the Temporary Stage Mapping, which contains the English names for maps that aren't supported by splatoon.ink yet.
@@ -88,15 +88,15 @@
             }
             
             updateCallback(@3);
-        } errorHandler:^(NSError* error) {
-            errorHandler(error);
+        } errorHandler:^(NSError* error, NSString* when) {
+            errorHandler(error, when);
         }];
-    } errorHandler:^(NSError* error) {
-        errorHandler(error);
+    } errorHandler:^(NSError* error, NSString* when) {
+        errorHandler(error, when);
     }];
 }
 
-+ (void) requestFestivalDataWithCallback:(void (^)()) updateCallback errorHandler:(void (^)(NSError* error)) errorHandler {
++ (void) requestFestivalDataWithCallback:(void (^)()) updateCallback errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
     NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
     [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/splatfest.json" completionHandler:^(NSDictionary* data) {
         NSDictionary* splatfestData = [data objectForKey:[SplatUtilities getUserRegion]];
@@ -104,8 +104,8 @@
         [storedData synchronize];
         
         updateCallback();
-    } errorHandler:^(NSError* error) {
-        errorHandler(error);
+    } errorHandler:^(NSError* error, NSString* when) {
+        errorHandler(error, when);
     }];
 }
 

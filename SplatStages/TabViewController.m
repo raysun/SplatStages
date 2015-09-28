@@ -67,7 +67,6 @@
 
     [SplatDataFetcher requestStageDataWithCallback:^(NSNumber* mode) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self setSelectedRotation:0];
             switch ([mode integerValue]) {
                 case 1: // Data is stale
                     [self setStageLoadingFinished];
@@ -76,12 +75,13 @@
                     [self setStagesUnavailable];
                     break;
                 case 3: // Setup views and schedule timer
+                    [self setSelectedRotation:0];
                     [self setStages];
                     break;
             }
         });
-    } errorHandler:^(NSError* error) {
-        [self errorOccurred:error when:@"ERROR_GENERIC"];
+    } errorHandler:^(NSError* error, NSString* when) {
+        [self errorOccurred:error when:when];
     }];
     
 }
@@ -112,11 +112,11 @@
         [SplatDataFetcher downloadFile:[splatfestData objectForKey:@"image"] completionHandler:^(NSData* data) {
             [data writeToFile:imagePath atomically:true];
             [self setupSplatfestWithData:splatfestData splatfestId:splatfestId];
-        } errorHandler:^(NSError* error) {
-            [self errorOccurred:error when:@"ERROR_GENERIC"];
+        } errorHandler:^(NSError* error, NSString* when) {
+            [self errorOccurred:error when:when];
         }];
-    } errorHandler:^(NSError* error) {
-        [self errorOccurred:error when:@"ERROR_GENERIC"];
+    } errorHandler:^(NSError* error, NSString* when) {
+        [self errorOccurred:error when:when];
     }];
 }
 
@@ -219,22 +219,31 @@
     [rankedVC setupViewWithData:[chosenSchedule objectForKey:@"ranked"]];
     
     // Schedule the rotation timer.
-    NSDate* nextRotation = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
-    if (self.rotationTimer) {
-        [self.rotationTimer invalidate];
-        self.rotationTimer = nil;
+    if (![self getSelectedRotation] >= 1) {
+        NSDate* nextRotation = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
+        if (self.rotationTimer) {
+            [self.rotationTimer invalidate];
+            self.rotationTimer = nil;
+        }
+        self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:regularVC.rotationCountdownLabel labelTwo:rankedVC.rotationCountdownLabel textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timeString:nil timerFinishedHandler:^() {
+            // Rotating now! Update the UI first and update the schedule data in the background.
+            NSString* rotatingNowText = NSLocalizedString(@"ROTATION_NOW", nil);
+            [regularVC.rotationCountdownLabel setText:rotatingNowText];
+            [rankedVC.rotationCountdownLabel setText:rotatingNowText];
+            [self setSelectedRotation:1];
+            [self setStages];
+            [self scheduleStageDownloadTimer];
+            [self.rotationTimer invalidate];
+            self.rotationTimer = nil;
+        }];
+    } else {
+        if (self.rotationTimer) {
+            [self.rotationTimer invalidate];
+            self.rotationTimer = nil;
+        }
+        [regularVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
+        [rankedVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
     }
-    self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:regularVC.rotationCountdownLabel labelTwo:rankedVC.rotationCountdownLabel textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timeString:nil timerFinishedHandler:^() {
-        // Rotating now! Update the UI first and update the schedule data in the background.
-        NSString* rotatingNowText = NSLocalizedString(@"ROTATION_NOW", nil);
-        [regularVC.rotationCountdownLabel setText:rotatingNowText];
-        [rankedVC.rotationCountdownLabel setText:rotatingNowText];
-        [self setSelectedRotation:1];
-        [self setStages];
-        [self scheduleStageDownloadTimer];
-        [self.rotationTimer invalidate];
-        self.rotationTimer = nil;
-    }];
     
     // Invalidate the stage requeset timer.
     [self.stageRequestTimer invalidate];
