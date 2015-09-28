@@ -22,4 +22,7 @@
 //! Get our user defaults group.
 + (NSUserDefaults*) getUserDefaults;
 
+//! Get the team name as a coloured NSAttributedString.
++ (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData;
+
 @end
