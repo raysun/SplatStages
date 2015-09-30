@@ -20,7 +20,8 @@
 + (void) downloadFile:(NSString*) urlString completionHandler:(void (^)(NSData* data)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
     // We need an NSURLSession instance that has caching turned off.
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData; // Don't cache, get request each time
+    configuration.timeoutIntervalForRequest = 15; // Wait 15 seconds before timing out.
     NSURLSession* session = [NSURLSession sessionWithConfiguration:configuration];
     
     NSURL* url = [NSURL URLWithString:urlString];
