@@ -7,126 +7,126 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06623A22325A60EC90C44E5D6631E548 /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 36A0E7ABB9451E0BD7340BB33CEB7D47 /* ActionSheetStringPicker.h */; };
-		082D739BECDDA2E9A55C5F7702C90B1B /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C98F641054EE587CE3E5E41E2EB2AA /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0CE45ABA4C6DB70913A6357CE7564456 /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62C84E64B3FD172C97DBDCF5157C5EC3 /* DistancePickerView.h */; };
-		19D3D0AF86F9A9F2E7F275FDC0BA3FF3 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CF832144CE975825C73BB55CA52B8849 /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1ED630702EB1F817A8AA39CB2E347B50 /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 68ECB138F343224435DAF13D6D442F66 /* ActionSheetPicker.h */; };
-		27E329557662B002D0CB39FD1A2644EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC4EAA0C6810500B0934E8F8CAFFBE5 /* UIKit.framework */; };
-		2FF11E1F6923A8852D35004BFD74217E /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E7062EDD38FF2053A30E3A6C2B1DDFC9 /* ActionSheetDatePicker.h */; };
-		327D30FE9CB914430335B109B3AC80DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
-		32DB0046433BC4F30BCDE7646DF56C01 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE78B14C8EF5280D6239D4B4ED85D93 /* AbstractActionSheetPicker.h */; };
-		36D727A27B7C05EEC0976DF4D3F594FF /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5DDE35B2577B44920E8735CD496897 /* ActionSheetDistancePicker.h */; };
-		46637C99A7AF65C823B55D8B05F49414 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = FC40F7CBF29C50FD821795305F3BDAD1 /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		494D46B3D653C5D60E4E0F53A9ACDAF2 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F815183B41F0A9FD9A083753E08EAB /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4D1AEB1F54F0E81255DF7D85CCD2C2A6 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 196E71B529B87A360B4848A88D3ABB21 /* ActionSheetCustomPickerDelegate.h */; };
-		5C15DB895282E34ABBDB3FEA3576A1C3 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = AA850FB64CACAC68BD0C8B9B6B85AD09 /* MBProgressHUD.h */; };
-		6165EDA75EB5EB47E390896D0F712C46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
-		65D008810B0EE1B06C32B59BEDD933A1 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E2542C22448652199BFE74D529F330B0 /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6E32EB2B2DA97B2BF41642E73074B34F /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BE53740B7A8939EB62D6EA1A9CC6510B /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6F150F6BC88A5939A5C9F6461B530419 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A9542516B4550B1F0B3D38AD770561F3 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		804E234604CDA5F4932784E4ABD487BE /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F2DA378C6C34A4087791380193600A0D /* ActionSheetMultipleStringPicker.h */; };
-		88983C19D4C8F3940EBEB0BDC9502BFE /* NSAttributedString+CCLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4CDCC5D84D5586D391169DC76081DE /* NSAttributedString+CCLFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8BB0C33C784331C522B2546CFECB02F3 /* NSAttributedString+CCLFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = EA124C1642CA26D219DB85A38AAE36A0 /* NSAttributedString+CCLFormat.h */; };
-		9E379577AE3AACA3C7D2FB3792A8FB22 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC37AA84769FC46FAAF0EC1BC6D064 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AED3AA4B9AF78BBDB1EFB34724A51781 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 128252DDE8F09486FE09954BE0AA08CE /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		06FAB3FF03A01E24FA10E1D9B69D4B5A /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 47FA40D78558264CCDFD3F7680762858 /* ActionSheetMultipleStringPicker.h */; };
+		12FE34CFEE3DA12E2F26D87A8CB01A88 /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = FF92830BA003A24C9DB0B356E91FC851 /* ActionSheetPicker.h */; };
+		15382182F2D7415F2229D7F390C33873 /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2346C2EFBAD7EC968079E518EDACB3E9 /* ActionSheetStringPicker.h */; };
+		164760BEEF0592833666A433E9F978C5 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6EA522F4629CF8365F617D3DDF199 /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		23C7CDDF69801CC294B5F3A8D1CA15CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E940D592C574F09D638DEDD86DE105C /* UIKit.framework */; };
+		2C2D14E4D4285BAAF766848DAC26019A /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F044C20DCE81DE73E58CA7E115D5435 /* ActionSheetCustomPicker.h */; };
+		474389BB563BE7E62A2802CB47938B7F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CABFA7C269A078A9ED7EFC77BED90D /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4ED0176D90C68DB52FEF5617F147E874 /* NSAttributedString+CCLFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B51D9E1D71FEDDEA7B6E9ED7D3B2A51 /* NSAttributedString+CCLFormat.h */; };
+		5942709F4224D8D653A979A13DC9C8EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0271C363E6ECF20843D8FECAE9943CE /* Foundation.framework */; };
+		5960E906E45733331E8276D303A5A255 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0271C363E6ECF20843D8FECAE9943CE /* Foundation.framework */; };
+		596C1224518F00A46862D40B171A263A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0271C363E6ECF20843D8FECAE9943CE /* Foundation.framework */; };
+		6165EDA75EB5EB47E390896D0F712C46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0271C363E6ECF20843D8FECAE9943CE /* Foundation.framework */; };
+		6F4B5170502D18FE09009D46967E3ED7 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD501F66B694E56D6D423DF5C50EF40 /* ActionSheetDatePicker.h */; };
+		7136CA252DBA2737574956115C69F72D /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE01A80ED4CC1531851426F8BC5841 /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		759EE44757E44BB2AA0C0CB6EFD89AAA /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DA7C7D3065061DDB10958C544EB3B /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7A3EB383107554AA77399D7AD1CC12F3 /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = E245DBCCA4668679E3519E6619768B8E /* SWActionSheet.h */; };
+		7DA3948762541104C081F8440E649672 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 958132A8B34E74E82CE39743CF27C68A /* ActionSheetMultipleStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		82A199284501E725791F197ACC3E414B /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FEC2AD891D6607DBF5F318D688D002A /* ActionSheetCustomPickerDelegate.h */; };
+		89DBA8DBC471958DF7F389A9C807F0F4 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C097EC9520C2CFF52A117A0BF17D4E27 /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8D9B4916492D386BF73EB393AC43733A /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7755DA52735941809860D57DD34660 /* MBProgressHUD-dummy.m */; };
+		8F2DE9038EDEADBD4910DA7B848F50E0 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 299CE4BD751296B26613A3ED77899C61 /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		93EE36FA675700E42BA50440C8A482E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F144F542D9B5FF458335F02DCFD6E9 /* CoreGraphics.framework */; };
+		96A70E92E14D0B683A10008101B325DB /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E7873B68C595BA2F6D144D97320709E9 /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9871690E377C5B1C3C0ECC78A2EEA387 /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCD19C4F231C5B29A173B565DB031A /* ActionSheetPicker-3.0-dummy.m */; };
+		9993BE2F2367BE80692189B1D9374D9B /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CB6FDD4AAAA3304B01A3618800ED987 /* MBProgressHUD.h */; };
+		9A05DEA154A9C7A95305BA9843FF7541 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1748D9E5F3C5B1DFD03C4EF4F0AC1873 /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A389166E5210D87B92B454E6D2D29702 /* NSAttributedString+CCLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA2243DF64FE5F0CAA875035F4DCC17 /* NSAttributedString+CCLFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AC8E5E4D6A72774E5A7C820C568FFA54 /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B72E7ADEB8650D08A8C669AF99020EA /* ActionSheetLocalePicker.h */; };
 		B21CA3F97A3EFB1FD57B8E095762602D /* Pods-SplatStages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40013D64B3EB7B8D6D1BB6ADA024F6A7 /* Pods-SplatStages-dummy.m */; };
-		B639E4793B7BFCF71E9133E7A31C6486 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A5AF7956F3BD6FF63E88D39F2FACB3 /* ActionSheetMultipleStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BBC92A4659AC716D0BAAA752B44B0442 /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC5ACFB64B4493D4506A55136C9E4E2 /* ActionSheetPicker-3.0-dummy.m */; };
-		CC0FEAC6EDF640D93BD82D1958F954F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
+		B5F75D7B1F7BAD8799FF3C1DBB01D87D /* NSAttributedString+CCLFormat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2782885BDAF5B92BB41F9D6F4D11 /* NSAttributedString+CCLFormat-dummy.m */; };
+		CC0FEAC6EDF640D93BD82D1958F954F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0271C363E6ECF20843D8FECAE9943CE /* Foundation.framework */; };
 		CE2A9688B7A9797B351FA19D957C45D7 /* Pods-SplatStagesFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C07980390D63ED28F337EBE85DEE7A06 /* Pods-SplatStagesFramework-dummy.m */; };
-		D6DEC947E6FC54002F5B9F3D8F6AC0DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358081C62D155F3F20224044EC2940EA /* CoreGraphics.framework */; };
-		DA5B6AB2F923DFD90231CEAAAACF2326 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = BC840935EEFDD4B3AAB140193DE101E8 /* ActionSheetCustomPicker.h */; };
-		DC82216A65BEEDEDD6D376C7BD1D70C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
-		DEEF10F224EEA23744606B6B2FC9A02B /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C774EEA6D3B29F7198D37287123D9186 /* MBProgressHUD-dummy.m */; };
-		E5A60060F98BC1AC5C457F30FB0AA41D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */; };
-		E8ED52C16A8F246C7A56D3AF95DC6C57 /* NSAttributedString+CCLFormat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA781ABEB8320364635C4AE55DFEC58 /* NSAttributedString+CCLFormat-dummy.m */; };
-		F6196EDB9BC5CF8F5B9B1810FA7968F0 /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0B2B4578014CAC248FD6A4D0D40722 /* ActionSheetLocalePicker.h */; };
-		FA7D9A47F80AC8D2F43EA5847F1EDBE3 /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E94775B4CE8219C19320B7F96BED873 /* SWActionSheet.h */; };
+		DA1BD7C3C201E1E74A9B9F862854BE89 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 25605F92BEFAE20887D68C28EBC478F3 /* AbstractActionSheetPicker.h */; };
+		E52FB4654515EFEFC081AA7F4076652D /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7277D666E4C70983DB29744CE3720F31 /* DistancePickerView.h */; };
+		F3AF1ED1D25C06E4E3F437E209960065 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF497DA550F007C0D50AB0AD9C213E2C /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FBC90C0E698071A7B82A1F0F9729B324 /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F9A13C86494764913828649496FD6E7 /* ActionSheetDistancePicker.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D0048A2E95E9357CA166B8D28303EA1 /* PBXContainerItemProxy */ = {
+		4A7C3251D6F88405CE5D232989BE5E34 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 43341247DEE909D82EF275A6C0200112;
+			remoteGlobalIDString = 442F865177F58347BFEA5F50EB2054AA;
 			remoteInfo = "NSAttributedString+CCLFormat";
 		};
-		6A63486C7F0AE9B136F056A7FA155B58 /* PBXContainerItemProxy */ = {
+		7008ECE242850699D71890F6BCC0D9F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 192F58EFC5688E7D920DDBDFCFDA203A;
-			remoteInfo = "ActionSheetPicker-3.0";
-		};
-		F5BF8BB813EE86FB7CB837752D741296 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1400DEEBDD692C84EE5B2798597E29E3;
+			remoteGlobalIDString = E2684F949A1E128C7AE6C265C326297B;
 			remoteInfo = MBProgressHUD;
+		};
+		7C3E3E616BA0C1B92008C6CB3A4EF296 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 788F7346F1F13A8AF5BC63B8D7BA5B1F;
+			remoteInfo = "ActionSheetPicker-3.0";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		028681853131462DC8152F5AE9BCBDCD /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		03F815183B41F0A9FD9A083753E08EAB /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
-		0CC5ACFB64B4493D4506A55136C9E4E2 /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
-		0EC4EAA0C6810500B0934E8F8CAFFBE5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		128252DDE8F09486FE09954BE0AA08CE /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
 		1513AC65BDEB8071AF27DA1264F4638A /* Pods-SplatStagesFramework-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SplatStagesFramework-acknowledgements.markdown"; sourceTree = "<group>"; };
-		196E71B529B87A360B4848A88D3ABB21 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
-		25A5AF7956F3BD6FF63E88D39F2FACB3 /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
-		26C319F18BBCB803945C567E302C7137 /* ActionSheetPicker-3.0-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0-Private.xcconfig"; sourceTree = "<group>"; };
+		1748D9E5F3C5B1DFD03C4EF4F0AC1873 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		18ED2782885BDAF5B92BB41F9D6F4D11 /* NSAttributedString+CCLFormat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat-dummy.m"; sourceTree = "<group>"; };
+		1B72E7ADEB8650D08A8C669AF99020EA /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		1E940D592C574F09D638DEDD86DE105C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		1F3DA7C7D3065061DDB10958C544EB3B /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		2346C2EFBAD7EC968079E518EDACB3E9 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		25605F92BEFAE20887D68C28EBC478F3 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		299CE4BD751296B26613A3ED77899C61 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		2FA6EA522F4629CF8365F617D3DDF199 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		2FEC2AD891D6607DBF5F318D688D002A /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
 		30D2687729912CDD0E964E5EA2C5357E /* libPods-SplatStagesFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		358081C62D155F3F20224044EC2940EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		36A0E7ABB9451E0BD7340BB33CEB7D47 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		3616868607BBFCCD3E561B22E7A164F8 /* libActionSheetPicker-3.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libActionSheetPicker-3.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B51D9E1D71FEDDEA7B6E9ED7D3B2A51 /* NSAttributedString+CCLFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat.h"; sourceTree = "<group>"; };
+		3DFCD19C4F231C5B29A173B565DB031A /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
 		3F5920A29CE6399DF3429B6030AB92F7 /* NSAttributedString+CCLFormat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat-prefix.pch"; sourceTree = "<group>"; };
 		3FB3C4067E12331349041CD869A90EAF /* Pods-SplatStages-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStages-resources.sh"; sourceTree = "<group>"; };
 		40013D64B3EB7B8D6D1BB6ADA024F6A7 /* Pods-SplatStages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SplatStages-dummy.m"; sourceTree = "<group>"; };
-		4CA781ABEB8320364635C4AE55DFEC58 /* NSAttributedString+CCLFormat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat-dummy.m"; sourceTree = "<group>"; };
+		47FA40D78558264CCDFD3F7680762858 /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
 		4CC3641E21B3AE2DF83981EBEAF7D64E /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		4E94775B4CE8219C19320B7F96BED873 /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
 		4EE617F4F192AF4CBB97A5A07C032335 /* libPods-SplatStages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		542D6B75B0614324FEC5E22593B5EEBF /* Pods-SplatStagesFramework-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SplatStagesFramework-acknowledgements.plist"; sourceTree = "<group>"; };
 		5C3C8F967DE97C6324A769A11D16E93F /* Pods-SplatStages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStages.release.xcconfig"; sourceTree = "<group>"; };
-		62C84E64B3FD172C97DBDCF5157C5EC3 /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
-		67FC37AA84769FC46FAAF0EC1BC6D064 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
-		68ECB138F343224435DAF13D6D442F66 /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
-		6AE78B14C8EF5280D6239D4B4ED85D93 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		63FE09451A708860973B0799BBD888C4 /* libNSAttributedString+CCLFormat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSAttributedString+CCLFormat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E36CF7DB4A41F1FD9B4048803A37398 /* Pods-SplatStagesFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStagesFramework.debug.xcconfig"; sourceTree = "<group>"; };
-		78241C88CB6082F66D8DC133355157A0 /* libActionSheetPicker-3.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libActionSheetPicker-3.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E7755DA52735941809860D57DD34660 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		6F9A13C86494764913828649496FD6E7 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		7277D666E4C70983DB29744CE3720F31 /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		79FF67836E3F2770CC7F54DDCA0A186D /* NSAttributedString+CCLFormat-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSAttributedString+CCLFormat-Private.xcconfig"; sourceTree = "<group>"; };
+		7F044C20DCE81DE73E58CA7E115D5435 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		82F144F542D9B5FF458335F02DCFD6E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		885CE700881023F0012142D199F6648B /* ActionSheetPicker-3.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.xcconfig"; sourceTree = "<group>"; };
-		8C0A7424E4D1C8FD13E17F7FDAD5FACE /* libNSAttributedString+CCLFormat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSAttributedString+CCLFormat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90CE01A80ED4CC1531851426F8BC5841 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
 		91624DA6CDB56AF6F7F44DD703F4D538 /* Pods-SplatStages-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SplatStages-acknowledgements.markdown"; sourceTree = "<group>"; };
-		92C98F641054EE587CE3E5E41E2EB2AA /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
-		9A4CDCC5D84D5586D391169DC76081DE /* NSAttributedString+CCLFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat.m"; sourceTree = "<group>"; };
+		958132A8B34E74E82CE39743CF27C68A /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
 		9AD047349AFF1407980FF36DF4E61401 /* Pods-SplatStagesFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStagesFramework.release.xcconfig"; sourceTree = "<group>"; };
-		A9542516B4550B1F0B3D38AD770561F3 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		AA850FB64CACAC68BD0C8B9B6B85AD09 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		B7EB0A2150E4C0405E43F367A13C2DC4 /* MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		9AD501F66B694E56D6D423DF5C50EF40 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		9CB6FDD4AAAA3304B01A3618800ED987 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		B9C0755BFA464123B413B80ED40655D9 /* Pods-SplatStagesFramework-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStagesFramework-resources.sh"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BC840935EEFDD4B3AAB140193DE101E8 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
-		BE53740B7A8939EB62D6EA1A9CC6510B /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
 		BFB6250E69758149B5B6107779AB696C /* NSAttributedString+CCLFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSAttributedString+CCLFormat.xcconfig"; sourceTree = "<group>"; };
 		C07980390D63ED28F337EBE85DEE7A06 /* Pods-SplatStagesFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SplatStagesFramework-dummy.m"; sourceTree = "<group>"; };
+		C097EC9520C2CFF52A117A0BF17D4E27 /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
 		C426F9042779AC2CCDCBD6F5A1736984 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		C774EEA6D3B29F7198D37287123D9186 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		C983C01C86B50966871C79AAB3449B5A /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
-		CD087B51C2B7603F3A2A372F99168A19 /* NSAttributedString+CCLFormat-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSAttributedString+CCLFormat-Private.xcconfig"; sourceTree = "<group>"; };
-		CF832144CE975825C73BB55CA52B8849 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
-		D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DA5DDE35B2577B44920E8735CD496897 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
-		E2542C22448652199BFE74D529F330B0 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
-		E7062EDD38FF2053A30E3A6C2B1DDFC9 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		CED0C0C2B7FC1749BD7C3D6EAC88C0A4 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFA2243DF64FE5F0CAA875035F4DCC17 /* NSAttributedString+CCLFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat.m"; sourceTree = "<group>"; };
+		DFF20260F5CE0E444B771A593C4F4F5E /* ActionSheetPicker-3.0-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0-Private.xcconfig"; sourceTree = "<group>"; };
+		E0CABFA7C269A078A9ED7EFC77BED90D /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		E245DBCCA4668679E3519E6619768B8E /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		E7873B68C595BA2F6D144D97320709E9 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
 		E875F7EA7CBBDFEA1C93AA713E122C2A /* Pods-SplatStages-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SplatStages-acknowledgements.plist"; sourceTree = "<group>"; };
-		EA124C1642CA26D219DB85A38AAE36A0 /* NSAttributedString+CCLFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat.h"; sourceTree = "<group>"; };
-		ED0B2B4578014CAC248FD6A4D0D40722 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
-		F2DA378C6C34A4087791380193600A0D /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
-		FC40F7CBF29C50FD821795305F3BDAD1 /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		EED575310A4BBC5A4F14316625803EBF /* MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		F0271C363E6ECF20843D8FECAE9943CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		FCB6D5C46A14B0E7BF422901D0D902DE /* Pods-SplatStages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStages.debug.xcconfig"; sourceTree = "<group>"; };
+		FF497DA550F007C0D50AB0AD9C213E2C /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		FF92830BA003A24C9DB0B356E91FC851 /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,15 +138,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E71A58CEB179E9BEF8DBD5284ABB126 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				327D30FE9CB914430335B109B3AC80DA /* Foundation.framework in Frameworks */,
-				27E329557662B002D0CB39FD1A2644EE /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4131A31B9BD49D433EBBA5654A6B37C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,20 +146,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78A5B034B22408B29740DD2372BC1B1F /* Frameworks */ = {
+		51433B472C256FF8B8CAB54CC12CC2A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5A60060F98BC1AC5C457F30FB0AA41D /* Foundation.framework in Frameworks */,
+				93EE36FA675700E42BA50440C8A482E3 /* CoreGraphics.framework in Frameworks */,
+				5942709F4224D8D653A979A13DC9C8EA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9282D8B754E76BC71ABE190DEEB3AC15 /* Frameworks */ = {
+		63116098DBD5E234A577E555D4E92068 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DEC947E6FC54002F5B9F3D8F6AC0DA /* CoreGraphics.framework in Frameworks */,
-				DC82216A65BEEDEDD6D376C7BD1D70C6 /* Foundation.framework in Frameworks */,
+				5960E906E45733331E8276D303A5A255 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2B8066FD3DB48DC014F27161D62D83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596C1224518F00A46862D40B171A263A /* Foundation.framework in Frameworks */,
+				23C7CDDF69801CC294B5F3A8D1CA15CD /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				885CE700881023F0012142D199F6648B /* ActionSheetPicker-3.0.xcconfig */,
-				26C319F18BBCB803945C567E302C7137 /* ActionSheetPicker-3.0-Private.xcconfig */,
-				0CC5ACFB64B4493D4506A55136C9E4E2 /* ActionSheetPicker-3.0-dummy.m */,
+				DFF20260F5CE0E444B771A593C4F4F5E /* ActionSheetPicker-3.0-Private.xcconfig */,
+				3DFCD19C4F231C5B29A173B565DB031A /* ActionSheetPicker-3.0-dummy.m */,
 				C983C01C86B50966871C79AAB3449B5A /* ActionSheetPicker-3.0-prefix.pch */,
 			);
 			name = "Support Files";
@@ -222,9 +222,9 @@
 		39CF33B2E976FD3E12A7D9F562B97919 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				358081C62D155F3F20224044EC2940EA /* CoreGraphics.framework */,
-				D4FFD21723D2BC156C5487B3B49EA981 /* Foundation.framework */,
-				0EC4EAA0C6810500B0934E8F8CAFFBE5 /* UIKit.framework */,
+				82F144F542D9B5FF458335F02DCFD6E9 /* CoreGraphics.framework */,
+				F0271C363E6ECF20843D8FECAE9943CE /* Foundation.framework */,
+				1E940D592C574F09D638DEDD86DE105C /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -255,8 +255,8 @@
 		49FF75D7ADFF800420C93F44AB21C401 /* NSAttributedString+CCLFormat */ = {
 			isa = PBXGroup;
 			children = (
-				EA124C1642CA26D219DB85A38AAE36A0 /* NSAttributedString+CCLFormat.h */,
-				9A4CDCC5D84D5586D391169DC76081DE /* NSAttributedString+CCLFormat.m */,
+				3B51D9E1D71FEDDEA7B6E9ED7D3B2A51 /* NSAttributedString+CCLFormat.h */,
+				DFA2243DF64FE5F0CAA875035F4DCC17 /* NSAttributedString+CCLFormat.m */,
 				BDA791F631AAE5EDA1C1BC11FD7BE6E8 /* Support Files */,
 			);
 			path = "NSAttributedString+CCLFormat";
@@ -265,8 +265,8 @@
 		79146F8924B33D9E3D5AF9E161102528 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				AA850FB64CACAC68BD0C8B9B6B85AD09 /* MBProgressHUD.h */,
-				A9542516B4550B1F0B3D38AD770561F3 /* MBProgressHUD.m */,
+				9CB6FDD4AAAA3304B01A3618800ED987 /* MBProgressHUD.h */,
+				E0CABFA7C269A078A9ED7EFC77BED90D /* MBProgressHUD.m */,
 				EDC95F08C5F13DFB825B98F0F97F811E /* Support Files */,
 			);
 			path = MBProgressHUD;
@@ -286,26 +286,26 @@
 		ABDA610B65B9E5571A0C26B3A620EF3A /* ActionSheetPicker-3.0 */ = {
 			isa = PBXGroup;
 			children = (
-				6AE78B14C8EF5280D6239D4B4ED85D93 /* AbstractActionSheetPicker.h */,
-				BE53740B7A8939EB62D6EA1A9CC6510B /* AbstractActionSheetPicker.m */,
-				BC840935EEFDD4B3AAB140193DE101E8 /* ActionSheetCustomPicker.h */,
-				E2542C22448652199BFE74D529F330B0 /* ActionSheetCustomPicker.m */,
-				196E71B529B87A360B4848A88D3ABB21 /* ActionSheetCustomPickerDelegate.h */,
-				E7062EDD38FF2053A30E3A6C2B1DDFC9 /* ActionSheetDatePicker.h */,
-				92C98F641054EE587CE3E5E41E2EB2AA /* ActionSheetDatePicker.m */,
-				DA5DDE35B2577B44920E8735CD496897 /* ActionSheetDistancePicker.h */,
-				03F815183B41F0A9FD9A083753E08EAB /* ActionSheetDistancePicker.m */,
-				ED0B2B4578014CAC248FD6A4D0D40722 /* ActionSheetLocalePicker.h */,
-				CF832144CE975825C73BB55CA52B8849 /* ActionSheetLocalePicker.m */,
-				F2DA378C6C34A4087791380193600A0D /* ActionSheetMultipleStringPicker.h */,
-				25A5AF7956F3BD6FF63E88D39F2FACB3 /* ActionSheetMultipleStringPicker.m */,
-				68ECB138F343224435DAF13D6D442F66 /* ActionSheetPicker.h */,
-				36A0E7ABB9451E0BD7340BB33CEB7D47 /* ActionSheetStringPicker.h */,
-				128252DDE8F09486FE09954BE0AA08CE /* ActionSheetStringPicker.m */,
-				62C84E64B3FD172C97DBDCF5157C5EC3 /* DistancePickerView.h */,
-				67FC37AA84769FC46FAAF0EC1BC6D064 /* DistancePickerView.m */,
-				4E94775B4CE8219C19320B7F96BED873 /* SWActionSheet.h */,
-				FC40F7CBF29C50FD821795305F3BDAD1 /* SWActionSheet.m */,
+				25605F92BEFAE20887D68C28EBC478F3 /* AbstractActionSheetPicker.h */,
+				90CE01A80ED4CC1531851426F8BC5841 /* AbstractActionSheetPicker.m */,
+				7F044C20DCE81DE73E58CA7E115D5435 /* ActionSheetCustomPicker.h */,
+				299CE4BD751296B26613A3ED77899C61 /* ActionSheetCustomPicker.m */,
+				2FEC2AD891D6607DBF5F318D688D002A /* ActionSheetCustomPickerDelegate.h */,
+				9AD501F66B694E56D6D423DF5C50EF40 /* ActionSheetDatePicker.h */,
+				1748D9E5F3C5B1DFD03C4EF4F0AC1873 /* ActionSheetDatePicker.m */,
+				6F9A13C86494764913828649496FD6E7 /* ActionSheetDistancePicker.h */,
+				E7873B68C595BA2F6D144D97320709E9 /* ActionSheetDistancePicker.m */,
+				1B72E7ADEB8650D08A8C669AF99020EA /* ActionSheetLocalePicker.h */,
+				1F3DA7C7D3065061DDB10958C544EB3B /* ActionSheetLocalePicker.m */,
+				47FA40D78558264CCDFD3F7680762858 /* ActionSheetMultipleStringPicker.h */,
+				958132A8B34E74E82CE39743CF27C68A /* ActionSheetMultipleStringPicker.m */,
+				FF92830BA003A24C9DB0B356E91FC851 /* ActionSheetPicker.h */,
+				2346C2EFBAD7EC968079E518EDACB3E9 /* ActionSheetStringPicker.h */,
+				2FA6EA522F4629CF8365F617D3DDF199 /* ActionSheetStringPicker.m */,
+				7277D666E4C70983DB29744CE3720F31 /* DistancePickerView.h */,
+				FF497DA550F007C0D50AB0AD9C213E2C /* DistancePickerView.m */,
+				E245DBCCA4668679E3519E6619768B8E /* SWActionSheet.h */,
+				C097EC9520C2CFF52A117A0BF17D4E27 /* SWActionSheet.m */,
 				1ED449DF238AF2A828EE2A75C3C055C3 /* Support Files */,
 			);
 			path = "ActionSheetPicker-3.0";
@@ -315,8 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				BFB6250E69758149B5B6107779AB696C /* NSAttributedString+CCLFormat.xcconfig */,
-				CD087B51C2B7603F3A2A372F99168A19 /* NSAttributedString+CCLFormat-Private.xcconfig */,
-				4CA781ABEB8320364635C4AE55DFEC58 /* NSAttributedString+CCLFormat-dummy.m */,
+				79FF67836E3F2770CC7F54DDCA0A186D /* NSAttributedString+CCLFormat-Private.xcconfig */,
+				18ED2782885BDAF5B92BB41F9D6F4D11 /* NSAttributedString+CCLFormat-dummy.m */,
 				3F5920A29CE6399DF3429B6030AB92F7 /* NSAttributedString+CCLFormat-prefix.pch */,
 			);
 			name = "Support Files";
@@ -326,9 +326,9 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				78241C88CB6082F66D8DC133355157A0 /* libActionSheetPicker-3.0.a */,
-				028681853131462DC8152F5AE9BCBDCD /* libMBProgressHUD.a */,
-				8C0A7424E4D1C8FD13E17F7FDAD5FACE /* libNSAttributedString+CCLFormat.a */,
+				3616868607BBFCCD3E561B22E7A164F8 /* libActionSheetPicker-3.0.a */,
+				CED0C0C2B7FC1749BD7C3D6EAC88C0A4 /* libMBProgressHUD.a */,
+				63FE09451A708860973B0799BBD888C4 /* libNSAttributedString+CCLFormat.a */,
 				4EE617F4F192AF4CBB97A5A07C032335 /* libPods-SplatStages.a */,
 				30D2687729912CDD0E964E5EA2C5357E /* libPods-SplatStagesFramework.a */,
 			);
@@ -339,8 +339,8 @@
 			isa = PBXGroup;
 			children = (
 				4CC3641E21B3AE2DF83981EBEAF7D64E /* MBProgressHUD.xcconfig */,
-				B7EB0A2150E4C0405E43F367A13C2DC4 /* MBProgressHUD-Private.xcconfig */,
-				C774EEA6D3B29F7198D37287123D9186 /* MBProgressHUD-dummy.m */,
+				EED575310A4BBC5A4F14316625803EBF /* MBProgressHUD-Private.xcconfig */,
+				6E7755DA52735941809860D57DD34660 /* MBProgressHUD-dummy.m */,
 				C426F9042779AC2CCDCBD6F5A1736984 /* MBProgressHUD-prefix.pch */,
 			);
 			name = "Support Files";
@@ -350,37 +350,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		432F33D826B6922FD043C3FCE9F7DC18 /* Headers */ = {
+		20BFB248B272AC68C466BCA2FB990149 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB0C33C784331C522B2546CFECB02F3 /* NSAttributedString+CCLFormat.h in Headers */,
+				9993BE2F2367BE80692189B1D9374D9B /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		756E83A0A9E375BB2681A817E70E63E2 /* Headers */ = {
+		44519B81B7302C3241F5EF0F786B3248 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32DB0046433BC4F30BCDE7646DF56C01 /* AbstractActionSheetPicker.h in Headers */,
-				DA5B6AB2F923DFD90231CEAAAACF2326 /* ActionSheetCustomPicker.h in Headers */,
-				4D1AEB1F54F0E81255DF7D85CCD2C2A6 /* ActionSheetCustomPickerDelegate.h in Headers */,
-				2FF11E1F6923A8852D35004BFD74217E /* ActionSheetDatePicker.h in Headers */,
-				36D727A27B7C05EEC0976DF4D3F594FF /* ActionSheetDistancePicker.h in Headers */,
-				F6196EDB9BC5CF8F5B9B1810FA7968F0 /* ActionSheetLocalePicker.h in Headers */,
-				804E234604CDA5F4932784E4ABD487BE /* ActionSheetMultipleStringPicker.h in Headers */,
-				1ED630702EB1F817A8AA39CB2E347B50 /* ActionSheetPicker.h in Headers */,
-				06623A22325A60EC90C44E5D6631E548 /* ActionSheetStringPicker.h in Headers */,
-				0CE45ABA4C6DB70913A6357CE7564456 /* DistancePickerView.h in Headers */,
-				FA7D9A47F80AC8D2F43EA5847F1EDBE3 /* SWActionSheet.h in Headers */,
+				4ED0176D90C68DB52FEF5617F147E874 /* NSAttributedString+CCLFormat.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CE6A2D849CA2CB9B81298E28ACAB4DD /* Headers */ = {
+		6C8A13A6587A5BBA1752690F855074FB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C15DB895282E34ABBDB3FEA3576A1C3 /* MBProgressHUD.h in Headers */,
+				DA1BD7C3C201E1E74A9B9F862854BE89 /* AbstractActionSheetPicker.h in Headers */,
+				2C2D14E4D4285BAAF766848DAC26019A /* ActionSheetCustomPicker.h in Headers */,
+				82A199284501E725791F197ACC3E414B /* ActionSheetCustomPickerDelegate.h in Headers */,
+				6F4B5170502D18FE09009D46967E3ED7 /* ActionSheetDatePicker.h in Headers */,
+				FBC90C0E698071A7B82A1F0F9729B324 /* ActionSheetDistancePicker.h in Headers */,
+				AC8E5E4D6A72774E5A7C820C568FFA54 /* ActionSheetLocalePicker.h in Headers */,
+				06FAB3FF03A01E24FA10E1D9B69D4B5A /* ActionSheetMultipleStringPicker.h in Headers */,
+				12FE34CFEE3DA12E2F26D87A8CB01A88 /* ActionSheetPicker.h in Headers */,
+				15382182F2D7415F2229D7F390C33873 /* ActionSheetStringPicker.h in Headers */,
+				E52FB4654515EFEFC081AA7F4076652D /* DistancePickerView.h in Headers */,
+				7A3EB383107554AA77399D7AD1CC12F3 /* SWActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,54 +397,20 @@
 			buildRules = (
 			);
 			dependencies = (
-				BBF12D609CFF31A5058BEA6143918026 /* PBXTargetDependency */,
+				4588AF82E2D20B38AD0F08AE4142E0A2 /* PBXTargetDependency */,
 			);
 			name = "Pods-SplatStagesFramework";
 			productName = "Pods-SplatStagesFramework";
 			productReference = 30D2687729912CDD0E964E5EA2C5357E /* libPods-SplatStagesFramework.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		1400DEEBDD692C84EE5B2798597E29E3 /* MBProgressHUD */ = {
+		442F865177F58347BFEA5F50EB2054AA /* NSAttributedString+CCLFormat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35EB001A18C373470D335F4707541BBA /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildConfigurationList = 375DB9BBFEC359D042E7293B2012174A /* Build configuration list for PBXNativeTarget "NSAttributedString+CCLFormat" */;
 			buildPhases = (
-				4EE3C7ADEBAB88DA03D0AEF1B6B0372C /* Sources */,
-				9282D8B754E76BC71ABE190DEEB3AC15 /* Frameworks */,
-				9CE6A2D849CA2CB9B81298E28ACAB4DD /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MBProgressHUD;
-			productName = MBProgressHUD;
-			productReference = 028681853131462DC8152F5AE9BCBDCD /* libMBProgressHUD.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		192F58EFC5688E7D920DDBDFCFDA203A /* ActionSheetPicker-3.0 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E0823D661BAA94FC86CC8E04C55FD07E /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */;
-			buildPhases = (
-				25249F99A7DAFAE055388627E7D74247 /* Sources */,
-				2E71A58CEB179E9BEF8DBD5284ABB126 /* Frameworks */,
-				756E83A0A9E375BB2681A817E70E63E2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ActionSheetPicker-3.0";
-			productName = "ActionSheetPicker-3.0";
-			productReference = 78241C88CB6082F66D8DC133355157A0 /* libActionSheetPicker-3.0.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		43341247DEE909D82EF275A6C0200112 /* NSAttributedString+CCLFormat */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 96A051E15BE9B68E1749792616E524EC /* Build configuration list for PBXNativeTarget "NSAttributedString+CCLFormat" */;
-			buildPhases = (
-				41258840209E3455BBB5BDAF9B153663 /* Sources */,
-				78A5B034B22408B29740DD2372BC1B1F /* Frameworks */,
-				432F33D826B6922FD043C3FCE9F7DC18 /* Headers */,
+				E1F28E2AF6F5A5126CFA6E325CB476B9 /* Sources */,
+				63116098DBD5E234A577E555D4E92068 /* Frameworks */,
+				44519B81B7302C3241F5EF0F786B3248 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -452,7 +418,41 @@
 			);
 			name = "NSAttributedString+CCLFormat";
 			productName = "NSAttributedString+CCLFormat";
-			productReference = 8C0A7424E4D1C8FD13E17F7FDAD5FACE /* libNSAttributedString+CCLFormat.a */;
+			productReference = 63FE09451A708860973B0799BBD888C4 /* libNSAttributedString+CCLFormat.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		788F7346F1F13A8AF5BC63B8D7BA5B1F /* ActionSheetPicker-3.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB37B887F35B274B9F78382780034633 /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */;
+			buildPhases = (
+				9449F0DCEB9328B5E5F3BE1F1CE33EA2 /* Sources */,
+				BF2B8066FD3DB48DC014F27161D62D83 /* Frameworks */,
+				6C8A13A6587A5BBA1752690F855074FB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActionSheetPicker-3.0";
+			productName = "ActionSheetPicker-3.0";
+			productReference = 3616868607BBFCCD3E561B22E7A164F8 /* libActionSheetPicker-3.0.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E2684F949A1E128C7AE6C265C326297B /* MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A786B866D1E49C303D7C5524B7E8551A /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildPhases = (
+				E9567A2AF8C15535C5DF7886C815BAD7 /* Sources */,
+				51433B472C256FF8B8CAB54CC12CC2A7 /* Frameworks */,
+				20BFB248B272AC68C466BCA2FB990149 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = CED0C0C2B7FC1749BD7C3D6EAC88C0A4 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		EF7FFA4B00AD2AE3E384B2E23CA06883 /* Pods-SplatStages */ = {
@@ -465,8 +465,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				9754F755B3A62F3DE492B37B5A9DC862 /* PBXTargetDependency */,
-				4B201109F95766D32F32D7CE69022C58 /* PBXTargetDependency */,
+				ED154838E90020C834D6867768641B80 /* PBXTargetDependency */,
+				17EF8B084053946AB4FF4D56F437326E /* PBXTargetDependency */,
 			);
 			name = "Pods-SplatStages";
 			productName = "Pods-SplatStages";
@@ -494,9 +494,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				192F58EFC5688E7D920DDBDFCFDA203A /* ActionSheetPicker-3.0 */,
-				1400DEEBDD692C84EE5B2798597E29E3 /* MBProgressHUD */,
-				43341247DEE909D82EF275A6C0200112 /* NSAttributedString+CCLFormat */,
+				788F7346F1F13A8AF5BC63B8D7BA5B1F /* ActionSheetPicker-3.0 */,
+				E2684F949A1E128C7AE6C265C326297B /* MBProgressHUD */,
+				442F865177F58347BFEA5F50EB2054AA /* NSAttributedString+CCLFormat */,
 				EF7FFA4B00AD2AE3E384B2E23CA06883 /* Pods-SplatStages */,
 				12A16C6730F4E9624A67B230F8EE9BF4 /* Pods-SplatStagesFramework */,
 			);
@@ -504,32 +504,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		25249F99A7DAFAE055388627E7D74247 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E32EB2B2DA97B2BF41642E73074B34F /* AbstractActionSheetPicker.m in Sources */,
-				65D008810B0EE1B06C32B59BEDD933A1 /* ActionSheetCustomPicker.m in Sources */,
-				082D739BECDDA2E9A55C5F7702C90B1B /* ActionSheetDatePicker.m in Sources */,
-				494D46B3D653C5D60E4E0F53A9ACDAF2 /* ActionSheetDistancePicker.m in Sources */,
-				19D3D0AF86F9A9F2E7F275FDC0BA3FF3 /* ActionSheetLocalePicker.m in Sources */,
-				B639E4793B7BFCF71E9133E7A31C6486 /* ActionSheetMultipleStringPicker.m in Sources */,
-				BBC92A4659AC716D0BAAA752B44B0442 /* ActionSheetPicker-3.0-dummy.m in Sources */,
-				AED3AA4B9AF78BBDB1EFB34724A51781 /* ActionSheetStringPicker.m in Sources */,
-				9E379577AE3AACA3C7D2FB3792A8FB22 /* DistancePickerView.m in Sources */,
-				46637C99A7AF65C823B55D8B05F49414 /* SWActionSheet.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		41258840209E3455BBB5BDAF9B153663 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8ED52C16A8F246C7A56D3AF95DC6C57 /* NSAttributedString+CCLFormat-dummy.m in Sources */,
-				88983C19D4C8F3940EBEB0BDC9502BFE /* NSAttributedString+CCLFormat.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		43B86ABB4CDA290F988408C34A47A9E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,12 +512,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EE3C7ADEBAB88DA03D0AEF1B6B0372C /* Sources */ = {
+		9449F0DCEB9328B5E5F3BE1F1CE33EA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEEF10F224EEA23744606B6B2FC9A02B /* MBProgressHUD-dummy.m in Sources */,
-				6F150F6BC88A5939A5C9F6461B530419 /* MBProgressHUD.m in Sources */,
+				7136CA252DBA2737574956115C69F72D /* AbstractActionSheetPicker.m in Sources */,
+				8F2DE9038EDEADBD4910DA7B848F50E0 /* ActionSheetCustomPicker.m in Sources */,
+				9A05DEA154A9C7A95305BA9843FF7541 /* ActionSheetDatePicker.m in Sources */,
+				96A70E92E14D0B683A10008101B325DB /* ActionSheetDistancePicker.m in Sources */,
+				759EE44757E44BB2AA0C0CB6EFD89AAA /* ActionSheetLocalePicker.m in Sources */,
+				7DA3948762541104C081F8440E649672 /* ActionSheetMultipleStringPicker.m in Sources */,
+				9871690E377C5B1C3C0ECC78A2EEA387 /* ActionSheetPicker-3.0-dummy.m in Sources */,
+				164760BEEF0592833666A433E9F978C5 /* ActionSheetStringPicker.m in Sources */,
+				F3AF1ED1D25C06E4E3F437E209960065 /* DistancePickerView.m in Sources */,
+				89DBA8DBC471958DF7F389A9C807F0F4 /* SWActionSheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F28E2AF6F5A5126CFA6E325CB476B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F75D7B1F7BAD8799FF3C1DBB01D87D /* NSAttributedString+CCLFormat-dummy.m in Sources */,
+				A389166E5210D87B92B454E6D2D29702 /* NSAttributedString+CCLFormat.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9567A2AF8C15535C5DF7886C815BAD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D9B4916492D386BF73EB393AC43733A /* MBProgressHUD-dummy.m in Sources */,
+				474389BB563BE7E62A2802CB47938B7F /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,23 +558,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4B201109F95766D32F32D7CE69022C58 /* PBXTargetDependency */ = {
+		17EF8B084053946AB4FF4D56F437326E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
-			target = 1400DEEBDD692C84EE5B2798597E29E3 /* MBProgressHUD */;
-			targetProxy = F5BF8BB813EE86FB7CB837752D741296 /* PBXContainerItemProxy */;
+			target = E2684F949A1E128C7AE6C265C326297B /* MBProgressHUD */;
+			targetProxy = 7008ECE242850699D71890F6BCC0D9F9 /* PBXContainerItemProxy */;
 		};
-		9754F755B3A62F3DE492B37B5A9DC862 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ActionSheetPicker-3.0";
-			target = 192F58EFC5688E7D920DDBDFCFDA203A /* ActionSheetPicker-3.0 */;
-			targetProxy = 6A63486C7F0AE9B136F056A7FA155B58 /* PBXContainerItemProxy */;
-		};
-		BBF12D609CFF31A5058BEA6143918026 /* PBXTargetDependency */ = {
+		4588AF82E2D20B38AD0F08AE4142E0A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "NSAttributedString+CCLFormat";
-			target = 43341247DEE909D82EF275A6C0200112 /* NSAttributedString+CCLFormat */;
-			targetProxy = 3D0048A2E95E9357CA166B8D28303EA1 /* PBXContainerItemProxy */;
+			target = 442F865177F58347BFEA5F50EB2054AA /* NSAttributedString+CCLFormat */;
+			targetProxy = 4A7C3251D6F88405CE5D232989BE5E34 /* PBXContainerItemProxy */;
+		};
+		ED154838E90020C834D6867768641B80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ActionSheetPicker-3.0";
+			target = 788F7346F1F13A8AF5BC63B8D7BA5B1F /* ActionSheetPicker-3.0 */;
+			targetProxy = 7C3E3E616BA0C1B92008C6CB3A4EF296 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -589,6 +589,22 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		263D1B16D16500319F8E0BD9C65FD059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFF20260F5CE0E444B771A593C4F4F5E /* ActionSheetPicker-3.0-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -611,12 +627,12 @@
 			};
 			name = Release;
 		};
-		500E7BF4D4CE282AD0DA605BF2203A05 /* Debug */ = {
+		54CFFD0E898F9FD9376ADE3F38F0B33C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26C319F18BBCB803945C567E302C7137 /* ActionSheetPicker-3.0-Private.xcconfig */;
+			baseConfigurationReference = 79FF67836E3F2770CC7F54DDCA0A186D /* NSAttributedString+CCLFormat-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/NSAttributedString+CCLFormat/NSAttributedString+CCLFormat-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -626,6 +642,38 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		629281DFDC562E2925BAF5EA993FDC99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79FF67836E3F2770CC7F54DDCA0A186D /* NSAttributedString+CCLFormat-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NSAttributedString+CCLFormat/NSAttributedString+CCLFormat-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		77533241B0785886066BEDD650CD71AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFF20260F5CE0E444B771A593C4F4F5E /* ActionSheetPicker-3.0-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		A54ACEB418B7B7612BCA7EF834B73446 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -682,41 +730,9 @@
 			};
 			name = Debug;
 		};
-		AB4ADCE52C3FE4186882A4B53CE9FCA3 /* Release */ = {
+		E6F4C90E4E79996C44B477CDE2B858C9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26C319F18BBCB803945C567E302C7137 /* ActionSheetPicker-3.0-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		AD57585FC9F7281D81022F9D89D57C95 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7EB0A2150E4C0405E43F367A13C2DC4 /* MBProgressHUD-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		D39539B6DF16FEA6059EF7A9600A2171 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7EB0A2150E4C0405E43F367A13C2DC4 /* MBProgressHUD-Private.xcconfig */;
+			baseConfigurationReference = EED575310A4BBC5A4F14316625803EBF /* MBProgressHUD-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
@@ -730,12 +746,12 @@
 			};
 			name = Release;
 		};
-		DDD7084AF5D9F5D213C0C215D69D9281 /* Debug */ = {
+		ED2D3CC7B9890969BDE9C75B632D3C7E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD087B51C2B7603F3A2A372F99168A19 /* NSAttributedString+CCLFormat-Private.xcconfig */;
+			baseConfigurationReference = EED575310A4BBC5A4F14316625803EBF /* MBProgressHUD-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/NSAttributedString+CCLFormat/NSAttributedString+CCLFormat-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -745,22 +761,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
-		};
-		F0A1A95F7EFDD9679A0886AEDA84FA87 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD087B51C2B7603F3A2A372F99168A19 /* NSAttributedString+CCLFormat-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/NSAttributedString+CCLFormat/NSAttributedString+CCLFormat-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
 		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -824,20 +824,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35EB001A18C373470D335F4707541BBA /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+		375DB9BBFEC359D042E7293B2012174A /* Build configuration list for PBXNativeTarget "NSAttributedString+CCLFormat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD57585FC9F7281D81022F9D89D57C95 /* Debug */,
-				D39539B6DF16FEA6059EF7A9600A2171 /* Release */,
+				54CFFD0E898F9FD9376ADE3F38F0B33C /* Debug */,
+				629281DFDC562E2925BAF5EA993FDC99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96A051E15BE9B68E1749792616E524EC /* Build configuration list for PBXNativeTarget "NSAttributedString+CCLFormat" */ = {
+		A786B866D1E49C303D7C5524B7E8551A /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDD7084AF5D9F5D213C0C215D69D9281 /* Debug */,
-				F0A1A95F7EFDD9679A0886AEDA84FA87 /* Release */,
+				ED2D3CC7B9890969BDE9C75B632D3C7E /* Debug */,
+				E6F4C90E4E79996C44B477CDE2B858C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -860,11 +860,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0823D661BAA94FC86CC8E04C55FD07E /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */ = {
+		FB37B887F35B274B9F78382780034633 /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				500E7BF4D4CE282AD0DA605BF2203A05 /* Debug */,
-				AB4ADCE52C3FE4186882A4B53CE9FCA3 /* Release */,
+				263D1B16D16500319F8E0BD9C65FD059 /* Debug */,
+				77533241B0785886066BEDD650CD71AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
