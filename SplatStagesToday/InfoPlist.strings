@@ -1,0 +1,8 @@
+/*
+ InfoPlist.strings - English
+ SplatStagesToday
+ */
+
+// This is what name the Today extension will appear under in the
+// Notification Center.
+"CFBundleDisplayName" = "SplatStages";

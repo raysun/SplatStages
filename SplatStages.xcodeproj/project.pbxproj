@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0417215A1BB8B8CD0027991D /* StagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041721591BB8B8CD0027991D /* StagesCell.m */; settings = {ASSET_TAGS = (); }; };
+		0417215D1BB8B98D0027991D /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215C1BB8B98D0027991D /* HeaderCell.m */; settings = {ASSET_TAGS = (); }; };
+		041721601BB8B9CD0027991D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215F1BB8B9CD0027991D /* MessageCell.m */; settings = {ASSET_TAGS = (); }; };
 		044042AB1BAB4274003C481E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044042AA1BAB4274003C481E /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
 		047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5EC91BB5E09F00DD510D /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
@@ -17,6 +20,12 @@
 		047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ED41BB6103D00DD510D /* SplatTimer.m */; settings = {ASSET_TAGS = (); }; };
 		047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 047B3FA41BB72875005BF2D0 /* SplatUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FA51BB72875005BF2D0 /* SplatUtilities.m */; settings = {ASSET_TAGS = (); }; };
+		047B3FAE1BB79199005BF2D0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047B3FAD1BB79199005BF2D0 /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
+		047B3FB21BB79199005BF2D0 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FB11BB79199005BF2D0 /* TodayViewController.m */; };
+		047B3FB51BB79199005BF2D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047B3FB31BB79199005BF2D0 /* MainInterface.storyboard */; };
+		047B3FB91BB79199005BF2D0 /* SplatStagesToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
+		04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
 		04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC31BA5D47D003BE6A9 /* main.m */; };
 		04EE0CC71BA5D47D003BE6A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC61BA5D47D003BE6A9 /* AppDelegate.m */; };
 		04EE0CCD1BA5D47D003BE6A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CCB1BA5D47D003BE6A9 /* Main.storyboard */; };
@@ -29,6 +38,7 @@
 		04EE0CE71BA5D4D6003BE6A9 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE21BA5D4D6003BE6A9 /* TabViewController.m */; settings = {ASSET_TAGS = (); }; };
 		04EE0CE91BA5D539003BE6A9 /* project_paintball_beta3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CE81BA5D539003BE6A9 /* project_paintball_beta3.otf */; settings = {ASSET_TAGS = (); }; };
 		04EE0CEB1BA5DAD4003BE6A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
+		04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
 		9A84413964F4ED2D995BF5CF /* libPods-SplatStages.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */; };
 		E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */; };
 /* End PBXBuildFile section */
@@ -40,6 +50,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 047A5EC11BB5E09F00DD510D;
 			remoteInfo = SplatStagesFramework;
+		};
+		047B3FB71BB79199005BF2D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04EE0CB71BA5D47D003BE6A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 047B3FAB1BB79199005BF2D0;
+			remoteInfo = SplatStagesToday;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,9 +72,26 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		047B3FBD1BB79199005BF2D0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				047B3FB91BB79199005BF2D0 /* SplatStagesToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		041721581BB8B8CD0027991D /* StagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StagesCell.h; sourceTree = "<group>"; };
+		041721591BB8B8CD0027991D /* StagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StagesCell.m; sourceTree = "<group>"; };
+		0417215B1BB8B98D0027991D /* HeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCell.h; sourceTree = "<group>"; };
+		0417215C1BB8B98D0027991D /* HeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCell.m; sourceTree = "<group>"; };
+		0417215E1BB8B9CD0027991D /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		0417215F1BB8B9CD0027991D /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		044042AA1BAB4274003C481E /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SplatStagesFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplatStagesFramework.h; sourceTree = "<group>"; };
@@ -68,6 +102,14 @@
 		047A5ED41BB6103D00DD510D /* SplatTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatTimer.m; sourceTree = "<group>"; };
 		047B3FA41BB72875005BF2D0 /* SplatUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatUtilities.h; sourceTree = "<group>"; };
 		047B3FA51BB72875005BF2D0 /* SplatUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatUtilities.m; sourceTree = "<group>"; };
+		047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SplatStagesToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		047B3FAD1BB79199005BF2D0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		047B3FB01BB79199005BF2D0 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		047B3FB11BB79199005BF2D0 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		047B3FB41BB79199005BF2D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		047B3FB61BB79199005BF2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C1DE2C1BBA014000D98CA3 /* SplatStages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SplatStages.entitlements; sourceTree = "<group>"; };
+		04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplatStages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EE0CC31BA5D47D003BE6A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04EE0CC51BA5D47D003BE6A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,12 +130,17 @@
 		04EE0CE21BA5D4D6003BE6A9 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 		04EE0CE81BA5D539003BE6A9 /* project_paintball_beta3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = project_paintball_beta3.otf; sourceTree = "<group>"; };
 		04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		04FF0F421BBB71C9005BC356 /* SplatStagesToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SplatStagesToday.entitlements; sourceTree = "<group>"; };
+		04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesFramework/Pods-SplatStagesFramework.release.xcconfig"; sourceTree = "<group>"; };
+		33B13DB44236484B48F0A673 /* Pods-SplatStagesToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesToday/Pods-SplatStagesToday.debug.xcconfig"; sourceTree = "<group>"; };
 		406078D19F699FD6F4F180BF /* Pods-SplatStages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStages.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages.release.xcconfig"; sourceTree = "<group>"; };
 		802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F2E8C750242519572ABB41 /* Pods-SplatStages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages.debug.xcconfig"; sourceTree = "<group>"; };
+		CEB210A3B8364F619F272756 /* libPods-SplatStagesToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1104AE9B520422938A60319 /* Pods-SplatStagesFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesFramework/Pods-SplatStagesFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		E0C8ABE2D17A8DF2E0945651 /* Pods-SplatStagesToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesToday/Pods-SplatStagesToday.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +149,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047B3FA91BB79199005BF2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */,
+				047B3FAE1BB79199005BF2D0 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,11 +188,32 @@
 			path = SplatStagesFramework;
 			sourceTree = "<group>";
 		};
+		047B3FAF1BB79199005BF2D0 /* SplatStagesToday */ = {
+			isa = PBXGroup;
+			children = (
+				04FF0F421BBB71C9005BC356 /* SplatStagesToday.entitlements */,
+				047B3FB01BB79199005BF2D0 /* TodayViewController.h */,
+				047B3FB11BB79199005BF2D0 /* TodayViewController.m */,
+				0417215B1BB8B98D0027991D /* HeaderCell.h */,
+				0417215C1BB8B98D0027991D /* HeaderCell.m */,
+				0417215E1BB8B9CD0027991D /* MessageCell.h */,
+				0417215F1BB8B9CD0027991D /* MessageCell.m */,
+				041721581BB8B8CD0027991D /* StagesCell.h */,
+				041721591BB8B8CD0027991D /* StagesCell.m */,
+				047B3FB31BB79199005BF2D0 /* MainInterface.storyboard */,
+				047B3FB61BB79199005BF2D0 /* Info.plist */,
+				04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */,
+				04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */,
+			);
+			path = SplatStagesToday;
+			sourceTree = "<group>";
+		};
 		04EE0CB61BA5D47D003BE6A9 = {
 			isa = PBXGroup;
 			children = (
 				04EE0CC11BA5D47D003BE6A9 /* SplatStages */,
 				047A5EC31BB5E09F00DD510D /* SplatStagesFramework */,
+				047B3FAF1BB79199005BF2D0 /* SplatStagesToday */,
 				04EE0CC01BA5D47D003BE6A9 /* Products */,
 				0EB9B1D4092FCC00534FF30D /* Pods */,
 				73212F200F1238B9BCBBB379 /* Frameworks */,
@@ -148,6 +225,7 @@
 			children = (
 				04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */,
 				047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */,
+				047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +233,7 @@
 		04EE0CC11BA5D47D003BE6A9 /* SplatStages */ = {
 			isa = PBXGroup;
 			children = (
+				04C1DE2C1BBA014000D98CA3 /* SplatStages.entitlements */,
 				04EE0CC51BA5D47D003BE6A9 /* AppDelegate.h */,
 				04EE0CC61BA5D47D003BE6A9 /* AppDelegate.m */,
 				04EE0CE11BA5D4D6003BE6A9 /* TabViewController.h */,
@@ -194,6 +273,8 @@
 				406078D19F699FD6F4F180BF /* Pods-SplatStages.release.xcconfig */,
 				D1104AE9B520422938A60319 /* Pods-SplatStagesFramework.debug.xcconfig */,
 				1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */,
+				33B13DB44236484B48F0A673 /* Pods-SplatStagesToday.debug.xcconfig */,
+				E0C8ABE2D17A8DF2E0945651 /* Pods-SplatStagesToday.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -203,6 +284,8 @@
 			children = (
 				8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */,
 				802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */,
+				047B3FAD1BB79199005BF2D0 /* NotificationCenter.framework */,
+				CEB210A3B8364F619F272756 /* libPods-SplatStagesToday.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,6 +327,23 @@
 			productReference = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		047B3FAB1BB79199005BF2D0 /* SplatStagesToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 047B3FBC1BB79199005BF2D0 /* Build configuration list for PBXNativeTarget "SplatStagesToday" */;
+			buildPhases = (
+				047B3FA81BB79199005BF2D0 /* Sources */,
+				047B3FA91BB79199005BF2D0 /* Frameworks */,
+				047B3FAA1BB79199005BF2D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SplatStagesToday;
+			productName = SplatStagesToday;
+			productReference = 047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		04EE0CBE1BA5D47D003BE6A9 /* SplatStages */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04EE0CD61BA5D47D003BE6A9 /* Build configuration list for PBXNativeTarget "SplatStages" */;
@@ -255,11 +355,13 @@
 				047A5ECE1BB5E09F00DD510D /* Embed Frameworks */,
 				7734477505F324E00D962F45 /* Copy Pods Resources */,
 				044042A91BAB1515003C481E /* ShellScript */,
+				047B3FBD1BB79199005BF2D0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				047A5EC81BB5E09F00DD510D /* PBXTargetDependency */,
+				047B3FB81BB79199005BF2D0 /* PBXTargetDependency */,
 			);
 			name = SplatStages;
 			productName = SplatStages;
@@ -279,9 +381,23 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 596NM9AGF4;
 					};
+					047B3FAB1BB79199005BF2D0 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 596NM9AGF4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					04EE0CBE1BA5D47D003BE6A9 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 596NM9AGF4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -299,6 +415,7 @@
 			projectRoot = "";
 			targets = (
 				04EE0CBE1BA5D47D003BE6A9 /* SplatStages */,
+				047B3FAB1BB79199005BF2D0 /* SplatStagesToday */,
 				047A5EC11BB5E09F00DD510D /* SplatStagesFramework */,
 			);
 		};
@@ -309,6 +426,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047B3FAA1BB79199005BF2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047B3FB51BB79199005BF2D0 /* MainInterface.storyboard in Resources */,
+				04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */,
+				04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +541,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		047B3FA81BB79199005BF2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0417215A1BB8B8CD0027991D /* StagesCell.m in Sources */,
+				041721601BB8B9CD0027991D /* MessageCell.m in Sources */,
+				0417215D1BB8B98D0027991D /* HeaderCell.m in Sources */,
+				047B3FB21BB79199005BF2D0 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EE0CBB1BA5D47D003BE6A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,9 +574,22 @@
 			target = 047A5EC11BB5E09F00DD510D /* SplatStagesFramework */;
 			targetProxy = 047A5EC71BB5E09F00DD510D /* PBXContainerItemProxy */;
 		};
+		047B3FB81BB79199005BF2D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 047B3FAB1BB79199005BF2D0 /* SplatStagesToday */;
+			targetProxy = 047B3FB71BB79199005BF2D0 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		047B3FB31BB79199005BF2D0 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				047B3FB41BB79199005BF2D0 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		04EE0CCB1BA5D47D003BE6A9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -462,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1104AE9B520422938A60319 /* Pods-SplatStagesFramework.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -482,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -495,6 +648,42 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		047B3FBA1BB79199005BF2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SplatStagesToday/SplatStagesToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/NSAttributedString+CCLFormat\"";
+				INFOPLIST_FILE = SplatStagesToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStages.SplatStagesToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		047B3FBB1BB79199005BF2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SplatStagesToday/SplatStagesToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/NSAttributedString+CCLFormat\"";
+				INFOPLIST_FILE = SplatStagesToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStages.SplatStagesToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -585,11 +774,15 @@
 			baseConfigurationReference = A4F2E8C750242519572ABB41 /* Pods-SplatStages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SplatStages/SplatStages.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SplatStages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -598,11 +791,22 @@
 			baseConfigurationReference = 406078D19F699FD6F4F180BF /* Pods-SplatStages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SplatStages/SplatStages.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/ActionSheetPicker-3.0\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/NSAttributedString+CCLFormat\"",
+				);
 				INFOPLIST_FILE = SplatStages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -614,6 +818,15 @@
 			buildConfigurations = (
 				047A5ECB1BB5E09F00DD510D /* Debug */,
 				047A5ECC1BB5E09F00DD510D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		047B3FBC1BB79199005BF2D0 /* Build configuration list for PBXNativeTarget "SplatStagesToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047B3FBA1BB79199005BF2D0 /* Debug */,
+				047B3FBB1BB79199005BF2D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

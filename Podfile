@@ -9,3 +9,4 @@ end
 target 'SplatStagesFramework' do
 	pod 'NSAttributedString+CCLFormat'
 end
+
