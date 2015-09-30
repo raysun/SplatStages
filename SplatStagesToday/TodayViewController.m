@@ -93,6 +93,11 @@
             return 19;
         case 1:
             return 25;
+        case 2:
+        case 3:
+        case 4:
+            // TODO: ability to pick how many rotations are shown
+            return 44;
         case 5:
             if ([[SplatUtilities getUserDefaults] objectForKey:@"showSplatfestInToday"] != nil) {
                 return 0;
@@ -133,7 +138,7 @@
     // Check if app setup was completed.
     if ([[SplatUtilities getUserDefaults] objectForKey:@"setupFinished"] == nil || self.errorOccurred) {
         if (indexPath.row == 0) {
-            // Display a special message telling the user to set up the app first.
+            // Display a special message.
             MessageCell* messageCell = (MessageCell*) [self getCellWithIdentifier:@"messageCell" tableView:tableView];
             NSString* message = (self.errorOccurred) ? NSLocalizedString(@"TODAY_ERROR", nil) : NSLocalizedString(@"TODAY_DO_SETUP_FIRST", nil);
             [messageCell.messageLabel setText:message];

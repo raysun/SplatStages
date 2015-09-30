@@ -14,7 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property NSMutableArray* cells;
 @property MessageCell* rotationCountdownCell;
 @property MessageCell* splatfestCountdownCell;
 @property SplatTimer* rotationTimer;
