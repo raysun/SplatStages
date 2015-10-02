@@ -199,6 +199,10 @@
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
     
+    // Call the completionHandler before we even start fetching to ensure that
+    // this method is continued to be called.
+    completionHandler(NCUpdateResultNoData);
+    
     if ([[SplatUtilities getUserDefaults] objectForKey:@"setupFinished"] == nil) {
         [self reloadTableViewWithCompletionHandler:^(){}];
         completionHandler(NCUpdateResultNewData);
