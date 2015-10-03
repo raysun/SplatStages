@@ -6,6 +6,8 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
+#import <ActionSheetPicker-3.0/ActionSheetPicker.h>
+
 #import <SplatStagesFramework/SplatUtilities.h>
 
 #import "SettingsViewController.h"
@@ -21,41 +23,40 @@
     [super viewDidLoad];
     
     // Initialize the picker options arrays
-    self.pickerOptions = [[NSArray alloc] initWithObjects:NSLocalizedString(@"REGION_NORTH_AMERICA", nil), NSLocalizedString(@"REGION_EUROPE", nil), NSLocalizedString(@"REGION_JAPAN", nil), NSLocalizedString(@"REGION_DEBUG", nil), nil];
+    self.pickerOptions = @[
+                           NSLocalizedString(@"REGION_NORTH_AMERICA", nil),
+                           NSLocalizedString(@"REGION_EUROPE", nil),
+                           NSLocalizedString(@"REGION_JAPAN", nil),
+#ifdef DEBUG
+                           NSLocalizedString(@"REGION_DEBUG", nil),
+#endif
+                           ];
     self.internalRegionStrings = [[NSArray alloc] initWithObjects:@"na", @"eu", @"jp", @"debug", nil];
     
     // Setup the UISegmentedControl callback
     [self.rotationSelector addTarget:self action:@selector(userSelectedRotation:) forControlEvents:UIControlEventValueChanged];
+    
+    // Setup the region label
+    NSString* region = [[SplatUtilities getUserDefaults] objectForKey:@"regionUserFacing"];
+    if (region == nil) {
+        region = NSLocalizedString(@"REGION_UNKNOWN", nil);
+    }
+    [self.regionLabel setText:[NSString stringWithFormat:NSLocalizedString(@"SETTINGS_REGION", nil), region]];
     
     // Set background
     UIImage* image = [UIImage imageNamed:@"BACKGROUND"];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
 }
 
-- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *) pickerView {
-    return 1;
-}
-
-- (NSInteger) pickerView:(UIPickerView *) pickerView numberOfRowsInComponent:(NSInteger) component {
-#ifdef DEBUG
-    return self.pickerOptions.count;
-#else
-    // Hide the "Debug" region in release builds.
-    return self.pickerOptions.count - 1;
-#endif
-}
-
-- (NSAttributedString*) pickerView:(UIPickerView *) pickerView attributedTitleForRow:(NSInteger) row forComponent:(NSInteger) component {
-    return [[NSAttributedString alloc] initWithString:[self.pickerOptions objectAtIndex:row] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-}
-
-- (IBAction) regionConfirmed:(id) sender {
-    NSString* chosenRegion = [self.pickerOptions objectAtIndex:[self.pickerView selectedRowInComponent:0]];
-    NSString* confirmRegionLocalized = [NSString stringWithFormat:NSLocalizedString(@"SETTINGS_CONFIRM_REGION_TEXT", nil), chosenRegion];
-    
-    UIAlertView* confirmRegionAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SETTINGS_CONFIRM_REGION_TITLE", nil) message:confirmRegionLocalized delegate:self cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
-    confirmRegionAlert.tag = 1;
-    [confirmRegionAlert show];
+- (IBAction) changeRegion:(id) sender {
+    [ActionSheetStringPicker showPickerWithTitle:NSLocalizedString(@"SETTINGS_PICKER_TITLE", nil) rows:self.pickerOptions initialSelection:0 doneBlock:^(ActionSheetStringPicker* picker, NSInteger selectedIndex, id selectedValue) {
+        self.chosenRegion = selectedIndex;
+        NSString* confirmRegionLocalized = [NSString stringWithFormat:NSLocalizedString(@"SETTINGS_CONFIRM_REGION_TEXT", nil), selectedValue];
+        
+        UIAlertView* confirmRegionAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SETTINGS_CONFIRM_REGION_TITLE", nil) message:confirmRegionLocalized delegate:self cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
+        confirmRegionAlert.tag = 1;
+        [confirmRegionAlert show];
+    } cancelBlock:^(ActionSheetStringPicker* picker) {} origin:self.view];
 }
 
 - (IBAction) refreshData:(id) sender {
@@ -71,14 +72,18 @@
     [aboutAlert show];
 }
 
-- (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (IBAction) reportIssue:(id) sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/OatmealDome/SplatStages/issues"]];
+}
+
+- (void) alertView:(UIAlertView*) alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView.tag == 1) {
         // Confirm Region Alert
         
         if (buttonIndex == 0) {
             // User picked OK, so let's setup the done alert + save settings
-            NSString* chosenRegionInternal = [self.internalRegionStrings objectAtIndex:[self.pickerView selectedRowInComponent:0]];
-            NSString* chosenRegionUser = [self.pickerOptions objectAtIndex:[self.pickerView selectedRowInComponent:0]];
+            NSString* chosenRegionInternal = [self.internalRegionStrings objectAtIndex:self.chosenRegion];
+            NSString* chosenRegionUser = [self.pickerOptions objectAtIndex:self.chosenRegion];
             NSMutableString* finishText = [NSMutableString stringWithFormat:NSLocalizedString(@"SETTINGS_DONE_TEXT", nil), chosenRegionUser];
             
             // Add the outdated message to the text if the user is not in the NA region
@@ -91,21 +96,26 @@
             finishAlert.tag = 2;
             [finishAlert show];
             
+            // Update region label
+            [self.regionLabel setText:[NSString stringWithFormat:NSLocalizedString(@"SETTINGS_REGION", nil), chosenRegionUser]];
+            
             // Save this setting.
             NSUserDefaults* userDefaults = [SplatUtilities getUserDefaults];
             [userDefaults setObject:@1 forKey:@"setupFinished"];
             [userDefaults setObject:chosenRegionInternal forKey:@"region"];
+            [userDefaults setObject:chosenRegionUser forKey:@"regionUserFacing"];
             [userDefaults synchronize];
-            
-            // Tell the TabViewController that it's okay to let the user out.
-            TabViewController* rootController = (TabViewController*) self.tabBarController;
-            rootController.needsInitialSetup = false;
         } else {
             // Cancelled, do nothing.
             [alertView dismissWithClickedButtonIndex:-1 animated:true];
         }
     } else if (alertView.tag == 2) {
         // Finished Setup Alert
+        
+        // Tell the TabViewController that it's okay to let the user out.
+        TabViewController* rootController = (TabViewController*) self.tabBarController;
+        rootController.needsInitialSetup = false;
+        
         // Force a refresh of all the data.
         [self.refreshDataButton sendActionsForControlEvents:UIControlEventTouchUpInside];
     }

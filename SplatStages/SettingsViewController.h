@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate>
+@interface SettingsViewController : UIViewController <UIAlertViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIPickerView* pickerView;
+@property (weak, nonatomic) IBOutlet UILabel* regionLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl* rotationSelector;
 @property (weak, nonatomic) IBOutlet UIButton* refreshDataButton;
-@property (weak, nonatomic) IBOutlet UIButton* aboutButton;
 @property NSArray* pickerOptions;
 @property NSArray* internalRegionStrings;
+@property NSInteger chosenRegion;
 
 @end
 
