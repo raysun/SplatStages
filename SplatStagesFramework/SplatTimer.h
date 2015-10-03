@@ -27,9 +27,16 @@
 @property SEL selector;
 @property NSTimer* internalTimer;
 
+//! Inits the SplatTimer instance as a rotation timer.
 - (id) initRotationTimerWithDate:(NSDate*) date labelOne:(UILabel*) labelOne labelTwo:(UILabel*) labelTwo textString:(NSString*) textString timerFinishedHandler:(void (^)()) timerFinishedHandler;
+
+//! Inits the SplatTimer instance as a Splatfest coundown timer.
 - (id) initFestivalTimerWithDate:(NSDate*) date label:(UILabel*) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)(NSAttributedString* teamA, NSAttributedString* teamB)) timerFinishedHandler;
+
+//! Starts the timer if it has been stopped.
 - (void) start;
+
+//! Stops the timer if it has been started.
 - (void) invalidate;
 
 @end

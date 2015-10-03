@@ -27,6 +27,10 @@
 //! Get the team name as a coloured NSAttributedString.
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData;
 
+//
+// Thanks WrightsCS on StackOverflow!
+// http://stackoverflow.com/questions/6207329/how-to-set-hex-color-code-for-background
+//
 //! Returns the hex string as a UIColor.
 + (UIColor*) colorWithHexString:(NSString*) hex;
 

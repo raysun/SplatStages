@@ -52,7 +52,6 @@
 - (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    // TODO Should we be doing anything here...?
 }
 
 // Data Methods ---------------

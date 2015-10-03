@@ -10,10 +10,6 @@
 "RAINMAKER" = "Rainmaker";
 "UNKNOWN_GAMEMODE" = "Unknown Gamemode";
 
-// Modes - Unused
-"REGULAR_BATTLE" = "Regular";
-"RANKED_BATTLE" = "Ranked";
-
 // Stages
 "AROWANA_MALL" = "Arowana Mall";
 "BLACKBELLY_SKATEPARK" = "Blackbelly Skatepark";

@@ -10,6 +10,6 @@
 
 @interface HeaderCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (weak, nonatomic) IBOutlet UILabel* headerLabel;
 
 @end

@@ -12,7 +12,7 @@
 
 @interface TodayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView* tableView;
 
 @property MessageCell* rotationCountdownCell;
 @property MessageCell* splatfestCountdownCell;

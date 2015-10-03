@@ -37,10 +37,7 @@
     return string;
 }
 
-// Thanks WrightsCS on StackOverflow!
-// http://stackoverflow.com/questions/6207329/how-to-set-hex-color-code-for-background
-+ (UIColor*) colorWithHexString:(NSString*) hex
-{
++ (UIColor*) colorWithHexString:(NSString*) hex {
     NSString* cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
     // String should be 6 or 8 characters

@@ -10,14 +10,17 @@
 
 @interface StagesCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *timePeriod;
-@property (weak, nonatomic) IBOutlet UILabel *rankedGamemodeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *regularStageOneLabel;
-@property (weak, nonatomic) IBOutlet UILabel *regularStageTwoLabel;
-@property (weak, nonatomic) IBOutlet UILabel *rankedStageOneLabel;
-@property (weak, nonatomic) IBOutlet UILabel *rankedStageTwoLabel;
+@property (weak, nonatomic) IBOutlet UILabel* timePeriod;
+@property (weak, nonatomic) IBOutlet UILabel* rankedGamemodeLabel;
+@property (weak, nonatomic) IBOutlet UILabel* regularStageOneLabel;
+@property (weak, nonatomic) IBOutlet UILabel* regularStageTwoLabel;
+@property (weak, nonatomic) IBOutlet UILabel* rankedStageOneLabel;
+@property (weak, nonatomic) IBOutlet UILabel* rankedStageTwoLabel;
 
+//! Uses the schedule data provided to setup the cell.
 - (void) setupWithSchedule:(NSDictionary*) schedule timePeriod:(NSString*) timePeriod;
+
+//! Uses the Splatfest data provided to setup the cell.
 - (void) setupWithSplatfestStages:(NSArray*) stages;
 
 @end

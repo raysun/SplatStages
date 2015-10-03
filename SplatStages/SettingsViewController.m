@@ -31,7 +31,7 @@
                            NSLocalizedString(@"REGION_DEBUG", nil),
 #endif
                            ];
-    self.internalRegionStrings = [[NSArray alloc] initWithObjects:@"na", @"eu", @"jp", @"debug", nil];
+    self.internalRegionStrings = @[ @"na", @"eu", @"jp", @"debug" ];
     
     // Setup the UISegmentedControl callback
     [self.rotationSelector addTarget:self action:@selector(userSelectedRotation:) forControlEvents:UIControlEventValueChanged];

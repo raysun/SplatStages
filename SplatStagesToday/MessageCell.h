@@ -10,6 +10,6 @@
 
 @interface MessageCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+@property (weak, nonatomic) IBOutlet UILabel* messageLabel;
 
 @end
