@@ -52,11 +52,11 @@
 "REGION_EUROPE" = "Europe & Oceania";
 "REGION_JAPAN" = "Japan";
 "REGION_DEBUG" = "Debug";
+"REGION_UNKNOWN" = "Unknown";
 
-// Settings
-"SETTINGS_CHANGE_REGION" = "Change Region";
-"SETTINGS_REFRESH_DATA" = "Refresh Data";
-"SETTINGS_ABOUT" = "About this App";
+// Settings
+"SETTINGS_REGION" = "Current region: %@";
+"SETTINGS_PICKER_TITLE" = "Select Your Region";
 "SETTINGS_CONFIRM_REGION_TITLE" = "Confirm Region";
 "SETTINGS_CONFIRM_REGION_TEXT" = "You are in the %@ region. Is this correct?";
 "SETTINGS_DONE_TITLE" = "Region Set";

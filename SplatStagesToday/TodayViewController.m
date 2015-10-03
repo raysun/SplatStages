@@ -79,7 +79,7 @@
 }
 
 - (CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *) indexPath {
-    // Check if app setup was completed.
+    // Check if app setup was completed or if there was an error.
     if ([[SplatUtilities getUserDefaults] objectForKey:@"setupFinished"] == nil || self.errorOccurred) {
         if (indexPath.row == 0) {
             return 44;
@@ -92,7 +92,7 @@
         case 0:
             return 19;
         case 1:
-            return 25;
+            return 29;
         case 2:
         case 3:
         case 4:
@@ -111,11 +111,11 @@
                 NSDate* splatfestStart = [NSDate dateWithTimeIntervalSince1970:[[splatfestData objectForKey:@"startTime"] longLongValue]];
                 NSDate* splatfestEnd = [NSDate dateWithTimeIntervalSince1970:[[splatfestData objectForKey:@"endTime"] longLongValue]];
                 
-                if ([splatfestStart timeIntervalSinceNow] < 0.0 && [splatfestEnd timeIntervalSinceNow] > 0.0) {
+                if ([splatfestStart timeIntervalSinceNow] < 0.0 && [splatfestEnd timeIntervalSinceNow] > 0.0) { // Splatfest started
                     return 44;
                 }
             }
-            return 25;
+            return 29;
         case 7:
             if ([[SplatUtilities getUserDefaults] objectForKey:@"showSplatfestInToday"] != nil) {
                 return 0;
@@ -135,7 +135,7 @@
 }
 
 - (UITableViewCell*) tableView:(UITableView*) tableView cellForRowAtIndexPath:(NSIndexPath*) indexPath {
-    // Check if app setup was completed.
+    // Check if app setup was completed or if there was an error.
     if ([[SplatUtilities getUserDefaults] objectForKey:@"setupFinished"] == nil || self.errorOccurred) {
         if (indexPath.row == 0) {
             // Display a special message.
@@ -161,7 +161,7 @@
         case 3:
         case 4: {
             NSInteger rotationNum = indexPath.row - 2; // for example, row 4 - 2 = index 2 in our schedule array
-            NSString* timePeriod = [NSString stringWithFormat:@"TODAY_TIME_PERIOD_%li", (NSInteger) rotationNum + 1];
+            NSString* timePeriod = [NSString stringWithFormat:@"TODAY_TIME_PERIOD_%ld", (NSInteger) rotationNum + 1];
             NSArray* schedules = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
             
             StagesCell* stagesCell = (StagesCell*) [self getCellWithIdentifier:@"stagesCell" tableView:tableView];
