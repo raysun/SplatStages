@@ -56,7 +56,7 @@
         UIAlertView* confirmRegionAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SETTINGS_CONFIRM_REGION_TITLE", nil) message:confirmRegionLocalized delegate:self cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:NSLocalizedString(@"CANCEL", nil), nil];
         confirmRegionAlert.tag = 1;
         [confirmRegionAlert show];
-    } cancelBlock:^(ActionSheetStringPicker* picker) {} origin:self.view];
+    } cancelBlock:^(ActionSheetStringPicker* picker) {} origin:self.regionLabel];
 }
 
 - (IBAction) refreshData:(id) sender {
