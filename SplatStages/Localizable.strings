@@ -34,7 +34,7 @@
 "ROTATION_UNKNOWN" = "The stage rotation is in an unknown amount of time.";
 "ROTATION_NOW" = "The stage rotation just happened!";
 "ROTATION_FUTURE" = "This is a future stage rotation.";
-"ROTATION_SPLATFEST" = "Stage information is unavailable during Splatfests.";
+"ROTATION_UNAVAILABLE" = "Stage information is currently unavailable.";
 
 // Splatfest
 "SPLATFEST_ANNOUNCED" = "The next Splatfest has been announced!";

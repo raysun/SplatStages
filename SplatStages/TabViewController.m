@@ -169,8 +169,8 @@
     [rankedViewController setupViewWithData:unknown];
     
     // Set the rotation countdown labels
-    [regularViewController.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_SPLATFEST", nil)];
-    [rankedViewController.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_SPLATFEST", nil)];
+    [regularViewController.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
+    [rankedViewController.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
     
     // Clear any MBProgressHUDs currently attached to the views.
     [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
