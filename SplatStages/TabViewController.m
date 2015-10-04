@@ -153,9 +153,6 @@
                                             },
                                             @{
                                                 @"nameEN" : @"UNKNOWN_MAP"
-                                            },
-                                            @{
-                                                @"nameEN" : @"UNKNOWN_MAP"
                                             }
                                         ],
                                 @"rulesEN" : @"UNKNOWN_GAMEMODE"

@@ -23,4 +23,7 @@
 //! Uses the Splatfest data provided to setup the cell.
 - (void) setupWithSplatfestStages:(NSArray*) stages;
 
+//! Sets up the cell with all "unknown" text.
+- (void) setupWithUnknownStages;
+
 @end

@@ -36,6 +36,24 @@
     [self.timePeriod setText:NSLocalizedString(@"TODAY_TIME_PERIOD_1", nil)];
 }
 
+- (void) setupWithUnknownStages {
+    NSArray* unknownStages = @[
+                         @{
+                             @"nameEN" : @"UNKNOWN_MAP"
+                         },
+                         @{
+                             @"nameEN" : @"UNKNOWN_MAP"
+                         }
+                         ];
+    
+    [self.rankedGamemodeLabel setHidden:false];
+    [self.rankedStageTwoLabel setHidden:false];
+    
+    [self setupStageLabelsWithStages:unknownStages labelOne:self.regularStageOneLabel labelTwo:self.regularStageTwoLabel];
+    [self setupStageLabelsWithStages:unknownStages labelOne:self.rankedStageOneLabel labelTwo:self.rankedStageTwoLabel];
+    [self.rankedGamemodeLabel setText:NSLocalizedString(@"UNKNOWN_GAMEMODE", nil)];
+}
+
 - (void) setupStageLabelsWithStages:(NSArray*) stages labelOne:(UILabel*) labelOne labelTwo:(UILabel*) labelTwo {
     [self setLabel:labelOne nameEN:[[stages objectAtIndex:0] objectForKey:@"nameEN"] nameJP:[[stages objectAtIndex:0] objectForKey:@"nameJP"] unknownFallback:NSLocalizedString(@"UNKNOWN_MAP", nil)];
     [self setLabel:labelTwo nameEN:[[stages objectAtIndex:1] objectForKey:@"nameEN"] nameJP:[[stages objectAtIndex:0] objectForKey:@"nameJP"] unknownFallback:NSLocalizedString(@"UNKNOWN_MAP", nil)];

@@ -161,11 +161,19 @@
         case 3:
         case 4: {
             NSInteger rotationNum = indexPath.row - 2; // for example, row 4 - 2 = index 2 in our schedule array
-            NSString* timePeriod = [NSString stringWithFormat:@"TODAY_TIME_PERIOD_%ld", (NSInteger) rotationNum + 1];
             NSArray* schedules = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
-            
             StagesCell* stagesCell = (StagesCell*) [self getCellWithIdentifier:@"stagesCell" tableView:tableView];
-            [stagesCell setupWithSchedule:[schedules objectAtIndex:rotationNum] timePeriod:NSLocalizedString(timePeriod, nil)];
+            
+            // Check if there is a schedule
+            if ([schedules count] <= 1) {
+                // No schedule! Setup the cell with unknowns.
+                [stagesCell setupWithUnknownStages];
+            } else {
+                // There is a schedule, continue with setup as normal.
+                NSString* timePeriod = [NSString stringWithFormat:@"TODAY_TIME_PERIOD_%ld", (NSInteger) rotationNum + 1];
+                [stagesCell setupWithSchedule:[schedules objectAtIndex:rotationNum] timePeriod:NSLocalizedString(timePeriod, nil)];
+            }
+            
             return stagesCell;
         }
         case 5: {
