@@ -17,7 +17,18 @@
 - (BOOL) application:(UIApplication*) application didFinishLaunchingWithOptions:(NSDictionary*) launchOptions {
     // The Light status bar style is best, otherwise we can't read it!
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    // Register for Push Notifications
+    UIUserNotificationSettings* settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound categories:nil];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
     return YES;
+}
+
+- (void) application:(UIApplication*) application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*) deviceToken {
+    NSLog(@"device token: %@", [deviceToken description]);
 }
 
 - (void) applicationWillResignActive:(UIApplication*) application {

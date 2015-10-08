@@ -64,11 +64,17 @@
 "SETTINGS_WELCOME_TEXT" = "Welcome to SplatStages! To begin, choose your Splatoon region.";
 "SETTINGS_ABOUT_TEXT" = "SplatStages was written by OatmealDome. This app contains MBProgressHUD, NSAttributedString+CCLFormat, and ActionSheetPicker-3.0. The Project Paintball font was created by JapanYoshi/theFIZZYnator. Schedule data is provided by splatoon.ink, and Splatfest data is provided by myself. The settings icon was provided by icons8.com. Source code for this app is available on GitHub and is licensed under the BSD 3-clause license. \n\nSplatoon and all its related assets are copyright of Nintendo. Nintendo does not have any involvement whatsoever in the SplatStages app.";
 
+// Push Notifications
+"PUSH_REGULAR_STAGE" = "Turf War on %@ has entered the %@ rotation."; // Stage, Rotation Number (Current/Next/Later)
+"PUSH_RANKED_STAGE" = "%@ on %@ has entered the %@ rotation."; // Gamemode, Stage, Rotation Number
+"PUSH_RANKED_GAMEMODE" = "%@ has entered the %@ Ranked rotation."; // Gamemode, Rotation Number
+
 // Errors
 "ERROR_TITLE" = "Error";
 "ERROR_DOWNLOADING_DATA" = "An error occurred while attempting to download data.";
 "ERROR_PARSING_JSON" = "An error occurred while parsing JSON data.";
 "ERROR_CLEARING_IMAGE_CACHE" = "An error occurred while trying to clear the Splatfest image cache.";
+"ERROR_PUSH_FAILED_TO_SUBSCRIBE" = "An error occurred while updating your subscriptions.";
 "ERROR_INTERNAL_DESCRIPTION" = "Internal description: ";
 "ERROR_TRY_AGAIN" = "Tap on Refresh Data in Settings to try again.";
 
