@@ -379,11 +379,11 @@
 				TargetAttributes = {
 					047A5EC11BB5E09F00DD510D = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 596NM9AGF4;
+						DevelopmentTeam = F9VP3B7ZRQ;
 					};
 					047B3FAB1BB79199005BF2D0 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 596NM9AGF4;
+						DevelopmentTeam = F9VP3B7ZRQ;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -392,9 +392,12 @@
 					};
 					04EE0CBE1BA5D47D003BE6A9 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 596NM9AGF4;
+						DevelopmentTeam = F9VP3B7ZRQ;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -614,6 +617,7 @@
 			baseConfigurationReference = D1104AE9B520422938A60319 /* Pods-SplatStagesFramework.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -635,6 +639,7 @@
 			baseConfigurationReference = 1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -662,7 +667,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStages.SplatStagesToday;
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.SplatStagesToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -680,7 +685,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStages.SplatStagesToday;
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.SplatStagesToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -780,7 +785,7 @@
 				INFOPLIST_FILE = SplatStages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStages;
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -804,7 +809,7 @@
 				INFOPLIST_FILE = SplatStages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStages;
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

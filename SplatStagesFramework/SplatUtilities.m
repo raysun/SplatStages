@@ -28,7 +28,7 @@
 }
 
 + (NSUserDefaults*) getUserDefaults {
-    return [[NSUserDefaults alloc] initWithSuiteName:@"group.me.oatmealdome.SplatStages"];
+    return [[NSUserDefaults alloc] initWithSuiteName:@"group.me.oatmealdome.ios.SplatStages"];
 }
 
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData {
