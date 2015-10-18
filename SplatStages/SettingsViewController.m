@@ -29,6 +29,9 @@
         region = NSLocalizedString(@"REGION_UNKNOWN", nil);
     }
     [self.regionLabel setText:region];
+    
+    // Update status bar
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (IBAction) userSelectedRotation:(id) sender {
@@ -71,6 +74,10 @@
         RegionViewController* regionVC = [segue destinationViewController];
         [regionVC setSettingsRegionLabel:self.regionLabel];
     }
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
 }
 
 @end

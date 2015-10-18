@@ -25,6 +25,10 @@
     // Set background
     UIImage* image = [UIImage imageNamed:@"SPLATFEST_BACKGROUND"];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
+    
+    // Update status bar
+    [self setNeedsStatusBarAppearanceUpdate];
+
 }
 
 - (void) preliminarySetup:(NSArray*) teams id:(int) id {
@@ -150,5 +154,8 @@
     [self.resultsMessageLabel setHidden:visibility];
 }
 
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 @end
