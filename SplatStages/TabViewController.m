@@ -333,13 +333,15 @@
 
 /// Returns the currently selected rotation (Current/0, Next/1, Later/2)
 - (NSInteger) getSelectedRotation {
-    SettingsViewController* settingsController = [self.viewControllers objectAtIndex:SETTINGS_CONTROLLER];
+    NSArray* settingsViewControllers = [[self.viewControllers objectAtIndex:SETTINGS_CONTROLLER] viewControllers];
+    SettingsViewController* settingsController = (SettingsViewController*) [settingsViewControllers objectAtIndex:0];
     return [settingsController.rotationSelector selectedSegmentIndex];
 }
 
 /// Sets the selected rotation.
 - (void) setSelectedRotation:(NSInteger) rotation {
-    SettingsViewController* settingsController = [self.viewControllers objectAtIndex:SETTINGS_CONTROLLER];
+    NSArray* settingsViewControllers = [[self.viewControllers objectAtIndex:SETTINGS_CONTROLLER] viewControllers];
+    SettingsViewController* settingsController = (SettingsViewController*) [settingsViewControllers objectAtIndex:0];
     [settingsController.rotationSelector setSelectedSegmentIndex:rotation];
 }
 

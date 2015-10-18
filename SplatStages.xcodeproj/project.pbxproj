@@ -10,7 +10,10 @@
 		0417215A1BB8B8CD0027991D /* StagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041721591BB8B8CD0027991D /* StagesCell.m */; settings = {ASSET_TAGS = (); }; };
 		0417215D1BB8B98D0027991D /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215C1BB8B98D0027991D /* HeaderCell.m */; settings = {ASSET_TAGS = (); }; };
 		041721601BB8B9CD0027991D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215F1BB8B9CD0027991D /* MessageCell.m */; settings = {ASSET_TAGS = (); }; };
+		04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */; settings = {ASSET_TAGS = (); }; };
 		044042AB1BAB4274003C481E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044042AA1BAB4274003C481E /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
+		044F04351BC875820082F921 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F04341BC875820082F921 /* RegionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5EC91BB5E09F00DD510D /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
 		047A5ECA1BB5E09F00DD510D /* SplatStagesFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,7 +95,13 @@
 		0417215C1BB8B98D0027991D /* HeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCell.m; sourceTree = "<group>"; };
 		0417215E1BB8B9CD0027991D /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		0417215F1BB8B9CD0027991D /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		04391BAB1BD3F1C70014EC99 /* SubscriptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionsViewController.h; sourceTree = "<group>"; };
+		04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionsViewController.m; sourceTree = "<group>"; };
+		04391BB11BD3F1FC0014EC99 /* WidgetConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetConfigViewController.h; sourceTree = "<group>"; };
+		04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetConfigViewController.m; sourceTree = "<group>"; };
 		044042AA1BAB4274003C481E /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		044F04331BC875820082F921 /* RegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionViewController.h; sourceTree = "<group>"; };
+		044F04341BC875820082F921 /* RegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionViewController.m; sourceTree = "<group>"; };
 		047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SplatStagesFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplatStagesFramework.h; sourceTree = "<group>"; };
 		047A5EC61BB5E09F00DD510D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -246,6 +255,12 @@
 				04EE0CE01BA5D4D6003BE6A9 /* SplatfestViewController.m */,
 				04EE0CDD1BA5D4D6003BE6A9 /* SettingsViewController.h */,
 				04EE0CDE1BA5D4D6003BE6A9 /* SettingsViewController.m */,
+				044F04331BC875820082F921 /* RegionViewController.h */,
+				044F04341BC875820082F921 /* RegionViewController.m */,
+				04391BB11BD3F1FC0014EC99 /* WidgetConfigViewController.h */,
+				04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */,
+				04391BAB1BD3F1C70014EC99 /* SubscriptionsViewController.h */,
+				04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */,
 				04EE0CCB1BA5D47D003BE6A9 /* Main.storyboard */,
 				04EE0CCE1BA5D47D003BE6A9 /* Assets.xcassets */,
 				04EE0CD01BA5D47D003BE6A9 /* LaunchScreen.storyboard */,
@@ -563,6 +578,9 @@
 				04EE0CC71BA5D47D003BE6A9 /* AppDelegate.m in Sources */,
 				04EE0CE51BA5D4D6003BE6A9 /* SettingsViewController.m in Sources */,
 				04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */,
+				04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */,
+				044F04351BC875820082F921 /* RegionViewController.m in Sources */,
+				04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */,
 				04EE0CE41BA5D4D6003BE6A9 /* RegularViewController.m in Sources */,
 				04EE0CE71BA5D4D6003BE6A9 /* TabViewController.m in Sources */,
 				04EE0CE61BA5D4D6003BE6A9 /* SplatfestViewController.m in Sources */,

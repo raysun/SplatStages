@@ -8,14 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController <UIAlertViewDelegate>
+@interface SettingsViewController : UITableViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel* regionLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl* rotationSelector;
-@property (weak, nonatomic) IBOutlet UIButton* refreshDataButton;
-@property NSArray* pickerOptions;
-@property NSArray* internalRegionStrings;
-@property NSInteger chosenRegion;
 
 @end
 
