@@ -29,9 +29,6 @@
     [self updateNumberLabel];
     
     self.hideSplatfestInformation = [userDefaults objectForKey:@"hideSplatfestInToday"] != nil;
-    if (self.hideSplatfestInformation) {
-        [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] animated:false scrollPosition:UITableViewScrollPositionTop];
-    }
 }
 
 - (void) didReceiveMemoryWarning {
@@ -39,6 +36,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) tableView:(UITableView*) tableView willDisplayCell:(UITableViewCell*) cell forRowAtIndexPath:(NSIndexPath*) indexPath {
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        if (self.hideSplatfestInformation) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+    }
+}
 
 - (void) tableView:(UITableView*) tableView didSelectRowAtIndexPath:(NSIndexPath*) indexPath {
     if (indexPath.section == 1) {
