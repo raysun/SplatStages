@@ -69,7 +69,6 @@
 // http://stackoverflow.com/questions/2797165/uitableviewcell-checkmark-change-on-select
 - (NSIndexPath*) tableView:(UITableView*) tableView willSelectRowAtIndexPath:(NSIndexPath*) indexPath {
     if (indexPath.section == 0) {
-        NSLog(@"old: %li, new: %li", self.oldIndex.row, indexPath.row);
         [self.tableView cellForRowAtIndexPath:self.oldIndex].accessoryType = UITableViewCellAccessoryNone;
         [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
         self.oldIndex = indexPath;
