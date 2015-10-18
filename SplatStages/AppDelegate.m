@@ -15,8 +15,6 @@
 @implementation AppDelegate
 
 - (BOOL) application:(UIApplication*) application didFinishLaunchingWithOptions:(NSDictionary*) launchOptions {
-    // The Light status bar style is best, otherwise we can't read it!
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 
