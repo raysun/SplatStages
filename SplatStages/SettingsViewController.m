@@ -41,7 +41,12 @@
         switch (indexPath.row) {
             case 0: { // Refresh Data cell
                 TabViewController* rootController = (TabViewController*) [self tabBarController];
-                [rootController refreshAllData];
+                if (rootController.needsInitialSetup) {
+                    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SETTINGS_SELECT_REGION_FIRST_TITLE", nil) message:NSLocalizedString(@"SETTINGS_SELECT_REGION_FIRST_TEXT", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
+                    [alert show];
+                } else {
+                    [rootController refreshAllData];
+                }
                 break;
             }
             case 1: { // Report an Issue cell
