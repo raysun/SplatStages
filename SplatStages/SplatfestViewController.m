@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     // Set background
-    UIImage* image = [UIImage imageNamed:@"BACKGROUND"];
+    UIImage* image = [UIImage imageNamed:@"SPLATFEST_BACKGROUND"];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
 }
 

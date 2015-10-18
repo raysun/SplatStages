@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     // Set background
-    UIImage* image = [UIImage imageNamed:@"BACKGROUND"];
+    UIImage* image = [UIImage imageNamed:@"REGULAR_BACKGROUND"];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
 }
 
