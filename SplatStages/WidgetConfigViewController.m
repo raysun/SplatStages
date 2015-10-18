@@ -26,6 +26,7 @@
         [userDefaults synchronize];
         self.rotationsShown = @(3);
     }
+    [self.stepper setValue:[self.rotationsShown doubleValue]];
     [self updateNumberLabel];
     
     self.hideSplatfestInformation = [userDefaults objectForKey:@"hideSplatfestInToday"] != nil;
