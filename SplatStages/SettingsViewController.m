@@ -6,8 +6,6 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
-#import <ActionSheetPicker-3.0/ActionSheetPicker.h>
-
 #import <SplatStagesFramework/SplatUtilities.h>
 
 #import "RegionViewController.h"
