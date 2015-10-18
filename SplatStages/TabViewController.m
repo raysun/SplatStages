@@ -202,7 +202,8 @@
 
 - (void) setStages {
     NSArray* schedule = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
-    if (schedule == nil || [schedule count] <= 1) {
+    NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedule lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
+    if (schedule == nil || [schedule count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
         // Just in case.
         return;
     }

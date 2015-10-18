@@ -164,13 +164,14 @@
             NSArray* schedules = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
             StagesCell* stagesCell = (StagesCell*) [self getCellWithIdentifier:@"stagesCell" tableView:tableView];
             
-            // Check if there is a schedule
-            if ([schedules count] <= 1) {
+            // Check if there is a schedule.
+            NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedules lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
+            if ([schedules count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
                 // No schedule! Setup the cell with unknowns.
                 [stagesCell setupWithUnknownStages];
             } else {
                 // There is a schedule, continue with setup as normal.
-                NSString* timePeriod = [NSString stringWithFormat:@"TODAY_TIME_PERIOD_%ld", (NSInteger) rotationNum + 1];
+                NSString* timePeriod = [NSString stringWithFormat:@"TODAY_TIME_PERIOD_%@", @(rotationNum + 1)];
                 [stagesCell setupWithSchedule:[schedules objectAtIndex:rotationNum] timePeriod:NSLocalizedString(timePeriod, nil)];
             }
             
@@ -222,8 +223,12 @@
             self.errorOccurred = false;
             [self reloadTableViewWithCompletionHandler:^{
                 // Setup timers.
-                [self setupRotationTimer];
                 [self setupSplatfestTimer];
+                if (![mode isEqualToNumber:@2]) {
+                    [self setupRotationTimer];
+                } else {
+                    [self.rotationCountdownCell.messageLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
+                }
                 
                 // Populate all cells right now!
                 for (int i = 0; i < 8; i++) {
