@@ -95,16 +95,21 @@
             return 29;
         case 2:
         case 3:
-        case 4:
-            // TODO: ability to pick how many rotations are shown
-            return 44;
+        case 4: {
+            NSNumber* rotationsShown = [[SplatUtilities getUserDefaults] objectForKey:@"rotationsShown"];
+            if (rotationsShown == nil) {
+                [[SplatUtilities getUserDefaults] setObject:@(3) forKey:@"rotationsShown"];
+                rotationsShown = @(3);
+            }
+            return ((rotationsShown.integerValue - indexPath.row + 1) < 0) ? 0 : 44;
+        }
         case 5:
-            if ([[SplatUtilities getUserDefaults] objectForKey:@"showSplatfestInToday"] != nil) {
+            if ([[SplatUtilities getUserDefaults] objectForKey:@"hideSplatfestInToday"] != nil) {
                 return 0;
             }
             return 19;
         case 6:
-            if ([[SplatUtilities getUserDefaults] objectForKey:@"showSplatfestInToday"] != nil) {
+            if ([[SplatUtilities getUserDefaults] objectForKey:@"hideSplatfestInToday"] != nil) {
                 return 0;
             } else {
                 NSDictionary* splatfestData = [[SplatUtilities getUserDefaults] objectForKey:@"splatfestData"];
@@ -117,7 +122,7 @@
             }
             return 29;
         case 7:
-            if ([[SplatUtilities getUserDefaults] objectForKey:@"showSplatfestInToday"] != nil) {
+            if ([[SplatUtilities getUserDefaults] objectForKey:@"hideSplatfestInToday"] != nil) {
                 return 0;
             } else {
                 NSDictionary* splatfestData = [[SplatUtilities getUserDefaults] objectForKey:@"splatfestData"];
