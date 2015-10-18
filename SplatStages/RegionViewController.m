@@ -29,8 +29,6 @@
 #endif
                            ];
     self.internalRegionStrings = @[ @"na", @"eu", @"jp", @"debug" ];
-    
-    [self selectRowWithRegion:[SplatUtilities getUserRegion]];
 }
 
 - (void) didReceiveMemoryWarning {
@@ -38,10 +36,40 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) tableView:(UITableView*) tableView willDisplayCell:(UITableViewCell*) cell forRowAtIndexPath:(NSIndexPath*) indexPath {
+    if (indexPath.section == 1)
+        return;
+    
+    switch (indexPath.row) {
+        case 0:
+            if ([[SplatUtilities getUserRegion] isEqualToString:@"na"]) {
+                self.oldIndex = indexPath;
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            }
+            break;
+        case 1:
+            if ([[SplatUtilities getUserRegion] isEqualToString:@"eu"]) {
+                self.oldIndex = indexPath;
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            }
+            break;
+        case 2:
+            if ([[SplatUtilities getUserRegion] isEqualToString:@"jp"]) {
+                self.oldIndex = indexPath;
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            }
+            break;
+        default:
+            // This should *never* happen.
+            break;
+    }
+}
+
 // Thanks to Zyphrax at StackOverflow!
 // http://stackoverflow.com/questions/2797165/uitableviewcell-checkmark-change-on-select
 - (NSIndexPath*) tableView:(UITableView*) tableView willSelectRowAtIndexPath:(NSIndexPath*) indexPath {
     if (indexPath.section == 0) {
+        NSLog(@"old: %li, new: %li", self.oldIndex.row, indexPath.row);
         [self.tableView cellForRowAtIndexPath:self.oldIndex].accessoryType = UITableViewCellAccessoryNone;
         [self.tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
         self.oldIndex = indexPath;
@@ -53,7 +81,6 @@
 - (void) tableView:(UITableView*) tableView didSelectRowAtIndexPath:(NSIndexPath*) indexPath {
     if ((long) indexPath.section == 1) {
         // User tapped on Save, so let's do just that!
-        NSLog(@"saving");
         NSString* chosenRegionInternal = [self.internalRegionStrings objectAtIndex:self.oldIndex.row];
         NSString* chosenRegionUser = [self.userFacingRegionStrings objectAtIndex:self.oldIndex.row];
         NSMutableString* finishText = [NSMutableString stringWithFormat:NSLocalizedString(@"SETTINGS_REGION_SET_TEXT", nil), chosenRegionUser];
@@ -86,23 +113,6 @@
     }
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (void) selectRowWithRegion:(NSString*) region {
-    NSIndexPath* index;
-    if ([region isEqualToString:@"na"]) {
-        index = [NSIndexPath indexPathForRow:0 inSection:0];
-    } else if ([region isEqualToString:@"eu"]) {
-        index = [NSIndexPath indexPathForRow:1 inSection:0];
-    } else if ([region isEqualToString:@"jp"]) {
-        index = [NSIndexPath indexPathForRow:2 inSection:0];
-    } else {
-        // This should *never* happen.
-        index = nil;
-    }
-    
-    [self.tableView selectRowAtIndexPath:index animated:false scrollPosition:UITableViewScrollPositionTop];
-
 }
 
 @end
