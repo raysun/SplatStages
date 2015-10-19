@@ -23,18 +23,17 @@
 - (void) applicationWillResignActive:(UIApplication*) application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
     // Cancel all timers.
     TabViewController* viewController = (TabViewController*) self.window.rootViewController;
     SplatfestViewController* splatfestVC = [[viewController viewControllers] objectAtIndex:2];
     
     if (viewController.rotationTimer != nil) {
         [viewController.rotationTimer invalidate];
-        viewController.rotationTimer = nil;
     }
     
     if (splatfestVC.countdownTimer != nil) {
         [splatfestVC.countdownTimer invalidate];
-        splatfestVC.countdownTimer = nil;
     }
 }
 
@@ -45,6 +44,7 @@
 
 - (void) applicationWillEnterForeground:(UIApplication*) application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
     // Update the Stage and Splatfest data.
     TabViewController* viewController = (TabViewController*) self.window.rootViewController;
     [viewController refreshAllData];
