@@ -485,7 +485,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Thanks to Jared Sinclair at Bloglovin and Martin Rybak at objcsharp!\ngit=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD | wc -l | tr -d ' '`\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $branchName-$appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+			shellScript = "# Thanks to Jared Sinclair at Bloglovin and Martin Rybak at objcsharp!\ngit=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD | wc -l | tr -d ' '`\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
 		197562E2B77DF172385C0CCC /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
