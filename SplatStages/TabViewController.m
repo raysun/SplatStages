@@ -237,8 +237,13 @@
             [self.rotationTimer invalidate];
             self.rotationTimer = nil;
         }
-        [regularVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
-        [rankedVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
+        
+        // Check if the first rotation is over. If it is, then don't touch the labels.
+        NSDate* firstRotationEnd = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
+        if ([firstRotationEnd timeIntervalSinceNow] > 0.0) {
+            [regularVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
+            [rankedVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
+        }
     }
     
     // Invalidate the stage requeset timer.
