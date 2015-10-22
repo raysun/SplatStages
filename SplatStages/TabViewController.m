@@ -137,16 +137,6 @@
     if (!self.viewsReady) {
         [self setStages];
     } else {
-        // Start up any timers.
-        if (self.rotationTimer) {
-            [self.rotationTimer start];
-        }
-        
-        SplatfestViewController* splatfestViewController = [self.viewControllers objectAtIndex:SPLATFEST_CONTROLLER];
-        if (splatfestViewController.countdownTimer) {
-            [splatfestViewController.countdownTimer start];
-        }
-        
         RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
         RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
         [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
