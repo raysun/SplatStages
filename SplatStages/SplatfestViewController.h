@@ -58,7 +58,7 @@
 
 // Data
 @property NSArray* teams;
-@property SplatTimer* countdown;
+@property SplatTimer* countdownTimer;
 @property int splatfestId;
 
 // Team Names

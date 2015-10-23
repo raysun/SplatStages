@@ -202,7 +202,8 @@
 
 - (void) setStages {
     NSArray* schedule = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
-    if (schedule == nil || [schedule count] <= 1) {
+    NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedule lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
+    if (schedule == nil || [schedule count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
         // Just in case.
         return;
     }
@@ -236,8 +237,13 @@
             [self.rotationTimer invalidate];
             self.rotationTimer = nil;
         }
-        [regularVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
-        [rankedVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
+        
+        // Check if the first rotation is over. If it is, then don't touch the labels.
+        NSDate* firstRotationEnd = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
+        if ([firstRotationEnd timeIntervalSinceNow] > 0.0) {
+            [regularVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
+            [rankedVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
+        }
     }
     
     // Invalidate the stage requeset timer.
@@ -332,13 +338,15 @@
 
 /// Returns the currently selected rotation (Current/0, Next/1, Later/2)
 - (NSInteger) getSelectedRotation {
-    SettingsViewController* settingsController = [self.viewControllers objectAtIndex:SETTINGS_CONTROLLER];
+    NSArray* settingsViewControllers = [[self.viewControllers objectAtIndex:SETTINGS_CONTROLLER] viewControllers];
+    SettingsViewController* settingsController = (SettingsViewController*) [settingsViewControllers objectAtIndex:0];
     return [settingsController.rotationSelector selectedSegmentIndex];
 }
 
 /// Sets the selected rotation.
 - (void) setSelectedRotation:(NSInteger) rotation {
-    SettingsViewController* settingsController = [self.viewControllers objectAtIndex:SETTINGS_CONTROLLER];
+    NSArray* settingsViewControllers = [[self.viewControllers objectAtIndex:SETTINGS_CONTROLLER] viewControllers];
+    SettingsViewController* settingsController = (SettingsViewController*) [settingsViewControllers objectAtIndex:0];
     [settingsController.rotationSelector setSelectedSegmentIndex:rotation];
 }
 

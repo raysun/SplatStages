@@ -30,6 +30,7 @@
 // Map Rotation
 "ROTATION_COUNTDOWN" = "The next stage rotation is in %ld:%02ld:%02ld."; // Hours, Minutes, Seconds
 "ROTATION_NOW" = "The stage rotation just happened!";
+"ROTATION_UNAVAILABLE" = "Stage information is currently unavailable.";
 
 // Splatfest
 "SPLATFEST_UPCOMING_COUNTDOWN" = "The %@ vs. %@ Splatfest is in %@!"; // Team A, Team B, SPLATFEST_UPCOMING_COUNTDOWN_TIME

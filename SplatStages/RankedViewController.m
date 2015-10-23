@@ -21,8 +21,12 @@
     [super viewDidLoad];
     
     // Set background
-    UIImage* image = [UIImage imageNamed:@"BACKGROUND"];
+    UIImage* image = [UIImage imageNamed:@"RANKED_BACKGROUND"];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
+    
+    // Update status bar
+    [self setNeedsStatusBarAppearanceUpdate];
+
 }
 
 - (void) setupViewWithData:(NSDictionary*) data {
@@ -54,6 +58,10 @@
         NSLog(@"No string for gamemode (en)\"%@\" (jp)\"%@\"!", gamemode, gamemodeJP);
     }
     self.gamemodeLabel.text = localizedGamemode;
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

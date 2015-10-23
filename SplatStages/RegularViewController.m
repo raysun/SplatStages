@@ -19,8 +19,11 @@
     [super viewDidLoad];
     
     // Set background
-    UIImage* image = [UIImage imageNamed:@"BACKGROUND"];
+    UIImage* image = [UIImage imageNamed:@"REGULAR_BACKGROUND"];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
+    
+    // Update status bar
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void) setupViewWithData:(NSDictionary*) data {
@@ -38,6 +41,10 @@
     
     // Regular Battles always have Turf War as their gamemode.
     [self.gamemodeLabel setText:NSLocalizedString(@"TURF_WAR", nil)];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SplatfestViewController.h"
+#import "TabViewController.h"
 
 @interface AppDelegate ()
 
@@ -34,6 +36,18 @@
 - (void) applicationWillResignActive:(UIApplication*) application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    // Invalidate all timers.
+    TabViewController* viewController = (TabViewController*) self.window.rootViewController;
+    SplatfestViewController* splatfestVC = [[viewController viewControllers] objectAtIndex:2];
+    
+    if (viewController.rotationTimer != nil) {
+        [viewController.rotationTimer invalidate];
+    }
+    
+    if (splatfestVC.countdownTimer != nil) {
+        [splatfestVC.countdownTimer invalidate];
+    }
 }
 
 - (void) applicationDidEnterBackground:(UIApplication*) application {
@@ -43,13 +57,21 @@
 
 - (void) applicationWillEnterForeground:(UIApplication*) application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    // Update the Stage and Splatfest data.
-    TabViewController* viewController = (TabViewController*) self.window.rootViewController;
-    [viewController refreshAllData];
 }
 
 - (void) applicationDidBecomeActive:(UIApplication*) application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    // Restart timers.
+    TabViewController* viewController = (TabViewController*) self.window.rootViewController;
+    if (viewController.rotationTimer) {
+        [viewController.rotationTimer start];
+    }
+    
+    SplatfestViewController* splatfestViewController = [viewController.viewControllers objectAtIndex:SPLATFEST_CONTROLLER];
+    if (splatfestViewController.countdownTimer) {
+        [splatfestViewController.countdownTimer start];
+    }
 }
 
 - (void) applicationWillTerminate:(UIApplication*) application {

@@ -95,16 +95,21 @@
             return 29;
         case 2:
         case 3:
-        case 4:
-            // TODO: ability to pick how many rotations are shown
-            return 44;
+        case 4: {
+            NSNumber* rotationsShown = [[SplatUtilities getUserDefaults] objectForKey:@"rotationsShown"];
+            if (rotationsShown == nil) {
+                [[SplatUtilities getUserDefaults] setObject:@(3) forKey:@"rotationsShown"];
+                rotationsShown = @(3);
+            }
+            return ((rotationsShown.integerValue - indexPath.row + 1) < 0) ? 0 : 44;
+        }
         case 5:
-            if ([[SplatUtilities getUserDefaults] objectForKey:@"showSplatfestInToday"] != nil) {
+            if ([[SplatUtilities getUserDefaults] objectForKey:@"hideSplatfestInToday"] != nil) {
                 return 0;
             }
             return 19;
         case 6:
-            if ([[SplatUtilities getUserDefaults] objectForKey:@"showSplatfestInToday"] != nil) {
+            if ([[SplatUtilities getUserDefaults] objectForKey:@"hideSplatfestInToday"] != nil) {
                 return 0;
             } else {
                 NSDictionary* splatfestData = [[SplatUtilities getUserDefaults] objectForKey:@"splatfestData"];
@@ -117,7 +122,7 @@
             }
             return 29;
         case 7:
-            if ([[SplatUtilities getUserDefaults] objectForKey:@"showSplatfestInToday"] != nil) {
+            if ([[SplatUtilities getUserDefaults] objectForKey:@"hideSplatfestInToday"] != nil) {
                 return 0;
             } else {
                 NSDictionary* splatfestData = [[SplatUtilities getUserDefaults] objectForKey:@"splatfestData"];
@@ -164,13 +169,14 @@
             NSArray* schedules = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
             StagesCell* stagesCell = (StagesCell*) [self getCellWithIdentifier:@"stagesCell" tableView:tableView];
             
-            // Check if there is a schedule
-            if ([schedules count] <= 1) {
+            // Check if there is a schedule.
+            NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedules lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
+            if ([schedules count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
                 // No schedule! Setup the cell with unknowns.
                 [stagesCell setupWithUnknownStages];
             } else {
                 // There is a schedule, continue with setup as normal.
-                NSString* timePeriod = [NSString stringWithFormat:@"TODAY_TIME_PERIOD_%ld", (NSInteger) rotationNum + 1];
+                NSString* timePeriod = [NSString stringWithFormat:@"TODAY_TIME_PERIOD_%@", @(rotationNum + 1)];
                 [stagesCell setupWithSchedule:[schedules objectAtIndex:rotationNum] timePeriod:NSLocalizedString(timePeriod, nil)];
             }
             
@@ -222,8 +228,12 @@
             self.errorOccurred = false;
             [self reloadTableViewWithCompletionHandler:^{
                 // Setup timers.
-                [self setupRotationTimer];
                 [self setupSplatfestTimer];
+                if (![mode isEqualToNumber:@2]) {
+                    [self setupRotationTimer];
+                } else {
+                    [self.rotationCountdownCell.messageLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
+                }
                 
                 // Populate all cells right now!
                 for (int i = 0; i < 8; i++) {

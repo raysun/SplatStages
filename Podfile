@@ -3,7 +3,6 @@
 
 target 'SplatStages' do
 	pod 'MBProgressHUD', '~> 0.9.1'
-	pod 'ActionSheetPicker-3.0'
 end
 
 target 'SplatStagesFramework' do

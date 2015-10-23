@@ -83,7 +83,9 @@
             [storedData synchronize];
             
             // Check if there's no schedule (for example, splatoon.ink returns nothing of value during Splatfests)
-            if ([[data objectForKey:@"schedule"] count] <= 1) {
+            NSArray* schedules = [data objectForKey:@"schedule"];
+            NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedules lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
+            if ([schedules count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
                 updateCallback(@2);
                 return;
             }

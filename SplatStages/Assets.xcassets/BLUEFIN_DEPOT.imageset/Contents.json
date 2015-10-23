@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "stage_bluefin_depot.png",
+      "filename" : "09_ruins^o.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "stage_bluefin_depot-1.png",
+      "filename" : "09_ruins^o-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "stage_bluefin_depot-2.png",
+      "filename" : "09_ruins^o-2.png",
       "scale" : "3x"
     }
   ],
