@@ -20,8 +20,8 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
-    // Set background
-    UIImage* image = [UIImage imageNamed:@"RANKED_BACKGROUND"];
+    // Set background - a generic background is used in attempt to comply with App Store guidelines
+    UIImage* image = [UIImage imageNamed:@"GENERIC_BACKGROUND"];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
     
     // Update status bar
