@@ -127,9 +127,9 @@
     });
 }
 
-/// Schedules a timer to attempt to download Stage data every 60s.
+/// Schedules a timer to attempt to download Stage data every 120s.
 - (void) scheduleStageDownloadTimer {
-    self.stageRequestTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 target:self selector:@selector(getStageData) userInfo:nil repeats:true];
+    self.stageRequestTimer = [NSTimer scheduledTimerWithTimeInterval:120 target:self selector:@selector(getStageData) userInfo:nil repeats:true];
     [self.stageRequestTimer fire];
 }
 
@@ -205,6 +205,7 @@
     NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedule lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
     if (schedule == nil || [schedule count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
         // Just in case.
+        [self setStagesUnavailable];
         return;
     }
     
