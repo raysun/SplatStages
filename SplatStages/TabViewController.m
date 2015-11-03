@@ -249,8 +249,10 @@
     }
     
     // Invalidate the stage requeset timer.
-    [self.stageRequestTimer invalidate];
-    self.stageRequestTimer = nil;
+    if (self.stageRequestTimer) {
+        [self.stageRequestTimer invalidate];
+        self.stageRequestTimer = nil;
+    }
     
     // Clear any MBProgressHUDs currently attached to the views.
     [MBProgressHUD hideAllHUDsForView:regularVC.view animated:true];
