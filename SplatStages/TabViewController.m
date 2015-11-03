@@ -171,6 +171,8 @@
     // Clear any MBProgressHUDs currently attached to the views.
     [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
     [MBProgressHUD hideAllHUDsForView:rankedViewController.view animated:true];
+    
+    self.viewsReady = true;
 }
 
 - (void) setupSplatfestWithData:(NSDictionary*) splatfestData splatfestId:(int) splatfestId {
