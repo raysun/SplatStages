@@ -53,6 +53,8 @@
     TabViewController* viewController = (TabViewController*) self.window.rootViewController;
     if (viewController.rotationTimer) {
         [viewController.rotationTimer start];
+    } else {
+        [viewController refreshAllData];
     }
     
     SplatfestViewController* splatfestViewController = [viewController.viewControllers objectAtIndex:SPLATFEST_CONTROLLER];
