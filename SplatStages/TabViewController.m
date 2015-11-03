@@ -231,6 +231,7 @@
             [self setSelectedRotation:1];
             [self setStages];
             [self scheduleStageDownloadTimer];
+            [self.rotationTimer invalidate];
             self.rotationTimer = nil;
         }];
     } else {
