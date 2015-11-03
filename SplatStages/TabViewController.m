@@ -219,7 +219,7 @@
     [rankedVC setupViewWithData:[chosenSchedule objectForKey:@"ranked"]];
     
     // Schedule the rotation timer.
-    if (![self getSelectedRotation] >= 1) {
+    if ([self getSelectedRotation] == 0) {
         NSDate* nextRotation = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
         if (self.rotationTimer) {
             [self.rotationTimer invalidate];
