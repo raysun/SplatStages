@@ -349,6 +349,7 @@
 				047B3FA81BB79199005BF2D0 /* Sources */,
 				047B3FA91BB79199005BF2D0 /* Frameworks */,
 				047B3FAA1BB79199005BF2D0 /* Resources */,
+				04C44CBB1BE9AF8A00A54DA8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -475,6 +476,19 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		044042A91BAB1515003C481E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Thanks to Jared Sinclair at Bloglovin and Martin Rybak at objcsharp!\ngit=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD | wc -l | tr -d ' '`\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+		};
+		04C44CBB1BE9AF8A00A54DA8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
