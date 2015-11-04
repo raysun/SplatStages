@@ -72,6 +72,11 @@
 "ERROR_INTERNAL_DESCRIPTION" = "Internal description: ";
 "ERROR_TRY_AGAIN" = "Tap on Refresh Data in Settings to try again.";
 
+// Screenshot Strings
+"SCREENSHOT_ROTATION_COUNTDOWN" = "The next stage rotation is in 0:18:37.";
+"SCREENSHOT_SPLATFEST_UPCOMING_COUNTDOWN" = "The %@ vs. %@ Splatfest is in 04:14:18:23!";
+"SCREENSHOT_SPLATFEST_FINISH_COUNTDOWN" = "The %@ vs %@ Splatfest finishes in 14:18:50!";
+
 // Misc
 "CONFIRM" = "OK";
 "CANCEL" = "Cancel";
