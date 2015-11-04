@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel* regionLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl* rotationSelector;
+@property BOOL fakedStatusBar;
 
 @end
 

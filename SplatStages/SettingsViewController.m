@@ -9,6 +9,7 @@
 #import <SplatStagesFramework/SplatUtilities.h>
 
 #import "RegionViewController.h"
+#import "SDStatusBarManager.h"
 #import "SettingsViewController.h"
 #import "TabViewController.h"
 
@@ -51,7 +52,14 @@
                 break;
             }
             case 1: { // Report an Issue cell
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/OatmealDome/SplatStages/issues"]];
+                //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/OatmealDome/SplatStages/issues"]];
+                if (self.fakedStatusBar) {
+                    [[SDStatusBarManager sharedInstance] disableOverrides];
+                    self.fakedStatusBar = false;
+                } else {
+                    [[SDStatusBarManager sharedInstance] enableOverrides];
+                    self.fakedStatusBar = true;
+                }
                 break;
             }
             case 2: { // About cell
