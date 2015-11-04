@@ -269,14 +269,15 @@
         self.rotationTimer = nil;
     }
     
-    self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:self.rotationCountdownCell.messageLabel labelTwo:nil textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timerFinishedHandler:^() {
+    /*self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:self.rotationCountdownCell.messageLabel labelTwo:nil textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timerFinishedHandler:^() {
         dispatch_async(dispatch_get_main_queue(), ^{
             // Just in case, dispatch this on the main queue.
             [self.rotationCountdownCell.messageLabel setText:NSLocalizedString(@"ROTATION_NOW", nil)];
         });
         [self.rotationTimer invalidate];
         self.rotationTimer = nil;
-    }];
+    }];*/
+    [self.rotationCountdownCell.messageLabel setText:NSLocalizedString(@"SCREENSHOT_ROTATION_COUNTDOWN", nil)];
 }
 
 - (void) setupSplatfestTimer {
@@ -296,24 +297,28 @@
     
     if ([splatfestStart timeIntervalSinceNow] > 0.0) {
         // Splatfest is in the future.
-        self.splatfestTimer = [[SplatTimer alloc] initFestivalTimerWithDate:splatfestStart label:self.splatfestCountdownCell.messageLabel textString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN_TIME", nil) teamA:teamA teamB:teamB useThreeNumbers:false timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
+        /*self.splatfestTimer = [[SplatTimer alloc] initFestivalTimerWithDate:splatfestStart label:self.splatfestCountdownCell.messageLabel textString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN_TIME", nil) teamA:teamA teamB:teamB useThreeNumbers:false timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSAttributedString* message = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"TODAY_SPLATFEST_STARTED", nil), teamA, teamB];
                 [self.splatfestCountdownCell.messageLabel setAttributedText:message];
             });
             [self.splatfestTimer invalidate];
             self.splatfestTimer = nil;
-        }];
+        }];*/
+        NSAttributedString* labelString = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SCREENSHOT_SPLATFEST_UPCOMING_COUNTDOWN", nil), teamA, teamB];
+        [self.splatfestCountdownCell.messageLabel setAttributedText:labelString];
     } else if ([splatfestStart timeIntervalSinceNow] < 0.0 && [splatfestEnd timeIntervalSinceNow] > 0.0) {
         // The Splatfest is going on right now!
-        self.splatfestTimer = [[SplatTimer alloc] initFestivalTimerWithDate:splatfestEnd label:self.splatfestCountdownCell.messageLabel textString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN_TIME", nil) teamA:teamA teamB:teamB useThreeNumbers:true timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
+        /*self.splatfestTimer = [[SplatTimer alloc] initFestivalTimerWithDate:splatfestEnd label:self.splatfestCountdownCell.messageLabel textString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN_TIME", nil) teamA:teamA teamB:teamB useThreeNumbers:true timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSAttributedString* message = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SPLATFEST_FINISHED", nil), teamA, teamB];
                 [self.splatfestCountdownCell.messageLabel setAttributedText:message];
             });
             [self.splatfestTimer invalidate];
             self.splatfestTimer = nil;
-        }];
+        }];*/
+        NSAttributedString* labelString = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SCREENSHOT_SPLATFEST_FINISH_COUNTDOWN", nil), teamA, teamB];
+        [self.splatfestCountdownCell.messageLabel setAttributedText:labelString];
     } else {
         // The Splatfest has ended.
         NSAttributedString* message = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SPLATFEST_FINISHED", nil), teamA, teamB];

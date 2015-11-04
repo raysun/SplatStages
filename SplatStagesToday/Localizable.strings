@@ -39,6 +39,11 @@
 "SPLATFEST_FINISH_COUNTDOWN_TIME" = "%02ld:%02ld:%02ld"; // Hours, Minutes, Seconds
 "SPLATFEST_FINISHED" = "The %@ vs. %@ Splatfest is over!";
 
+// Screenshot Strings
+"SCREENSHOT_ROTATION_COUNTDOWN" = "The next stage rotation is in 0:18:37.";
+"SCREENSHOT_SPLATFEST_UPCOMING_COUNTDOWN" = "The %@ vs. %@ Splatfest is in 04:14:18:23!";
+"SCREENSHOT_SPLATFEST_FINISH_COUNTDOWN" = "The %@ vs %@ Splatfest finishes in 14:18:50!";
+
 // Today Extension specific
 "TODAY_HEADER_SCHEDULE" = "Schedule";
 "TODAY_HEADER_SPLATFEST" = "Splatfest";
