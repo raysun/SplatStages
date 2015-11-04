@@ -55,11 +55,13 @@
     [self.headerLabel setText:NSLocalizedString(@"SPLATFEST_ANNOUNCED", nil)];
     
     // Schedule the countdown timer.
-    self.countdownTimer = [[SplatTimer alloc] initFestivalTimerWithDate:startDate label:self.resultsMessageLabel textString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN_TIME", nil) teamA:self.teamANameString teamB:self.teamBNameString useThreeNumbers:false timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
+    /*self.countdownTimer = [[SplatTimer alloc] initFestivalTimerWithDate:startDate label:self.resultsMessageLabel textString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN_TIME", nil) teamA:self.teamANameString teamB:self.teamBNameString useThreeNumbers:false timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
         TabViewController* rootController = (TabViewController*) [self tabBarController];
         [rootController getSplatfestData];
         self.countdownTimer = nil;
-    }];
+    }];*/
+    NSAttributedString* messageString = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SCREENSHOT_SPLATFEST_UPCOMING_COUNTDOWN", nil), self.teamANameString, self.teamBNameString];
+    [self.resultsMessageLabel setAttributedText:messageString];
 }
 
 // Splatfest has started.
@@ -72,11 +74,13 @@
     [rootController setupStageView:[stages objectAtIndex:1] nameJP:nil label:self.stageTwoLabel imageView:self.stageTwoImage];
     [rootController setupStageView:[stages objectAtIndex:2] nameJP:nil label:self.stageThreeLabel imageView:self.stageThreeImage];
     
-    self.countdownTimer = [[SplatTimer alloc] initFestivalTimerWithDate:endDate label:self.headerLabel textString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN_TIME", nil) teamA:self.teamANameString teamB:self.teamBNameString useThreeNumbers:true timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
+    /*self.countdownTimer = [[SplatTimer alloc] initFestivalTimerWithDate:endDate label:self.headerLabel textString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN_TIME", nil) teamA:self.teamANameString teamB:self.teamBNameString useThreeNumbers:true timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
         TabViewController* rootController = (TabViewController*) [self tabBarController];
         [rootController getSplatfestData];
         self.countdownTimer = nil;
-    }];
+    }];*/
+    NSAttributedString* headerString = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SCREENSHOT_SPLATFEST_FINISH_COUNTDOWN", nil), self.teamANameString, self.teamBNameString];
+    [self.headerLabel setAttributedText:headerString];
 }
 
 // Splatfest has finished.
