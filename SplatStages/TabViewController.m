@@ -220,12 +220,12 @@
     
     // Schedule the rotation timer.
     if ([self getSelectedRotation] == 0) {
-        NSDate* nextRotation = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
+        //NSDate* nextRotation = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
         if (self.rotationTimer) {
             [self.rotationTimer invalidate];
             self.rotationTimer = nil;
         }
-        self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:regularVC.rotationCountdownLabel labelTwo:rankedVC.rotationCountdownLabel textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timerFinishedHandler:^() {
+        /*self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:regularVC.rotationCountdownLabel labelTwo:rankedVC.rotationCountdownLabel textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timerFinishedHandler:^() {
             // Rotating now! Update the UI first and update the schedule data in the background.
             NSString* rotatingNowText = NSLocalizedString(@"ROTATION_NOW", nil);
             [regularVC.rotationCountdownLabel setText:rotatingNowText];
@@ -235,7 +235,9 @@
             [self scheduleStageDownloadTimer];
             [self.rotationTimer invalidate];
             self.rotationTimer = nil;
-        }];
+        }];*/
+        [regularVC.rotationCountdownLabel setText:NSLocalizedString(@"SCREENSHOT_ROTATION_COUNTDOWN", nil)];
+        [rankedVC.rotationCountdownLabel setText:NSLocalizedString(@"SCREENSHOT_ROTATION_COUNTDOWN", nil)];
     } else {
         if (self.rotationTimer) {
             [self.rotationTimer invalidate];
