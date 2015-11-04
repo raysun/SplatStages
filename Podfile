@@ -3,6 +3,7 @@
 
 target 'SplatStages' do
 	pod 'MBProgressHUD', '~> 0.9.1'
+	pod 'SimulatorStatusMagic'
 end
 
 target 'SplatStagesFramework' do
