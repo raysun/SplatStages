@@ -37,11 +37,11 @@
     }] resume];
 }
 
-+ (void) downloadAndParseJson:(NSString*) urlString completionHandler:(void (^)(NSDictionary* dict)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
++ (void) downloadAndParseJson:(NSString*) urlString completionHandler:(void (^)(NSMutableDictionary* dict)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
     [self downloadFile:urlString completionHandler:^(NSData* data) {
         // Attempt to parse the data.
         NSError* jsonError;
-        NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+        NSMutableDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
         
         // Check for a error first
         if (jsonError) {
@@ -60,7 +60,7 @@
     NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
     
     // Get the Temporary Stage Mapping, which contains the English names for maps that aren't supported by splatoon.ink yet.
-    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/temporary-stage-mapping.json" completionHandler:^(NSDictionary* data) {
+    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/temporary-stage-mapping.json" completionHandler:^(NSMutableDictionary* data) {
         [storedData setObject:data forKey:@"temporaryMappings"];
         [storedData synchronize];
         
@@ -101,7 +101,21 @@
 
 + (void) requestFestivalDataWithCallback:(void (^)()) updateCallback errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
     NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
-    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/splatfest.json" completionHandler:^(NSDictionary* data) {
+    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/splatfest-screenshot.json" completionHandler:^(NSMutableDictionary* data) {
+        // set start countdown time
+        NSDate* naStartDate = [[NSDate date] dateByAddingTimeInterval:52377];
+        [[data objectForKey:@"na"] setObject:[NSNumber numberWithDouble:[naStartDate timeIntervalSince1970]] forKey:@"startTime"];
+        
+        // set end countdown times
+        NSDate* euStartDate = [[NSDate date] dateByAddingTimeInterval:-52377];
+        NSDate* euEndDate = [[NSDate date] dateByAddingTimeInterval:52377];
+        [[data objectForKey:@"eu"] setObject:[NSNumber numberWithDouble:[euStartDate timeIntervalSince1970]] forKey:@"startTime"];
+        [[data objectForKey:@"eu"] setObject:[NSNumber numberWithDouble:[euEndDate timeIntervalSince1970]] forKey:@"endTime"];
+        
+        // set results time
+        [[data objectForKey:@"jp"] setObject:[NSNumber numberWithDouble:[euStartDate timeIntervalSince1970]] forKey:@"startTime"];
+        [[data objectForKey:@"jp"] setObject:[NSNumber numberWithDouble:[euStartDate timeIntervalSince1970]] forKey:@"endTime"];
+        
         NSDictionary* splatfestData = [data objectForKey:[SplatUtilities getUserRegion]];
         [storedData setObject:splatfestData forKey:@"splatfestData"];
         [storedData synchronize];
