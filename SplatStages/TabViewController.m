@@ -120,11 +120,15 @@
 }
 
 - (void) refreshAllData {
-    // Make sure this is called on the main thread so we can update the UI.
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self getStageData];
-        [self getSplatfestData];
-    });
+    // Don't refresh data if setup has not been finished
+    NSUserDefaults* userDefaults = [SplatUtilities getUserDefaults];
+    if ([userDefaults objectForKey:@"setupFinished"] != nil) {
+        // Make sure this is called on the main thread so we can update the UI.
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self getStageData];
+            [self getSplatfestData];
+        });
+    }
 }
 
 /// Schedules a timer to attempt to download Stage data every 120s.
