@@ -17,10 +17,6 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
-    // Turn the user away for now.
-    UIAlertView* finishAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SETTINGS_NOTIFICATIONS_UNAVAILABLE_TITLE", nil) message:NSLocalizedString(@"SETTINGS_NOTIFICATIONS_UNAVAILABLE_TEXT", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
-    [finishAlert show];
-    
     [self.navigationController popViewControllerAnimated:true];
 }
 
