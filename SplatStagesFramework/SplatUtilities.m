@@ -11,10 +11,9 @@
 @implementation SplatUtilities
 
 + (NSString*) toLocalizable:(NSString*) string {
-    
-    NSMutableCharacterSet *charactersToKeep = [NSMutableCharacterSet alphanumericCharacterSet];
+    NSMutableCharacterSet* charactersToKeep = [NSMutableCharacterSet alphanumericCharacterSet];
     [charactersToKeep addCharactersInString:@"_"];
-    NSCharacterSet *charactersToRemove = [charactersToKeep invertedSet];
+    NSCharacterSet* charactersToRemove = [charactersToKeep invertedSet];
     
     NSString* withUnderscore = [[string stringByReplacingOccurrencesOfString:@" " withString:@"_"] uppercaseString];
     return [[withUnderscore componentsSeparatedByCharactersInSet:charactersToRemove] componentsJoinedByString:@""];
