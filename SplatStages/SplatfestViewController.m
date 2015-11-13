@@ -138,13 +138,15 @@
     // Blur the view.
     UIBlurEffect *blurOne = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *effectViewOne = [[UIVisualEffectView alloc]initWithEffect:blurOne];
-    effectViewOne.frame = self.view.frame;
+    CGRect rectOne = CGRectMake(self.splatfestImageOne.bounds.origin.x, self.splatfestImageOne.bounds.origin.y, self.splatfestImageOne.bounds.size.width, self.splatfestImageOne.bounds.size.height + 50);
+    [effectViewOne setFrame:rectOne];
     [self.splatfestImageOne addSubview:effectViewOne];
     
     // Blur the view.
-    UIBlurEffect *blurTwo = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIBlurEffect *blurTwo = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *effectViewTwo = [[UIVisualEffectView alloc]initWithEffect:blurTwo];
-    effectViewTwo.frame = self.view.frame;
+    CGRect rectTwo = CGRectMake(self.splatfestImageTwo.bounds.origin.x, self.splatfestImageTwo.bounds.origin.y, self.splatfestImageTwo.bounds.size.width, self.splatfestImageTwo.bounds.size.height + 50);
+    effectViewTwo.frame = rectTwo;
     [self.splatfestImageTwo addSubview:effectViewTwo];
 }
 

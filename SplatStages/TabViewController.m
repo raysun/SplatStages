@@ -297,7 +297,8 @@
         // Blur the view.
         UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
         UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
-        effectView.frame = self.view.frame;
+        CGRect newBounds = CGRectMake(imageView.bounds.origin.x, imageView.bounds.origin.y, imageView.bounds.size.width, imageView.bounds.size.height + 50);
+        [effectView setFrame:newBounds];
         [imageView addSubview:effectView];
     }
 }
