@@ -61,9 +61,10 @@
                 break;
             }
             case 2: { // About cell
-                NSString* bundleVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
                 NSString* displayName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
-                NSString* aboutTitle = [NSString stringWithFormat:@"%@ (%@)", displayName, bundleVersion];
+                NSString* bundleVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+                NSString* buildNumber = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+                NSString* aboutTitle = [NSString stringWithFormat:@"%@ (%@-%@)", displayName, bundleVersion, buildNumber];
                 UIAlertView* aboutAlert = [[UIAlertView alloc] initWithTitle:aboutTitle message:NSLocalizedString(@"SETTINGS_ABOUT_TEXT", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
                 [aboutAlert show];
                 break;
