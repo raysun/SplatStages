@@ -51,7 +51,13 @@
                 break;
             }
             case 1: { // Report an Issue cell
+#ifdef DEBUG
+                NSUserDefaults* defaults = [SplatUtilities getUserDefaults];
+                [defaults setObject:@"debug" forKey:@"region"];
+                [defaults synchronize];
+#else
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/OatmealDome/SplatStages/issues"]];
+#endif
                 break;
             }
             case 2: { // About cell

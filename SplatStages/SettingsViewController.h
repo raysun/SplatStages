@@ -6,6 +6,10 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
+#ifdef DEBUG
+#warning Debug build detected; the Report an Issue button will set the region to "debug".
+#endif
+
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UITableViewController <UIAlertViewDelegate>
