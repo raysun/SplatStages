@@ -11,8 +11,13 @@
 @implementation SplatUtilities
 
 + (NSString*) toLocalizable:(NSString*) string {
-    NSString* apostropheRemoved = [string stringByReplacingOccurrencesOfString:@"'" withString:@""];
-    return [[apostropheRemoved stringByReplacingOccurrencesOfString:@" " withString:@"_"] uppercaseString];
+    
+    NSMutableCharacterSet *charactersToKeep = [NSMutableCharacterSet alphanumericCharacterSet];
+    [charactersToKeep addCharactersInString:@"_"];
+    NSCharacterSet *charactersToRemove = [charactersToKeep invertedSet];
+    
+    NSString* withUnderscore = [[string stringByReplacingOccurrencesOfString:@" " withString:@"_"] uppercaseString];
+    return [[withUnderscore componentsSeparatedByCharactersInSet:charactersToRemove] componentsJoinedByString:@""];
 }
 
 + (BOOL) isDeviceLangaugeJapanese {
