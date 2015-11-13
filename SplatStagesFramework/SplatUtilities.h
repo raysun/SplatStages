@@ -15,8 +15,11 @@
 //! Convert the string to a localizable (e.g. "Moray Towers" -> "MORAY_TOWERS")
 + (NSString*) toLocalizable:(NSString*) string;
 
-//! Returns if the user's language is currently Japanese.
+//! Returns true if the user's language is currently Japanese.
 + (BOOL) isDeviceLangaugeJapanese;
+
+//! Returns true if setup has been finished.
++ (BOOL) getSetupFinished;
 
 //! Returns the user's selected Splatoon region
 + (NSString*) getUserRegion;

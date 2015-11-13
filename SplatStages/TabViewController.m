@@ -32,8 +32,7 @@
     [self.viewControllers makeObjectsPerformSelector:@selector(view)];
     
     // Check if we need to do the initial setup.
-    NSUserDefaults* userDefaults = [SplatUtilities getUserDefaults];
-    if ([userDefaults objectForKey:@"setupFinished"] == nil) {
+    if (![SplatUtilities getSetupFinished]) {
         // Yes, set our BOOL to lock the user in and switch to the Settings tab.
         self.needsInitialSetup = true;
         [self setSelectedIndex:SETTINGS_CONTROLLER];
@@ -121,8 +120,7 @@
 
 - (void) refreshAllData {
     // Don't refresh data if setup has not been finished
-    NSUserDefaults* userDefaults = [SplatUtilities getUserDefaults];
-    if ([userDefaults objectForKey:@"setupFinished"] != nil) {
+    if ([SplatUtilities getSetupFinished]) {
         // Make sure this is called on the main thread so we can update the UI.
         dispatch_async(dispatch_get_main_queue(), ^{
             [self getStageData];
