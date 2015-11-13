@@ -295,9 +295,9 @@
         [imageView setImage:[UIImage imageNamed:localizable]];
         
         // Blur the view.
-        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
         UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
-        CGRect newBounds = CGRectMake(imageView.bounds.origin.x, imageView.bounds.origin.y, imageView.bounds.size.width, imageView.bounds.size.height + 50);
+        CGRect newBounds = CGRectMake(imageView.bounds.origin.x, imageView.bounds.origin.y, imageView.bounds.size.width + 200, imageView.bounds.size.height + 250);
         [effectView setFrame:newBounds];
         [imageView addSubview:effectView];
     }

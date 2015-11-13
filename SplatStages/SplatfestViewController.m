@@ -136,16 +136,16 @@
     [self.splatfestImageTwo setImage:[UIImage imageWithContentsOfFile:imagePath]];
     
     // Blur the view.
-    UIBlurEffect *blurOne = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIBlurEffect *blurOne = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     UIVisualEffectView *effectViewOne = [[UIVisualEffectView alloc]initWithEffect:blurOne];
-    CGRect rectOne = CGRectMake(self.splatfestImageOne.bounds.origin.x, self.splatfestImageOne.bounds.origin.y, self.splatfestImageOne.bounds.size.width, self.splatfestImageOne.bounds.size.height + 50);
+    CGRect rectOne = CGRectMake(self.splatfestImageOne.bounds.origin.x, self.splatfestImageOne.bounds.origin.y, self.splatfestImageOne.bounds.size.width + 200, self.splatfestImageOne.bounds.size.height + 250);
     [effectViewOne setFrame:rectOne];
     [self.splatfestImageOne addSubview:effectViewOne];
     
     // Blur the view.
-    UIBlurEffect *blurTwo = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIBlurEffect *blurTwo = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     UIVisualEffectView *effectViewTwo = [[UIVisualEffectView alloc]initWithEffect:blurTwo];
-    CGRect rectTwo = CGRectMake(self.splatfestImageTwo.bounds.origin.x, self.splatfestImageTwo.bounds.origin.y, self.splatfestImageTwo.bounds.size.width, self.splatfestImageTwo.bounds.size.height + 50);
+    CGRect rectTwo = CGRectMake(self.splatfestImageTwo.bounds.origin.x, self.splatfestImageTwo.bounds.origin.y, self.splatfestImageTwo.bounds.size.width + 200, self.splatfestImageTwo.bounds.size.height + 250);
     effectViewTwo.frame = rectTwo;
     [self.splatfestImageTwo addSubview:effectViewTwo];
 }
