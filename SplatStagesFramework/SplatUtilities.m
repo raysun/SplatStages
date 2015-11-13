@@ -38,7 +38,7 @@
 
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData {
     UIColor* teamColour = [self colorWithHexString:[teamData objectForKey:@"colour"]];
-    NSAttributedString* string = [[NSAttributedString alloc] initWithString:[teamData objectForKey:@"name"] attributes:@{NSForegroundColorAttributeName: teamColour}];
+    NSAttributedString* string = [[NSAttributedString alloc] initWithString:[teamData objectForKey:@"name"] attributes:@{NSForegroundColorAttributeName : teamColour}];
     return string;
 }
 
@@ -46,12 +46,15 @@
     NSString* cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
     // String should be 6 or 8 characters
-    if ([cString length] < 6) return [UIColor grayColor];
+    if ([cString length] < 6)
+        return [UIColor grayColor];
     
     // strip 0X if it appears
-    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
+    if ([cString hasPrefix:@"0X"])
+        cString = [cString substringFromIndex:2];
     
-    if ([cString length] != 6) return  [UIColor grayColor];
+    if ([cString length] != 6)
+        return [UIColor grayColor];
     
     // Separate into r, g, b substrings
     NSRange range;
