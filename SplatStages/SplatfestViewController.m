@@ -134,6 +134,18 @@
     NSString* imagePath = [cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"splatfest-%@-%i.jpg", [SplatUtilities getUserRegion], self.splatfestId]];
     [self.splatfestImageOne setImage:[UIImage imageWithContentsOfFile:imagePath]];
     [self.splatfestImageTwo setImage:[UIImage imageWithContentsOfFile:imagePath]];
+    
+    // Blur the view.
+    UIBlurEffect *blurOne = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *effectViewOne = [[UIVisualEffectView alloc]initWithEffect:blurOne];
+    effectViewOne.frame = self.view.frame;
+    [self.splatfestImageOne addSubview:effectViewOne];
+    
+    // Blur the view.
+    UIBlurEffect *blurTwo = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *effectViewTwo = [[UIVisualEffectView alloc]initWithEffect:blurTwo];
+    effectViewTwo.frame = self.view.frame;
+    [self.splatfestImageTwo addSubview:effectViewTwo];
 }
 
 - (void) setDefaultVisibilitiesAndText {

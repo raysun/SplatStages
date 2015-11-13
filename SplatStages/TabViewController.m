@@ -293,6 +293,12 @@
         // Alright, we know this stage!
         label.text = localizedText;
         [imageView setImage:[UIImage imageNamed:localizable]];
+        
+        // Blur the view.
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
+        effectView.frame = self.view.frame;
+        [imageView addSubview:effectView];
     }
 }
 
