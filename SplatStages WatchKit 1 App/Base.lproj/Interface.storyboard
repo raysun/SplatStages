@@ -1,21 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--SplatStages-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider=""/>
+                <controller title="SplatStages" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="0.90000000000000002" alignment="center" title="Schedule" id="gn3-BB-bH2">
+                            <connections>
+                                <segue destination="yl5-g7-0k2" kind="push" id="Lrs-DA-OeH"/>
+                            </connections>
+                        </button>
+                        <button width="0.90000000000000002" alignment="center" title="Splatfest" id="Dzd-6N-hNu">
+                            <connections>
+                                <segue destination="iHA-vq-7nP" kind="push" id="HNP-CD-w52"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="TfS-Vc-xcR">
+            <objects>
+                <controller identifier="Schedule" title="Schedule" id="yl5-g7-0k2">
+                    <items>
+                        <group width="1" height="60" alignment="left" layout="vertical" spacing="0.0" id="B70-df-tec" userLabel="Regular Battle Group">
+                            <items>
+                                <label width="1" alignment="left" text="Turf War" id="dHr-8j-vVL">
+                                    <color key="textColor" red="0.80000000000000004" green="0.72549019609999998" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label width="0.90000000000000002" alignment="right" text="Map" id="G3c-Dl-JTQ"/>
+                                <label width="0.90000000000000002" alignment="right" text="Map" id="KNU-V6-SdB"/>
+                            </items>
+                        </group>
+                        <separator width="0.80000000000000004" alignment="center" alpha="0.5" id="qMa-EQ-C63"/>
+                        <group width="1" height="60" alignment="left" layout="vertical" spacing="0.0" id="iaZ-h8-AbF" userLabel="Ranked Battle Group">
+                            <items>
+                                <label width="1" alignment="left" text="Gamemode" id="9Co-gH-kN7">
+                                    <color key="textColor" red="1" green="0.58487451489999998" blue="0.16648759569999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label width="0.90000000000000002" alignment="right" text="Map" id="mjG-Zt-dCw"/>
+                                <label width="0.90000000000000002" alignment="right" text="Map" id="nnX-Sw-8TR"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="O5Q-i2-f5r"/>
+                        <group height="25" alignment="center" spacing="0.0" id="9o5-PU-EuW">
+                            <items>
+                                <button height="1" alignment="left" title="Now" id="dQf-P8-EC0">
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </button>
+                                <button height="1" alignment="left" title="Next" id="cN9-Fk-2Uv"/>
+                                <button height="1" alignment="left" title="Later" id="Ru9-BS-Z4y"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="487" y="208"/>
+        </scene>
+        <!--Splatfest-->
+        <scene sceneID="I5G-9g-Zuu">
+            <objects>
+                <controller title="Splatfest" id="iHA-vq-7nP"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="478"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModuleProvider="">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y"/>
                         <group alignment="left" id="uCw-4Q-Ouw"/>
@@ -44,7 +103,7 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModuleProvider=""/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>
