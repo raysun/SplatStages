@@ -7,41 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0417215A1BB8B8CD0027991D /* StagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041721591BB8B8CD0027991D /* StagesCell.m */; settings = {ASSET_TAGS = (); }; };
-		0417215D1BB8B98D0027991D /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215C1BB8B98D0027991D /* HeaderCell.m */; settings = {ASSET_TAGS = (); }; };
-		041721601BB8B9CD0027991D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215F1BB8B9CD0027991D /* MessageCell.m */; settings = {ASSET_TAGS = (); }; };
-		04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */; settings = {ASSET_TAGS = (); }; };
-		044042AB1BAB4274003C481E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044042AA1BAB4274003C481E /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
-		044F04351BC875820082F921 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F04341BC875820082F921 /* RegionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0417215A1BB8B8CD0027991D /* StagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041721591BB8B8CD0027991D /* StagesCell.m */; };
+		0417215D1BB8B98D0027991D /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215C1BB8B98D0027991D /* HeaderCell.m */; };
+		041721601BB8B9CD0027991D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215F1BB8B9CD0027991D /* MessageCell.m */; };
+		04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */; };
+		04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */; };
+		044042AB1BAB4274003C481E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044042AA1BAB4274003C481E /* InfoPlist.strings */; };
+		044F04351BC875820082F921 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F04341BC875820082F921 /* RegionViewController.m */; };
 		047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5EC91BB5E09F00DD510D /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
 		047A5ECA1BB5E09F00DD510D /* SplatStagesFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */; settings = {ASSET_TAGS = (); }; };
+		047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */; };
 		047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED31BB6103D00DD510D /* SplatTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ED41BB6103D00DD510D /* SplatTimer.m */; settings = {ASSET_TAGS = (); }; };
+		047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ED41BB6103D00DD510D /* SplatTimer.m */; };
 		047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 047B3FA41BB72875005BF2D0 /* SplatUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FA51BB72875005BF2D0 /* SplatUtilities.m */; settings = {ASSET_TAGS = (); }; };
-		047B3FAE1BB79199005BF2D0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047B3FAD1BB79199005BF2D0 /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
+		047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FA51BB72875005BF2D0 /* SplatUtilities.m */; };
+		047B3FAE1BB79199005BF2D0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047B3FAD1BB79199005BF2D0 /* NotificationCenter.framework */; };
 		047B3FB21BB79199005BF2D0 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FB11BB79199005BF2D0 /* TodayViewController.m */; };
 		047B3FB51BB79199005BF2D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047B3FB31BB79199005BF2D0 /* MainInterface.storyboard */; };
 		047B3FB91BB79199005BF2D0 /* SplatStagesToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04B27EBD1C00DE61006720EF /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EBC1C00DE61006720EF /* InterfaceController.m */; };
+		04B27EC01C00DE61006720EF /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EBF1C00DE61006720EF /* NotificationController.m */; };
+		04B27EC31C00DE61006720EF /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EC21C00DE61006720EF /* GlanceController.m */; };
+		04B27EC51C00DE61006720EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B27EC41C00DE61006720EF /* Assets.xcassets */; };
+		04B27ECA1C00DE61006720EF /* SplatStages WatchKit 1 App.app in Resources */ = {isa = PBXBuildFile; fileRef = 04B27EC91C00DE61006720EF /* SplatStages WatchKit 1 App.app */; };
+		04B27ED01C00DE61006720EF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B27ECE1C00DE61006720EF /* Interface.storyboard */; };
+		04B27ED21C00DE62006720EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B27ED11C00DE62006720EF /* Assets.xcassets */; };
+		04B27ED61C00DE62006720EF /* SplatStages WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04B27EB71C00DE61006720EF /* SplatStages WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
-		04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
+		04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */; };
 		04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC31BA5D47D003BE6A9 /* main.m */; };
 		04EE0CC71BA5D47D003BE6A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC61BA5D47D003BE6A9 /* AppDelegate.m */; };
 		04EE0CCD1BA5D47D003BE6A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CCB1BA5D47D003BE6A9 /* Main.storyboard */; };
 		04EE0CCF1BA5D47D003BE6A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CCE1BA5D47D003BE6A9 /* Assets.xcassets */; };
 		04EE0CD21BA5D47D003BE6A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CD01BA5D47D003BE6A9 /* LaunchScreen.storyboard */; };
-		04EE0CE31BA5D4D6003BE6A9 /* RankedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDA1BA5D4D6003BE6A9 /* RankedViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE41BA5D4D6003BE6A9 /* RegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDC1BA5D4D6003BE6A9 /* RegularViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE51BA5D4D6003BE6A9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDE1BA5D4D6003BE6A9 /* SettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE61BA5D4D6003BE6A9 /* SplatfestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE01BA5D4D6003BE6A9 /* SplatfestViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE71BA5D4D6003BE6A9 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE21BA5D4D6003BE6A9 /* TabViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE91BA5D539003BE6A9 /* project_paintball_beta3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CE81BA5D539003BE6A9 /* project_paintball_beta3.otf */; settings = {ASSET_TAGS = (); }; };
-		04EE0CEB1BA5DAD4003BE6A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
-		04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
+		04EE0CE31BA5D4D6003BE6A9 /* RankedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDA1BA5D4D6003BE6A9 /* RankedViewController.m */; };
+		04EE0CE41BA5D4D6003BE6A9 /* RegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDC1BA5D4D6003BE6A9 /* RegularViewController.m */; };
+		04EE0CE51BA5D4D6003BE6A9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDE1BA5D4D6003BE6A9 /* SettingsViewController.m */; };
+		04EE0CE61BA5D4D6003BE6A9 /* SplatfestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE01BA5D4D6003BE6A9 /* SplatfestViewController.m */; };
+		04EE0CE71BA5D4D6003BE6A9 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE21BA5D4D6003BE6A9 /* TabViewController.m */; };
+		04EE0CE91BA5D539003BE6A9 /* project_paintball_beta3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CE81BA5D539003BE6A9 /* project_paintball_beta3.otf */; };
+		04EE0CEB1BA5DAD4003BE6A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */; };
+		04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */; };
 		9A84413964F4ED2D995BF5CF /* libPods-SplatStages.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */; };
 		E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */; };
 /* End PBXBuildFile section */
@@ -60,6 +68,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 047B3FAB1BB79199005BF2D0;
 			remoteInfo = SplatStagesToday;
+		};
+		04B27ECB1C00DE61006720EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04EE0CB71BA5D47D003BE6A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04B27EC81C00DE61006720EF;
+			remoteInfo = "SplatStages WatchKit 1 App";
+		};
+		04B27ED41C00DE62006720EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04EE0CB71BA5D47D003BE6A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04B27EB61C00DE61006720EF;
+			remoteInfo = "SplatStages WatchKit 1 Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -81,6 +103,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				04B27ED61C00DE62006720EF /* SplatStages WatchKit 1 Extension.appex in Embed App Extensions */,
 				047B3FB91BB79199005BF2D0 /* SplatStagesToday.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -117,6 +140,20 @@
 		047B3FB11BB79199005BF2D0 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		047B3FB41BB79199005BF2D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		047B3FB61BB79199005BF2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B27EB71C00DE61006720EF /* SplatStages WatchKit 1 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SplatStages WatchKit 1 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B27EBA1C00DE61006720EF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		04B27EBB1C00DE61006720EF /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		04B27EBC1C00DE61006720EF /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		04B27EBE1C00DE61006720EF /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		04B27EBF1C00DE61006720EF /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		04B27EC11C00DE61006720EF /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		04B27EC21C00DE61006720EF /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		04B27EC41C00DE61006720EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04B27EC61C00DE61006720EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B27EC91C00DE61006720EF /* SplatStages WatchKit 1 App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SplatStages WatchKit 1 App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B27ECF1C00DE61006720EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		04B27ED11C00DE62006720EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04B27ED31C00DE62006720EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C1DE2C1BBA014000D98CA3 /* SplatStages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SplatStages.entitlements; sourceTree = "<group>"; };
 		04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplatStages.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +207,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04B27EB41C00DE61006720EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EE0CBC1BA5D47D003BE6A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,12 +261,48 @@
 			path = SplatStagesToday;
 			sourceTree = "<group>";
 		};
+		04B27EB81C00DE61006720EF /* SplatStages WatchKit 1 Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04B27EBB1C00DE61006720EF /* InterfaceController.h */,
+				04B27EBC1C00DE61006720EF /* InterfaceController.m */,
+				04B27EBE1C00DE61006720EF /* NotificationController.h */,
+				04B27EBF1C00DE61006720EF /* NotificationController.m */,
+				04B27EC11C00DE61006720EF /* GlanceController.h */,
+				04B27EC21C00DE61006720EF /* GlanceController.m */,
+				04B27EC41C00DE61006720EF /* Assets.xcassets */,
+				04B27EC61C00DE61006720EF /* Info.plist */,
+				04B27EB91C00DE61006720EF /* Supporting Files */,
+			);
+			path = "SplatStages WatchKit 1 Extension";
+			sourceTree = "<group>";
+		};
+		04B27EB91C00DE61006720EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04B27EBA1C00DE61006720EF /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04B27ECD1C00DE61006720EF /* SplatStages WatchKit 1 App */ = {
+			isa = PBXGroup;
+			children = (
+				04B27ECE1C00DE61006720EF /* Interface.storyboard */,
+				04B27ED11C00DE62006720EF /* Assets.xcassets */,
+				04B27ED31C00DE62006720EF /* Info.plist */,
+			);
+			path = "SplatStages WatchKit 1 App";
+			sourceTree = "<group>";
+		};
 		04EE0CB61BA5D47D003BE6A9 = {
 			isa = PBXGroup;
 			children = (
 				04EE0CC11BA5D47D003BE6A9 /* SplatStages */,
 				047A5EC31BB5E09F00DD510D /* SplatStagesFramework */,
 				047B3FAF1BB79199005BF2D0 /* SplatStagesToday */,
+				04B27EB81C00DE61006720EF /* SplatStages WatchKit 1 Extension */,
+				04B27ECD1C00DE61006720EF /* SplatStages WatchKit 1 App */,
 				04EE0CC01BA5D47D003BE6A9 /* Products */,
 				0EB9B1D4092FCC00534FF30D /* Pods */,
 				73212F200F1238B9BCBBB379 /* Frameworks */,
@@ -235,6 +315,8 @@
 				04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */,
 				047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */,
 				047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */,
+				04B27EB71C00DE61006720EF /* SplatStages WatchKit 1 Extension.appex */,
+				04B27EC91C00DE61006720EF /* SplatStages WatchKit 1 App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,6 +442,39 @@
 			productReference = 047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		04B27EB61C00DE61006720EF /* SplatStages WatchKit 1 Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04B27EDC1C00DE62006720EF /* Build configuration list for PBXNativeTarget "SplatStages WatchKit 1 Extension" */;
+			buildPhases = (
+				04B27EB31C00DE61006720EF /* Sources */,
+				04B27EB41C00DE61006720EF /* Frameworks */,
+				04B27EB51C00DE61006720EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04B27ECC1C00DE61006720EF /* PBXTargetDependency */,
+			);
+			name = "SplatStages WatchKit 1 Extension";
+			productName = "SplatStages WatchKit 1 Extension";
+			productReference = 04B27EB71C00DE61006720EF /* SplatStages WatchKit 1 Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		04B27EC81C00DE61006720EF /* SplatStages WatchKit 1 App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04B27EDB1C00DE62006720EF /* Build configuration list for PBXNativeTarget "SplatStages WatchKit 1 App" */;
+			buildPhases = (
+				04B27EC71C00DE61006720EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SplatStages WatchKit 1 App";
+			productName = "SplatStages WatchKit 1 App";
+			productReference = 04B27EC91C00DE61006720EF /* SplatStages WatchKit 1 App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		04EE0CBE1BA5D47D003BE6A9 /* SplatStages */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04EE0CD61BA5D47D003BE6A9 /* Build configuration list for PBXNativeTarget "SplatStages" */;
@@ -379,6 +494,7 @@
 			dependencies = (
 				047A5EC81BB5E09F00DD510D /* PBXTargetDependency */,
 				047B3FB81BB79199005BF2D0 /* PBXTargetDependency */,
+				04B27ED51C00DE62006720EF /* PBXTargetDependency */,
 			);
 			name = SplatStages;
 			productName = SplatStages;
@@ -406,6 +522,13 @@
 								enabled = 1;
 							};
 						};
+					};
+					04B27EB61C00DE61006720EF = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = F9VP3B7ZRQ;
+					};
+					04B27EC81C00DE61006720EF = {
+						CreatedOnToolsVersion = 7.1.1;
 					};
 					04EE0CBE1BA5D47D003BE6A9 = {
 						CreatedOnToolsVersion = 7.0;
@@ -437,6 +560,8 @@
 				04EE0CBE1BA5D47D003BE6A9 /* SplatStages */,
 				047B3FAB1BB79199005BF2D0 /* SplatStagesToday */,
 				047A5EC11BB5E09F00DD510D /* SplatStagesFramework */,
+				04B27EB61C00DE61006720EF /* SplatStages WatchKit 1 Extension */,
+				04B27EC81C00DE61006720EF /* SplatStages WatchKit 1 App */,
 			);
 		};
 /* End PBXProject section */
@@ -456,6 +581,24 @@
 				047B3FB51BB79199005BF2D0 /* MainInterface.storyboard in Resources */,
 				04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */,
 				04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B27EB51C00DE61006720EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B27EC51C00DE61006720EF /* Assets.xcassets in Resources */,
+				04B27ECA1C00DE61006720EF /* SplatStages WatchKit 1 App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B27EC71C00DE61006720EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B27ED21C00DE62006720EF /* Assets.xcassets in Resources */,
+				04B27ED01C00DE61006720EF /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +743,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04B27EB31C00DE61006720EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B27EC01C00DE61006720EF /* NotificationController.m in Sources */,
+				04B27EBD1C00DE61006720EF /* InterfaceController.m in Sources */,
+				04B27EC31C00DE61006720EF /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EE0CBB1BA5D47D003BE6A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,6 +783,16 @@
 			target = 047B3FAB1BB79199005BF2D0 /* SplatStagesToday */;
 			targetProxy = 047B3FB71BB79199005BF2D0 /* PBXContainerItemProxy */;
 		};
+		04B27ECC1C00DE61006720EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04B27EC81C00DE61006720EF /* SplatStages WatchKit 1 App */;
+			targetProxy = 04B27ECB1C00DE61006720EF /* PBXContainerItemProxy */;
+		};
+		04B27ED51C00DE62006720EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04B27EB61C00DE61006720EF /* SplatStages WatchKit 1 Extension */;
+			targetProxy = 04B27ED41C00DE62006720EF /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -639,6 +802,14 @@
 				047B3FB41BB79199005BF2D0 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		04B27ECE1C00DE61006720EF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04B27ECF1C00DE61006720EF /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		04EE0CCB1BA5D47D003BE6A9 /* Main.storyboard */ = {
@@ -741,6 +912,64 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		04B27ED71C00DE62006720EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "SplatStages WatchKit 1 Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		04B27ED81C00DE62006720EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				INFOPLIST_FILE = "SplatStages WatchKit 1 Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		04B27ED91C00DE62006720EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = SplatStages_WatchKit_1_Extension;
+				INFOPLIST_FILE = "SplatStages WatchKit 1 App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		04B27EDA1C00DE62006720EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = SplatStages_WatchKit_1_Extension;
+				INFOPLIST_FILE = "SplatStages WatchKit 1 App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Release;
 		};
@@ -887,6 +1116,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		04B27EDB1C00DE62006720EF /* Build configuration list for PBXNativeTarget "SplatStages WatchKit 1 App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04B27ED91C00DE62006720EF /* Debug */,
+				04B27EDA1C00DE62006720EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		04B27EDC1C00DE62006720EF /* Build configuration list for PBXNativeTarget "SplatStages WatchKit 1 Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04B27ED71C00DE62006720EF /* Debug */,
+				04B27ED81C00DE62006720EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		04EE0CBA1BA5D47D003BE6A9 /* Build configuration list for PBXProject "SplatStages" */ = {
 			isa = XCConfigurationList;
