@@ -35,6 +35,8 @@
 		04B27ED01C00DE61006720EF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B27ECE1C00DE61006720EF /* Interface.storyboard */; };
 		04B27ED21C00DE62006720EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B27ED11C00DE62006720EF /* Assets.xcassets */; };
 		04B27ED61C00DE62006720EF /* SplatStages WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04B27EB71C00DE61006720EF /* SplatStages WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04B27EDF1C010995006720EF /* ScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EDE1C010995006720EF /* ScheduleController.m */; };
+		04B27EE11C010A0C006720EF /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
 		04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
 		04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */; };
 		04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC31BA5D47D003BE6A9 /* main.m */; };
@@ -154,6 +156,9 @@
 		04B27ECF1C00DE61006720EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		04B27ED11C00DE62006720EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B27ED31C00DE62006720EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B27EDD1C010995006720EF /* ScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleController.h; sourceTree = "<group>"; };
+		04B27EDE1C010995006720EF /* ScheduleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleController.m; sourceTree = "<group>"; };
+		04B27EE01C0109E6006720EF /* SplatStages WatchKit 1 Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SplatStages WatchKit 1 Extension.entitlements"; sourceTree = "<group>"; };
 		04C1DE2C1BBA014000D98CA3 /* SplatStages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SplatStages.entitlements; sourceTree = "<group>"; };
 		04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplatStages.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B27EE11C010A0C006720EF /* SplatStagesFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +270,7 @@
 		04B27EB81C00DE61006720EF /* SplatStages WatchKit 1 Extension */ = {
 			isa = PBXGroup;
 			children = (
+				04B27EE01C0109E6006720EF /* SplatStages WatchKit 1 Extension.entitlements */,
 				04B27EBB1C00DE61006720EF /* InterfaceController.h */,
 				04B27EBC1C00DE61006720EF /* InterfaceController.m */,
 				04B27EBE1C00DE61006720EF /* NotificationController.h */,
@@ -273,6 +280,8 @@
 				04B27EC41C00DE61006720EF /* Assets.xcassets */,
 				04B27EC61C00DE61006720EF /* Info.plist */,
 				04B27EB91C00DE61006720EF /* Supporting Files */,
+				04B27EDD1C010995006720EF /* ScheduleController.h */,
+				04B27EDE1C010995006720EF /* ScheduleController.m */,
 			);
 			path = "SplatStages WatchKit 1 Extension";
 			sourceTree = "<group>";
@@ -526,6 +535,11 @@
 					04B27EB61C00DE61006720EF = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = F9VP3B7ZRQ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					04B27EC81C00DE61006720EF = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -747,6 +761,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B27EDF1C010995006720EF /* ScheduleController.m in Sources */,
 				04B27EC01C00DE61006720EF /* NotificationController.m in Sources */,
 				04B27EBD1C00DE61006720EF /* InterfaceController.m in Sources */,
 				04B27EC31C00DE61006720EF /* GlanceController.m in Sources */,
@@ -918,6 +933,7 @@
 		04B27ED71C00DE62006720EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "SplatStages WatchKit 1 Extension/SplatStages WatchKit 1 Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SplatStages WatchKit 1 Extension/Info.plist";
@@ -925,6 +941,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -932,13 +949,15 @@
 		04B27ED81C00DE62006720EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = "SplatStages WatchKit 1 Extension/SplatStages WatchKit 1 Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SplatStages WatchKit 1 Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1124,6 +1143,7 @@
 				04B27EDA1C00DE62006720EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04B27EDC1C00DE62006720EF /* Build configuration list for PBXNativeTarget "SplatStages WatchKit 1 Extension" */ = {
 			isa = XCConfigurationList;
@@ -1132,6 +1152,7 @@
 				04B27ED81C00DE62006720EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04EE0CBA1BA5D47D003BE6A9 /* Build configuration list for PBXProject "SplatStages" */ = {
 			isa = XCConfigurationList;
