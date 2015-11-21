@@ -273,6 +273,8 @@
 				04B27EE01C0109E6006720EF /* SplatStages WatchKit 1 Extension.entitlements */,
 				04B27EBB1C00DE61006720EF /* InterfaceController.h */,
 				04B27EBC1C00DE61006720EF /* InterfaceController.m */,
+				04B27EDD1C010995006720EF /* ScheduleController.h */,
+				04B27EDE1C010995006720EF /* ScheduleController.m */,
 				04B27EBE1C00DE61006720EF /* NotificationController.h */,
 				04B27EBF1C00DE61006720EF /* NotificationController.m */,
 				04B27EC11C00DE61006720EF /* GlanceController.h */,
@@ -280,8 +282,6 @@
 				04B27EC41C00DE61006720EF /* Assets.xcassets */,
 				04B27EC61C00DE61006720EF /* Info.plist */,
 				04B27EB91C00DE61006720EF /* Supporting Files */,
-				04B27EDD1C010995006720EF /* ScheduleController.h */,
-				04B27EDE1C010995006720EF /* ScheduleController.m */,
 			);
 			path = "SplatStages WatchKit 1 Extension";
 			sourceTree = "<group>";
