@@ -28,7 +28,7 @@
 		047B3FB51BB79199005BF2D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047B3FB31BB79199005BF2D0 /* MainInterface.storyboard */; };
 		047B3FB91BB79199005BF2D0 /* SplatStagesToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04B27EE31C012DC4006720EF /* SplatSquidRingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */; };
-		04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */; };
+		04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
 		04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */; };
 		04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC31BA5D47D003BE6A9 /* main.m */; };
@@ -194,10 +194,10 @@
 				047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */,
 				04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */,
 				04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */,
+				047A5ED31BB6103D00DD510D /* SplatTimer.h */,
 				047A5ED41BB6103D00DD510D /* SplatTimer.m */,
 				047B3FA41BB72875005BF2D0 /* SplatUtilities.h */,
 				047B3FA51BB72875005BF2D0 /* SplatUtilities.m */,
-				047A5ED31BB6103D00DD510D /* SplatTimer.h */,
 				047A5EC61BB5E09F00DD510D /* Info.plist */,
 			);
 			path = SplatStagesFramework;
@@ -319,10 +319,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */,
-				04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */,
 				047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */,
-				047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */,
+				04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */,
 				047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */,
+				047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
