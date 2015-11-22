@@ -36,6 +36,10 @@
     return [[NSUserDefaults alloc] initWithSuiteName:@"group.me.oatmealdome.ios.SplatStages"];
 }
 
++ (VALValet*) getValet {
+    return [[VALValet alloc] initWithSharedAccessGroupIdentifier:@"me.oatmealdome.ios.SplatStages" accessibility:VALAccessibilityWhenUnlocked];
+}
+
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData {
     UIColor* teamColour = [self colorWithHexString:[teamData objectForKey:@"colour"]];
     NSAttributedString* string = [[NSAttributedString alloc] initWithString:[teamData objectForKey:@"name"] attributes:@{NSForegroundColorAttributeName : teamColour}];

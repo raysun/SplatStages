@@ -10,6 +10,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import <Valet/VALValet.h>
+
 @interface SplatUtilities : NSObject
 
 //! Convert the string to a localizable (e.g. "Moray Towers" -> "MORAY_TOWERS")
@@ -26,6 +28,9 @@
 
 //! Get our user defaults group.
 + (NSUserDefaults*) getUserDefaults;
+
+//! Returns a Valet instance that we can use to access the Keychain.
++ (VALValet*) getValet;
 
 //! Get the team name as a coloured NSAttributedString.
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData;
