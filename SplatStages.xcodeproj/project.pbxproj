@@ -12,6 +12,7 @@
 		041721601BB8B9CD0027991D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215F1BB8B9CD0027991D /* MessageCell.m */; };
 		04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */; };
 		04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */; };
+		043E49E71C01764500B9A60D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043E49E61C01764500B9A60D /* Security.framework */; };
 		044042AB1BAB4274003C481E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044042AA1BAB4274003C481E /* InfoPlist.strings */; };
 		044F04351BC875820082F921 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F04341BC875820082F921 /* RegionViewController.m */; };
 		047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,10 +46,18 @@
 		04EE0CEB1BA5DAD4003BE6A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */; };
 		04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */; };
 		9A84413964F4ED2D995BF5CF /* libPods-SplatStages.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */; };
+		CD6FC0C0FF578F9C61989C57 /* libPods-SplatStagesToday.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB210A3B8364F619F272756 /* libPods-SplatStagesToday.a */; };
 		E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		040998131C021874007B88D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04EE0CB71BA5D47D003BE6A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 047A5EC11BB5E09F00DD510D;
+			remoteInfo = SplatStagesFramework;
+		};
 		047A5EC71BB5E09F00DD510D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04EE0CB71BA5D47D003BE6A9 /* Project object */;
@@ -101,6 +110,7 @@
 		04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionsViewController.m; sourceTree = "<group>"; };
 		04391BB11BD3F1FC0014EC99 /* WidgetConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetConfigViewController.h; sourceTree = "<group>"; };
 		04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetConfigViewController.m; sourceTree = "<group>"; };
+		043E49E61C01764500B9A60D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		044042AA1BAB4274003C481E /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		044F04331BC875820082F921 /* RegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionViewController.h; sourceTree = "<group>"; };
 		044F04341BC875820082F921 /* RegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionViewController.m; sourceTree = "<group>"; };
@@ -161,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043E49E71C01764500B9A60D /* Security.framework in Frameworks */,
 				E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,8 +180,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */,
+				CD6FC0C0FF578F9C61989C57 /* libPods-SplatStagesToday.a in Frameworks */,
 				047B3FAE1BB79199005BF2D0 /* NotificationCenter.framework in Frameworks */,
+				04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +315,7 @@
 		73212F200F1238B9BCBBB379 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				043E49E61C01764500B9A60D /* Security.framework */,
 				8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */,
 				802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */,
 				047B3FAD1BB79199005BF2D0 /* NotificationCenter.framework */,
@@ -353,14 +366,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 047B3FBC1BB79199005BF2D0 /* Build configuration list for PBXNativeTarget "SplatStagesToday" */;
 			buildPhases = (
+				F8D972C1702EED79806D1688 /* Check Pods Manifest.lock */,
 				047B3FA81BB79199005BF2D0 /* Sources */,
 				047B3FA91BB79199005BF2D0 /* Frameworks */,
 				047B3FAA1BB79199005BF2D0 /* Resources */,
 				04C44CBB1BE9AF8A00A54DA8 /* ShellScript */,
+				972BC5796984ADF3E0B497D6 /* Embed Pods Frameworks */,
+				D1426044A734F27E7C52E418 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				040998141C021874007B88D1 /* PBXTargetDependency */,
 			);
 			name = SplatStagesToday;
 			productName = SplatStagesToday;
@@ -544,6 +561,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		972BC5796984ADF3E0B497D6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplatStagesToday/Pods-SplatStagesToday-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9BA0579DE2504DBC27567816 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -574,7 +606,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplatStagesFramework/Pods-SplatStagesFramework-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D1426044A734F27E7C52E418 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplatStagesToday/Pods-SplatStagesToday-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E646114C3C4628BE5C389012 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8D972C1702EED79806D1688 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -634,6 +696,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		040998141C021874007B88D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 047A5EC11BB5E09F00DD510D /* SplatStagesFramework */;
+			targetProxy = 040998131C021874007B88D1 /* PBXContainerItemProxy */;
+		};
 		047A5EC81BB5E09F00DD510D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 047A5EC11BB5E09F00DD510D /* SplatStagesFramework */;
@@ -724,15 +791,17 @@
 		};
 		047B3FBA1BB79199005BF2D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B13DB44236484B48F0A673 /* Pods-SplatStagesToday.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SplatStagesToday/SplatStagesToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/NSAttributedString+CCLFormat\"";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SplatStagesToday/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PODS_ROOT = "${SRCROOT}/Pods";
+				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.SplatStagesToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -742,15 +811,17 @@
 		};
 		047B3FBB1BB79199005BF2D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0C8ABE2D17A8DF2E0945651 /* Pods-SplatStagesToday.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SplatStagesToday/SplatStagesToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/NSAttributedString+CCLFormat\"";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SplatStagesToday/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PODS_ROOT = "${SRCROOT}/Pods";
+				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.SplatStagesToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -845,6 +916,7 @@
 			baseConfigurationReference = A4F2E8C750242519572ABB41 /* Pods-SplatStages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SplatStages/SplatStages.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -862,6 +934,7 @@
 			baseConfigurationReference = 406078D19F699FD6F4F180BF /* Pods-SplatStages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SplatStages/SplatStages.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";

@@ -12,3 +12,8 @@ target 'SplatStagesFramework' do
 	pod 'Valet'
 end
 
+target 'SplatStagesToday' do
+        pod 'NSAttributedString+CCLFormat'
+        pod 'Valet'
+end
+
