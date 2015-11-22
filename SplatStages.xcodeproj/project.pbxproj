@@ -7,41 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0417215A1BB8B8CD0027991D /* StagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041721591BB8B8CD0027991D /* StagesCell.m */; settings = {ASSET_TAGS = (); }; };
-		0417215D1BB8B98D0027991D /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215C1BB8B98D0027991D /* HeaderCell.m */; settings = {ASSET_TAGS = (); }; };
-		041721601BB8B9CD0027991D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215F1BB8B9CD0027991D /* MessageCell.m */; settings = {ASSET_TAGS = (); }; };
-		04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */; settings = {ASSET_TAGS = (); }; };
-		044042AB1BAB4274003C481E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044042AA1BAB4274003C481E /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
-		044F04351BC875820082F921 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F04341BC875820082F921 /* RegionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0417215A1BB8B8CD0027991D /* StagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041721591BB8B8CD0027991D /* StagesCell.m */; };
+		0417215D1BB8B98D0027991D /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215C1BB8B98D0027991D /* HeaderCell.m */; };
+		041721601BB8B9CD0027991D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215F1BB8B9CD0027991D /* MessageCell.m */; };
+		04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */; };
+		04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */; };
+		044042AB1BAB4274003C481E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044042AA1BAB4274003C481E /* InfoPlist.strings */; };
+		044F04351BC875820082F921 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F04341BC875820082F921 /* RegionViewController.m */; };
 		047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5EC91BB5E09F00DD510D /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
 		047A5ECA1BB5E09F00DD510D /* SplatStagesFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */; settings = {ASSET_TAGS = (); }; };
+		047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */; };
 		047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED31BB6103D00DD510D /* SplatTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ED41BB6103D00DD510D /* SplatTimer.m */; settings = {ASSET_TAGS = (); }; };
+		047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ED41BB6103D00DD510D /* SplatTimer.m */; };
 		047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 047B3FA41BB72875005BF2D0 /* SplatUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FA51BB72875005BF2D0 /* SplatUtilities.m */; settings = {ASSET_TAGS = (); }; };
-		047B3FAE1BB79199005BF2D0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047B3FAD1BB79199005BF2D0 /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
+		047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FA51BB72875005BF2D0 /* SplatUtilities.m */; };
+		047B3FAE1BB79199005BF2D0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047B3FAD1BB79199005BF2D0 /* NotificationCenter.framework */; };
 		047B3FB21BB79199005BF2D0 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FB11BB79199005BF2D0 /* TodayViewController.m */; };
 		047B3FB51BB79199005BF2D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047B3FB31BB79199005BF2D0 /* MainInterface.storyboard */; };
 		047B3FB91BB79199005BF2D0 /* SplatStagesToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04B27EE31C012DC4006720EF /* SplatSquidRingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */; };
+		04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */; };
 		04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
-		04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
+		04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */; };
 		04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC31BA5D47D003BE6A9 /* main.m */; };
 		04EE0CC71BA5D47D003BE6A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC61BA5D47D003BE6A9 /* AppDelegate.m */; };
 		04EE0CCD1BA5D47D003BE6A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CCB1BA5D47D003BE6A9 /* Main.storyboard */; };
 		04EE0CCF1BA5D47D003BE6A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CCE1BA5D47D003BE6A9 /* Assets.xcassets */; };
 		04EE0CD21BA5D47D003BE6A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CD01BA5D47D003BE6A9 /* LaunchScreen.storyboard */; };
-		04EE0CE31BA5D4D6003BE6A9 /* RankedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDA1BA5D4D6003BE6A9 /* RankedViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE41BA5D4D6003BE6A9 /* RegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDC1BA5D4D6003BE6A9 /* RegularViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE51BA5D4D6003BE6A9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDE1BA5D4D6003BE6A9 /* SettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE61BA5D4D6003BE6A9 /* SplatfestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE01BA5D4D6003BE6A9 /* SplatfestViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE71BA5D4D6003BE6A9 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE21BA5D4D6003BE6A9 /* TabViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04EE0CE91BA5D539003BE6A9 /* project_paintball_beta3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CE81BA5D539003BE6A9 /* project_paintball_beta3.otf */; settings = {ASSET_TAGS = (); }; };
-		04EE0CEB1BA5DAD4003BE6A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
-		04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
+		04EE0CE31BA5D4D6003BE6A9 /* RankedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDA1BA5D4D6003BE6A9 /* RankedViewController.m */; };
+		04EE0CE41BA5D4D6003BE6A9 /* RegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDC1BA5D4D6003BE6A9 /* RegularViewController.m */; };
+		04EE0CE51BA5D4D6003BE6A9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDE1BA5D4D6003BE6A9 /* SettingsViewController.m */; };
+		04EE0CE61BA5D4D6003BE6A9 /* SplatfestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE01BA5D4D6003BE6A9 /* SplatfestViewController.m */; };
+		04EE0CE71BA5D4D6003BE6A9 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE21BA5D4D6003BE6A9 /* TabViewController.m */; };
+		04EE0CE91BA5D539003BE6A9 /* project_paintball_beta3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CE81BA5D539003BE6A9 /* project_paintball_beta3.otf */; };
+		04EE0CEB1BA5DAD4003BE6A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */; };
+		04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */; };
 		9A84413964F4ED2D995BF5CF /* libPods-SplatStages.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */; };
 		E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */; };
 /* End PBXBuildFile section */
@@ -117,6 +119,8 @@
 		047B3FB11BB79199005BF2D0 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		047B3FB41BB79199005BF2D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		047B3FB61BB79199005BF2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatSquidRingHelper.m; sourceTree = "<group>"; };
+		04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatSquidRingHelper.h; sourceTree = "<group>"; };
 		04C1DE2C1BBA014000D98CA3 /* SplatStages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SplatStages.entitlements; sourceTree = "<group>"; };
 		04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplatStages.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,10 +192,12 @@
 				047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */,
 				047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */,
 				047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */,
-				047A5ED31BB6103D00DD510D /* SplatTimer.h */,
+				04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */,
+				04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */,
 				047A5ED41BB6103D00DD510D /* SplatTimer.m */,
 				047B3FA41BB72875005BF2D0 /* SplatUtilities.h */,
 				047B3FA51BB72875005BF2D0 /* SplatUtilities.m */,
+				047A5ED31BB6103D00DD510D /* SplatTimer.h */,
 				047A5EC61BB5E09F00DD510D /* Info.plist */,
 			);
 			path = SplatStagesFramework;
@@ -313,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */,
+				04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */,
 				047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */,
 				047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */,
 				047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */,
@@ -585,6 +592,7 @@
 			files = (
 				047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */,
 				047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */,
+				04B27EE31C012DC4006720EF /* SplatSquidRingHelper.m in Sources */,
 				047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
