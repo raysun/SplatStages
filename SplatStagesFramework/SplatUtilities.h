@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <Valet/VALValet.h>
+#import <Valet/Valet.h>
 
 @interface SplatUtilities : NSObject
 
