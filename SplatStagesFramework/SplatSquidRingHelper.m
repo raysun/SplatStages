@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import <SplatStagesFramework/SplatDataFetcher.h>
-#import <SplatStagesFramework/SplatUtilities.h>
 #import <SplatStagesFramework/SplatSquidRingHelper.h>
+#import <SplatStagesFramework/SplatUtilities.h>
 
 @interface SplatSquidRingHelper ()
 
