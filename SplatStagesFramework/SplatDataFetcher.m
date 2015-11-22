@@ -18,12 +18,7 @@
 @implementation SplatDataFetcher
 
 + (void) downloadFile:(NSString*) urlString completionHandler:(void (^)(NSData* data)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
-    // We need an NSURLSession instance that has caching turned off.
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData; // Don't cache, get request each time
-    configuration.timeoutIntervalForRequest = 15; // Wait 15 seconds before timing out.
-    NSURLSession* session = [NSURLSession sessionWithConfiguration:configuration];
-    
+    NSURLSession* session = [SplatUtilities getNSURLSession];
     NSURL* url = [NSURL URLWithString:urlString];
     [[session dataTaskWithURL:url completionHandler:^(NSData* data, NSURLResponse* response, NSError* taskError) {
         // Check for an error first

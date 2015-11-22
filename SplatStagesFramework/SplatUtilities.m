@@ -80,4 +80,12 @@
                            alpha:1.0f];
 }
 
++ (NSURLSession*) getNSURLSession {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData; // Don't cache, get request each time
+    configuration.timeoutIntervalForRequest = 15; // Wait 15 seconds before timing out.
+    
+    return [NSURLSession sessionWithConfiguration:configuration];
+}
+
 @end
