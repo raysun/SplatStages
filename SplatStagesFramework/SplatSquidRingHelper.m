@@ -32,6 +32,11 @@
                                    };
         NSError* error = [[NSError alloc] initWithDomain:@"me.oatmealdome.ios.SplatStages" code:1 userInfo:userInfo];
         errorHandler(error, NSLocalizedString(@"ERROR_SPLATNET_LOG_IN", nil));
+        return;
+    }
+    
+    if ([valet stringForKey:@"username"] == nil) {
+        return;
     }
     
     NSURL* url = [NSURL URLWithString:@"https://id.nintendo.net/oauth/authorize"];
