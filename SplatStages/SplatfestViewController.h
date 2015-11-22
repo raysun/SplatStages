@@ -57,13 +57,13 @@
 @property (weak, nonatomic) IBOutlet UILabel* teamBFinalScore;
 
 // Data
-@property NSArray* teams;
-@property SplatTimer* countdownTimer;
-@property int splatfestId;
+@property (strong, atomic) NSArray* teams;
+@property (strong, atomic) SplatTimer* countdownTimer;
+@property (atomic) int splatfestId;
 
 // Team Names
-@property NSAttributedString* teamANameString;
-@property NSAttributedString* teamBNameString;
+@property (strong, atomic) NSAttributedString* teamANameString;
+@property (strong, atomic) NSAttributedString* teamBNameString;
 
 - (void) preliminarySetup:(NSArray*) teams id:(int) id;
 - (void) setupViewSplatfestSoon:(NSDate*) startDate;
