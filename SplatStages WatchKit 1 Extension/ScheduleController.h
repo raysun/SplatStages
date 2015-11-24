@@ -11,4 +11,12 @@
 
 @interface ScheduleController : WKInterfaceController
 
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* regularMapOne;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* regularMapTwo;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* rankedGamemode;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* rankedMapOne;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* rankedMapTwo;
+
+@property (nonatomic) NSInteger selectedRotation;
+
 @end
