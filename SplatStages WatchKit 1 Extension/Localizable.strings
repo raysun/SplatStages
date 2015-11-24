@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  SplatStages - WatchKit 1 Extension
+
+  Created by mac on 2015-11-23.
+  Copyright © 2015 OatmealDome. All rights reserved.
+*/
+
+// Gamemodes / Rules
+"TURF_WAR" = "Turf War";
+"SPLAT_ZONES" = "Splat Zones";
+"TOWER_CONTROL" = "Tower Control";
+"RAINMAKER" = "Rainmaker";
+"UNKNOWN_GAMEMODE" = "Unknown Gamemode";
+
+// Stages
+"AROWANA_MALL" = "Arowana Mall";
+"BLACKBELLY_SKATEPARK" = "Blackbelly Skatepark";
+"BLUEFIN_DEPOT" = "Bluefin Depot";
+"CAMP_TRIGGERFISH" = "Camp Triggerfish";
+"FLOUNDER_HEIGHTS" = "Flounder Heights";
+"KELP_DOME" = "Kelp Dome";
+"MORAY_TOWERS" = "Moray Towers";
+"PORT_MACKEREL" = "Port Mackerel";
+"SALTSPRAY_RIG" = "Saltspray Rig";
+"URCHIN_UNDERPASS" = "Urchin Underpass";
+"WALLEYE_WAREHOUSE" = "Walleye Warehouse";
+"HAMMERHEAD_BRIDGE" = "Hammerhead Bridge";
+"MUSEUM_DALFONSINO" = "Museum d'Alfonsino";
+"MAHIMAHI_RESORT" = "Mahi-Mahi Resort";
+"UNKNOWN_MAP" = "Unknown Map";
+
+// Map Rotation
+"ROTATION_COUNTDOWN" = "The next stage rotation is in \n%ld:%02ld:%02ld."; // Hours, Minutes, Seconds
+"ROTATION_UNKNOWN" = "The stage rotation is in an unknown amount of time.";
+"ROTATION_NOW" = "The stage rotation just happened!";
+"ROTATION_UNAVAILABLE" = "Stage information is currently unavailable.";
+

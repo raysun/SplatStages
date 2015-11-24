@@ -14,6 +14,7 @@
 		04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */; };
 		044042AB1BAB4274003C481E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044042AA1BAB4274003C481E /* InfoPlist.strings */; };
 		044F04351BC875820082F921 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F04341BC875820082F921 /* RegionViewController.m */; };
+		0455029A1C03B8090011A32C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 045502991C03B8090011A32C /* Localizable.strings */; };
 		047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5EC91BB5E09F00DD510D /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
 		047A5ECA1BB5E09F00DD510D /* SplatStagesFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -127,6 +128,7 @@
 		044042AA1BAB4274003C481E /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		044F04331BC875820082F921 /* RegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionViewController.h; sourceTree = "<group>"; };
 		044F04341BC875820082F921 /* RegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionViewController.m; sourceTree = "<group>"; };
+		045502991C03B8090011A32C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SplatStagesFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplatStagesFramework.h; sourceTree = "<group>"; };
 		047A5EC61BB5E09F00DD510D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				04B27EC41C00DE61006720EF /* Assets.xcassets */,
 				04B27EC61C00DE61006720EF /* Info.plist */,
 				04B27EB91C00DE61006720EF /* Supporting Files */,
+				045502991C03B8090011A32C /* Localizable.strings */,
 			);
 			path = "SplatStages WatchKit 1 Extension";
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B27EC51C00DE61006720EF /* Assets.xcassets in Resources */,
+				0455029A1C03B8090011A32C /* Localizable.strings in Resources */,
 				04B27ECA1C00DE61006720EF /* SplatStages WatchKit 1 App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
