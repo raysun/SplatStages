@@ -8,11 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+#import <UIKit/UILabel.h>
+
+#import <WatchKit/WKInterfaceLabel.h>
+
 @interface SplatTimer : NSObject
 
 @property NSDate* countdownDate;
+#ifdef TARGET_OS_WATCH
+@property WKInterfaceLabel* labelOne;
+@property WKInterfaceLabel* labelTwo;
+// if we ever support OS X in the future:
+// #elif !TARGET_OS_IPHONE
+#else
 @property UILabel* labelOne;
 @property UILabel* labelTwo;
+#endif
 @property NSString* textString;
 @property NSString* timeString;
 @property NSAttributedString* teamA;
@@ -28,10 +39,10 @@
 @property NSTimer* internalTimer;
 
 //! Inits the SplatTimer instance as a rotation timer.
-- (id) initRotationTimerWithDate:(NSDate*) date labelOne:(UILabel*) labelOne labelTwo:(UILabel*) labelTwo textString:(NSString*) textString timerFinishedHandler:(void (^)()) timerFinishedHandler;
+- (id) initRotationTimerWithDate:(NSDate*) date labelOne:(id) labelOne labelTwo:(id) labelTwo textString:(NSString*) textString timerFinishedHandler:(void (^)()) timerFinishedHandler;
 
 //! Inits the SplatTimer instance as a Splatfest coundown timer.
-- (id) initFestivalTimerWithDate:(NSDate*) date label:(UILabel*) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)(NSAttributedString* teamA, NSAttributedString* teamB)) timerFinishedHandler;
+- (id) initFestivalTimerWithDate:(NSDate*) date label:(id) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)(NSAttributedString* teamA, NSAttributedString* teamB)) timerFinishedHandler;
 
 //! Starts the timer if it has been stopped.
 - (void) start;

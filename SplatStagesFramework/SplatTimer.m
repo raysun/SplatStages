@@ -14,7 +14,7 @@
 
 @implementation SplatTimer
 
-- (id) initRotationTimerWithDate:(NSDate*) date labelOne:(UILabel*) labelOne labelTwo:(UILabel*) labelTwo textString:(NSString*) textString timerFinishedHandler:(void (^)()) timerFinishedHandler {
+- (id) initRotationTimerWithDate:(NSDate*) date labelOne:(id) labelOne labelTwo:(id) labelTwo textString:(NSString*) textString timerFinishedHandler:(void (^)()) timerFinishedHandler {
     if (self = [super init]) {
         // Initialize variables
         self.countdownDate = date;
@@ -32,7 +32,7 @@
     return self;
 }
 
-- (id) initFestivalTimerWithDate:(NSDate*) date label:(UILabel*) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)(NSAttributedString* teamA, NSAttributedString* teamB)) timerFinishedHandler {
+- (id) initFestivalTimerWithDate:(NSDate*) date label:(id) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)(NSAttributedString* teamA, NSAttributedString* teamB)) timerFinishedHandler {
     if (self = [super init]) {
         // Initialize variables
         self.countdownDate = date;
