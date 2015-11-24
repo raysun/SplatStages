@@ -30,6 +30,9 @@
 //! Get the team name as a coloured NSAttributedString.
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData;
 
+//! Returns true if the cached schedule is outdated.
++ (BOOL) isScheduleOutdated;
+
 //
 // Thanks WrightsCS on StackOverflow!
 // http://stackoverflow.com/questions/6207329/how-to-set-hex-color-code-for-background

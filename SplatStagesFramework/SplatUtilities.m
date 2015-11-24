@@ -42,6 +42,12 @@
     return string;
 }
 
++ (BOOL) isScheduleOutdated {
+    NSArray* schedule = [[self getUserDefaults] objectForKey:@"schedule"];
+    NSDate* nextRotation = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
+    return [nextRotation timeIntervalSinceNow] <= 0;
+}
+
 + (UIColor*) colorWithHexString:(NSString*) hex {
     NSString* cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
