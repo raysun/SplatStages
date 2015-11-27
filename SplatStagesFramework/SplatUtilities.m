@@ -48,6 +48,27 @@
     return [nextRotation timeIntervalSinceNow] <= 0;
 }
 
+- (void) setLabel:(PLATFORM_SPECIFIC_LABEL*) label nameEN:(NSString*) nameEN nameJP:(NSString*) nameJP unknownLocalizable:(NSString*) unknownLocalizable {
+    NSString* localizable = [SplatUtilities toLocalizable:nameEN];
+    NSString* localizedString = NSLocalizedString(localizable, nil);
+    
+    if ([localizedString isEqualToString:localizable]) {
+        // We don't have data for this stage!
+        if ([SplatUtilities isDeviceLangaugeJapanese]) {
+            // The device language is Japanese, so use nameJP.
+            [label setText:nameJP];
+        } else if ([nameEN canBeConvertedToEncoding:NSISOLatin1StringEncoding]) {
+            // nameEN is an English string, so let's use that.
+            [label setText:nameEN];
+        } else {
+            // The device language is not Japanese and we have no English string, so just display the unknown string,
+            [label setText:NSLocalizedString(unknownLocalizable, nil)];
+        }
+    } else {
+        [label setText:localizedString];
+    }
+}
+
 + (UIColor*) colorWithHexString:(NSString*) hex {
     NSString* cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     

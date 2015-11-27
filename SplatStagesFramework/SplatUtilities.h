@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <SplatStagesFramework/SplatLabel.h>
+
 #import <UIKit/UIKit.h>
 
 @interface SplatUtilities : NSObject
@@ -32,6 +34,9 @@
 
 //! Returns true if the cached schedule is outdated.
 + (BOOL) isScheduleOutdated;
+
+//! Sets the text on the label.
+- (void) setLabel:(PLATFORM_SPECIFIC_LABEL*) label nameEN:(NSString*) nameEN nameJP:(NSString*) nameJP unknownLocalizable:(NSString*) unknownLocalizable;
 
 //
 // Thanks WrightsCS on StackOverflow!
