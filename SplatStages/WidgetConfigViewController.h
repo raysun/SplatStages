@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIStepper* stepper;
 @property (weak, nonatomic) IBOutlet UILabel* numberLabel;
-@property NSNumber* rotationsShown;
-@property BOOL hideSplatfestInformation;
+@property (strong, nonatomic) NSNumber* rotationsShown;
+@property (nonatomic) BOOL hideSplatfestInformation;
 
 @end

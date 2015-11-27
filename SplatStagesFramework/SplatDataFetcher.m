@@ -18,12 +18,7 @@
 @implementation SplatDataFetcher
 
 + (void) downloadFile:(NSString*) urlString completionHandler:(void (^)(NSData* data)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
-    // We need an NSURLSession instance that has caching turned off.
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData; // Don't cache, get request each time
-    configuration.timeoutIntervalForRequest = 15; // Wait 15 seconds before timing out.
-    NSURLSession* session = [NSURLSession sessionWithConfiguration:configuration];
-    
+    NSURLSession* session = [SplatUtilities getNSURLSession];
     NSURL* url = [NSURL URLWithString:urlString];
     [[session dataTaskWithURL:url completionHandler:^(NSData* data, NSURLResponse* response, NSError* taskError) {
         // Check for an error first
@@ -37,11 +32,11 @@
     }] resume];
 }
 
-+ (void) downloadAndParseJson:(NSString*) urlString completionHandler:(void (^)(NSDictionary* dict)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
++ (void) downloadAndParseJson:(NSString*) urlString completionHandler:(void (^)(id parsedJson)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
     [self downloadFile:urlString completionHandler:^(NSData* data) {
         // Attempt to parse the data.
         NSError* jsonError;
-        NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+        id parsedJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
         
         // Check for a error first
         if (jsonError) {
@@ -50,7 +45,7 @@
         }
         
         // Call the completion handler.
-        completionHandler(jsonDict);
+        completionHandler(parsedJson);
     } errorHandler:^(NSError* error, NSString* when) {
         errorHandler(error, when);
     }];
@@ -60,14 +55,14 @@
     NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
     
     // Get the Temporary Stage Mapping, which contains the English names for maps that aren't supported by splatoon.ink yet.
-    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/temporary-stage-mapping.json" completionHandler:^(NSDictionary* data) {
-        [storedData setObject:data forKey:@"temporaryMappings"];
+    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/temporary-stage-mapping.json" completionHandler:^(id mappingJson) {
+        [storedData setObject:mappingJson forKey:@"temporaryMappings"];
         [storedData synchronize];
         
         // Now we can request the latest stage data.
-        [self downloadAndParseJson:@"https://splatoon.ink/schedule.json" completionHandler:^(NSDictionary* data) {
+        [self downloadAndParseJson:@"https://splatoon.ink/schedule.json" completionHandler:^(id scheduleJson) {
             // Check if the data is stale, and return if it is.
-            NSDate* updateTime = [NSDate dateWithTimeIntervalSince1970:[[data objectForKey:@"updateTime"] longLongValue] / 1000];
+            NSDate* updateTime = [NSDate dateWithTimeIntervalSince1970:[[scheduleJson objectForKey:@"updateTime"] longLongValue] / 1000];
             NSDate* storedDataUpdateTime = [storedData objectForKey:@"storedDataUpdateTime"];
             if (!storedDataUpdateTime) {
                 storedDataUpdateTime = [NSDate dateWithTimeIntervalSince1970:0];
@@ -79,11 +74,11 @@
             
             // Set all our data variables.
             [storedData setObject:updateTime forKey:@"storedDataUpdateTime"];
-            [storedData setObject:[data objectForKey:@"schedule"] forKey:@"schedule"];
+            [storedData setObject:[scheduleJson objectForKey:@"schedule"] forKey:@"schedule"];
             [storedData synchronize];
             
             // Check if there's no schedule (for example, splatoon.ink returns nothing of value during Splatfests)
-            NSArray* schedules = [data objectForKey:@"schedule"];
+            NSArray* schedules = [scheduleJson objectForKey:@"schedule"];
             NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedules lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
             if ([schedules count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
                 updateCallback(@2);
@@ -101,8 +96,8 @@
 
 + (void) requestFestivalDataWithCallback:(void (^)()) updateCallback errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
     NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
-    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/splatfest.json" completionHandler:^(NSDictionary* data) {
-        NSDictionary* splatfestData = [data objectForKey:[SplatUtilities getUserRegion]];
+    [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/splatfest.json" completionHandler:^(id splatfestJson) {
+        NSDictionary* splatfestData = [splatfestJson objectForKey:[SplatUtilities getUserRegion]];
         [storedData setObject:splatfestData forKey:@"splatfestData"];
         [storedData synchronize];
         

@@ -18,12 +18,12 @@
 @interface TabViewController : UITabBarController <UITabBarControllerDelegate>
 
 // Stages
-@property BOOL viewsReady;
-@property SplatTimer* rotationTimer;
-@property NSTimer* stageRequestTimer;
+@property (nonatomic) BOOL viewsReady;
+@property (strong, atomic) SplatTimer* rotationTimer;
+@property (strong, atomic) NSTimer* stageRequestTimer;
 
 // Setup
-@property BOOL needsInitialSetup;
+@property (nonatomic) BOOL needsInitialSetup;
 
 - (void) getStageData;
 - (void) getSplatfestData;

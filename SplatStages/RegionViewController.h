@@ -10,9 +10,9 @@
 
 @interface RegionViewController : UITableViewController
 
-@property NSIndexPath* oldIndex;
-@property UILabel* settingsRegionLabel;
-@property NSArray* userFacingRegionStrings;
-@property NSArray* internalRegionStrings;
+@property (strong, nonatomic) NSIndexPath* oldIndex;
+@property (weak, nonatomic) UILabel* settingsRegionLabel;
+@property (strong, nonatomic) NSArray* userFacingRegionStrings;
+@property (strong, nonatomic) NSArray* internalRegionStrings;
 
 @end

@@ -36,6 +36,10 @@
     return [[NSUserDefaults alloc] initWithSuiteName:@"group.me.oatmealdome.ios.SplatStages"];
 }
 
++ (VALValet*) getValet {
+    return [[VALValet alloc] initWithSharedAccessGroupIdentifier:@"me.oatmealdome.ios.SplatStages" accessibility:VALAccessibilityWhenUnlocked];
+}
+
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData {
     UIColor* teamColour = [self colorWithHexString:[teamData objectForKey:@"colour"]];
     NSAttributedString* string = [[NSAttributedString alloc] initWithString:[teamData objectForKey:@"name"] attributes:@{NSForegroundColorAttributeName : teamColour}];
@@ -105,6 +109,14 @@
                            green:((float) g / 255.0f)
                             blue:((float) b / 255.0f)
                            alpha:1.0f];
+}
+
++ (NSURLSession*) getNSURLSession {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configuration.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData; // Don't cache, get request each time
+    configuration.timeoutIntervalForRequest = 15; // Wait 15 seconds before timing out.
+    
+    return [NSURLSession sessionWithConfiguration:configuration];
 }
 
 @end
