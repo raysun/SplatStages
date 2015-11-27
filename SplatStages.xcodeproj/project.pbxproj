@@ -944,6 +944,10 @@
 				CODE_SIGN_ENTITLEMENTS = "SplatStages WatchKit 1 Extension/SplatStages WatchKit 1 Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"WATCH_EXTENSION=1",
+				);
 				INFOPLIST_FILE = "SplatStages WatchKit 1 Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";

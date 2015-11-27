@@ -12,7 +12,7 @@
 
 #pragma once
 
-#if TARGET_OS_WATCH
+#if TARGET_OS_WATCH || defined(WATCH_EXTENSION)
     // WatchOS
     #import <WatchKit/WKInterfaceLabel.h>
     #define PLATFORM_SPECIFIC_LABEL WKInterfaceLabel
