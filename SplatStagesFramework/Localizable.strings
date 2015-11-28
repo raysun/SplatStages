@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  SplatStages
+
+  Created by mac on 2015-11-27.
+  Copyright © 2015 OatmealDome. All rights reserved.
+*/
+
+// This file contains strings that are shared between all targets.
+
+// Gamemodes / Rules
+"TURF_WAR" = "Turf War";
+"SPLAT_ZONES" = "Splat Zones";
+"TOWER_CONTROL" = "Tower Control";
+"RAINMAKER" = "Rainmaker";
+"UNKNOWN_GAMEMODE" = "Unknown Gamemode";
+
+// Stages
+"AROWANA_MALL" = "Arowana Mall";
+"BLACKBELLY_SKATEPARK" = "Blackbelly Skatepark";
+"BLUEFIN_DEPOT" = "Bluefin Depot";
+"CAMP_TRIGGERFISH" = "Camp Triggerfish";
+"FLOUNDER_HEIGHTS" = "Flounder Heights";
+"KELP_DOME" = "Kelp Dome";
+"MORAY_TOWERS" = "Moray Towers";
+"PORT_MACKEREL" = "Port Mackerel";
+"SALTSPRAY_RIG" = "Saltspray Rig";
+"URCHIN_UNDERPASS" = "Urchin Underpass";
+"WALLEYE_WAREHOUSE" = "Walleye Warehouse";
+"HAMMERHEAD_BRIDGE" = "Hammerhead Bridge";
+"MUSEUM_DALFONSINO" = "Museum d'Alfonsino";
+"MAHIMAHI_RESORT" = "Mahi-Mahi Resort";
+"UNKNOWN_MAP" = "Unknown Map";
+
+// Map Rotation
+"ROTATION_COUNTDOWN" = "The next stage rotation is in %ld:%02ld:%02ld."; // Hours, Minutes, Seconds
+"ROTATION_NOW" = "The stage rotation just happened!";
+"ROTATION_UNAVAILABLE" = "Stage information is currently unavailable.";
+
+// Splatfest
+"SPLATFEST_UPCOMING_COUNTDOWN" = "The %@ vs. %@ Splatfest is in %@!"; // Team A, Team B, SPLATFEST_UPCOMING_COUNTDOWN_TIME
+"SPLATFEST_UPCOMING_COUNTDOWN_TIME" = "%02ld:%02ld:%02ld:%02ld"; // Days, Hours, Minutes, Seconds
+"SPLATFEST_FINISH_COUNTDOWN" = "The %@ vs. %@ Splatfest finishes in %@!"; // Team A, Team B, SPLATFEST_FINISH_COUNTDOWN_TIME
+"SPLATFEST_FINISH_COUNTDOWN_TIME" = "%02ld:%02ld:%02ld"; // Hours, Minutes, Seconds
+"SPLATFEST_FINISHED" = "The %@ vs. %@ Splatfest is over!";
+
+// Errors
+"ERROR_DOWNLOADING_DATA" = "An error occurred while attempting to download data.";
+"ERROR_PARSING_JSON" = "An error occurred while parsing JSON data.";
+"ERROR_CLEARING_IMAGE_CACHE" = "An error occurred while trying to clear the Splatfest image cache.";
+"ERROR_SPLATNET_LOG_IN" = "An error occurred while trying to log into SplatNet.";
+"ERROR_KEYCHAIN_ACCESS_DESCRIPTION" = "Valet could not access the system keychain.";
+"ERROR_LOG_IN_FAILED_DESCRIPTION" = "Logging into SplatNet failed. Check your username and password.";
+"ERROR_CREDENTIALS_NOT_SET_DESCRIPTION" = "No SplatNet credentials found. Set your username and password in settings.";

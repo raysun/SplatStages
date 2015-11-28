@@ -35,6 +35,9 @@
 //! Get the team name as a coloured NSAttributedString.
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData;
 
+//! Localizes a string with priority to the Framework bundle.
++ (NSString*) localizeString:(NSString*) string;
+
 //
 // Thanks WrightsCS on StackOverflow!
 // http://stackoverflow.com/questions/6207329/how-to-set-hex-color-code-for-background

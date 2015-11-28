@@ -46,6 +46,14 @@
     return string;
 }
 
++ (NSString*) localizeString:(NSString*) string {
+    NSString* localized = NSLocalizedStringFromTableInBundle(string, nil, [NSBundle bundleForClass:[self class]], nil);
+    if ([localized isEqualToString:string]) {
+        localized = NSLocalizedStringFromTableInBundle(string, nil, [NSBundle mainBundle], nil);
+    }
+    return localized;
+}
+
 + (UIColor*) colorWithHexString:(NSString*) hex {
     NSString* cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
