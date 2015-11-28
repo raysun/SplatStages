@@ -41,7 +41,7 @@
 + (BOOL) isScheduleOutdated;
 
 //! Sets the text on the label.
-- (void) setLabel:(PLATFORM_SPECIFIC_LABEL*) label nameEN:(NSString*) nameEN nameJP:(NSString*) nameJP unknownLocalizable:(NSString*) unknownLocalizable;
++ (void) setLabel:(PLATFORM_SPECIFIC_LABEL*) label nameEN:(NSString*) nameEN nameJP:(NSString*) nameJP unknownLocalizable:(NSString*) unknownLocalizable;
 
 //
 // Thanks WrightsCS on StackOverflow!

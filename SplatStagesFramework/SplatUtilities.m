@@ -52,7 +52,7 @@
     return [nextRotation timeIntervalSinceNow] <= 0;
 }
 
-- (void) setLabel:(PLATFORM_SPECIFIC_LABEL*) label nameEN:(NSString*) nameEN nameJP:(NSString*) nameJP unknownLocalizable:(NSString*) unknownLocalizable {
++ (void) setLabel:(PLATFORM_SPECIFIC_LABEL*) label nameEN:(NSString*) nameEN nameJP:(NSString*) nameJP unknownLocalizable:(NSString*) unknownLocalizable {
     NSString* localizable = [SplatUtilities toLocalizable:nameEN];
     NSString* localizedString = NSLocalizedString(localizable, nil);
     
