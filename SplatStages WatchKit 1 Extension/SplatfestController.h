@@ -11,4 +11,9 @@
 
 @interface SplatfestController : WKInterfaceController
 
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* messageLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* mapOne;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* mapTwo;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* mapThree;
+
 @end

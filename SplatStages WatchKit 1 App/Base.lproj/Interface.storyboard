@@ -117,6 +117,12 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="mapOne" destination="GPm-En-3Vw" id="Gil-dy-Bsu"/>
+                        <outlet property="mapThree" destination="yjj-q7-HDR" id="f8p-Ui-tgx"/>
+                        <outlet property="mapTwo" destination="qw2-PR-rtV" id="nKx-zs-9XE"/>
+                        <outlet property="messageLabel" destination="E9b-c1-6Td" id="iqp-Uy-1nb"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="487" y="478"/>
