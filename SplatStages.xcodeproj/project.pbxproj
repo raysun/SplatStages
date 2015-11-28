@@ -30,6 +30,7 @@
 		047B3FB21BB79199005BF2D0 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FB11BB79199005BF2D0 /* TodayViewController.m */; };
 		047B3FB51BB79199005BF2D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047B3FB31BB79199005BF2D0 /* MainInterface.storyboard */; };
 		047B3FB91BB79199005BF2D0 /* SplatStagesToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04AF6BA41C0A36DF00F87F98 /* SplatfestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF6BA31C0A36DF00F87F98 /* SplatfestController.m */; };
 		04B27EBD1C00DE61006720EF /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EBC1C00DE61006720EF /* InterfaceController.m */; };
 		04B27EC01C00DE61006720EF /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EBF1C00DE61006720EF /* NotificationController.m */; };
 		04B27EC31C00DE61006720EF /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EC21C00DE61006720EF /* GlanceController.m */; };
@@ -159,6 +160,8 @@
 		047B3FB11BB79199005BF2D0 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		047B3FB41BB79199005BF2D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		047B3FB61BB79199005BF2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AF6BA21C0A36DF00F87F98 /* SplatfestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatfestController.h; sourceTree = "<group>"; };
+		04AF6BA31C0A36DF00F87F98 /* SplatfestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatfestController.m; sourceTree = "<group>"; };
 		04B27EB71C00DE61006720EF /* SplatStages WatchKit 1 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SplatStages WatchKit 1 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B27EBA1C00DE61006720EF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		04B27EBB1C00DE61006720EF /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
@@ -303,6 +306,8 @@
 				04B27EBC1C00DE61006720EF /* InterfaceController.m */,
 				04B27EDD1C010995006720EF /* ScheduleController.h */,
 				04B27EDE1C010995006720EF /* ScheduleController.m */,
+				04AF6BA21C0A36DF00F87F98 /* SplatfestController.h */,
+				04AF6BA31C0A36DF00F87F98 /* SplatfestController.m */,
 				04B27EBE1C00DE61006720EF /* NotificationController.h */,
 				04B27EBF1C00DE61006720EF /* NotificationController.m */,
 				04B27EC11C00DE61006720EF /* GlanceController.h */,
@@ -902,6 +907,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B27EDF1C010995006720EF /* ScheduleController.m in Sources */,
+				04AF6BA41C0A36DF00F87F98 /* SplatfestController.m in Sources */,
 				04B27EC01C00DE61006720EF /* NotificationController.m in Sources */,
 				04B27EBD1C00DE61006720EF /* InterfaceController.m in Sources */,
 				04B27EC31C00DE61006720EF /* GlanceController.m in Sources */,

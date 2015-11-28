@@ -98,7 +98,7 @@
         <!--Splatfest-->
         <scene sceneID="I5G-9g-Zuu">
             <objects>
-                <controller title="Splatfest" id="iHA-vq-7nP">
+                <controller title="Splatfest" id="iHA-vq-7nP" customClass="SplatfestController">
                     <items>
                         <group width="1" alignment="left" id="aPK-cs-LKU">
                             <items>
