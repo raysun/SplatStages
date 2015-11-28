@@ -58,7 +58,7 @@
     
     if ([localizedString isEqualToString:localizable]) {
         // We don't have data for this stage!
-        if ([SplatUtilities isDeviceLangaugeJapanese]) {
+        if ([SplatUtilities isDeviceLangaugeJapanese] && nameJP != nil) {
             // The device language is Japanese, so use nameJP.
             [label setText:nameJP];
         } else if ([nameEN canBeConvertedToEncoding:NSISOLatin1StringEncoding]) {
