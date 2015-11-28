@@ -60,7 +60,7 @@
                             </items>
                         </group>
                         <separator width="0.80000000000000004" alignment="center" alpha="0.5" id="O5Q-i2-f5r"/>
-                        <group height="25" alignment="center" spacing="0.0" id="9o5-PU-EuW">
+                        <group height="25" alignment="center" spacing="2" id="9o5-PU-EuW">
                             <items>
                                 <button height="1" alignment="left" title="Now" id="dQf-P8-EC0">
                                     <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
