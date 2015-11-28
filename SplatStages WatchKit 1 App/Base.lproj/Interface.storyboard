@@ -11,6 +11,7 @@
                 <controller title="SplatStages" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <button width="0.90000000000000002" alignment="center" title="Schedule" id="gn3-BB-bH2">
+                            <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="yl5-g7-0k2" kind="push" id="Lrs-DA-OeH"/>
                             </connections>
@@ -62,7 +63,7 @@
                         <group height="25" alignment="center" spacing="0.0" id="9o5-PU-EuW">
                             <items>
                                 <button height="1" alignment="left" title="Now" id="dQf-P8-EC0">
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="nowPressed" destination="yl5-g7-0k2" id="ZBM-I0-kxz"/>
                                     </connections>
@@ -81,6 +82,9 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="laterButton" destination="Ru9-BS-Z4y" id="VBT-w6-qfL"/>
+                        <outlet property="nextButton" destination="cN9-Fk-2Uv" id="wav-ZD-lN0"/>
+                        <outlet property="nowButton" destination="dQf-P8-EC0" id="fuM-iR-5kA"/>
                         <outlet property="rankedGamemode" destination="9Co-gH-kN7" id="kbI-Xv-jV3"/>
                         <outlet property="rankedMapOne" destination="mjG-Zt-dCw" id="emz-LS-3jT"/>
                         <outlet property="rankedMapTwo" destination="nnX-Sw-8TR" id="irW-bP-Dbv"/>

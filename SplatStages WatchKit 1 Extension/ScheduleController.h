@@ -16,7 +16,12 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* rankedGamemode;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* rankedMapOne;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* rankedMapTwo;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton* nowButton;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton* nextButton;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton* laterButton;
 
 @property (nonatomic) NSInteger selectedRotation;
+@property (strong, nonatomic) UIColor* defaultButtonColour;
+@property (strong, nonatomic) UIColor* selectedButtonColour;
 
 @end
