@@ -13,7 +13,11 @@ target 'SplatStagesFramework' do
 end
 
 target 'SplatStagesToday' do
-        pod 'NSAttributedString+CCLFormat'
-        pod 'Valet'
+    pod 'NSAttributedString+CCLFormat'
+    pod 'Valet'
 end
 
+target 'SplatStages WatchKit 1 Extension' do
+    pod 'NSAttributedString+CCLFormat'
+    pod 'Valet'
+end

@@ -10,8 +10,10 @@
 		0417215A1BB8B8CD0027991D /* StagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041721591BB8B8CD0027991D /* StagesCell.m */; };
 		0417215D1BB8B98D0027991D /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215C1BB8B98D0027991D /* HeaderCell.m */; };
 		041721601BB8B9CD0027991D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417215F1BB8B9CD0027991D /* MessageCell.m */; };
+		041C3E691C0926A3005DC390 /* SplatTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED31BB6103D00DD510D /* SplatTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BAC1BD3F1C70014EC99 /* SubscriptionsViewController.m */; };
 		04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04391BB21BD3F1FC0014EC99 /* WidgetConfigViewController.m */; };
+		043E49E71C01764500B9A60D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043E49E61C01764500B9A60D /* Security.framework */; };
 		044042AB1BAB4274003C481E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044042AA1BAB4274003C481E /* InfoPlist.strings */; };
 		044F04351BC875820082F921 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F04341BC875820082F921 /* RegionViewController.m */; };
 		0455029A1C03B8090011A32C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 045502991C03B8090011A32C /* Localizable.strings */; };
@@ -21,7 +23,6 @@
 		047A5ECA1BB5E09F00DD510D /* SplatStagesFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */; };
 		047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 047A5ED31BB6103D00DD510D /* SplatTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A5ED41BB6103D00DD510D /* SplatTimer.m */; };
 		047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 047B3FA41BB72875005BF2D0 /* SplatUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FA51BB72875005BF2D0 /* SplatUtilities.m */; };
@@ -39,6 +40,8 @@
 		04B27ED61C00DE62006720EF /* SplatStages WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04B27EB71C00DE61006720EF /* SplatStages WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04B27EDF1C010995006720EF /* ScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EDE1C010995006720EF /* ScheduleController.m */; };
 		04B27EE11C010A0C006720EF /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
+		04B27EE31C012DC4006720EF /* SplatSquidRingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */; };
+		04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
 		04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */; };
 		04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC31BA5D47D003BE6A9 /* main.m */; };
@@ -54,6 +57,7 @@
 		04EE0CE91BA5D539003BE6A9 /* project_paintball_beta3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CE81BA5D539003BE6A9 /* project_paintball_beta3.otf */; };
 		04EE0CEB1BA5DAD4003BE6A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */; };
 		04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */; };
+		592E731A900A1A1594375F69 /* libPods-SplatStages WatchKit 1 Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7B69C60003DD597B92BC5D /* libPods-SplatStages WatchKit 1 Extension.a */; };
 		9A84413964F4ED2D995BF5CF /* libPods-SplatStages.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */; };
 		CD6FC0C0FF578F9C61989C57 /* libPods-SplatStagesToday.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB210A3B8364F619F272756 /* libPods-SplatStagesToday.a */; };
 		E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */; };
@@ -172,6 +176,8 @@
 		04B27EDD1C010995006720EF /* ScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleController.h; sourceTree = "<group>"; };
 		04B27EDE1C010995006720EF /* ScheduleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleController.m; sourceTree = "<group>"; };
 		04B27EE01C0109E6006720EF /* SplatStages WatchKit 1 Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SplatStages WatchKit 1 Extension.entitlements"; sourceTree = "<group>"; };
+		04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatSquidRingHelper.m; sourceTree = "<group>"; };
+		04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatSquidRingHelper.h; sourceTree = "<group>"; };
 		04C1DE2C1BBA014000D98CA3 /* SplatStages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SplatStages.entitlements; sourceTree = "<group>"; };
 		04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplatStages.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,11 +205,14 @@
 		1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesFramework/Pods-SplatStagesFramework.release.xcconfig"; sourceTree = "<group>"; };
 		33B13DB44236484B48F0A673 /* Pods-SplatStagesToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesToday/Pods-SplatStagesToday.debug.xcconfig"; sourceTree = "<group>"; };
 		406078D19F699FD6F4F180BF /* Pods-SplatStages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStages.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages.release.xcconfig"; sourceTree = "<group>"; };
+		773E158D8B1A46C940CB4A7D /* Pods-SplatStages WatchKit 1 Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStages WatchKit 1 Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStages WatchKit 1 Extension/Pods-SplatStages WatchKit 1 Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C9AFD7356EE091AB35BDB13 /* Pods-SplatStages WatchKit 1 Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStages WatchKit 1 Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStages WatchKit 1 Extension/Pods-SplatStages WatchKit 1 Extension.release.xcconfig"; sourceTree = "<group>"; };
 		A4F2E8C750242519572ABB41 /* Pods-SplatStages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB210A3B8364F619F272756 /* libPods-SplatStagesToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1104AE9B520422938A60319 /* Pods-SplatStagesFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesFramework/Pods-SplatStagesFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7B69C60003DD597B92BC5D /* libPods-SplatStages WatchKit 1 Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStages WatchKit 1 Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C8ABE2D17A8DF2E0945651 /* Pods-SplatStagesToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesToday/Pods-SplatStagesToday.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B27EE11C010A0C006720EF /* SplatStagesFramework.framework in Frameworks */,
+				592E731A900A1A1594375F69 /* libPods-SplatStages WatchKit 1 Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +263,8 @@
 				047A5EC41BB5E09F00DD510D /* SplatStagesFramework.h */,
 				047A5ED11BB5E0F300DD510D /* SplatDataFetcher.h */,
 				047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */,
+				04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */,
+				04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */,
 				045B66771C07B35200F17BEE /* SplatLabel.h */,
 				047A5ED31BB6103D00DD510D /* SplatTimer.h */,
 				047A5ED41BB6103D00DD510D /* SplatTimer.m */,
@@ -398,6 +410,8 @@
 				1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */,
 				33B13DB44236484B48F0A673 /* Pods-SplatStagesToday.debug.xcconfig */,
 				E0C8ABE2D17A8DF2E0945651 /* Pods-SplatStagesToday.release.xcconfig */,
+				773E158D8B1A46C940CB4A7D /* Pods-SplatStages WatchKit 1 Extension.debug.xcconfig */,
+				8C9AFD7356EE091AB35BDB13 /* Pods-SplatStages WatchKit 1 Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -410,6 +424,7 @@
 				802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */,
 				047B3FAD1BB79199005BF2D0 /* NotificationCenter.framework */,
 				CEB210A3B8364F619F272756 /* libPods-SplatStagesToday.a */,
+				DA7B69C60003DD597B92BC5D /* libPods-SplatStages WatchKit 1 Extension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -423,9 +438,9 @@
 			files = (
 				047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */,
 				047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */,
-				047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */,
 				045B66781C07B35200F17BEE /* SplatLabel.h in Headers */,
-				047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */,
+				04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */,
+				041C3E691C0926A3005DC390 /* SplatTimer.h in Headers */,
 				047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,9 +494,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04B27EDC1C00DE62006720EF /* Build configuration list for PBXNativeTarget "SplatStages WatchKit 1 Extension" */;
 			buildPhases = (
+				3FA80B2F90A94AC071D92C22 /* Check Pods Manifest.lock */,
 				04B27EB31C00DE61006720EF /* Sources */,
 				04B27EB41C00DE61006720EF /* Frameworks */,
 				04B27EB51C00DE61006720EF /* Resources */,
+				5ADB9C1D483CF2ABF36C8571 /* Embed Pods Frameworks */,
+				1AE5CF78DFCBEC44C0FA9769 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -702,6 +720,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1AE5CF78DFCBEC44C0FA9769 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplatStages WatchKit 1 Extension/Pods-SplatStages WatchKit 1 Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FA80B2F90A94AC071D92C22 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5ADB9C1D483CF2ABF36C8571 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplatStages WatchKit 1 Extension/Pods-SplatStages WatchKit 1 Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7734477505F324E00D962F45 /* Copy Pods Resources */ = {
@@ -1018,7 +1081,9 @@
 		};
 		04B27ED71C00DE62006720EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773E158D8B1A46C940CB4A7D /* Pods-SplatStages WatchKit 1 Extension.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "SplatStages WatchKit 1 Extension/SplatStages WatchKit 1 Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1038,7 +1103,9 @@
 		};
 		04B27ED81C00DE62006720EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C9AFD7356EE091AB35BDB13 /* Pods-SplatStages WatchKit 1 Extension.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "SplatStages WatchKit 1 Extension/SplatStages WatchKit 1 Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
