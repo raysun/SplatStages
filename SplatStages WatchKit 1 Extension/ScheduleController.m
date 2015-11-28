@@ -21,6 +21,8 @@
     [super awakeWithContext:context];
     
     // Configure interface objects here.
+    self.defaultButtonColour = [SplatUtilities colorWithHexString:@"242424"];
+    self.selectedButtonColour = [SplatUtilities colorWithHexString:@"4B4B4B"];
 }
 
 - (void) willActivate {
@@ -62,12 +64,33 @@
 }
 
 - (IBAction) nowPressed {
+    self.selectedRotation = 0;
+    [self setStages];
+    
+    // Change the other buttons' colours
+    [self.nowButton setBackgroundColor:self.selectedButtonColour];
+    [self.nextButton setBackgroundColor:self.defaultButtonColour];
+    [self.laterButton setBackgroundColor:self.defaultButtonColour];
 }
 
 - (IBAction) nextPressed {
+    self.selectedRotation = 1;
+    [self setStages];
+    
+    // Change the other buttons' colours
+    [self.nowButton setBackgroundColor:self.defaultButtonColour];
+    [self.nextButton setBackgroundColor:self.selectedButtonColour];
+    [self.laterButton setBackgroundColor:self.defaultButtonColour];
 }
 
 - (IBAction) laterPressed {
+    self.selectedRotation = 2;
+    [self setStages];
+    
+    // Change the other buttons' colours
+    [self.nowButton setBackgroundColor:self.defaultButtonColour];
+    [self.nextButton setBackgroundColor:self.defaultButtonColour];
+    [self.laterButton setBackgroundColor:self.selectedButtonColour];
 }
 
 @end
