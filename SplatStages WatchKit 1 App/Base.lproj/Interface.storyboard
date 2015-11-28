@@ -23,7 +23,7 @@
                         <separator width="0.80000000000000004" alignment="center" alpha="0.5" id="GtK-7P-YoX"/>
                         <group width="1" alignment="left" layout="vertical" id="kUo-Ea-Lsn">
                             <items>
-                                <label width="1" alignment="left" text="The next map rotation is unknown." textAlignment="center" numberOfLines="3" id="25b-XZ-R1R"/>
+                                <label width="1" alignment="left" text="The next rotation is in an unknown amount of time." textAlignment="center" numberOfLines="3" id="25b-XZ-R1R"/>
                             </items>
                         </group>
                     </items>
@@ -58,7 +58,7 @@
                                 <label width="0.90000000000000002" alignment="right" text="Map" id="nnX-Sw-8TR"/>
                             </items>
                         </group>
-                        <separator alignment="left" alpha="0.5" id="O5Q-i2-f5r"/>
+                        <separator width="0.80000000000000004" alignment="center" alpha="0.5" id="O5Q-i2-f5r"/>
                         <group height="25" alignment="center" spacing="0.0" id="9o5-PU-EuW">
                             <items>
                                 <button height="1" alignment="left" title="Now" id="dQf-P8-EC0">
@@ -124,7 +124,7 @@
                     <items>
                         <group alignment="left" id="4Bw-fh-Vlb">
                             <items>
-                                <label alignment="left" text="Next @ 12:00am" minimumScaleFactor="0.75" id="Jsl-iS-Bbd"/>
+                                <label alignment="left" text="Next @ 12:00am" numberOfLines="2" minimumScaleFactor="0.75" id="Jsl-iS-Bbd"/>
                             </items>
                         </group>
                         <label alignment="left" text="Turf War" id="Sdi-2X-8p6">
