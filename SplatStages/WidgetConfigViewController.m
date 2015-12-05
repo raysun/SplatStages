@@ -61,6 +61,7 @@
         } else {
             [userDefaults removeObjectForKey:@"hideSplatfestInToday"];
         }
+        [userDefaults synchronize];
     } else if (indexPath.row == 1) {
         self.hideSplatfestInformation = !self.hideSplatfestInformation;
         if (self.hideSplatfestInformation) {
