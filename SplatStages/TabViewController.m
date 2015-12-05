@@ -160,6 +160,12 @@
                                 @"rulesEN" : @"UNKNOWN_GAMEMODE"
                               };
     
+    // Invalidate the rotation timer
+    if (self.rotationTimer) {
+        [self.rotationTimer invalidate];
+        self.rotationTimer = nil;
+    }
+    
     // Setup the views
     RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
     RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
@@ -205,15 +211,14 @@
 }
 
 - (void) setStages {
-    NSArray* schedule = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
-    NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedule lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
-    if (schedule == nil || [schedule count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
-        // Just in case.
+    // Check if the schedule data is usable first
+    if (![SplatUtilities isScheduleUsable]) {
         [self setStagesUnavailable];
         return;
     }
     
-    // Get the stages for the chosen rotation and setup the Regular and Ranked tabs
+    // Set up the tabs.
+    NSArray* schedule = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
     NSDictionary* chosenSchedule = [schedule objectAtIndex:[self getSelectedRotation]];
     RegularViewController* regularVC = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
     RankedViewController* rankedVC = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
