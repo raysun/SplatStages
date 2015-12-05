@@ -54,6 +54,19 @@
     return localized;
 }
 
++ (BOOL) isScheduleUsable {
+    NSUserDefaults* userDefaults = [SplatUtilities getUserDefaults];
+    NSArray* schedule = [userDefaults objectForKey:@"schedule"];
+    NSDate* lastRotationEndTime = [NSDate dateWithTimeIntervalSince1970:[[[schedule lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
+    
+    // Check if the data is usable
+    if (schedule == nil || [userDefaults boolForKey:@"scheduleHasSplatfestData"] || [lastRotationEndTime timeIntervalSinceNow] < 0.0) {
+        return false;
+    }
+    
+    return true;
+}
+
 + (UIColor*) colorWithHexString:(NSString*) hex {
     NSString* cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     

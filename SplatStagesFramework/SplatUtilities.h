@@ -38,6 +38,9 @@
 //! Localizes a string with priority to the Framework bundle.
 + (NSString*) localizeString:(NSString*) string;
 
+//! Returns if the current schedule is usable.
++ (BOOL) isScheduleUsable;
+
 //
 // Thanks WrightsCS on StackOverflow!
 // http://stackoverflow.com/questions/6207329/how-to-set-hex-color-code-for-background
