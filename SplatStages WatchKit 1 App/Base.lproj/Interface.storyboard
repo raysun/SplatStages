@@ -100,7 +100,7 @@
             <objects>
                 <controller title="Splatfest" id="iHA-vq-7nP" customClass="SplatfestController">
                     <items>
-                        <group width="1" alignment="left" id="aPK-cs-LKU">
+                        <group width="1" alignment="left" id="aPK-cs-LKU" userLabel="Message Group">
                             <items>
                                 <label width="1" alignment="left" text="Splatfest information is unavailable." textAlignment="center" numberOfLines="4" id="E9b-c1-6Td"/>
                             </items>
@@ -122,6 +122,8 @@
                         <outlet property="mapThree" destination="yjj-q7-HDR" id="f8p-Ui-tgx"/>
                         <outlet property="mapTwo" destination="qw2-PR-rtV" id="nKx-zs-9XE"/>
                         <outlet property="messageLabel" destination="E9b-c1-6Td" id="iqp-Uy-1nb"/>
+                        <outlet property="separator" destination="cp9-SL-1tm" id="Fbv-pj-H5o"/>
+                        <outlet property="stagesGroup" destination="aYH-6a-ARh" id="FcH-EQ-AQd"/>
                     </connections>
                 </controller>
             </objects>

@@ -36,3 +36,14 @@
 "ROTATION_NOW" = "The stage rotation just happened!";
 "ROTATION_UNAVAILABLE" = "Stage information is currently unavailable.";
 
+// Splatfest
+"SPLATFEST_ANNOUNCED" = "The next Splatfest has been announced!";
+"SPLATFEST_UPCOMING_COUNTDOWN" = "The %@ vs. %@ Splatfest is in %@!"; // Team A, Team B, SPLATFEST_UPCOMING_COUNTDOWN_TIME
+"SPLATFEST_UPCOMING_COUNTDOWN_TIME" = "%02ld:%02ld:%02ld:%02ld"; // Days, Hours, Minutes, Seconds
+"SPLATFEST_FINISH_COUNTDOWN" = "The %@ vs. %@ Splatfest finishes in %@!"; // Team A, Team B, SPLATFEST_FINISH_COUNTDOWN_TIME
+"SPLATFEST_FINISH_COUNTDOWN_TIME" = "%02ld:%02ld:%02ld"; // Hours, Minutes, Seconds
+"SPLATFEST_FINISHED" = "The %@ vs. %@ Splatfest is over!";
+"SPLATFEST_DATA_UNAVAILABLE" = "Splatfest data is not available at this time.";
+
+// Watch specific strings
+"WATCH_FINISH_SETUP_FIRST" = "Please run the SplatStages app for the first time on your device first.";
