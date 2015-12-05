@@ -72,15 +72,16 @@
                 return;
             }
             
+            BOOL splatfest = [scheduleJson objectForKey:@"splatfest"];
+            
             // Set all our data variables.
             [storedData setObject:updateTime forKey:@"storedDataUpdateTime"];
             [storedData setObject:[scheduleJson objectForKey:@"schedule"] forKey:@"schedule"];
+            [storedData setBool:splatfest forKey:@"scheduleHasSplatfestData"];
             [storedData synchronize];
             
-            // Check if there's no schedule (for example, splatoon.ink returns nothing of value during Splatfests)
-            NSArray* schedules = [scheduleJson objectForKey:@"schedule"];
-            NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedules lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
-            if ([schedules count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
+            // Check if the schedule is outdated
+            if (![SplatUtilities isScheduleUsable]) {
                 updateCallback(@2);
                 return;
             }
