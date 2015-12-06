@@ -169,10 +169,8 @@
             NSArray* schedules = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
             StagesCell* stagesCell = (StagesCell*) [self getCellWithIdentifier:@"stagesCell" tableView:tableView];
             
-            // Check if there is a schedule.
-            NSDate* lastUpdateTime = [NSDate dateWithTimeIntervalSince1970:[[[schedules lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
-            if ([schedules count] <= 2 || [lastUpdateTime timeIntervalSinceNow] < 0.0) {
-                // No schedule! Setup the cell with unknowns.
+            // Check if the schedule is usable.
+            if (![SplatUtilities isScheduleUsable] || rotationNum >= [schedules count]) {
                 [stagesCell setupWithUnknownStages];
             } else {
                 // There is a schedule, continue with setup as normal.
