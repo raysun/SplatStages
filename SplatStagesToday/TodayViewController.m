@@ -261,6 +261,11 @@
 }
 
 - (void) setupRotationTimer {
+    if (![SplatUtilities isScheduleUsable]) {
+        [self.rotationCountdownCell.messageLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
+        return;
+    }
+    
     NSArray* schedule = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
     NSDate* nextRotation = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
     
