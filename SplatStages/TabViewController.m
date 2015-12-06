@@ -212,13 +212,13 @@
 
 - (void) setStages {
     // Check if the schedule data is usable first
-    if (![SplatUtilities isScheduleUsable]) {
+    NSArray* schedule = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
+    if (![SplatUtilities isScheduleUsable] || [self getSelectedRotation] >= [schedule count]) {
         [self setStagesUnavailable];
         return;
     }
     
     // Set up the tabs.
-    NSArray* schedule = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
     NSDictionary* chosenSchedule = [schedule objectAtIndex:[self getSelectedRotation]];
     RegularViewController* regularVC = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
     RankedViewController* rankedVC = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
