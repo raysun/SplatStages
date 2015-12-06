@@ -4,22 +4,32 @@
 <img src="http://i.imgur.com/YkjIbbs.jpg" width="15%" height="15%" />
 <img src="http://i.imgur.com/Wutewq4.jpg" width="15%" height="15%" />
 <img src="http://i.imgur.com/PSeed5O.jpg" width="15%" height="15%" />
-<img src="http://i.imgur.com/0G8ru7H.png" width="15%" height="15%" />
+<img src="http://i.imgur.com/ld1cRm8.jpg" width="15%" height="15%" />
 
 An app for iOS that tells you the current (and future) Splatoon stages!
 
 ## Features
-* Ability to show the current stage rotation and two future rotations
-* Show Splatfest information (upcoming Splatfests, stages, and scores)
+* Shows the current and later stage rotations
+* Shows Splatfest information (upcoming Splatfests, stages, and scores)
+* Today (Notification Center) extension to show you all the above at glance
 
 Here are some upcoming features:
-* Today (Notification Center) Extension
 * Notifications when certain stages or gamemodes enters the current rotation
+* SplatNet integration
 
 ## Download
-Add the following repository to Cydia: ```http://oatmealdome.github.io/cydia/```. You can install the SplatStages package from there. Alternatively, if you want the latest bug fixes and features, you can clone this git repository and compile it yourself.
+<a href="https://itunes.apple.com/us/app/splatstages/id1051446224?ls=1&mt=8"><img src="http://oatmealdome.github.io/assets/app_store_badge.svg"></a>
 
-## License / Legalese
-This application is licensed under the 3-clause BSD license. Please refer to the LICENSE.md file you have recieved along with the source code. This application also includes MBProgressHUD (written by matej and licensed under the MIT license) and NSAttributedString+CCLFormat (written by Cocode Ltd, licensed under the BSD license).
+Click the above link to download SplatStages!
 
-Splatoon and all its related assets are copyright of Nintendo. Nintendo does not have any involvement whatsoever in the SplatStages app.
+## Credits & Legalese
+
+Thanks so much to the following people for providing me with graphics assets:
+
+* JessicaFreaxx
+* JapanYoshi/theFIZZYnator
+* icons8.com
+
+This application is licensed under the 3-clause BSD license. Please refer to the LICENSE.md file you have recieved along with the source code. This application also includes MBProgressHUD, NSAttributedString+CCLFormat, and Valet.
+
+Splatoon and all its related assets are copyright of Nintendo. Nintendo does not have any involvement whatsoever in the SplatStages app. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.
