@@ -72,7 +72,7 @@
                 return;
             }
             
-            BOOL splatfest = [scheduleJson objectForKey:@"splatfest"];
+            BOOL splatfest = [[scheduleJson objectForKey:@"splatfest"] boolValue];
             
             // Set all our data variables.
             [storedData setObject:updateTime forKey:@"storedDataUpdateTime"];
