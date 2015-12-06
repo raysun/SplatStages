@@ -22,7 +22,7 @@
     [self setupStageLabelsWithStages:[rankedInfo objectForKey:@"maps"] labelOne:self.rankedStageOneLabel labelTwo:self.rankedStageTwoLabel];
     [self setLabel:self.rankedGamemodeLabel nameEN:[rankedInfo objectForKey:@"rulesEN"] nameJP:[rankedInfo objectForKey:@"rulesJP"] unknownFallback:NSLocalizedString(@"UNKNOWN_GAMEMODE", nil)];
     
-    [self.timePeriod setText:timePeriod];
+    [self.timePeriod setText:NSLocalizedString(timePeriod, nil)];
 }
 
 - (void) setupWithSplatfestStages:(NSArray *) stages {

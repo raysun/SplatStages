@@ -175,7 +175,7 @@
                 [stagesCell setupWithUnknownStages:timePeriod];
             } else {
                 // There is a schedule, continue with setup as normal.
-                [stagesCell setupWithSchedule:[schedules objectAtIndex:rotationNum] timePeriod:NSLocalizedString(timePeriod, nil)];
+                [stagesCell setupWithSchedule:[schedules objectAtIndex:rotationNum] timePeriod:timePeriod];
             }
             
             return stagesCell;
