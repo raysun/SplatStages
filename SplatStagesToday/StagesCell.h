@@ -24,6 +24,6 @@
 - (void) setupWithSplatfestStages:(NSArray*) stages;
 
 //! Sets up the cell with all "unknown" text.
-- (void) setupWithUnknownStages;
+- (void) setupWithUnknownStages:(NSString*) timePeriod;
 
 @end
