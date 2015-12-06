@@ -41,10 +41,8 @@
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SETTINGS_WELCOME_TITLE", nil) message:NSLocalizedString(@"SETTINGS_WELCOME_TEXT", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
         [alert show];
     } else {
-        // Select the default tab and fetch the latest schedule data.
+        // Select the default tab.
         [self setSelectedIndex:REGULAR_CONTROLLER];
-        [self getStageData];
-        [self getSplatfestData];
     }
 }
 
