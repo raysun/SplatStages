@@ -376,6 +376,7 @@
 				04C44CBB1BE9AF8A00A54DA8 /* ShellScript */,
 				972BC5796984ADF3E0B497D6 /* Embed Pods Frameworks */,
 				D1426044A734F27E7C52E418 /* Copy Pods Resources */,
+				048E0D4F1C15288100D67CA3 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -521,6 +522,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Thanks to Jared Sinclair at Bloglovin and Martin Rybak at objcsharp!\ngit=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD | wc -l | tr -d ' '`\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+		};
+		048E0D4F1C15288100D67CA3 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Thanks to mikehouse at GitHub for this workaround!\n# https://github.com/CocoaPods/CocoaPods/issues/4203\ncd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then\nrm -fr Frameworks\nfi";
 		};
 		04C44CBB1BE9AF8A00A54DA8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
