@@ -112,15 +112,8 @@
             if ([[SplatUtilities getUserDefaults] objectForKey:@"hideSplatfestInToday"] != nil) {
                 return 0;
             } else {
-                NSDictionary* splatfestData = [[SplatUtilities getUserDefaults] objectForKey:@"splatfestData"];
-                NSDate* splatfestStart = [NSDate dateWithTimeIntervalSince1970:[[splatfestData objectForKey:@"startTime"] longLongValue]];
-                NSDate* splatfestEnd = [NSDate dateWithTimeIntervalSince1970:[[splatfestData objectForKey:@"endTime"] longLongValue]];
-                
-                if ([splatfestStart timeIntervalSinceNow] < 0.0 && [splatfestEnd timeIntervalSinceNow] > 0.0) { // Splatfest started
-                    return 44;
-                }
+                return 38;
             }
-            return 29;
         case 7:
             if ([[SplatUtilities getUserDefaults] objectForKey:@"hideSplatfestInToday"] != nil) {
                 return 0;
