@@ -33,7 +33,13 @@
 }
 
 + (NSUserDefaults*) getUserDefaults {
-    return [[NSUserDefaults alloc] initWithSuiteName:@"group.me.oatmealdome.ios.SplatStages"];
+    static NSUserDefaults* userDefaults = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.me.oatmealdome.ios.SplatStages"];
+    });
+    
+    return userDefaults;
 }
 
 + (VALValet*) getValet {
