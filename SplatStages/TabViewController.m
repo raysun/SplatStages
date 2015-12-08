@@ -105,11 +105,13 @@
         }
         
         // We need to get the image file first.
-        [SplatDataFetcher downloadFile:[splatfestData objectForKey:@"image"] completionHandler:^(NSData* data) {
+        [SplatDataFetcher downloadFile:[splatfestData objectForKey:@"image"] completionHandler:^(NSData* data, NSError* error) {
+            if (error) {
+                [self errorOccurred:error when:@""]; // TODO
+            }
+            
             [data writeToFile:imagePath atomically:true];
             [self setupSplatfestWithData:splatfestData splatfestId:splatfestId];
-        } errorHandler:^(NSError* error, NSString* when) {
-            [self errorOccurred:error when:when];
         }];
     } errorHandler:^(NSError* error, NSString* when) {
         [self errorOccurred:error when:when];
