@@ -109,7 +109,7 @@
 }
 
 + (NSURLSession*) dataSession {
-    static NSURLSession *session = nil;
+    static NSURLSession* session = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
