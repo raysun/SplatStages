@@ -63,7 +63,7 @@
         [request setHTTPMethod:@"POST"];
         [request setHTTPBody:[requestParameters dataUsingEncoding:NSUTF8StringEncoding]];
         
-        NSURLSession* session = [SplatUtilities getNSURLSession];
+        NSURLSession* session = [SplatDataFetcher dataSession];
         [[session dataTaskWithRequest:request completionHandler:^(NSData* data, NSURLResponse* response, NSError* taskError) {
             // Check for an error first
             if (taskError) {
@@ -94,23 +94,27 @@
 }
 
 + (void) getOnlineFriends:(void (^)(NSDictionary* onlineFriends)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
-    [SplatDataFetcher downloadAndParseJson:@"https://splatoon.nintendo.net/friend_list/index.json" completionHandler:^(id onlineFriends) {
+    [SplatDataFetcher downloadAndParseJson:@"https://splatoon.nintendo.net/friend_list/index.json" completionHandler:^(id onlineFriends, NSError* error) {
+        if (error) {
+            errorHandler(error, @""); // TODO
+            return;
+        }
+        
         completionHandler(onlineFriends);
-    } errorHandler:^(NSError* error, NSString* when) {
-        errorHandler(error, when);
     }];
 }
 
 + (void) checkIfLoggedIn:(void (^)(BOOL)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
-    [SplatDataFetcher downloadAndParseJson:@"https://splatoon.nintendo.net/friend_list/index.json" completionHandler:^(id json) {
-        if ([json isKindOfClass:[NSArray class]]) {
-            completionHandler(true);
+    [SplatDataFetcher downloadAndParseJson:@"https://splatoon.nintendo.net/friend_list/index.json" completionHandler:^(id json, NSError* error) {
+        if (error) {
+            errorHandler(error, @""); // TODO
+            return;
         }
         
-        completionHandler(false);
-    } errorHandler:^(NSError* error, NSString* when) {
-        errorHandler(error, when);
+        // If an error is encountered, the server returns a dictionary
+        completionHandler([json isKindOfClass:[NSArray class]]);
     }];
+
 }
 
 @end

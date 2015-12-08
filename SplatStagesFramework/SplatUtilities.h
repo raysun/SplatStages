@@ -48,7 +48,4 @@
 //! Returns the hex string as a UIColor.
 + (UIColor*) colorWithHexString:(NSString*) hex;
 
-//! Returns an NSURLSession that is preconfigured.
-+ (NSURLSession*) getNSURLSession;
-
 @end
