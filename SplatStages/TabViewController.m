@@ -8,10 +8,11 @@
 
 #import <SplatStagesFramework/SplatStagesFramework.h>
 
-#import "RankedViewController.h"
-#import "RegularViewController.h"
+//#import "RankedViewController.h"
+//#import "RegularViewController.h"
 #import "SettingsViewController.h"
 #import "SplatfestViewController.h"
+#import "StageViewController.h"
 #import "TabViewController.h"
 
 @interface TabViewController ()
@@ -56,8 +57,8 @@
 // Sends requests for all the data we need
 - (void) getStageData {
     // Add an MBProgressHUD instance to each of our stage view controllers.
-    RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
-    RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
+    StageViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
+    StageViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     [self generateLoadingHudWithView:regularViewController.view];
     [self generateLoadingHudWithView:rankedViewController.view];
 
@@ -139,8 +140,8 @@
     if (!self.viewsReady) {
         [self setStages];
     } else {
-        RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
-        RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
+        StageViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
+        StageViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
         [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
         [MBProgressHUD hideAllHUDsForView:rankedViewController.view animated:true];
     };
@@ -167,14 +168,14 @@
     }
     
     // Setup the views
-    RegularViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
-    RankedViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
+    StageViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
+    StageViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     [regularViewController setupViewWithData:unknown];
     [rankedViewController setupViewWithData:unknown];
     
     // Set the rotation countdown labels
-    [regularViewController.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
-    [rankedViewController.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
+    [regularViewController.countdownLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
+    [rankedViewController.countdownLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
     
     // Clear any MBProgressHUDs currently attached to the views.
     [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
@@ -220,8 +221,8 @@
     
     // Set up the tabs.
     NSDictionary* chosenSchedule = [schedule objectAtIndex:[self getSelectedRotation]];
-    RegularViewController* regularVC = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
-    RankedViewController* rankedVC = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
+    StageViewController* regularVC = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
+    StageViewController* rankedVC = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     [regularVC setupViewWithData:[chosenSchedule objectForKey:@"regular"]];
     [rankedVC setupViewWithData:[chosenSchedule objectForKey:@"ranked"]];
     
@@ -232,11 +233,11 @@
             [self.rotationTimer invalidate];
             self.rotationTimer = nil;
         }
-        self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:regularVC.rotationCountdownLabel labelTwo:rankedVC.rotationCountdownLabel textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timerFinishedHandler:^() {
+        self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:regularVC.countdownLabel labelTwo:rankedVC.countdownLabel textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timerFinishedHandler:^() {
             // Rotating now! Update the UI first and update the schedule data in the background.
             NSString* rotatingNowText = NSLocalizedString(@"ROTATION_NOW", nil);
-            [regularVC.rotationCountdownLabel setText:rotatingNowText];
-            [rankedVC.rotationCountdownLabel setText:rotatingNowText];
+            [regularVC.countdownLabel setText:rotatingNowText];
+            [rankedVC.countdownLabel setText:rotatingNowText];
             [self setSelectedRotation:1];
             [self setStages];
             [self scheduleStageDownloadTimer];
@@ -252,8 +253,8 @@
         // Check if the first rotation is over. If it is, then don't touch the labels.
         NSDate* firstRotationEnd = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
         if ([firstRotationEnd timeIntervalSinceNow] > 0.0) {
-            [regularVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
-            [rankedVC.rotationCountdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
+            [regularVC.countdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
+            [rankedVC.countdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
         }
     }
     

@@ -561,7 +561,7 @@
         <!--Ranked-->
         <scene sceneID="QL9-H4-FbA">
             <objects>
-                <viewController id="a5F-IM-rha" customClass="RankedViewController" sceneMemberID="viewController">
+                <viewController id="a5F-IM-rha" customClass="StageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hEr-iD-G3y"/>
                         <viewControllerLayoutGuide type="bottom" id="i4h-R9-zVp"/>
@@ -673,12 +673,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Ranked" image="RANKED_TAB" id="mqB-o1-FmH"/>
                     <connections>
-                        <outlet property="gamemodeLabel" destination="Xwt-fr-AF4" id="4yH-4o-ngt"/>
-                        <outlet property="rotationCountdownLabel" destination="S95-yQ-NFn" id="DsP-if-HGF"/>
-                        <outlet property="stageImageOne" destination="Z0e-kh-EvQ" id="Btp-IW-44e"/>
-                        <outlet property="stageImageTwo" destination="Fwb-hl-c6h" id="1dP-ac-ESg"/>
-                        <outlet property="stageLabelOne" destination="Csh-kz-4gK" id="cVC-IJ-ZUA"/>
-                        <outlet property="stageLabelTwo" destination="Ayq-J8-vfA" id="11g-dW-186"/>
+                        <outlet property="countdownLabel" destination="S95-yQ-NFn" id="yCs-UG-dpI"/>
+                        <outlet property="gamemodeLabel" destination="Xwt-fr-AF4" id="9mM-tG-zlu"/>
+                        <outlet property="stageOneImage" destination="Z0e-kh-EvQ" id="P9Q-un-CZz"/>
+                        <outlet property="stageOneLabel" destination="Csh-kz-4gK" id="uLd-ah-qVz"/>
+                        <outlet property="stageTwoImage" destination="Fwb-hl-c6h" id="j5R-Ly-YhP"/>
+                        <outlet property="stageTwoLabel" destination="Ayq-J8-vfA" id="oUe-Vs-BdA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mav-4Z-MeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -688,7 +688,7 @@
         <!--Regular-->
         <scene sceneID="n7y-eR-VuR">
             <objects>
-                <viewController id="3Jx-pa-lkj" customClass="RegularViewController" sceneMemberID="viewController">
+                <viewController id="3Jx-pa-lkj" customClass="StageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ijl-B9-YEy"/>
                         <viewControllerLayoutGuide type="bottom" id="r8q-nc-zoO"/>
@@ -800,12 +800,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Regular" image="REGULAR_TAB" id="3PJ-yU-6DZ"/>
                     <connections>
-                        <outlet property="gamemodeLabel" destination="4zO-hX-OD3" id="B2X-DD-Yxh"/>
-                        <outlet property="rotationCountdownLabel" destination="Mgl-GR-e73" id="tzZ-Uo-NqJ"/>
-                        <outlet property="stageImageOne" destination="ZaL-gH-vhp" id="r47-Mp-1XF"/>
-                        <outlet property="stageImageTwo" destination="9cB-tT-zhd" id="nED-k0-H02"/>
-                        <outlet property="stageLabelOne" destination="8Cb-QD-NmY" id="hpE-SU-jXO"/>
-                        <outlet property="stageLabelTwo" destination="2Um-ST-ik3" id="IrR-R2-2Fa"/>
+                        <outlet property="countdownLabel" destination="Mgl-GR-e73" id="CgV-ad-7GW"/>
+                        <outlet property="gamemodeLabel" destination="4zO-hX-OD3" id="HhZ-ho-zlh"/>
+                        <outlet property="stageOneImage" destination="ZaL-gH-vhp" id="DE8-ti-PYU"/>
+                        <outlet property="stageOneLabel" destination="8Cb-QD-NmY" id="xUe-Hd-aco"/>
+                        <outlet property="stageTwoImage" destination="9cB-tT-zhd" id="mzr-0h-byl"/>
+                        <outlet property="stageTwoLabel" destination="2Um-ST-ik3" id="8J0-gg-Wf3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0e-gF-tm9" userLabel="First Responder" sceneMemberID="firstResponder"/>

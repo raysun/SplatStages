@@ -1,21 +1,17 @@
 //
-//  RankedViewController.m
+//  StageViewController.m
 //  SplatStages
 //
-//  Created by mac on 2015-08-30.
+//  Created by mac on 2015-12-08.
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
 #import <SplatStagesFramework/SplatUtilities.h>
 
-#import "RankedViewController.h"
+#import "StageViewController.h"
 #import "TabViewController.h"
 
-@interface RankedViewController ()
-
-@end
-
-@implementation RankedViewController
+@implementation StageViewController
 
 - (void) viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +22,7 @@
     
     // Update status bar
     [self setNeedsStatusBarAppearanceUpdate];
-
+    
 }
 
 - (void) setupViewWithData:(NSDictionary*) data {
@@ -39,10 +35,10 @@
     NSString* stageTwoEN = [[stages objectAtIndex:1] objectForKey:@"nameEN"];
     NSString* stageTwoJP = [[stages objectAtIndex:1] objectForKey:@"nameJP"];
     
-    [rootController setupStageView:stageOneEN nameJP:stageOneJP label:self.stageLabelOne imageView:self.stageImageOne];
-    [rootController setupStageView:stageTwoEN nameJP:stageTwoJP label:self.stageLabelTwo imageView:self.stageImageTwo];
+    [rootController setupStageView:stageOneEN nameJP:stageOneJP label:self.self.stageOneLabel imageView:self.stageOneImage];
+    [rootController setupStageView:stageTwoEN nameJP:stageTwoJP label:self.stageTwoLabel imageView:self.self.stageTwoImage];
     
-    // Ranked Battles have all the other gamemodes.
+    // TODO: broken for turf wars, rulesEN does not exist
     NSString* gamemode = [SplatUtilities toLocalizable:[data objectForKey:@"rulesEN"]];
     NSString* gamemodeJP = [data objectForKey:@"rulesJP"];
     NSString* localizedGamemode = NSLocalizedString(gamemode, nil);

@@ -33,13 +33,12 @@
 		04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
 		04C1DE2E1BBA21DC00D98CA3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */; };
+		04C349AF1C17A6980085A8CF /* StageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C349AE1C17A6980085A8CF /* StageViewController.m */; };
 		04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC31BA5D47D003BE6A9 /* main.m */; };
 		04EE0CC71BA5D47D003BE6A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CC61BA5D47D003BE6A9 /* AppDelegate.m */; };
 		04EE0CCD1BA5D47D003BE6A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CCB1BA5D47D003BE6A9 /* Main.storyboard */; };
 		04EE0CCF1BA5D47D003BE6A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CCE1BA5D47D003BE6A9 /* Assets.xcassets */; };
 		04EE0CD21BA5D47D003BE6A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CD01BA5D47D003BE6A9 /* LaunchScreen.storyboard */; };
-		04EE0CE31BA5D4D6003BE6A9 /* RankedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDA1BA5D4D6003BE6A9 /* RankedViewController.m */; };
-		04EE0CE41BA5D4D6003BE6A9 /* RegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDC1BA5D4D6003BE6A9 /* RegularViewController.m */; };
 		04EE0CE51BA5D4D6003BE6A9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CDE1BA5D4D6003BE6A9 /* SettingsViewController.m */; };
 		04EE0CE61BA5D4D6003BE6A9 /* SplatfestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE01BA5D4D6003BE6A9 /* SplatfestViewController.m */; };
 		04EE0CE71BA5D4D6003BE6A9 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EE0CE21BA5D4D6003BE6A9 /* TabViewController.m */; };
@@ -135,6 +134,8 @@
 		04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatSquidRingHelper.h; sourceTree = "<group>"; };
 		04C1DE2C1BBA014000D98CA3 /* SplatStages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SplatStages.entitlements; sourceTree = "<group>"; };
 		04C1DE2D1BBA21DC00D98CA3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		04C349AD1C17A6980085A8CF /* StageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageViewController.h; sourceTree = "<group>"; };
+		04C349AE1C17A6980085A8CF /* StageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageViewController.m; sourceTree = "<group>"; };
 		04EE0CBF1BA5D47D003BE6A9 /* SplatStages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplatStages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EE0CC31BA5D47D003BE6A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04EE0CC51BA5D47D003BE6A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,10 +144,6 @@
 		04EE0CCE1BA5D47D003BE6A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04EE0CD11BA5D47D003BE6A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04EE0CD31BA5D47D003BE6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04EE0CD91BA5D4D6003BE6A9 /* RankedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankedViewController.h; sourceTree = "<group>"; };
-		04EE0CDA1BA5D4D6003BE6A9 /* RankedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankedViewController.m; sourceTree = "<group>"; };
-		04EE0CDB1BA5D4D6003BE6A9 /* RegularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularViewController.h; sourceTree = "<group>"; };
-		04EE0CDC1BA5D4D6003BE6A9 /* RegularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularViewController.m; sourceTree = "<group>"; };
 		04EE0CDD1BA5D4D6003BE6A9 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		04EE0CDE1BA5D4D6003BE6A9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		04EE0CDF1BA5D4D6003BE6A9 /* SplatfestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatfestViewController.h; sourceTree = "<group>"; };
@@ -268,10 +265,8 @@
 				04EE0CC61BA5D47D003BE6A9 /* AppDelegate.m */,
 				04EE0CE11BA5D4D6003BE6A9 /* TabViewController.h */,
 				04EE0CE21BA5D4D6003BE6A9 /* TabViewController.m */,
-				04EE0CDB1BA5D4D6003BE6A9 /* RegularViewController.h */,
-				04EE0CDC1BA5D4D6003BE6A9 /* RegularViewController.m */,
-				04EE0CD91BA5D4D6003BE6A9 /* RankedViewController.h */,
-				04EE0CDA1BA5D4D6003BE6A9 /* RankedViewController.m */,
+				04C349AD1C17A6980085A8CF /* StageViewController.h */,
+				04C349AE1C17A6980085A8CF /* StageViewController.m */,
 				04EE0CDF1BA5D4D6003BE6A9 /* SplatfestViewController.h */,
 				04EE0CE01BA5D4D6003BE6A9 /* SplatfestViewController.m */,
 				04EE0CDD1BA5D4D6003BE6A9 /* SettingsViewController.h */,
@@ -699,14 +694,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04EE0CE31BA5D4D6003BE6A9 /* RankedViewController.m in Sources */,
+				04C349AF1C17A6980085A8CF /* StageViewController.m in Sources */,
 				04EE0CC71BA5D47D003BE6A9 /* AppDelegate.m in Sources */,
 				04EE0CE51BA5D4D6003BE6A9 /* SettingsViewController.m in Sources */,
 				04EE0CC41BA5D47D003BE6A9 /* main.m in Sources */,
 				04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */,
 				044F04351BC875820082F921 /* RegionViewController.m in Sources */,
 				04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */,
-				04EE0CE41BA5D4D6003BE6A9 /* RegularViewController.m in Sources */,
 				04EE0CE71BA5D4D6003BE6A9 /* TabViewController.m in Sources */,
 				04EE0CE61BA5D4D6003BE6A9 /* SplatfestViewController.m in Sources */,
 			);
