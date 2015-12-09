@@ -8,8 +8,6 @@
 
 #import <SplatStagesFramework/SplatStagesFramework.h>
 
-//#import "RankedViewController.h"
-//#import "RegularViewController.h"
 #import "SettingsViewController.h"
 #import "SplatfestViewController.h"
 #import "StageViewController.h"
