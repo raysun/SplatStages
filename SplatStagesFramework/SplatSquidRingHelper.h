@@ -14,4 +14,6 @@
 
 + (void) checkIfLoggedIn:(void (^)(BOOL)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler;
 
++ (BOOL) splatNetCredentialsSet;
+
 @end

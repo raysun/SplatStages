@@ -117,4 +117,9 @@
 
 }
 
++ (BOOL) splatNetCredentialsSet {
+    VALValet* valet = [SplatUtilities getValet];
+    return ([valet stringForKey:@"username"] != nil && [valet stringForKey:@"password"] != nil);
+}
+
 @end
