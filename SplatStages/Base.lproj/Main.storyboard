@@ -672,6 +672,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Ranked" image="RANKED_TAB" id="mqB-o1-FmH"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ranked" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="countdownLabel" destination="S95-yQ-NFn" id="yCs-UG-dpI"/>
                         <outlet property="gamemodeLabel" destination="Xwt-fr-AF4" id="9mM-tG-zlu"/>
@@ -799,6 +802,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Regular" image="REGULAR_TAB" id="3PJ-yU-6DZ"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ranked" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="countdownLabel" destination="Mgl-GR-e73" id="CgV-ad-7GW"/>
                         <outlet property="gamemodeLabel" destination="4zO-hX-OD3" id="HhZ-ho-zlh"/>
