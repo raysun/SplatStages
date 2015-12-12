@@ -46,6 +46,17 @@
     return [[VALValet alloc] initWithSharedAccessGroupIdentifier:@"me.oatmealdome.ios.SplatStages" accessibility:VALAccessibilityWhenUnlocked];
 }
 
++ (NSDate*) parseSplatNetDate:(NSString*) string {
+    static NSDateFormatter* dateFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+    });
+    return [dateFormatter dateFromString:string];
+}
+
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData {
     UIColor* teamColour = [self colorWithHexString:[teamData objectForKey:@"colour"]];
     NSAttributedString* string = [[NSAttributedString alloc] initWithString:[teamData objectForKey:@"name"] attributes:@{NSForegroundColorAttributeName : teamColour}];

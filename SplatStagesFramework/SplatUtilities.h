@@ -32,6 +32,9 @@
 //! Returns a Valet instance that we can use to access the Keychain.
 + (VALValet*) getValet;
 
+//! Returns a NSDate instance using a string in ISO 8601 format.
++ (NSDate*) parseSplatNetDate:(NSString*) string;
+
 //! Get the team name as a coloured NSAttributedString.
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData;
 
