@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import <SplatStagesFramework/SplatDataFetcher.h>
+#import <SplatStagesFramework/SSFRotation.h>
 #import <SplatStagesFramework/SplatSquidRingHelper.h>
 #import <SplatStagesFramework/SplatUtilities.h>
 
@@ -91,6 +92,83 @@
     } errorHandler:^(NSError* error, NSString* when) {
         errorHandler(error, when);
     }];
+}
+
++ (void) getSchedule:(void (^)(NSMutableArray* schedule)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
+    // steps:
+    // 1. go to https://splatoon.nintendo.net/?utf8=%E2%9C%93&locale=en to set the language to english
+    // 2. send request to endpoint https://splatoon.nintendo.net/schedule/index.json
+    
+    [self checkIfLoggedIn:^(BOOL loggedIn) {
+        if (loggedIn) {
+            // We need stage names in English!
+            [SplatDataFetcher downloadFile:@"https://splatoon.nintendo.net/?utf8=%E2%9C%93&locale=en" completionHandler:^(NSData* data, NSError* error) {
+                if (error) {
+                    errorHandler(error, @""); // TODO
+                    return;
+                }
+                
+                // Now we can actually request the schedule data.
+                [SplatDataFetcher downloadAndParseJson:@"https://splatoon.nintendo.net/schedule/index.json" completionHandler:^(NSDictionary* json, NSError* error) {
+                    if (error) {
+                        errorHandler(error, @""); // TODO
+                        return;
+                    }
+                    
+                    // Check if there is an error object in the dictionary
+                    if ([json objectForKey:@"error"] == nil) {
+                        NSDictionary* userInfo = @{
+                                                   NSLocalizedDescriptionKey : NSLocalizedString(@"", nil) // TODO
+                                                   };
+                        NSError* error = [[NSError alloc] initWithDomain:@"me.oatmealdome.ios.SplatStages" code:4 userInfo:userInfo];
+                        errorHandler(error, NSLocalizedString(@"", nil)); // TODO
+                        return;
+                    }
+                    
+                    // We're good! Start parsing the schedule data.
+                    NSMutableArray* schedules = [[NSMutableArray alloc] init];
+                    BOOL splatfest = [json objectForKey:@"festival"];
+                    
+                    if (!splatfest) {
+                        for (NSDictionary* rotation in [json objectForKey:@"schedule"]) {
+                            NSDate* startTime = [SplatUtilities parseSplatNetDate:[rotation objectForKey:@"datetime_begin"]];
+                            NSDate* endTime = [SplatUtilities parseSplatNetDate:[rotation objectForKey:@"datetime_end"]];
+                            NSString* rankedMode = [rotation objectForKey:@"gachi_rule"];
+                            NSArray* regular = [[rotation objectForKey:@"stages"] objectForKey:@"regular"];
+                            NSArray* ranked = [[rotation objectForKey:@"stages"] objectForKey:@"gachi"];
+                            NSArray* stages = @[
+                                                [[regular objectAtIndex:0] objectForKey:@"name"],
+                                                [[regular objectAtIndex:1] objectForKey:@"name"],
+                                                [[ranked objectAtIndex:0] objectForKey:@"name"],
+                                                [[ranked objectAtIndex:1] objectForKey:@"name"]
+                                                ];
+                            
+                            [schedules addObject:[[SSFRotation alloc] initWithStages:stages rankedMode:rankedMode startTime:startTime endTime:endTime]];
+                        }
+                        
+                        completionHandler(schedules);
+                    } else {
+                        // TODO handle Splatfest
+                        while ([schedules count] < 3) {
+                            [schedules addObject:[[SSFRotation alloc] init]];
+                        }
+                    }
+                }];
+            }];
+        } else {
+            [self loginToSplatNet:^{
+                // Call this method again!
+                [self getSchedule:completionHandler errorHandler:errorHandler];
+            } errorHandler:^(NSError* error, NSString* when) {
+                errorHandler(error, when);
+            }];
+        }
+        
+    } errorHandler:^(NSError* error, NSString* when) {
+        errorHandler(error, when);
+    }];
+
+    
 }
 
 + (void) getOnlineFriends:(void (^)(NSDictionary* onlineFriends)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {

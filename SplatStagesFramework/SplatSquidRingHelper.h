@@ -12,6 +12,8 @@
 
 + (void) getOnlineFriends:(void (^)(NSDictionary* onlineFriends)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler;
 
++ (void) getSchedule:(void (^)(NSMutableArray* schedule)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler;
+
 + (void) checkIfLoggedIn:(void (^)(BOOL)) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler;
 
 + (BOOL) splatNetCredentialsSet;
