@@ -16,6 +16,7 @@ FOUNDATION_EXPORT const unsigned char SplatStagesFrameworkVersionString[];
 
 // Headers
 #import <SplatStagesFramework/SplatDataFetcher.h>
+#import <SplatStagesFramework/SSFRotation.h>
 #import <SplatStagesFramework/SplatSquidRingHelper.h>
 #import <SplatStagesFramework/SplatTimer.h>
 #import <SplatStagesFramework/SplatUtilities.h>
