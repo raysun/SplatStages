@@ -127,7 +127,7 @@
                     
                     // We're good! Start parsing the schedule data.
                     NSMutableArray* schedules = [[NSMutableArray alloc] init];
-                    BOOL splatfest = [json objectForKey:@"festival"];
+                    BOOL splatfest = [[json objectForKey:@"festival"] boolValue];
                     
                     if (!splatfest) {
                         for (NSDictionary* rotation in [json objectForKey:@"schedule"]) {
