@@ -23,6 +23,19 @@
     return self;
 }
 
+- (id) initWithUnknownStages:(NSDate*) start endTime:(NSDate*) end {
+    if (self = [super init]) {
+        self.startTime = start;
+        self.endTime = end;
+        self.regularStageOne = @"UNKNOWN_MAP";
+        self.regularStageTwo = @"UNKNOWN_MAP";
+        self.rankedGamemode = @"UNKNOWN_GAMEMODE";
+        self.rankedStageOne = @"UNKNOWN_MAP";
+        self.rankedStageTwo = @"UNKNOWN_MAP";
+    }
+    return self;
+}
+
 - (id) initWithStages:(NSArray*) stages rankedMode:(NSString*) rankedMode startTime:(NSDate*) start endTime:(NSDate*) end {
     if (self = [super init]) {
         self.startTime = start;

@@ -18,6 +18,8 @@
 @property (strong, atomic) NSString* rankedStageOne;
 @property (strong, atomic) NSString* rankedStageTwo;
 
+- (id) initWithUnknownStages:(NSDate*) start endTime:(NSDate*) end;
+
 - (id) initWithStages:(NSArray*) stages rankedMode:(NSString*) rankedMode startTime:(NSDate*) start endTime:(NSDate*) end;
 
 @end
