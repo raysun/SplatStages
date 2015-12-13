@@ -45,7 +45,13 @@
 }
 
 + (VALValet*) getValet {
-    return [[VALValet alloc] initWithSharedAccessGroupIdentifier:@"me.oatmealdome.ios.SplatStages" accessibility:VALAccessibilityWhenUnlocked];
+    static VALValet* valet = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        valet = [[VALValet alloc] initWithSharedAccessGroupIdentifier:@"me.oatmealdome.ios.SplatStages" accessibility:VALAccessibilityWhenUnlocked];
+    });
+    
+    return valet;
 }
 
 + (NSDate*) parseSplatNetDate:(NSString*) string {
