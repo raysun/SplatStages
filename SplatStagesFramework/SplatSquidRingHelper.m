@@ -149,9 +149,9 @@
                         completionHandler(schedules);
                     } else {
                         // TODO handle Splatfest
-                        while ([schedules count] < 3) {
-                            [schedules addObject:[[SSFRotation alloc] init]];
-                        }
+                    
+                        // Return an unknown schedule
+                        completionHandler([SplatUtilities createUnknownSchedule]);
                     }
                 }];
             }];
