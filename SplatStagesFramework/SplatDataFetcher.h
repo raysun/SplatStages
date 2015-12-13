@@ -14,8 +14,11 @@
 //! Downloads and attempts to parse some JSON data. An NSDictionary instance is returned to the completionHandler.
 + (void) downloadAndParseJson:(NSString*) urlString completionHandler:(void (^)(id parsedJson, NSError* error)) completionHandler;
 
-//! Requests stage data from splatoon.ink.
+//! [DEPRECATED] Requests stage data from splatoon.ink.
 + (void) requestStageDataWithCallback:(void (^)(NSNumber* mode)) updateCallback errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler;
+
+//! Requests schedule data.
++ (void) getSchedule:(void (^)()) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler;
 
 //! Requests Splatfest data from oatmealdome.github.io.
 + (void) requestFestivalDataWithCallback:(void (^)()) updateCallback errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler;

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import <SplatStagesFramework/SplatDataFetcher.h>
+#import <SplatStagesFramework/SSFRotation.h>
+#import <SplatStagesFramework/SplatSquidRingHelper.h>
 #import <SplatStagesFramework/SplatUtilities.h>
 
 @interface SplatDataFetcher ()
@@ -47,50 +49,115 @@
     }];
 }
 
+// DEPRECATED
 + (void) requestStageDataWithCallback:(void (^)(NSNumber* mode)) updateCallback errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
-    NSUserDefaults* storedData = [SplatUtilities getUserDefaults];
+    [self getSchedule:^{
+        updateCallback(@3);
+    } errorHandler:^(NSError* error, NSString* when) {
+        errorHandler(error, when);
+    }];
+}
+
++ (void) getSchedule:(void (^)()) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
+    NSUserDefaults* userDefaults = [SplatUtilities getUserDefaults];
     
     [self downloadAndParseJson:@"https://oatmealdome.github.io/splatstages/temporary-stage-mapping.json" completionHandler:^(id mappingJson, NSError* mappingError) {
         if (mappingError) {
             errorHandler(mappingError, @""); // TODO
         }
         
-        [storedData setObject:mappingJson forKey:@"temporaryMappings"];
-        [storedData synchronize];
+        [userDefaults setObject:mappingJson forKey:@"temporaryMappings"];
+        [userDefaults synchronize];
         
         [self downloadAndParseJson:@"https://splatoon.ink/schedule.json" completionHandler:^(id scheduleJson, NSError* scheduleError) {
             if (scheduleError) {
                 errorHandler(scheduleError, @""); // TODO
-            }
-            
-            // Check if the data is stale, and return if it is.
-            NSDate* updateTime = [NSDate dateWithTimeIntervalSince1970:[[scheduleJson objectForKey:@"updateTime"] longLongValue] / 1000];
-            NSDate* storedDataUpdateTime = [storedData objectForKey:@"storedDataUpdateTime"];
-            if (!storedDataUpdateTime) {
-                storedDataUpdateTime = [NSDate dateWithTimeIntervalSince1970:0];
-            }
-            if ([updateTime timeIntervalSinceDate:storedDataUpdateTime] <= 0.0) {
-                updateCallback(@1);
                 return;
             }
             
+            NSMutableArray* schedules = [[NSMutableArray alloc] init];
             BOOL splatfest = [[scheduleJson objectForKey:@"splatfest"] boolValue];
             
-            // Set all our data variables.
-            [storedData setObject:updateTime forKey:@"storedDataUpdateTime"];
-            [storedData setObject:[scheduleJson objectForKey:@"schedule"] forKey:@"schedule"];
-            [storedData setBool:splatfest forKey:@"scheduleHasSplatfestData"];
-            [storedData synchronize];
-            
-            // Check if the schedule is outdated
-            if (![SplatUtilities isScheduleUsable]) {
-                updateCallback(@2);
+            if (!splatfest) {
+                NSArray* schedulesRaw = [scheduleJson objectForKey:@"schedule"];
+                NSDate* lastRotationEndTime = [NSDate dateWithTimeIntervalSince1970:[[[schedulesRaw lastObject] objectForKey:@"endTime"] longLongValue] / 1000];
+                if ([lastRotationEndTime timeIntervalSinceNow] <= 0) {
+                    // Schedule is unusable, fallback
+                    [self fallbackToSplatNetSchedule:schedules completionHandler:completionHandler errorHandler:^(NSError* error, NSString* when) {
+                        errorHandler(error, when);
+                    }];
+                    return;
+                } else {
+                    for (NSDictionary* rotationData in [scheduleJson objectForKey:@"schedule"]) {
+                        NSDate* startTime = [NSDate dateWithTimeIntervalSince1970:[[rotationData objectForKey:@"startTime"] longLongValue] / 1000];
+                        NSDate* endTime = [NSDate dateWithTimeIntervalSince1970:[[rotationData objectForKey:@"endTime"] longLongValue] / 1000];
+                        NSString* rankedGamemode = [[rotationData objectForKey:@"ranked"] objectForKey:@"rulesEN"];
+                        NSArray* regularStages = [[rotationData objectForKey:@"regular"] objectForKey:@"maps"];
+                        NSArray* rankedStages = [[rotationData objectForKey:@"ranked"] objectForKey:@"maps"];
+                        NSArray* stages = @[
+                                            [[regularStages objectAtIndex:0] objectForKey:@"nameEN"],
+                                            [[regularStages objectAtIndex:1] objectForKey:@"nameEN"],
+                                            [[rankedStages objectAtIndex:0] objectForKey:@"nameEN"],
+                                            [[rankedStages objectAtIndex:1] objectForKey:@"nameEN"]
+                                            ];
+                        
+                        [schedules addObject:[[SSFRotation alloc] initWithStages:stages rankedMode:rankedGamemode startTime:startTime endTime:endTime]];
+                    }
+                    
+                    if ([schedules count] < 3) {
+                        // Schedule is incomplete, fallback
+                        [self fallbackToSplatNetSchedule:schedules completionHandler:completionHandler errorHandler:^(NSError* error, NSString* when) {
+                            errorHandler(error, when);
+                        }];
+                        return;
+                    }
+                    
+                    [self saveSchedule:schedules];
+                    completionHandler();
+                }
+            } else {
+                // TODO handle Splatfest
+                
+                // We have no schedule, fallback
+                [self fallbackToSplatNetSchedule:schedules completionHandler:completionHandler errorHandler:^(NSError* error, NSString* when) {
+                    errorHandler(error, when);
+                }];
                 return;
             }
-            
-            updateCallback(@3);
         }];
     }];
+}
+
++ (void) fallbackToSplatNetSchedule:(NSMutableArray*) schedule completionHandler:(void (^)()) completionHandler errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {
+    // Fill empty spaces with NSNull
+    while ([schedule count] < 3) {
+        [schedule addObject:[NSNull null]];
+    }
+    
+    if (![SplatSquidRingHelper splatNetCredentialsSet]) {
+        // We can't fallback to SplatNet if the user hasn't provided us with a login.
+        NSMutableArray* unknownSchedule = [SplatUtilities createUnknownSchedule];
+        [SplatUtilities mergeScheduleArray:schedule withArray:unknownSchedule];
+        
+        [self saveSchedule:schedule];
+        completionHandler();
+    } else {
+        // Request schedule from SplatNet
+        [SplatSquidRingHelper getSchedule:^(NSMutableArray* splatNetSchedule) {
+            [SplatUtilities mergeScheduleArray:schedule withArray:splatNetSchedule];
+            [self saveSchedule:schedule];
+            completionHandler();
+        } errorHandler:^(NSError* error, NSString* when) {
+            errorHandler(error, when);
+        }];
+    }
+}
+
++ (void) saveSchedule:(NSMutableArray*) array {
+    NSUserDefaults* userDefaults = [SplatUtilities getUserDefaults];
+    NSData* encodedArray = [NSKeyedArchiver archivedDataWithRootObject:array];
+    [userDefaults setObject:encodedArray forKey:@"schedule"];
+    [userDefaults synchronize];
 }
 
 + (void) requestFestivalDataWithCallback:(void (^)()) updateCallback errorHandler:(void (^)(NSError* error, NSString* when)) errorHandler {

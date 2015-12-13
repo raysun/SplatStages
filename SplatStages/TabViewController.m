@@ -59,21 +59,10 @@
     StageViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
     [self generateLoadingHudWithView:regularViewController.view];
     [self generateLoadingHudWithView:rankedViewController.view];
-
-    [SplatDataFetcher requestStageDataWithCallback:^(NSNumber* mode) {
+    
+    [SplatDataFetcher getSchedule:^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            switch ([mode integerValue]) {
-                case 1: // Data is stale
-                    [self setStageLoadingFinished];
-                    break;
-                case 2: // No stages available
-                    [self setStagesUnavailable];
-                    break;
-                case 3: // Setup views and schedule timer
-                    [self setSelectedRotation:0];
-                    [self setStages];
-                    break;
-            }
+            [self setStages];
         });
     } errorHandler:^(NSError* error, NSString* when) {
         [self errorOccurred:error when:when];
@@ -134,54 +123,6 @@
     [self.stageRequestTimer fire];
 }
 
-- (void) setStageLoadingFinished {
-    if (!self.viewsReady) {
-        [self setStages];
-    } else {
-        StageViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
-        StageViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
-        [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
-        [MBProgressHUD hideAllHUDsForView:rankedViewController.view animated:true];
-    };
-}
-
-- (void) setStagesUnavailable {
-    // Setup a schedule dictionary with all unknowns
-    NSDictionary* unknown = @{
-                                @"maps" : @[
-                                            @{
-                                                @"nameEN" : @"UNKNOWN_MAP"
-                                            },
-                                            @{
-                                                @"nameEN" : @"UNKNOWN_MAP"
-                                            }
-                                        ],
-                                @"rulesEN" : @"UNKNOWN_GAMEMODE"
-                              };
-    
-    // Invalidate the rotation timer
-    if (self.rotationTimer) {
-        [self.rotationTimer invalidate];
-        self.rotationTimer = nil;
-    }
-    
-    // Setup the views
-    StageViewController* regularViewController = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
-    StageViewController* rankedViewController = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
-    [regularViewController setupViewWithData:unknown];
-    [rankedViewController setupViewWithData:unknown];
-    
-    // Set the rotation countdown labels
-    [regularViewController.countdownLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
-    [rankedViewController.countdownLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
-    
-    // Clear any MBProgressHUDs currently attached to the views.
-    [MBProgressHUD hideAllHUDsForView:regularViewController.view animated:true];
-    [MBProgressHUD hideAllHUDsForView:rankedViewController.view animated:true];
-    
-    self.viewsReady = true;
-}
-
 - (void) setupSplatfestWithData:(NSDictionary*) splatfestData splatfestId:(int) splatfestId {
     SplatfestViewController* splatfestViewController = [self.viewControllers objectAtIndex:SPLATFEST_CONTROLLER];
     
@@ -211,22 +152,19 @@
 
 - (void) setStages {
     // Check if the schedule data is usable first
-    NSArray* schedule = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
-    if (![SplatUtilities isScheduleUsable] || [self getSelectedRotation] >= [schedule count]) {
-        [self setStagesUnavailable];
-        return;
-    }
+    NSData* encodedArray = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
+    NSArray* schedule = [NSKeyedUnarchiver unarchiveObjectWithData:encodedArray];
     
     // Set up the tabs.
-    NSDictionary* chosenSchedule = [schedule objectAtIndex:[self getSelectedRotation]];
+    SSFRotation* chosenSchedule = [schedule objectAtIndex:[self getSelectedRotation]];
     StageViewController* regularVC = [self.viewControllers objectAtIndex:REGULAR_CONTROLLER];
     StageViewController* rankedVC = [self.viewControllers objectAtIndex:RANKED_CONTROLLER];
-    [regularVC setupViewWithData:[chosenSchedule objectForKey:@"regular"]];
-    [rankedVC setupViewWithData:[chosenSchedule objectForKey:@"ranked"]];
+    [regularVC setupViewWithData:chosenSchedule];
+    [rankedVC setupViewWithData:chosenSchedule];
     
     // Schedule the rotation timer.
     if ([self getSelectedRotation] == 0) {
-        NSDate* nextRotation = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
+        NSDate* nextRotation = [[schedule objectAtIndex:0] endTime];
         if (self.rotationTimer) {
             [self.rotationTimer invalidate];
             self.rotationTimer = nil;
@@ -249,8 +187,8 @@
         }
         
         // Check if the first rotation is over. If it is, then don't touch the labels.
-        NSDate* firstRotationEnd = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
-        if ([firstRotationEnd timeIntervalSinceNow] > 0.0) {
+        NSDate* nextRotation = [[schedule objectAtIndex:0] endTime];
+        if ([nextRotation timeIntervalSinceNow] > 0.0) {
             [regularVC.countdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
             [rankedVC.countdownLabel setText:NSLocalizedString(@"ROTATION_FUTURE", nil)];
         }
