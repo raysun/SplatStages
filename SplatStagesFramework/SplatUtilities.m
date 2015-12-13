@@ -60,7 +60,8 @@
     dispatch_once(&onceToken, ^{
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+        // '.000' is a terrible hack, but I couldn't get it to work any other way
+        [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.000'ZZZZZ"];
     });
     return [dateFormatter dateFromString:string];
 }
