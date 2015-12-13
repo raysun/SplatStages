@@ -116,7 +116,7 @@
                     }
                     
                     // Check if there is an error object in the dictionary
-                    if ([json objectForKey:@"error"] == nil) {
+                    if ([json objectForKey:@"error"] != nil) {
                         NSDictionary* userInfo = @{
                                                    NSLocalizedDescriptionKey : NSLocalizedString(@"", nil) // TODO
                                                    };
