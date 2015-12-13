@@ -159,17 +159,11 @@
         case 3:
         case 4: {
             NSInteger rotationNum = indexPath.row - 2; // for example, row 4 - 2 = index 2 in our schedule array
-            NSArray* schedules = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
+            NSArray* schedules = [NSKeyedUnarchiver unarchiveObjectWithData:[[SplatUtilities getUserDefaults] objectForKey:@"schedule"]];
             NSString* timePeriod = [NSString stringWithFormat:@"TODAY_TIME_PERIOD_%@", @(rotationNum + 1)];
             StagesCell* stagesCell = (StagesCell*) [self getCellWithIdentifier:@"stagesCell" tableView:tableView];
             
-            // Check if the schedule is usable.
-            if (![SplatUtilities isScheduleUsable] || rotationNum >= [schedules count]) {
-                [stagesCell setupWithUnknownStages:timePeriod];
-            } else {
-                // There is a schedule, continue with setup as normal.
-                [stagesCell setupWithSchedule:[schedules objectAtIndex:rotationNum] timePeriod:timePeriod];
-            }
+            [stagesCell setupWithRotation:[schedules objectAtIndex:rotationNum] timePeriod:timePeriod];
             
             return stagesCell;
         }
@@ -206,59 +200,41 @@
     
     // Call the completionHandler before we even start fetching to ensure that
     // this method is continued to be called.
-    completionHandler(NCUpdateResultNoData);
+    completionHandler(NCUpdateResultNewData);
     
     if ([[SplatUtilities getUserDefaults] objectForKey:@"setupFinished"] == nil) {
         [self reloadTableViewWithCompletionHandler:^(){}];
-        completionHandler(NCUpdateResultNewData);
         return;
     }
     
     [SplatDataFetcher requestFestivalDataWithCallback:^() {
-        [SplatDataFetcher requestStageDataWithCallback:^(NSNumber* mode) {
+        [SplatDataFetcher getSchedule:^{
             self.errorOccurred = false;
             [self reloadTableViewWithCompletionHandler:^{
                 // Setup timers.
                 [self setupSplatfestTimer];
-                if (![mode isEqualToNumber:@2]) {
-                    [self setupRotationTimer];
-                } else {
-                    [self.rotationCountdownCell.messageLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
-                }
+                [self setupRotationTimer];
                 
                 // Populate all cells right now!
                 for (int i = 0; i < 8; i++) {
                     [self tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
                 }
-                
-                if ([mode isEqualToNumber:@1]) {
-                    completionHandler(NCUpdateResultNoData);
-                } else {
-                    completionHandler(NCUpdateResultNewData);
-                }
             }];
         } errorHandler:^(NSError* error, NSString* when) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self errorHasOccurred];
-                completionHandler(NCUpdateResultFailed);
             });
         }];
     } errorHandler:^(NSError* error, NSString* when) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self errorHasOccurred];
-            completionHandler(NCUpdateResultFailed);
         });
     }];
 }
 
 - (void) setupRotationTimer {
-    if (![SplatUtilities isScheduleUsable]) {
-        [self.rotationCountdownCell.messageLabel setText:NSLocalizedString(@"ROTATION_UNAVAILABLE", nil)];
-        return;
-    }
-    
-    NSArray* schedule = [[SplatUtilities getUserDefaults] objectForKey:@"schedule"];
-    NSDate* nextRotation = [NSDate dateWithTimeIntervalSince1970:[[[schedule objectAtIndex:0] objectForKey:@"endTime"] longLongValue] / 1000];
+    SSFRotation* rotation = [[NSKeyedUnarchiver unarchiveObjectWithData:[[SplatUtilities getUserDefaults] objectForKey:@"schedule"]] objectAtIndex:0];
+    NSDate* nextRotation = [rotation endTime];
     
     if (self.rotationTimer) {
         [self.rotationTimer invalidate];
