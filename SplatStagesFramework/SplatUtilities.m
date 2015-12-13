@@ -54,18 +54,6 @@
     return valet;
 }
 
-+ (NSDate*) parseSplatNetDate:(NSString*) string {
-    static NSDateFormatter* dateFormatter = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
-        // '.000' is a terrible hack, but I couldn't get it to work any other way
-        [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.000'ZZZZZ"];
-    });
-    return [dateFormatter dateFromString:string];
-}
-
 + (NSAttributedString*) getSplatfestTeamName:(NSDictionary*) teamData {
     UIColor* teamColour = [self colorWithHexString:[teamData objectForKey:@"colour"]];
     NSAttributedString* string = [[NSAttributedString alloc] initWithString:[teamData objectForKey:@"name"] attributes:@{NSForegroundColorAttributeName : teamColour}];

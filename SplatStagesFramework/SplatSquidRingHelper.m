@@ -120,8 +120,8 @@
                 
                 if (!splatfest) {
                     for (NSDictionary* rotation in [json objectForKey:@"schedule"]) {
-                        NSDate* startTime = [SplatUtilities parseSplatNetDate:[rotation objectForKey:@"datetime_begin"]];
-                        NSDate* endTime = [SplatUtilities parseSplatNetDate:[rotation objectForKey:@"datetime_end"]];
+                        NSDate* startTime = [self parseDate:[rotation objectForKey:@"datetime_begin"]];
+                        NSDate* endTime = [self parseDate:[rotation objectForKey:@"datetime_end"]];
                         NSString* rankedMode = [rotation objectForKey:@"gachi_rule"];
                         NSArray* regular = [[rotation objectForKey:@"stages"] objectForKey:@"regular"];
                         NSArray* ranked = [[rotation objectForKey:@"stages"] objectForKey:@"gachi"];
@@ -184,6 +184,18 @@
 + (BOOL) splatNetCredentialsSet {
     VALValet* valet = [SplatUtilities getValet];
     return ([valet stringForKey:@"username"] != nil && [valet stringForKey:@"password"] != nil);
+}
+
++ (NSDate*) parseDate:(NSString*) string {
+    static NSDateFormatter* dateFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
+        // '.000' is a terrible hack, but I couldn't get it to work any other way
+        [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.000'ZZZZZ"];
+    });
+    return [dateFormatter dateFromString:string];
 }
 
 @end
