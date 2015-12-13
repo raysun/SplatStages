@@ -6,6 +6,8 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
+#import <SplatStagesFramework/SSFRotation.h>
+
 #import "SplatUtilities.h"
 
 @implementation SplatUtilities
@@ -82,6 +84,47 @@
     }
     
     return true;
+}
+
++ (NSDate*) getNextRotation {
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    [dateFormatter setDateFormat:@"HH"];
+    NSDate* date = [NSDate date];
+    
+    NSArray* rotations = @[ @2, @6, @10, @14, @18, @22 ];
+    while (true) {
+        date = [date dateByAddingTimeInterval:3600];
+        for (NSNumber* num in rotations) {
+            if ([@([[dateFormatter stringFromDate:date] integerValue]) isEqualToNumber:num]) {
+                return date;
+            }
+        }
+    }
+}
+
++ (void) mergeScheduleArray:(NSMutableArray*) one withArray:(NSMutableArray*) two {
+    for (int i = 0; i < 3; i++) {
+        // Replace NSNull spaces with objects from the second array.
+        if ([[one objectAtIndex:i] isEqual:[NSNull null]]) {
+            [one replaceObjectAtIndex:i withObject:[two objectAtIndex:i]];
+        }
+    }
+}
+
++ (NSMutableArray*) createUnknownSchedule {
+    NSMutableArray* schedule = [[NSMutableArray alloc] init];
+    NSDate* now = [NSDate date];
+    NSDate* nextStart = [self getNextRotation];
+    NSDate* laterStart = [nextStart dateByAddingTimeInterval:3600];
+    NSDate* laterEnd =  [laterStart dateByAddingTimeInterval:3600];
+    
+    [schedule addObject:[[[SSFRotation alloc] init] initWithUnknownStages:now endTime:nextStart]];
+    [schedule addObject:[[[SSFRotation alloc] init] initWithUnknownStages:nextStart endTime:laterStart]];
+    [schedule addObject:[[[SSFRotation alloc] init] initWithUnknownStages:laterStart endTime:laterEnd]];
+    
+    return schedule;
 }
 
 + (UIColor*) colorWithHexString:(NSString*) hex {
