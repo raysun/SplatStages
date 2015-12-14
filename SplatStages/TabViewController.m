@@ -6,8 +6,6 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
-#import <SplatStagesFramework/SplatStagesFramework.h>
-
 #import "SettingsViewController.h"
 #import "SplatfestViewController.h"
 #import "StageViewController.h"
@@ -30,6 +28,9 @@
     // Force all our views to load right now.
     [self.viewControllers makeObjectsPerformSelector:@selector(view)];
     
+    // Register as an observer for rotationTimerFinished
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rotationTimerFinished:) name:@"rotationTimerFinished" object:nil];
+    
     // Check if we need to do the initial setup.
     if (![SplatUtilities getSetupFinished]) {
         // Yes, set our BOOL to lock the user in and switch to the Settings tab.
@@ -43,6 +44,7 @@
         // Select the default tab.
         [self setSelectedIndex:REGULAR_CONTROLLER];
     }
+    
 }
 
 - (void) didReceiveMemoryWarning {
@@ -166,23 +168,14 @@
     if ([self getSelectedRotation] == 0) {
         NSDate* nextRotation = [[schedule objectAtIndex:0] endTime];
         if (self.rotationTimer) {
-            [self.rotationTimer invalidate];
+            [self.rotationTimer stop];
             self.rotationTimer = nil;
         }
-        self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:regularVC.countdownLabel labelTwo:rankedVC.countdownLabel textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timerFinishedHandler:^() {
-            // Rotating now! Update the UI first and update the schedule data in the background.
-            NSString* rotatingNowText = NSLocalizedString(@"ROTATION_NOW", nil);
-            [regularVC.countdownLabel setText:rotatingNowText];
-            [rankedVC.countdownLabel setText:rotatingNowText];
-            [self setSelectedRotation:1];
-            [self setStages];
-            [self scheduleStageDownloadTimer];
-            [self.rotationTimer invalidate];
-            self.rotationTimer = nil;
-        }];
+        [self setRotationTimer:[[SSFRotationTimer alloc] initWithDate:nextRotation]];
+        [self.rotationTimer start];
     } else {
         if (self.rotationTimer) {
-            [self.rotationTimer invalidate];
+            [self.rotationTimer stop];
             self.rotationTimer = nil;
         }
         
@@ -298,6 +291,13 @@
     NSArray* settingsViewControllers = [[self.viewControllers objectAtIndex:SETTINGS_CONTROLLER] viewControllers];
     SettingsViewController* settingsController = (SettingsViewController*) [settingsViewControllers objectAtIndex:0];
     [settingsController.rotationSelector setSelectedSegmentIndex:rotation];
+}
+
+- (void) rotationTimerFinished:(NSNotification*) notification {
+    [self setSelectedRotation:1];
+    [self setStages];
+    [self scheduleStageDownloadTimer];
+    self.rotationTimer = nil;
 }
 
 // Delegate Method ------------

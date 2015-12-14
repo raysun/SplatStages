@@ -29,11 +29,11 @@
     SplatfestViewController* splatfestVC = [[viewController viewControllers] objectAtIndex:2];
     
     if (viewController.rotationTimer != nil) {
-        [viewController.rotationTimer invalidate];
+        [viewController.rotationTimer stop];
     }
     
     if (splatfestVC.countdownTimer != nil) {
-        [splatfestVC.countdownTimer invalidate];
+        [splatfestVC.countdownTimer stop];
     }
 }
 

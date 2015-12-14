@@ -6,7 +6,7 @@
 //  Copyright © 2015 OatmealDome. All rights reserved.
 //
 
-#import <SplatStagesFramework/SplatTimer.h>
+#import <SplatStagesFramework/SSFSplatfestTimer.h>
 
 #import <UIKit/UIKit.h>
 
@@ -58,7 +58,7 @@
 
 // Data
 @property (strong, atomic) NSArray* teams;
-@property (strong, atomic) SplatTimer* countdownTimer;
+@property (strong, atomic) SSFSplatfestTimer* countdownTimer;
 @property (atomic) int splatfestId;
 
 // Team Names

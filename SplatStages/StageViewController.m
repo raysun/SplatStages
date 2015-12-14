@@ -23,6 +23,9 @@
     // Update status bar
     [self setNeedsStatusBarAppearanceUpdate];
     
+    // Register as an observer of rotationTimerTick
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCountdownLabel:) name:@"rotationTimerTick" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(countdownFinished:) name:@"rotationTimerFinished" object:nil];
 }
 
 - (void) setupViewWithData:(SSFRotation*) data {
@@ -49,6 +52,14 @@
     
     [rootController setupStageView:mapOne nameJP:@"" label:self.stageOneLabel imageView:self.stageOneImage];
     [rootController setupStageView:mapTwo nameJP:@"" label:self.stageTwoLabel imageView:self.stageTwoImage];
+}
+
+- (void) updateCountdownLabel:(NSNotification*) notification {
+    [self.countdownLabel setText:[[notification userInfo] objectForKey:@"countdownString"]];
+}
+
+- (void) countdownFinished:(NSNotification*) notification {
+    [self.countdownLabel setText:NSLocalizedString(@"ROTATION_NOW", nil)];
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {

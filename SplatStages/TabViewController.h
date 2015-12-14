@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <SplatStagesFramework/SplatTimer.h>
+#import <SplatStagesFramework/SplatStagesFramework.h>
 
 #define REGULAR_CONTROLLER 0
 #define RANKED_CONTROLLER 1
@@ -19,7 +19,7 @@
 
 // Stages
 @property (nonatomic) BOOL viewsReady;
-@property (strong, atomic) SplatTimer* rotationTimer;
+@property (strong, atomic) SSFRotationTimer* rotationTimer;
 @property (strong, atomic) NSTimer* stageRequestTimer;
 
 // Setup
