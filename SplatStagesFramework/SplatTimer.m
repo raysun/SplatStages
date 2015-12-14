@@ -110,7 +110,7 @@
 }
 
 - (void) timerTick {
-    if (![self.countdownDate timeIntervalSinceNow] > 0) {
+    if ([self.countdownDate timeIntervalSinceNow] > 0) {
         NSDateComponents* components = [self.calendar components:self.calendarUnits fromDate:[NSDate date] toDate:self.countdownDate options:0];
         [self timerTickWithComponents:components];
     } else {
