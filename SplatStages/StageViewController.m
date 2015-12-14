@@ -23,7 +23,7 @@
     // Update status bar
     [self setNeedsStatusBarAppearanceUpdate];
     
-    // Register as an observer of rotationTimerTick
+    // Register as observers of our timer notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCountdownLabel:) name:@"rotationTimerTick" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(countdownFinished:) name:@"rotationTimerFinished" object:nil];
 }
