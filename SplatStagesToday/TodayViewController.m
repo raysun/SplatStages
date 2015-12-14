@@ -26,6 +26,8 @@
 }
 
 - (void) viewWillAppear:(BOOL) animated {
+    [super viewWillAppear:animated];
+    
     // Start our timers again
     if (self.rotationTimer) {
         [self.rotationTimer start];
@@ -43,6 +45,8 @@
 }
 
 - (void) viewWillDisappear:(BOOL) animated {
+    [super viewWillDisappear:animated];
+    
     // Stop our timers
     if (self.rotationTimer) {
         [self.rotationTimer stop];
