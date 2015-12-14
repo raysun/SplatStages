@@ -72,21 +72,4 @@
     [encoder encodeObject:self.rankedStageTwo forKey:@"rankedStageTwo"];
 }
 
-/*
- - (void)saveCustomObject:(MyObject *)object key:(NSString *)key {
- NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:object];
- NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
- [defaults setObject:encodedObject forKey:key];
- [defaults synchronize];
- 
- }
- 
- - (MyObject *)loadCustomObjectWithKey:(NSString *)key {
- NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
- NSData *encodedObject = [defaults objectForKey:key];
- MyObject *object = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
- return object;
- }
- */
-
 @end

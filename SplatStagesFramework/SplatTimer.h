@@ -10,21 +10,6 @@
 
 @interface SplatTimer : NSObject
 
-/*@property NSDate* countdownDate;
-@property UILabel* labelOne;
-@property UILabel* labelTwo;
-@property NSString* textString;
-@property NSString* timeString;
-@property NSAttributedString* teamA;
-@property NSAttributedString* teamB;
-@property BOOL useThreeNumbers;
-@property (nonatomic, copy) void (^timerFinishedHandler)();
-@property (nonatomic, copy) void (^festivalTimerFinishedHandler)(NSAttributedString* teamA, NSAttributedString* teamB);
-
-// Internals
-@property NSCalendar* calendar;
-@property int calendarUnits;
-@property SEL selector;*/
 @property (strong, atomic) NSDate* countdownDate;
 @property (strong, atomic) NSCalendar* calendar;
 @property (atomic) NSInteger calendarUnits;
