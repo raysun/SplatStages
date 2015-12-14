@@ -22,10 +22,22 @@
     
     // Update status bar
     [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (void) viewWillAppear:(BOOL) animated {
+    [super viewWillAppear:animated];
     
-    // Register as observers of our timer notifications
+    // Register as an observer of our timer notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCountdownLabel:) name:@"rotationTimerTick" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(countdownFinished:) name:@"rotationTimerFinished" object:nil];
+}
+
+- (void) viewWillDisappear:(BOOL) animated {
+    [super viewWillDisappear:animated];
+    
+    // Remove ourself as an observer
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"rotationTimerTick" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"rotationTimerFinished" object:nil];
 }
 
 - (void) setupViewWithData:(SSFRotation*) data {

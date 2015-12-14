@@ -28,10 +28,22 @@
     
     // Update status bar
     [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (void) viewWillAppear:(BOOL) animated {
+    [super viewWillAppear:animated];
     
-    // Register as observers for our timer messages
+    // Register as an observer for our timer messages
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCountdownLabel:) name:@"splatfestTimerTick" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(countdownFinished:) name:@"splatfestTimerFinished" object:nil];
+}
+
+- (void) viewWillDisappear:(BOOL) animated {
+    [super viewWillDisappear:animated];
+    
+    // Remove ourselves as an observer
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"splatfestTimerTick" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"splatfestTimerFinished" object:nil];
 }
 
 - (void) updateCountdownLabel:(NSNotification*) notification {

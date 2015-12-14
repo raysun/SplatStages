@@ -28,9 +28,6 @@
     // Force all our views to load right now.
     [self.viewControllers makeObjectsPerformSelector:@selector(view)];
     
-    // Register as an observer for rotationTimerFinished
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rotationTimerFinished:) name:@"rotationTimerFinished" object:nil];
-    
     // Check if we need to do the initial setup.
     if (![SplatUtilities getSetupFinished]) {
         // Yes, set our BOOL to lock the user in and switch to the Settings tab.
@@ -45,6 +42,21 @@
         [self setSelectedIndex:REGULAR_CONTROLLER];
     }
     
+}
+
+- (void) viewWillAppear:(BOOL) animated {
+    [super viewWillAppear:animated];
+    
+    // Register as an observer for rotationTimerFinished
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rotationTimerFinished:) name:@"rotationTimerFinished" object:nil];
+
+}
+
+- (void) viewWillDisappear:(BOOL) animated {
+    [super viewWillDisappear:animated];
+    
+    // Remove ourself as an observer
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"rotationTimerFinished" object:nil];
 }
 
 - (void) didReceiveMemoryWarning {
