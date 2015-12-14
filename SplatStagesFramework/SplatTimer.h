@@ -10,7 +10,7 @@
 
 @interface SplatTimer : NSObject
 
-@property NSDate* countdownDate;
+/*@property NSDate* countdownDate;
 @property UILabel* labelOne;
 @property UILabel* labelTwo;
 @property NSString* textString;
@@ -24,19 +24,29 @@
 // Internals
 @property NSCalendar* calendar;
 @property int calendarUnits;
-@property SEL selector;
-@property NSTimer* internalTimer;
+@property SEL selector;*/
+@property (strong, atomic) NSDate* countdownDate;
+@property (strong, atomic) NSCalendar* calendar;
+@property (atomic) NSInteger calendarUnits;
+@property (strong, atomic) NSDateComponents* dateComponents;
+@property (strong, atomic) NSTimer* internalTimer;
+@property (copy, nonatomic) void (^completionHandler)();
 
-//! Inits the SplatTimer instance as a rotation timer.
-- (id) initRotationTimerWithDate:(NSDate*) date labelOne:(UILabel*) labelOne labelTwo:(UILabel*) labelTwo textString:(NSString*) textString timerFinishedHandler:(void (^)()) timerFinishedHandler;
+- (id) init __unavailable;
 
-//! Inits the SplatTimer instance as a Splatfest coundown timer.
-- (id) initFestivalTimerWithDate:(NSDate*) date label:(UILabel*) label textString:(NSString*) textString timeString:(NSString*) timeString teamA:(NSAttributedString*) teamA teamB:(NSAttributedString*) teamB useThreeNumbers:(BOOL) useThreeNumbers timerFinishedHandler:(void (^)(NSAttributedString* teamA, NSAttributedString* teamB)) timerFinishedHandler;
+//! Creates a timer instance with a date to countdown to
+- (id) initWithDate:(NSDate*) date;
 
 //! Starts the timer if it has been stopped.
 - (void) start;
 
 //! Stops the timer if it has been started.
-- (void) invalidate;
+- (void) stop;
+
+//! Called each second by the internal timer.
+- (void) timerTickWithComponents:(NSDateComponents*) components;
+
+//! Called when the timer finishes.
+- (void) timerFinished;
 
 @end

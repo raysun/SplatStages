@@ -31,6 +31,10 @@
 		047B3FB21BB79199005BF2D0 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B3FB11BB79199005BF2D0 /* TodayViewController.m */; };
 		047B3FB51BB79199005BF2D0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047B3FB31BB79199005BF2D0 /* MainInterface.storyboard */; };
 		047B3FB91BB79199005BF2D0 /* SplatStagesToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 047B3FAC1BB79199005BF2D0 /* SplatStagesToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		048500E11C1DE90F004BD6DB /* SSFRotationTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 048500DF1C1DE90F004BD6DB /* SSFRotationTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		048500E21C1DE90F004BD6DB /* SSFRotationTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 048500E01C1DE90F004BD6DB /* SSFRotationTimer.m */; };
+		048500E51C1E4A29004BD6DB /* SSFSplatfestTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 048500E31C1E4A29004BD6DB /* SSFSplatfestTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		048500E61C1E4A29004BD6DB /* SSFSplatfestTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 048500E41C1E4A29004BD6DB /* SSFSplatfestTimer.m */; };
 		04B27EE31C012DC4006720EF /* SplatSquidRingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */; };
 		04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C1DE291BBA007600D98CA3 /* SplatStagesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047A5EC21BB5E09F00DD510D /* SplatStagesFramework.framework */; };
@@ -134,6 +138,10 @@
 		047B3FB11BB79199005BF2D0 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		047B3FB41BB79199005BF2D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		047B3FB61BB79199005BF2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048500DF1C1DE90F004BD6DB /* SSFRotationTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFRotationTimer.h; sourceTree = "<group>"; };
+		048500E01C1DE90F004BD6DB /* SSFRotationTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFRotationTimer.m; sourceTree = "<group>"; };
+		048500E31C1E4A29004BD6DB /* SSFSplatfestTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFSplatfestTimer.h; sourceTree = "<group>"; };
+		048500E41C1E4A29004BD6DB /* SSFSplatfestTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFSplatfestTimer.m; sourceTree = "<group>"; };
 		04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplatSquidRingHelper.m; sourceTree = "<group>"; };
 		04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplatSquidRingHelper.h; sourceTree = "<group>"; };
 		04C1DE2C1BBA014000D98CA3 /* SplatStages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SplatStages.entitlements; sourceTree = "<group>"; };
@@ -209,6 +217,10 @@
 				047A5ECF1BB5E0DA00DD510D /* SplatDataFetcher.m */,
 				046EBEEC1C1A434F0069D7F8 /* SSFRotation.h */,
 				046EBEED1C1A434F0069D7F8 /* SSFRotation.m */,
+				048500DF1C1DE90F004BD6DB /* SSFRotationTimer.h */,
+				048500E01C1DE90F004BD6DB /* SSFRotationTimer.m */,
+				048500E31C1E4A29004BD6DB /* SSFSplatfestTimer.h */,
+				048500E41C1E4A29004BD6DB /* SSFSplatfestTimer.m */,
 				04B27EE41C012E41006720EF /* SplatSquidRingHelper.h */,
 				04B27EE21C012DC4006720EF /* SplatSquidRingHelper.m */,
 				047A5ED31BB6103D00DD510D /* SplatTimer.h */,
@@ -337,7 +349,9 @@
 			files = (
 				047A5EC51BB5E09F00DD510D /* SplatStagesFramework.h in Headers */,
 				047A5ED21BB5E0F300DD510D /* SplatDataFetcher.h in Headers */,
+				048500E11C1DE90F004BD6DB /* SSFRotationTimer.h in Headers */,
 				046EBEEE1C1A434F0069D7F8 /* SSFRotation.h in Headers */,
+				048500E51C1E4A29004BD6DB /* SSFSplatfestTimer.h in Headers */,
 				04B27EE51C012E41006720EF /* SplatSquidRingHelper.h in Headers */,
 				047A5ED51BB6103D00DD510D /* SplatTimer.h in Headers */,
 				047B3FA61BB72875005BF2D0 /* SplatUtilities.h in Headers */,
@@ -679,11 +693,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048500E21C1DE90F004BD6DB /* SSFRotationTimer.m in Sources */,
 				046EBEEF1C1A434F0069D7F8 /* SSFRotation.m in Sources */,
 				047A5ED61BB6103D00DD510D /* SplatTimer.m in Sources */,
 				047A5ED01BB5E0DA00DD510D /* SplatDataFetcher.m in Sources */,
 				04B27EE31C012DC4006720EF /* SplatSquidRingHelper.m in Sources */,
 				047B3FA71BB72875005BF2D0 /* SplatUtilities.m in Sources */,
+				048500E61C1E4A29004BD6DB /* SSFSplatfestTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
