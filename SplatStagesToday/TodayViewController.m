@@ -23,21 +23,10 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    
-    if (!self.rotationCountdownCell) {
-        self.rotationCountdownCell = (MessageCell*) [self getCellWithIdentifier:@"messageCell" tableView:self.tableView];
-        [self.rotationCountdownCell.messageLabel setText:NSLocalizedString(@"TODAY_PLACEHOLDER", nil)];
-    }
-    
-    if (!self.splatfestCountdownCell) {
-        self.splatfestCountdownCell = (MessageCell*) [self getCellWithIdentifier:@"messageCell" tableView:self.tableView];
-        [self.splatfestCountdownCell.messageLabel setText:NSLocalizedString(@"TODAY_PLACEHOLDER", nil)];
-    }
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
+- (void) viewWillAppear:(BOOL) animated {
+    // Start our timers again
     if (self.rotationTimer) {
         [self.rotationTimer start];
     }
@@ -45,18 +34,29 @@
     if (self.splatfestTimer) {
         [self.splatfestTimer start];
     }
+    
+    // Register as observers of our timer notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rotationTimerTick:) name:@"rotationTimerTick" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rotationTimerFinish:) name:@"rotationTimerFinished" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(splatfestTimerTick:) name:@"splatfestTimerTick" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(splatfestTimerFinish:) name:@"splatfestTimerFinished" object:nil];
 }
 
-- (void) viewDidDisappear:(BOOL) animated {
-    [super viewDidDisappear:animated];
-    
+- (void) viewWillDisappear:(BOOL) animated {
+    // Stop our timers
     if (self.rotationTimer) {
-        [self.rotationTimer invalidate];
+        [self.rotationTimer stop];
     }
     
     if (self.splatfestTimer) {
-        [self.splatfestTimer invalidate];
+        [self.splatfestTimer stop];
     }
+    
+    // Remove ourself as an observer
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"rotationTimerTick" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"rotationTimerFinished" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"splatfestTimerTick" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"splatfestTimerFinished" object:nil];
 }
 
 - (void) didReceiveMemoryWarning {
@@ -153,7 +153,7 @@
             return headerCell;
         }
         case 1: {
-            return self.rotationCountdownCell;
+            return [self getCellWithIdentifier:@"messageCell" tableView:self.tableView];
         }
         case 2:
         case 3:
@@ -173,7 +173,7 @@
             return headerCell;
         }
         case 6: {
-            return self.splatfestCountdownCell;
+            return [self getCellWithIdentifier:@"messageCell" tableView:self.tableView];
         }
         case 7: {
             NSArray* splatfestStages = [[[SplatUtilities getUserDefaults] objectForKey:@"splatfestData"] objectForKey:@"maps"];
@@ -237,19 +237,15 @@
     NSDate* nextRotation = [rotation endTime];
     
     if (self.rotationTimer) {
-        [self.rotationTimer invalidate];
+        [self.rotationTimer stop];
         self.rotationTimer = nil;
     }
     
-    self.rotationTimer = [[SplatTimer alloc] initRotationTimerWithDate:nextRotation labelOne:self.rotationCountdownCell.messageLabel labelTwo:nil textString:NSLocalizedString(@"ROTATION_COUNTDOWN", nil) timerFinishedHandler:^() {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Just in case, dispatch this on the main queue.
-            [self.rotationCountdownCell.messageLabel setText:NSLocalizedString(@"ROTATION_NOW", nil)];
-        });
-        [self.rotationTimer invalidate];
-        self.rotationTimer = nil;
-    }];
+    [self setRotationTimer:[[SSFRotationTimer alloc] initWithDate:nextRotation]];
+    [self.rotationTimer start];
 }
+
+
 
 - (void) setupSplatfestTimer {
     NSDictionary* splatfestData = [[SplatUtilities getUserDefaults] objectForKey:@"splatfestData"];
@@ -262,45 +258,54 @@
     NSAttributedString* teamB = [SplatUtilities getSplatfestTeamName:[teams objectAtIndex:1]];
     
     if (self.splatfestTimer) {
-        [self.splatfestTimer invalidate];
+        [self.splatfestTimer stop];
         self.splatfestTimer = nil;
     }
     
     if ([splatfestStart timeIntervalSinceNow] > 0.0) {
         // Splatfest is in the future.
-        self.splatfestTimer = [[SplatTimer alloc] initFestivalTimerWithDate:splatfestStart label:self.splatfestCountdownCell.messageLabel textString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_UPCOMING_COUNTDOWN_TIME", nil) teamA:teamA teamB:teamB useThreeNumbers:false timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSAttributedString* message = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"TODAY_SPLATFEST_STARTED", nil), teamA, teamB];
-                [self.splatfestCountdownCell.messageLabel setAttributedText:message];
-            });
-            [self.splatfestTimer invalidate];
-            self.splatfestTimer = nil;
-        }];
+        self.splatfestTimer = [[SSFSplatfestTimer alloc] initWithDate:splatfestStart teamA:teamA teamB:teamB showDays:true];
+        [self.splatfestTimer start];
     } else if ([splatfestStart timeIntervalSinceNow] < 0.0 && [splatfestEnd timeIntervalSinceNow] > 0.0) {
         // The Splatfest is going on right now!
-        self.splatfestTimer = [[SplatTimer alloc] initFestivalTimerWithDate:splatfestEnd label:self.splatfestCountdownCell.messageLabel textString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN", nil) timeString:NSLocalizedString(@"SPLATFEST_FINISH_COUNTDOWN_TIME", nil) teamA:teamA teamB:teamB useThreeNumbers:true timerFinishedHandler:^(NSAttributedString* teamA, NSAttributedString* teamB) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSAttributedString* message = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SPLATFEST_FINISHED", nil), teamA, teamB];
-                [self.splatfestCountdownCell.messageLabel setAttributedText:message];
-            });
-            [self.splatfestTimer invalidate];
-            self.splatfestTimer = nil;
-        }];
+        self.splatfestTimer = [[SSFSplatfestTimer alloc] initWithDate:splatfestEnd teamA:teamA teamB:teamB showDays:false];
+        [self.splatfestTimer start];
     } else {
         // The Splatfest has ended.
-        NSAttributedString* message = [NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SPLATFEST_FINISHED", nil), teamA, teamB];
-        [self.splatfestCountdownCell.messageLabel setAttributedText:message];
+        MessageCell* messageCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:6 inSection:0]];
+        [messageCell.messageLabel setAttributedText:[NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SPLATFEST_FINISHED", nil), teamA, teamB]];
     }
 }
 
+- (void) rotationTimerTick:(NSNotification*) notification {
+    MessageCell* messageCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+    [messageCell.messageLabel setText:[[notification userInfo] objectForKey:@"countdownString"]];
+}
+
+- (void) rotationTimerFinish:(NSNotification*) notification {
+    MessageCell* messageCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+    [messageCell.messageLabel setText:NSLocalizedString(@"ROTATION_NOW", nil)];
+    self.rotationTimer = nil;
+}
+
+- (void) splatfestTimerTick:(NSNotification*) notification {
+    MessageCell* messageCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:6 inSection:0]];
+    [messageCell.messageLabel setAttributedText:[[notification userInfo] objectForKey:@"countdownString"]];
+}
+
+- (void) splatfestTimerFinish:(NSNotification*) notification {
+    [self setupSplatfestTimer];
+}
+
+
 - (void) errorHasOccurred {
     if (self.rotationTimer) {
-        [self.rotationTimer invalidate];
+        [self.rotationTimer stop];
         self.rotationTimer = nil;
     }
     
     if (self.splatfestTimer) {
-        [self.splatfestTimer invalidate];
+        [self.splatfestTimer stop];
         self.splatfestTimer = nil;
     }
     

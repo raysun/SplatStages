@@ -14,10 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView* tableView;
 
-@property (strong, nonatomic) MessageCell* rotationCountdownCell;
-@property (strong, nonatomic) MessageCell* splatfestCountdownCell;
-@property (strong, atomic) SplatTimer* rotationTimer;
-@property (strong, atomic) SplatTimer* splatfestTimer;
+@property (strong, atomic) SSFRotationTimer* rotationTimer;
+@property (strong, atomic) SSFSplatfestTimer* splatfestTimer;
 @property (atomic) BOOL errorOccurred;
 
 @end
