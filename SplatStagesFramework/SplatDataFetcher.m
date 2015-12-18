@@ -104,6 +104,15 @@
                         [schedules addObject:[[SSFRotation alloc] initWithStages:stages rankedMode:rankedGamemode startTime:startTime endTime:endTime]];
                     }
                     
+                    // Get rid of any outdated rotations
+                    while (true) {
+                        if ([[[schedules objectAtIndex:0] endTime] timeIntervalSinceNow] <= 0) {
+                            [schedules removeObjectAtIndex:0];
+                        } else {
+                            break;
+                        }
+                    }
+                    
                     if ([schedules count] < 3) {
                         // Schedule is incomplete, fallback
                         [self fallbackToSplatNetSchedule:schedules completionHandler:completionHandler errorHandler:^(NSError* error, NSString* when) {
