@@ -122,6 +122,14 @@
     return schedule;
 }
 
++ (void) shiftScheduleDown:(NSMutableArray*) schedule {
+    NSDate* laterStart = [[schedule lastObject] endTime];
+    NSDate* laterEnd =  [laterStart dateByAddingTimeInterval:3600];
+    
+    [schedule removeObjectAtIndex:0];
+    [schedule addObject:[[[SSFRotation alloc] init] initWithUnknownStages:laterStart endTime:laterEnd]];
+}
+
 + (UIColor*) colorWithHexString:(NSString*) hex {
     NSString* cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     

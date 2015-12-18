@@ -45,6 +45,9 @@
 
 + (NSMutableArray*) createUnknownSchedule;
 
+//! Removes the first object and appends an unknown rotation object.
++ (void) shiftScheduleDown:(NSMutableArray*) schedule;
+
 //
 // Thanks WrightsCS on StackOverflow!
 // http://stackoverflow.com/questions/6207329/how-to-set-hex-color-code-for-background
