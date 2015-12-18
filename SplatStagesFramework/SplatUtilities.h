@@ -41,8 +41,10 @@
 //! Returns if the current schedule is usable.
 + (BOOL) isScheduleUsable;
 
+//! Merges two schedule arrays.
 + (void) mergeScheduleArray:(NSMutableArray*) one withArray:(NSMutableArray*) two;
 
+//! Creates an unknown schedule.
 + (NSMutableArray*) createUnknownSchedule;
 
 //! Removes the first object and appends an unknown rotation object.
