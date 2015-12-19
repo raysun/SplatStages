@@ -47,7 +47,7 @@
 }
 
 - (void) updateCountdownLabel:(NSNotification*) notification {
-    if ([[notification userInfo] objectForKey:@"showDays"]) {
+    if ([[[notification userInfo] objectForKey:@"showDays"] boolValue]) {
         [self.resultsMessageLabel setAttributedText:[[notification userInfo] objectForKey:@"countdownString"]];
     } else {
         [self.headerLabel setAttributedText:[[notification userInfo] objectForKey:@"countdownString"]];
