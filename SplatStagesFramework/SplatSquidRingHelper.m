@@ -135,6 +135,14 @@
                         [schedules addObject:[[SSFRotation alloc] initWithStages:stages rankedMode:rankedMode startTime:startTime endTime:endTime]];
                     }
                     
+                    if ([schedules count] < 3) {
+                        while ([schedules count] < 3) {
+                            [schedules addObject:[NSNull null]];
+                        }
+                        
+                        [SplatUtilities mergeScheduleArray:schedules withArray:[SplatUtilities createUnknownSchedule]];
+                    }
+                    
                     completionHandler(schedules);
                 } else {
                     // TODO handle Splatfest
