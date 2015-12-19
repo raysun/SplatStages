@@ -16,8 +16,6 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    
-    [self.navigationController popViewControllerAnimated:true];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,11 +24,16 @@
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView*) tableView {
-    return 0;
+    return 2;
 }
 
 - (NSInteger) tableView:(UITableView*) tableView numberOfRowsInSection:(NSInteger) section {
-    return 0;
+    if (section == 0) {
+        // do something
+        return 0;
+    } else {
+        return 1;
+    }
 }
 
 /*

@@ -277,7 +277,7 @@
     } else {
         // The Splatfest has ended.
         MessageCell* messageCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:6 inSection:0]];
-        [messageCell.messageLabel setAttributedText:[NSAttributedString attributedStringWithFormat:NSLocalizedString(@"SPLATFEST_FINISHED", nil), teamA, teamB]];
+        [messageCell.messageLabel setAttributedText:[NSAttributedString attributedStringWithFormat:[SplatUtilities localizeString:@"SPLATFEST_FINISHED"], teamA, teamB]];
     }
 }
 

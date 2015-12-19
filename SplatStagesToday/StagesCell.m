@@ -36,9 +36,9 @@
 }
 - (void) setLabel:(UILabel*) label string:(NSString*) string unknownFallback:(NSString*) unknownFallback {
     NSString* localizable = [SplatUtilities toLocalizable:string];
-    NSString* localizedText = NSLocalizedString(localizable, nil);
+    NSString* localizedText = [SplatUtilities localizeString:localizable];
     if ([localizedText isEqualToString:localizable]) {
-        [label setText:NSLocalizedString(unknownFallback, nil)];
+        [label setText:[SplatUtilities localizeString:unknownFallback]];
         NSLog(@"No localizable string for \"%@\"!", string);
     } else {
         // Alright, we have data for this stage!

@@ -214,7 +214,7 @@
 
 - (void) setupStageView:(NSString*) nameEN nameJP:(NSString*) nameJP label:(UILabel*) label imageView:(UIImageView*) imageView {
     NSString* localizable = [SplatUtilities toLocalizable:nameEN];
-    NSString* localizedText = NSLocalizedString(localizable, nil);
+    NSString* localizedText = [SplatUtilities localizeString:localizable];
     if ([localizedText isEqualToString:localizable]) {
         // We don't have data for this stage! We have the Japanese (and maybe English)
         // name(s) for this stage. If the user's language is Japanese, great! If not, we'll
@@ -225,7 +225,7 @@
             // If there is no temporary mapping, then fall back to UNKNOWN_MAP.
             NSDictionary* temporaryMappings = [[SplatUtilities getUserDefaults] objectForKey:@"temporaryMappings"];
             NSString* temporaryMapping = [temporaryMappings objectForKey:nameEN];
-            nameEN = (temporaryMapping == nil) ? NSLocalizedString(@"UNKNOWN_MAP", nil) : temporaryMapping;
+            nameEN = (temporaryMapping == nil) ? [SplatUtilities localizeString:@"UNKNOWN_MAP"] : temporaryMapping;
         }
         
         [label setText:([SplatUtilities isDeviceLangaugeJapanese]) ? nameJP : nameEN];
@@ -233,7 +233,7 @@
         // Check if we have an image for this stage already. If we do, great! If not, default to
         // the generic question mark image.
         NSString* newLocalizable = [SplatUtilities toLocalizable:nameEN];
-        [imageView setImage:[UIImage imageNamed:([NSLocalizedString(newLocalizable, nil) isEqualToString:newLocalizable]) ? @"UNKNOWN_MAP" : newLocalizable]];
+        [imageView setImage:[UIImage imageNamed:([[SplatUtilities localizeString:newLocalizable] isEqualToString:newLocalizable]) ? @"UNKNOWN_MAP" : newLocalizable]];
         
         NSLog(@"No data for stage (en) \"%@\" (jp) \"%@\"!", nameEN, nameJP);
     } else {
@@ -271,18 +271,18 @@
 }
 
 - (void) errorOccurred:(NSError*) error when:(NSString*) when {
-    NSString* whenLocalized = NSLocalizedString(when, nil);
+    NSString* whenLocalized = [SplatUtilities localizeString:when];
     NSString* errorLocalized = [error localizedDescription];
-    NSString* alertText = [whenLocalized stringByAppendingFormat:@"\n\n%@%@\n\n%@", NSLocalizedString(@"ERROR_INTERNAL_DESCRIPTION", nil), errorLocalized, NSLocalizedString(@"ERROR_TRY_AGAIN", nil)];
+    NSString* alertText = [whenLocalized stringByAppendingFormat:@"\n\n%@%@\n\n%@", [SplatUtilities localizeString:@"ERROR_INTERNAL_DESCRIPTION"], errorLocalized, NSLocalizedString(@"ERROR_TRY_AGAIN", nil)];
     
     // Create a UIAlertView on the UI thread
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR_TITLE", nil) message:alertText delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
+        UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle:[SplatUtilities localizeString:@"ERROR_TITLE"] message:alertText delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
         [errorAlert show];
     });
     
     // Log it in the console too (in case anybody is looking there)
-    NSLog(@"%@ (Internal description: %@)", NSLocalizedString(when, nil), [error localizedDescription]);
+    NSLog(@"%@ (Internal description: %@)", [SplatUtilities localizeString:when], [error localizedDescription]);
     
     // Invalidate all download timers.
     if (self.stageRequestTimer) {

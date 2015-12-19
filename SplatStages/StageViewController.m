@@ -50,16 +50,16 @@
         mapTwo = [data rankedStageTwo];
         
         NSString* gamemode = [data rankedGamemode];
-        NSString* localizedGamemode = NSLocalizedString(gamemode, nil);
+        NSString* localizedGamemode = [SplatUtilities localizeString:gamemode];
         if ([localizedGamemode isEqualToString:gamemode]) {
-            self.gamemodeLabel.text = NSLocalizedString(@"UNKNOWN_GAMEMODE", nil);
+            self.gamemodeLabel.text = [SplatUtilities localizeString:@"UNKNOWN_GAMEMODE"];
         }
         self.gamemodeLabel.text = localizedGamemode;
     } else {
         mapOne = [data regularStageOne];
         mapTwo = [data regularStageTwo];
         
-        self.gamemodeLabel.text = NSLocalizedString(@"TURF_WAR", nil);
+        self.gamemodeLabel.text = [SplatUtilities localizeString:@"TURF_WAR"];
     }
     
     [rootController setupStageView:mapOne nameJP:@"" label:self.stageOneLabel imageView:self.stageOneImage];
@@ -71,7 +71,7 @@
 }
 
 - (void) countdownFinished:(NSNotification*) notification {
-    [self.countdownLabel setText:NSLocalizedString(@"ROTATION_NOW", nil)];
+    [self.countdownLabel setText:[SplatUtilities localizeString:@"ROTATION_NOW"]];
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {

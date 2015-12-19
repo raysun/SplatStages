@@ -40,20 +40,20 @@
         VALValet* valet = [SplatUtilities getValet];
         if (![valet canAccessKeychain]) {
             NSDictionary* userInfo = @{
-                                       NSLocalizedDescriptionKey : NSLocalizedString(@"ERROR_KEYCHAIN_ACCESS_DESCRIPTION", nil)
+                                       NSLocalizedDescriptionKey : [SplatUtilities localizeString:@"ERROR_KEYCHAIN_ACCESS_DESCRIPTION"]
                                        };
             NSError* error = [[NSError alloc] initWithDomain:@"me.oatmealdome.ios.SplatStages" code:1 userInfo:userInfo];
-            errorHandler(error, NSLocalizedString(@"ERROR_SPLATNET_LOG_IN", nil));
+            errorHandler(error, [SplatUtilities localizeString:@"ERROR_SPLATNET_LOG_IN"]);
             return;
         }
         
         // Check if the user has an NNID set
         if ([valet stringForKey:@"username"] == nil || [valet stringForKey:@"password"] == nil) {
             NSDictionary* userInfo = @{
-                                       NSLocalizedDescriptionKey : NSLocalizedString(@"ERROR_CREDENTIALS_NOT_SET", nil)
+                                       NSLocalizedDescriptionKey : [SplatUtilities localizeString:@"ERROR_CREDENTIALS_NOT_SET"]
                                        };
             NSError* error = [[NSError alloc] initWithDomain:@"me.oatmealdome.ios.SplatStages" code:3 userInfo:userInfo];
-            errorHandler(error, NSLocalizedString(@"ERROR_SPLATNET_LOG_IN", nil));
+            errorHandler(error, [SplatUtilities localizeString:@"ERROR_SPLATNET_LOG_IN"]);
             return;
         }
         
@@ -78,10 +78,10 @@
             
             if (range.location == NSNotFound) {
                 NSDictionary* userInfo = @{
-                                           NSLocalizedDescriptionKey : NSLocalizedString(@"ERROR_LOG_IN_FAILED", nil)
+                                           NSLocalizedDescriptionKey : [SplatUtilities localizeString:@"ERROR_LOG_IN_FAILED"]
                                            };
                 NSError* error = [[NSError alloc] initWithDomain:@"me.oatmealdome.ios.SplatStages" code:2 userInfo:userInfo];
-                errorHandler(error, NSLocalizedString(@"ERROR_SPLATNET_LOG_IN", nil));
+                errorHandler(error, [SplatUtilities localizeString:@"ERROR_SPLATNET_LOG_IN"]);
                 return;
             }
             
@@ -107,10 +107,10 @@
                 // Check if there is an error object in the dictionary
                 if ([json objectForKey:@"error"] != nil) {
                     NSDictionary* userInfo = @{
-                                               NSLocalizedDescriptionKey : NSLocalizedString(@"", nil) // TODO
+                                               NSLocalizedDescriptionKey : [SplatUtilities localizeString:@""] // TODO
                                                };
                     NSError* error = [[NSError alloc] initWithDomain:@"me.oatmealdome.ios.SplatStages" code:4 userInfo:userInfo];
-                    errorHandler(error, NSLocalizedString(@"", nil)); // TODO
+                    errorHandler(error, [SplatUtilities localizeString:@""]); // TODO
                     return;
                 }
                 

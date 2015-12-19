@@ -81,7 +81,7 @@
     [self setupImages];
     
     // Update header label.
-    [self.headerLabel setText:NSLocalizedString(@"SPLATFEST_ANNOUNCED", nil)];
+    [self.headerLabel setText:[SplatUtilities localizeString:@"SPLATFEST_ANNOUNCED"]];
     
     [self setCountdownTimer:[[SSFSplatfestTimer alloc] initWithDate:startDate teamA:self.teamANameString teamB:self.teamBNameString showDays:true]];
     [self.countdownTimer start];
@@ -109,7 +109,7 @@
     [self setupImages];
     
     // Update header label.
-    NSString* finishLocalized = NSLocalizedString(@"SPLATFEST_FINISHED", nil);
+    NSString* finishLocalized = [SplatUtilities localizeString:@"SPLATFEST_FINISHED"];
     NSAttributedString* finishText = [NSAttributedString attributedStringWithFormat:finishLocalized, self.teamANameString, self.teamBNameString];
     [self.headerLabel setAttributedText:finishText];
 
@@ -122,7 +122,7 @@
     } else {
         // Results are not available yet.
         [self setResultsVisbilities:false];
-        [self.resultsMessageLabel setText:NSLocalizedString(@"SPLATFEST_SCORES_UNAVAILABLE", nil)];
+        [self.resultsMessageLabel setText:[SplatUtilities localizeString:@"SPLATFEST_SCORES_UNAVAILABLE"]];
     }
 }
 
@@ -158,7 +158,7 @@
     // Set default settings for view visibility
     [self setStageVisibilies:false];
     [self setResultsVisbilities:false];
-    [self.resultsMessageLabel setText:NSLocalizedString(@"SPLATFEST_DATA_UNAVAILABLE", nil)];
+    [self.resultsMessageLabel setText:[SplatUtilities localizeString:@"SPLATFEST_DATA_UNAVAILABLE"]];
 }
 
 - (void) setStageVisibilies:(BOOL) visibility {
