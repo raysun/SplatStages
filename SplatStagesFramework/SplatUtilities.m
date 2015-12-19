@@ -82,18 +82,21 @@
 }
 
 + (NSDate*) getNextRotation {
-    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-    [dateFormatter setDateFormat:@"HH"];
-    NSDate* date = [NSDate date];
+    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    [calendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    NSDateComponents* components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitNanosecond fromDate:[NSDate date]];
+    [components setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    [components setMinute:0];
+    [components setSecond:0];
+    [components setNanosecond:0];
+
     
     NSArray* rotations = @[ @2, @6, @10, @14, @18, @22 ];
     while (true) {
-        date = [date dateByAddingTimeInterval:3600];
+        [components setHour:[components hour] + 1];
         for (NSNumber* num in rotations) {
-            if ([@([[dateFormatter stringFromDate:date] integerValue]) isEqualToNumber:num]) {
-                return date;
+            if ([@([components hour]) isEqualToNumber:num]) {
+                return [calendar dateFromComponents:components];
             }
         }
     }
