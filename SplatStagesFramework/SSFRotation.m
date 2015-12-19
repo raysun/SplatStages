@@ -41,9 +41,9 @@
         self.startTime = start;
         self.endTime = end;
         self.regularStageOne = [stages objectAtIndex:0];
-        self.regularStageTwo = [stages objectAtIndex:2];
+        self.regularStageTwo = [stages objectAtIndex:1];
         self.rankedGamemode = rankedMode;
-        self.rankedStageOne = [stages objectAtIndex:1];
+        self.rankedStageOne = [stages objectAtIndex:2];
         self.rankedStageTwo = [stages objectAtIndex:3];
     }
     return self;
