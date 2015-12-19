@@ -38,17 +38,27 @@
 "ROTATION_UNAVAILABLE" = "Stage information is currently unavailable.";
 
 // Splatfest
+"SPLATFEST_ANNOUNCED" = "The next Splatfest has been announced!";
 "SPLATFEST_UPCOMING_COUNTDOWN" = "The %@ vs. %@ Splatfest is in %@!"; // Team A, Team B, SPLATFEST_UPCOMING_COUNTDOWN_TIME
 "SPLATFEST_UPCOMING_COUNTDOWN_TIME" = "%02ld:%02ld:%02ld:%02ld"; // Days, Hours, Minutes, Seconds
 "SPLATFEST_FINISH_COUNTDOWN" = "The %@ vs. %@ Splatfest finishes in %@!"; // Team A, Team B, SPLATFEST_FINISH_COUNTDOWN_TIME
 "SPLATFEST_FINISH_COUNTDOWN_TIME" = "%02ld:%02ld:%02ld"; // Hours, Minutes, Seconds
 "SPLATFEST_FINISHED" = "The %@ vs. %@ Splatfest is over!";
+"SPLATFEST_SCORES_UNAVAILABLE" = "Splatfest results are not available at this time.";
+"SPLATFEST_DATA_UNAVAILABLE" = "Splatfest data is not available at this time.";
 
-// Errors
+// Errors (When)
 "ERROR_DOWNLOADING_DATA" = "An error occurred while attempting to download data.";
 "ERROR_PARSING_JSON" = "An error occurred while parsing JSON data.";
 "ERROR_CLEARING_IMAGE_CACHE" = "An error occurred while trying to clear the Splatfest image cache.";
 "ERROR_SPLATNET_LOG_IN" = "An error occurred while trying to log into SplatNet.";
+
+// Errors (Descriptions)
 "ERROR_KEYCHAIN_ACCESS_DESCRIPTION" = "Valet could not access the system keychain.";
 "ERROR_LOG_IN_FAILED_DESCRIPTION" = "Logging into SplatNet failed. Check your username and password.";
 "ERROR_CREDENTIALS_NOT_SET_DESCRIPTION" = "No SplatNet credentials found. Set your username and password in settings.";
+
+// Errors (UI)
+"ERROR_TITLE" = "Error";
+"ERROR_INTERNAL_DESCRIPTION" = "Internal description: ";
+"ERROR_TRY_AGAIN" = "Tap on Refresh Data in Settings to try again.";

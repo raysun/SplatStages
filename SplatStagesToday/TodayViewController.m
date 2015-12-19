@@ -288,7 +288,7 @@
 
 - (void) rotationTimerFinish:(NSNotification*) notification {
     MessageCell* messageCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-    [messageCell.messageLabel setText:NSLocalizedString(@"ROTATION_NOW", nil)];
+    [messageCell.messageLabel setText:[SplatUtilities localizeString:@"ROTATION_NOW"]];
     self.rotationTimer = nil;
 }
 
