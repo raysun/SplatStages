@@ -84,19 +84,27 @@
 + (NSDate*) getNextRotation {
     NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     [calendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-    NSDateComponents* components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitNanosecond fromDate:[NSDate date]];
-    [components setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-    [components setMinute:0];
-    [components setSecond:0];
-    [components setNanosecond:0];
-
+    NSDateComponents* roundDownComponents = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitNanosecond fromDate:[NSDate date]];
+    [roundDownComponents setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    [roundDownComponents setMinute:0];
+    [roundDownComponents setSecond:0];
+    [roundDownComponents setNanosecond:0];
+    
+    NSDate* roundedDate = [calendar dateFromComponents:roundDownComponents];
+    NSDateComponents* hourComponents = [[NSDateComponents alloc] init];
+    [hourComponents setHour:1];
+    
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    [dateFormatter setDateFormat:@"HH"];
     
     NSArray* rotations = @[ @2, @6, @10, @14, @18, @22 ];
     while (true) {
-        [components setHour:[components hour] + 1];
+        roundedDate = [calendar dateByAddingComponents:hourComponents toDate:roundedDate options:0];
         for (NSNumber* num in rotations) {
-            if ([@([components hour]) isEqualToNumber:num]) {
-                return [calendar dateFromComponents:components];
+            if ([@([[dateFormatter stringFromDate:roundedDate] integerValue]) isEqualToNumber:num]) {
+                return roundedDate;
             }
         }
     }
