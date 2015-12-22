@@ -38,9 +38,6 @@
 //! Localizes a string with priority to the Framework bundle.
 + (NSString*) localizeString:(NSString*) string;
 
-//! Returns if the current schedule is usable.
-+ (BOOL) isScheduleUsable;
-
 //! Merges two schedule arrays.
 + (void) mergeScheduleArray:(NSMutableArray*) one withArray:(NSMutableArray*) two;
 
