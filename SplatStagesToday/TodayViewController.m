@@ -28,15 +28,6 @@
 - (void) viewWillAppear:(BOOL) animated {
     [super viewWillAppear:animated];
     
-    // Start our timers again
-    if (self.rotationTimer) {
-        [self.rotationTimer start];
-    }
-    
-    if (self.splatfestTimer) {
-        [self.splatfestTimer start];
-    }
-    
     // Register as observers of our timer notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rotationTimerTick:) name:@"rotationTimerTick" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rotationTimerFinish:) name:@"rotationTimerFinished" object:nil];
@@ -50,10 +41,12 @@
     // Stop our timers
     if (self.rotationTimer) {
         [self.rotationTimer stop];
+        self.rotationTimer = nil;
     }
     
     if (self.splatfestTimer) {
         [self.splatfestTimer stop];
+        self.splatfestTimer = nil;
     }
     
     // Remove ourself as an observer
