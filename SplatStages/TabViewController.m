@@ -10,6 +10,7 @@
 #import "SplatfestViewController.h"
 #import "StageViewController.h"
 #import "TabViewController.h"
+#import "HZCountryToContinentDecoder.h"
 
 @interface TabViewController ()
 
@@ -30,16 +31,37 @@
     
     // Check if we need to do the initial setup.
     if (![SplatUtilities getSetupFinished]) {
-        // Yes, set our BOOL to lock the user in and switch to the Settings tab.
-        self.needsInitialSetup = true;
-        [self setSelectedIndex:SETTINGS_CONTROLLER];
+        // Detect user's continent based on his locale setting. Only happens at app's first launch; if the user changes the region in Settings, it will not get overridden automatically
+        HZCountryToContinentDecoder* continentDecoder = [[HZCountryToContinentDecoder alloc] init];
+        NSString* locale = [[NSLocale currentLocale] localeIdentifier];
+        NSString* continent = [continentDecoder continentForCountryCode:[NSLocale componentsFromLocaleIdentifier:locale][@"kCFLocaleCountryCodeKey"]];
+        // Rare, but if no continent is detected, just pick North America
+        if (continent == nil) {
+            continent = @"America";
+        }
         
-        // Show the user the welcome alert too.
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SETTINGS_WELCOME_TITLE", nil) message:NSLocalizedString(@"SETTINGS_WELCOME_TEXT", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"CONFIRM", nil) otherButtonTitles:nil, nil];
-        [alert show];
-    } else {
-        // Select the default tab.
+        // From the continent, look up the region & regionUserFacing keys
+        // Note: Africa is mapped to Europe, since there's no appropriate Splatoon region
+        NSDictionary* continentsAndRegions = @{@"Africa"    : @{@"internal" : @"eu", @"userfacing" : NSLocalizedString(@"REGION_EUROPE", nil)},
+                                               @"America"   : @{@"internal" : @"na", @"userfacing" : NSLocalizedString(@"REGION_NORTH_AMERICA", nil)},
+                                               @"Asia"      : @{@"internal" : @"jp", @"userfacing" : NSLocalizedString(@"REGION_JAPAN", nil)},
+                                               @"Australia" : @{@"internal" : @"eu", @"userfacing" : NSLocalizedString(@"REGION_EUROPE", nil)},
+                                               @"Europe"    : @{@"internal" : @"eu", @"userfacing" : NSLocalizedString(@"REGION_EUROPE", nil)},};
+        
+        NSLog(@"localeIdentifier = %@",[[NSLocale currentLocale] localeIdentifier]);
+        NSLog(@"Detected continent = %@",continent);
+        NSLog(@"region = %@",continentsAndRegions[continent][@"internal"]);
+        
+        // Save the region setting
+        NSUserDefaults* userDefaults = [SplatUtilities getUserDefaults];
+        [userDefaults setObject:@1 forKey:@"setupFinished"];
+        [userDefaults setObject:continentsAndRegions[continent][@"internal"] forKey:@"region"];
+        [userDefaults setObject:continentsAndRegions[continent][@"userfacing"] forKey:@"regionUserFacing"];
+        [userDefaults synchronize];
+        
+        self.needsInitialSetup = false;
         [self setSelectedIndex:REGULAR_CONTROLLER];
+        
     }
     
 }

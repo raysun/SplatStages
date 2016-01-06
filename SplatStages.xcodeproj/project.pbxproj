@@ -52,6 +52,7 @@
 		04EE0CEB1BA5DAD4003BE6A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE0CEA1BA5DAD4003BE6A9 /* Localizable.strings */; };
 		04FF0F441BBB7D3C005BC356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04FF0F431BBB7D3C005BC356 /* InfoPlist.strings */; };
 		9A84413964F4ED2D995BF5CF /* libPods-SplatStages.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */; };
+		B621B8F21C3D95CE003C924D /* HZCountryToContinentDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B621B8F11C3D95CE003C924D /* HZCountryToContinentDecoder.m */; };
 		CD6FC0C0FF578F9C61989C57 /* libPods-SplatStagesToday.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB210A3B8364F619F272756 /* libPods-SplatStagesToday.a */; };
 		E2CB4AA8820445D1AA2C235F /* libPods-SplatStagesFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */; };
 /* End PBXBuildFile section */
@@ -172,6 +173,8 @@
 		802616DE610D8CB38FA8F4EA /* libPods-SplatStagesFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8386D8BBBB81A8BB12AF9702 /* libPods-SplatStages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F2E8C750242519572ABB41 /* Pods-SplatStages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStages/Pods-SplatStages.debug.xcconfig"; sourceTree = "<group>"; };
+		B621B8F01C3D95CE003C924D /* HZCountryToContinentDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCountryToContinentDecoder.h; sourceTree = "<group>"; };
+		B621B8F11C3D95CE003C924D /* HZCountryToContinentDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCountryToContinentDecoder.m; sourceTree = "<group>"; };
 		CEB210A3B8364F619F272756 /* libPods-SplatStagesToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1104AE9B520422938A60319 /* Pods-SplatStagesFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesFramework/Pods-SplatStagesFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		E0C8ABE2D17A8DF2E0945651 /* Pods-SplatStagesToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplatStagesToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplatStagesToday/Pods-SplatStagesToday.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +281,7 @@
 		04EE0CC11BA5D47D003BE6A9 /* SplatStages */ = {
 			isa = PBXGroup;
 			children = (
+				B621B8EF1C3D95BF003C924D /* Transcontinental */,
 				04C1DE2C1BBA014000D98CA3 /* SplatStages.entitlements */,
 				04EE0CC51BA5D47D003BE6A9 /* AppDelegate.h */,
 				04EE0CC61BA5D47D003BE6A9 /* AppDelegate.m */,
@@ -338,6 +342,15 @@
 				CEB210A3B8364F619F272756 /* libPods-SplatStagesToday.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B621B8EF1C3D95BF003C924D /* Transcontinental */ = {
+			isa = PBXGroup;
+			children = (
+				B621B8F01C3D95CE003C924D /* HZCountryToContinentDecoder.h */,
+				B621B8F11C3D95CE003C924D /* HZCountryToContinentDecoder.m */,
+			);
+			name = Transcontinental;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -725,6 +738,7 @@
 				04391BB31BD3F1FC0014EC99 /* WidgetConfigViewController.m in Sources */,
 				044F04351BC875820082F921 /* RegionViewController.m in Sources */,
 				04391BAD1BD3F1C70014EC99 /* SubscriptionsViewController.m in Sources */,
+				B621B8F21C3D95CE003C924D /* HZCountryToContinentDecoder.m in Sources */,
 				04EE0CE71BA5D4D6003BE6A9 /* TabViewController.m in Sources */,
 				04EE0CE61BA5D4D6003BE6A9 /* SplatfestViewController.m in Sources */,
 			);
