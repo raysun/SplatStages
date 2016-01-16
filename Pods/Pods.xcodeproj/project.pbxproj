@@ -7,33 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0046C1717D136F50194A90FA9AC29901 /* VALValet_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A71F8510D08F4453400DDBB4A2FD186 /* VALValet_Protected.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		120DFE7C7A0A4DF7DE0BDBCBEF528837 /* ValetDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = E5B5A778833957BA2B0FDF94A39B71A9 /* ValetDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C990D8D575614F02422202D9B5F3C80 /* VALSynchronizableValet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAECE09F47C310F12C9BD1FDB31BBE7 /* VALSynchronizableValet.m */; };
+		0046C1717D136F50194A90FA9AC29901 /* VALValet_Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = E62D748FC0E0E2282A6B15D8456F6E08 /* VALValet_Protected.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		120DFE7C7A0A4DF7DE0BDBCBEF528837 /* ValetDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 87E48548D329F439F6B888E3ADC62132 /* ValetDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C990D8D575614F02422202D9B5F3C80 /* VALSynchronizableValet.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C37F84F86F6B1AB50D3EE459F534C8 /* VALSynchronizableValet.m */; };
 		1FDF18A00A312036707D09CFFB48B5A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
 		2989492A1A182744E36FD61DF1746D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
 		3582E9A38AC66127748330B59ECE0892 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
-		38BE0A7407C7AB7ADC2BD52D88B60261 /* NSAttributedString+CCLFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 16DD0EEBC26A7054DD9659B0410D421F /* NSAttributedString+CCLFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44C9BDF46F5F9B4BB19F8C66D4CE9717 /* NSAttributedString+CCLFormat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF20A3A6F324CF5EAD7D77B74FCB04 /* NSAttributedString+CCLFormat-dummy.m */; };
+		38BE0A7407C7AB7ADC2BD52D88B60261 /* NSAttributedString+CCLFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = CA231107475E2F95D2AC73383395D42E /* NSAttributedString+CCLFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44C9BDF46F5F9B4BB19F8C66D4CE9717 /* NSAttributedString+CCLFormat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D34923D8DF0683677A9AB28F567F5634 /* NSAttributedString+CCLFormat-dummy.m */; };
 		4C8039118314399CEE07152A87DEA6FA /* Pods-SplatStages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 135D8E16534DFA5AFE60BFDAF1836ECE /* Pods-SplatStages-dummy.m */; };
 		4FAEFE00F17BEF03CB5E8A0CA593F251 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8398B3D0EB66636F9DF19257E36C76C3 /* Security.framework */; };
 		5D4303360D8E0180C13B3A680C4866A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
-		5EB4F27B76513AE918BA5AE0868E87C8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8F4C03B84F4FB6B064D2AB2CC18B3F /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EB4F27B76513AE918BA5AE0868E87C8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F060ECBDB69EFEB1865DC463C89FE6 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70D801E0B95C23BCC270E4EC8659D463 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404D69B17CE747E6C6FCCAF879AAD2DB /* CoreGraphics.framework */; };
 		7FA9264B75B4A2636D2DAAF817284CD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
-		82FC12F67E83874B93592218E9FB4CA0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2216965D03115F2A0AAAF433AE714B5C /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		82FC12F67E83874B93592218E9FB4CA0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBFD43E8C7097233DD4F7FEDAA47860 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		87BEB0E9BC1DCDF9F809E10DE1DDD237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FBCA24073E628B188F2C104830A4B /* Foundation.framework */; };
-		92A25678399A5DDCB356C846F13AF5B7 /* NSAttributedString+CCLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = C78617880E4230B929597ED07421DC0D /* NSAttributedString+CCLFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		92A25678399A5DDCB356C846F13AF5B7 /* NSAttributedString+CCLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E349DD11E458E8A3165D0CD6AD849A /* NSAttributedString+CCLFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		9398BBFEB27A935FCC12C7CF389CE6CA /* Pods-SplatStagesToday-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD458998DB660E730847A5E583AC03F /* Pods-SplatStagesToday-dummy.m */; };
-		94104C5A010EC99626F6F9C0887D26A0 /* Valet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DC3E47D03ED899820BFEBE23F48142 /* Valet-dummy.m */; };
-		A2B9F83F9459256F1707D792F00E30E4 /* VALSecureEnclaveValet.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D600F5F9AC00C19D88052995267AA0 /* VALSecureEnclaveValet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A49D2F91B998AD937A57A17C3CAB85F6 /* Valet.h in Headers */ = {isa = PBXBuildFile; fileRef = A1FF007CD5982DEE2A9887CE51012DE7 /* Valet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C025C4A57EF91B4442C0E6A9192D3101 /* VALValet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F434813370802681BF72E9C154C4ABC /* VALValet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C1438ABE4E288E7E6A849E1F77AF4335 /* VALValet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4BD34750EF1A95D4611A5416904C63 /* VALValet.m */; };
+		94104C5A010EC99626F6F9C0887D26A0 /* Valet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB4E0B04DFE9CF4A544CD72EB89ADA4 /* Valet-dummy.m */; };
+		A2B9F83F9459256F1707D792F00E30E4 /* VALSecureEnclaveValet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7232AD7186464347E97BC379D6007C7E /* VALSecureEnclaveValet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A49D2F91B998AD937A57A17C3CAB85F6 /* Valet.h in Headers */ = {isa = PBXBuildFile; fileRef = F3ECB0E1BA1EA69DFF84796CF70BA2A5 /* Valet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C025C4A57EF91B4442C0E6A9192D3101 /* VALValet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7E5A4642C75A02A661FA866024B757 /* VALValet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1438ABE4E288E7E6A849E1F77AF4335 /* VALValet.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4CEC41FCF27A8AEB02E9E12C19005E /* VALValet.m */; };
 		D8BFE0C7FFBD363614EA17FA7B93ABE4 /* Pods-SplatStagesFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D76996FE4F86A137084426CE10D7 /* Pods-SplatStagesFramework-dummy.m */; };
-		EE45AF5D00386F726312C5AC1DA92997 /* VALSynchronizableValet.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C4696385CA198FF4438EE65E72A3E6 /* VALSynchronizableValet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC214077677D4F02E03C6C85F774E028 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 835DDE3E7DF68B2067B42F0D1B333656 /* MBProgressHUD-dummy.m */; };
-		FF58885D963C760403EE5CCC75D4F1FD /* VALSecureEnclaveValet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5F3321943A2DBAFEF3BC7E2EBCE75 /* VALSecureEnclaveValet.m */; };
+		EE45AF5D00386F726312C5AC1DA92997 /* VALSynchronizableValet.h in Headers */ = {isa = PBXBuildFile; fileRef = 16A2D208B6B79B2F3192A6F1C400F1B5 /* VALSynchronizableValet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC214077677D4F02E03C6C85F774E028 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB3AA83B54D4CD1526773C27E078635 /* MBProgressHUD-dummy.m */; };
+		FF58885D963C760403EE5CCC75D4F1FD /* VALSecureEnclaveValet.m in Sources */ = {isa = PBXBuildFile; fileRef = BB53FC1B45533D204A3B2E46D5491F1A /* VALSecureEnclaveValet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,59 +75,60 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02D7978F416E5373345F5D6ED18CC3F6 /* NSAttributedString+CCLFormat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat-prefix.pch"; sourceTree = "<group>"; };
 		033374089F2ACFEAE3708F098C1DEE94 /* libPods-SplatStagesToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FC4035954DF4DABC43B01A03CDA421 /* Pods-SplatStagesToday-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SplatStagesToday-acknowledgements.markdown"; sourceTree = "<group>"; };
 		135D8E16534DFA5AFE60BFDAF1836ECE /* Pods-SplatStages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SplatStages-dummy.m"; sourceTree = "<group>"; };
-		16DD0EEBC26A7054DD9659B0410D421F /* NSAttributedString+CCLFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat.h"; sourceTree = "<group>"; };
+		16A2D208B6B79B2F3192A6F1C400F1B5 /* VALSynchronizableValet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VALSynchronizableValet.h; path = Valet/VALSynchronizableValet.h; sourceTree = "<group>"; };
 		178F89BD72279D8A2E3BACC89CA2B460 /* Pods-SplatStages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStages.debug.xcconfig"; sourceTree = "<group>"; };
-		18FF20A3A6F324CF5EAD7D77B74FCB04 /* NSAttributedString+CCLFormat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat-dummy.m"; sourceTree = "<group>"; };
-		1AAECE09F47C310F12C9BD1FDB31BBE7 /* VALSynchronizableValet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VALSynchronizableValet.m; path = Valet/VALSynchronizableValet.m; sourceTree = "<group>"; };
 		1AF198215F82C549A0506AB4E3235585 /* libValet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libValet.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB4967E606D4CCEC4840A60E50F3929 /* Pods-SplatStagesFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStagesFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		207C3778AAC896004A0CDFCDAAD3CADC /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2216965D03115F2A0AAAF433AE714B5C /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		272FBCA24073E628B188F2C104830A4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2AA9960A42C5ACBEDE444B28BDA6B9F2 /* Pods-SplatStagesFramework-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SplatStagesFramework-acknowledgements.plist"; sourceTree = "<group>"; };
-		2B8F4C03B84F4FB6B064D2AB2CC18B3F /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		2EC5F3321943A2DBAFEF3BC7E2EBCE75 /* VALSecureEnclaveValet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VALSecureEnclaveValet.m; path = Valet/VALSecureEnclaveValet.m; sourceTree = "<group>"; };
-		2F67E7E25CE8D0C2C51499D6DF9A4997 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		3895CC4874A00A2738229F6DA6ADA7E4 /* Pods-SplatStagesFramework-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SplatStagesFramework-acknowledgements.markdown"; sourceTree = "<group>"; };
-		38D600F5F9AC00C19D88052995267AA0 /* VALSecureEnclaveValet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VALSecureEnclaveValet.h; path = Valet/VALSecureEnclaveValet.h; sourceTree = "<group>"; };
-		39DC3E47D03ED899820BFEBE23F48142 /* Valet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Valet-dummy.m"; sourceTree = "<group>"; };
+		3A7E5A4642C75A02A661FA866024B757 /* VALValet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VALValet.h; path = Valet/VALValet.h; sourceTree = "<group>"; };
 		404D69B17CE747E6C6FCCAF879AAD2DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		4F4BD34750EF1A95D4611A5416904C63 /* VALValet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VALValet.m; path = Valet/VALValet.m; sourceTree = "<group>"; };
+		4F0779285F375636FE003F294A321424 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		54E349DD11E458E8A3165D0CD6AD849A /* NSAttributedString+CCLFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat.m"; sourceTree = "<group>"; };
 		599713CBDC89A939BC1E9141DC397FE7 /* Pods-SplatStages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStages.release.xcconfig"; sourceTree = "<group>"; };
-		5CF99442FA3BBF88891576BCAF4066FB /* NSAttributedString+CCLFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSAttributedString+CCLFormat.xcconfig"; sourceTree = "<group>"; };
 		6EB54023FAA688C634E8E08C9A9FE7E3 /* Pods-SplatStages-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStages-resources.sh"; sourceTree = "<group>"; };
-		753E4ED1061A9DFE4019A4D902787F39 /* Valet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Valet-prefix.pch"; sourceTree = "<group>"; };
-		7F434813370802681BF72E9C154C4ABC /* VALValet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VALValet.h; path = Valet/VALValet.h; sourceTree = "<group>"; };
-		835DDE3E7DF68B2067B42F0D1B333656 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		7232AD7186464347E97BC379D6007C7E /* VALSecureEnclaveValet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VALSecureEnclaveValet.h; path = Valet/VALSecureEnclaveValet.h; sourceTree = "<group>"; };
 		8398B3D0EB66636F9DF19257E36C76C3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		84F846D597095B69DA1679A5B929E789 /* Pods-SplatStagesToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStagesToday.debug.xcconfig"; sourceTree = "<group>"; };
+		87E48548D329F439F6B888E3ADC62132 /* ValetDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ValetDefines.h; path = Other/ValetDefines.h; sourceTree = "<group>"; };
+		8A1828B53C2351E3503B10217044EF85 /* Valet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Valet-prefix.pch"; sourceTree = "<group>"; };
 		8BD458998DB660E730847A5E583AC03F /* Pods-SplatStagesToday-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SplatStagesToday-dummy.m"; sourceTree = "<group>"; };
 		96BFBDC575944BEDA1BBB817474EC688 /* Pods-SplatStages-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStages-frameworks.sh"; sourceTree = "<group>"; };
 		9782B10655EBCAF5BA3C2B5D5FFEA9DF /* libNSAttributedString+CCLFormat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSAttributedString+CCLFormat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99236AE3AF54B2B06D1187C68E0A5D17 /* Pods-SplatStagesFramework-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStagesFramework-resources.sh"; sourceTree = "<group>"; };
-		9A71F8510D08F4453400DDBB4A2FD186 /* VALValet_Protected.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VALValet_Protected.h; path = Valet/VALValet_Protected.h; sourceTree = "<group>"; };
-		A1FF007CD5982DEE2A9887CE51012DE7 /* Valet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Valet.h; path = Valet/Valet.h; sourceTree = "<group>"; };
+		A7C37F84F86F6B1AB50D3EE459F534C8 /* VALSynchronizableValet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VALSynchronizableValet.m; path = Valet/VALSynchronizableValet.m; sourceTree = "<group>"; };
+		A9DEB01160B5587C622B46F94175B131 /* NSAttributedString+CCLFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSAttributedString+CCLFormat.xcconfig"; sourceTree = "<group>"; };
 		A9F8B64D4B5B86B5CE07C85246EE3E99 /* Pods-SplatStages-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SplatStages-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B83044D18BFC99EFF73CF42B0B337B66 /* libPods-SplatStages.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStages.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BACE7B0020993EF1A1D97FC98662F2F6 /* Pods-SplatStagesToday-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SplatStagesToday-acknowledgements.plist"; sourceTree = "<group>"; };
-		C1C4696385CA198FF4438EE65E72A3E6 /* VALSynchronizableValet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VALSynchronizableValet.h; path = Valet/VALSynchronizableValet.h; sourceTree = "<group>"; };
-		C78617880E4230B929597ED07421DC0D /* NSAttributedString+CCLFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat.m"; sourceTree = "<group>"; };
-		D30995CED897B76085EF390F2C78D0CD /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		BB53FC1B45533D204A3B2E46D5491F1A /* VALSecureEnclaveValet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VALSecureEnclaveValet.m; path = Valet/VALSecureEnclaveValet.m; sourceTree = "<group>"; };
+		C5365BF20C0F57C2A8F921F4BA25DF2E /* Valet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Valet.xcconfig; sourceTree = "<group>"; };
+		CA231107475E2F95D2AC73383395D42E /* NSAttributedString+CCLFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat.h"; sourceTree = "<group>"; };
+		CCB4E0B04DFE9CF4A544CD72EB89ADA4 /* Valet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Valet-dummy.m"; sourceTree = "<group>"; };
+		CF4CEC41FCF27A8AEB02E9E12C19005E /* VALValet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VALValet.m; path = Valet/VALValet.m; sourceTree = "<group>"; };
+		D34923D8DF0683677A9AB28F567F5634 /* NSAttributedString+CCLFormat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CCLFormat-dummy.m"; sourceTree = "<group>"; };
 		D8FB6A977483C29F296BE6E24B9DF1A6 /* Pods-SplatStagesToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStagesToday.release.xcconfig"; sourceTree = "<group>"; };
-		DD5777C0F3B691A8B4A2543BE76563BA /* Valet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Valet.xcconfig; sourceTree = "<group>"; };
+		DADCAAE9984AB6D4B3541059CBAF58EC /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		DEC3B2C8E6E1F6A2D6CD0D3BE214958F /* Pods-SplatStagesFramework-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStagesFramework-frameworks.sh"; sourceTree = "<group>"; };
 		DF898219BF9988210B1EB5784E25DDD9 /* Pods-SplatStagesFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SplatStagesFramework.release.xcconfig"; sourceTree = "<group>"; };
 		E10E75D6DCBF588A5772033E28DF824E /* Pods-SplatStages-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SplatStages-acknowledgements.plist"; sourceTree = "<group>"; };
 		E453A0133EE698E7BF59D79D62239837 /* libPods-SplatStagesFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SplatStagesFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B5A778833957BA2B0FDF94A39B71A9 /* ValetDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ValetDefines.h; path = Other/ValetDefines.h; sourceTree = "<group>"; };
+		E4F060ECBDB69EFEB1865DC463C89FE6 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E62D748FC0E0E2282A6B15D8456F6E08 /* VALValet_Protected.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VALValet_Protected.h; path = Valet/VALValet_Protected.h; sourceTree = "<group>"; };
 		EEA8D76996FE4F86A137084426CE10D7 /* Pods-SplatStagesFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SplatStagesFramework-dummy.m"; sourceTree = "<group>"; };
-		F53D6E5042A32888D5FF771279FC2503 /* NSAttributedString+CCLFormat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CCLFormat-prefix.pch"; sourceTree = "<group>"; };
+		F3ECB0E1BA1EA69DFF84796CF70BA2A5 /* Valet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Valet.h; path = Valet/Valet.h; sourceTree = "<group>"; };
 		F7C0668F9386C92519091729839D2AEB /* Pods-SplatStagesToday-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStagesToday-resources.sh"; sourceTree = "<group>"; };
+		FAB3AA83B54D4CD1526773C27E078635 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		FCBFD43E8C7097233DD4F7FEDAA47860 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		FE59B5A915C59621B094CFA88848DECC /* Pods-SplatStagesToday-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SplatStagesToday-frameworks.sh"; sourceTree = "<group>"; };
+		FEA683B49EC8E03E6337502FEF82C93A /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +185,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03315C7AF10F1022FDBE2392638D3359 /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				0F31058142BD2F860BD4186B2FB3CD1F /* Frameworks */,
+			);
+			path = OneSignal;
+			sourceTree = "<group>";
+		};
+		0675ABDABB02A0082C4C36EA21431179 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5365BF20C0F57C2A8F921F4BA25DF2E /* Valet.xcconfig */,
+				CCB4E0B04DFE9CF4A544CD72EB89ADA4 /* Valet-dummy.m */,
+				8A1828B53C2351E3503B10217044EF85 /* Valet-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Valet";
+			sourceTree = "<group>";
+		};
+		0F31058142BD2F860BD4186B2FB3CD1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEA683B49EC8E03E6337502FEF82C93A /* OneSignal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,14 +220,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		29F70AD3EDA309FD7E0519031EF96B53 /* MBProgressHUD */ = {
+		2DFDFE9D4C712293AB1C5D234D02BBE4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2B8F4C03B84F4FB6B064D2AB2CC18B3F /* MBProgressHUD.h */,
-				2216965D03115F2A0AAAF433AE714B5C /* MBProgressHUD.m */,
-				68D5A50C01693BF3630B1BA10481E2CB /* Support Files */,
+				4F0779285F375636FE003F294A321424 /* MBProgressHUD.xcconfig */,
+				FAB3AA83B54D4CD1526773C27E078635 /* MBProgressHUD-dummy.m */,
+				DADCAAE9984AB6D4B3541059CBAF58EC /* MBProgressHUD-prefix.pch */,
 			);
-			path = MBProgressHUD;
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
 		2E0CD366E29ADFACBC7B45B3336B58BD /* Targets Support Files */ = {
@@ -227,15 +256,21 @@
 			path = "Target Support Files/Pods-SplatStagesToday";
 			sourceTree = "<group>";
 		};
-		498535E3E9471193F5152BF6E477A875 /* Support Files */ = {
+		42929E5F8A1399318B2799BBB4A6474C /* Valet */ = {
 			isa = PBXGroup;
 			children = (
-				5CF99442FA3BBF88891576BCAF4066FB /* NSAttributedString+CCLFormat.xcconfig */,
-				18FF20A3A6F324CF5EAD7D77B74FCB04 /* NSAttributedString+CCLFormat-dummy.m */,
-				F53D6E5042A32888D5FF771279FC2503 /* NSAttributedString+CCLFormat-prefix.pch */,
+				F3ECB0E1BA1EA69DFF84796CF70BA2A5 /* Valet.h */,
+				87E48548D329F439F6B888E3ADC62132 /* ValetDefines.h */,
+				7232AD7186464347E97BC379D6007C7E /* VALSecureEnclaveValet.h */,
+				BB53FC1B45533D204A3B2E46D5491F1A /* VALSecureEnclaveValet.m */,
+				16A2D208B6B79B2F3192A6F1C400F1B5 /* VALSynchronizableValet.h */,
+				A7C37F84F86F6B1AB50D3EE459F534C8 /* VALSynchronizableValet.m */,
+				3A7E5A4642C75A02A661FA866024B757 /* VALValet.h */,
+				CF4CEC41FCF27A8AEB02E9E12C19005E /* VALValet.m */,
+				E62D748FC0E0E2282A6B15D8456F6E08 /* VALValet_Protected.h */,
+				0675ABDABB02A0082C4C36EA21431179 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/NSAttributedString+CCLFormat";
+			path = Valet;
 			sourceTree = "<group>";
 		};
 		5A89EA5B072B0C55BC19645CC4A901D7 /* Products */ = {
@@ -251,26 +286,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5E8E22A094185C7506D8525490D8E122 /* Support Files */ = {
+		61626EC86C9B1A16398161E717F23583 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD5777C0F3B691A8B4A2543BE76563BA /* Valet.xcconfig */,
-				39DC3E47D03ED899820BFEBE23F48142 /* Valet-dummy.m */,
-				753E4ED1061A9DFE4019A4D902787F39 /* Valet-prefix.pch */,
+				A9DEB01160B5587C622B46F94175B131 /* NSAttributedString+CCLFormat.xcconfig */,
+				D34923D8DF0683677A9AB28F567F5634 /* NSAttributedString+CCLFormat-dummy.m */,
+				02D7978F416E5373345F5D6ED18CC3F6 /* NSAttributedString+CCLFormat-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Valet";
+			path = "../Target Support Files/NSAttributedString+CCLFormat";
 			sourceTree = "<group>";
 		};
-		68D5A50C01693BF3630B1BA10481E2CB /* Support Files */ = {
+		61BC4E5FD693F87FC711C10C97D08272 /* NSAttributedString+CCLFormat */ = {
 			isa = PBXGroup;
 			children = (
-				2F67E7E25CE8D0C2C51499D6DF9A4997 /* MBProgressHUD.xcconfig */,
-				835DDE3E7DF68B2067B42F0D1B333656 /* MBProgressHUD-dummy.m */,
-				D30995CED897B76085EF390F2C78D0CD /* MBProgressHUD-prefix.pch */,
+				CA231107475E2F95D2AC73383395D42E /* NSAttributedString+CCLFormat.h */,
+				54E349DD11E458E8A3165D0CD6AD849A /* NSAttributedString+CCLFormat.m */,
+				61626EC86C9B1A16398161E717F23583 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
+			path = "NSAttributedString+CCLFormat";
+			sourceTree = "<group>";
+		};
+		69750AB6222F41D864CB892D7463E90A /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E4F060ECBDB69EFEB1865DC463C89FE6 /* MBProgressHUD.h */,
+				FCBFD43E8C7097233DD4F7FEDAA47860 /* MBProgressHUD.m */,
+				2DFDFE9D4C712293AB1C5D234D02BBE4 /* Support Files */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -278,20 +322,10 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				FC39462350758DE7B5370928F0CFC173 /* Pods */,
+				CF2D464A26C889CA10A6EB55EDEE5A6F /* Pods */,
 				5A89EA5B072B0C55BC19645CC4A901D7 /* Products */,
 				2E0CD366E29ADFACBC7B45B3336B58BD /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		7DED1F4FC3C61027370DC34A17708C3D /* NSAttributedString+CCLFormat */ = {
-			isa = PBXGroup;
-			children = (
-				16DD0EEBC26A7054DD9659B0410D421F /* NSAttributedString+CCLFormat.h */,
-				C78617880E4230B929597ED07421DC0D /* NSAttributedString+CCLFormat.m */,
-				498535E3E9471193F5152BF6E477A875 /* Support Files */,
-			);
-			path = "NSAttributedString+CCLFormat";
 			sourceTree = "<group>";
 		};
 		C7D0C5845324929F38DBF3F26F5ED0B5 /* iOS */ = {
@@ -304,21 +338,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D8AC97DA03CFBD4931F85831FBA024B0 /* Valet */ = {
+		CF2D464A26C889CA10A6EB55EDEE5A6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A1FF007CD5982DEE2A9887CE51012DE7 /* Valet.h */,
-				E5B5A778833957BA2B0FDF94A39B71A9 /* ValetDefines.h */,
-				38D600F5F9AC00C19D88052995267AA0 /* VALSecureEnclaveValet.h */,
-				2EC5F3321943A2DBAFEF3BC7E2EBCE75 /* VALSecureEnclaveValet.m */,
-				C1C4696385CA198FF4438EE65E72A3E6 /* VALSynchronizableValet.h */,
-				1AAECE09F47C310F12C9BD1FDB31BBE7 /* VALSynchronizableValet.m */,
-				7F434813370802681BF72E9C154C4ABC /* VALValet.h */,
-				4F4BD34750EF1A95D4611A5416904C63 /* VALValet.m */,
-				9A71F8510D08F4453400DDBB4A2FD186 /* VALValet_Protected.h */,
-				5E8E22A094185C7506D8525490D8E122 /* Support Files */,
+				69750AB6222F41D864CB892D7463E90A /* MBProgressHUD */,
+				61BC4E5FD693F87FC711C10C97D08272 /* NSAttributedString+CCLFormat */,
+				03315C7AF10F1022FDBE2392638D3359 /* OneSignal */,
+				42929E5F8A1399318B2799BBB4A6474C /* Valet */,
 			);
-			path = Valet;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		DD2FF48649EF7CC11516A65F5B0AE6FF /* Pods-SplatStagesFramework */ = {
@@ -349,16 +377,6 @@
 			);
 			name = "Pods-SplatStages";
 			path = "Target Support Files/Pods-SplatStages";
-			sourceTree = "<group>";
-		};
-		FC39462350758DE7B5370928F0CFC173 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				29F70AD3EDA309FD7E0519031EF96B53 /* MBProgressHUD */,
-				7DED1F4FC3C61027370DC34A17708C3D /* NSAttributedString+CCLFormat */,
-				D8AC97DA03CFBD4931F85831FBA024B0 /* Valet */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -640,7 +658,7 @@
 		};
 		2EB7464BFC4B881299B5657C95CD0AF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F67E7E25CE8D0C2C51499D6DF9A4997 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 4F0779285F375636FE003F294A321424 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
@@ -658,7 +676,7 @@
 		};
 		32E595B66AAD5D8CDB35864C7BDF5470 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD5777C0F3B691A8B4A2543BE76563BA /* Valet.xcconfig */;
+			baseConfigurationReference = C5365BF20C0F57C2A8F921F4BA25DF2E /* Valet.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -677,7 +695,7 @@
 		};
 		4339C668BFB954CA7085FA2E17C73C5B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD5777C0F3B691A8B4A2543BE76563BA /* Valet.xcconfig */;
+			baseConfigurationReference = C5365BF20C0F57C2A8F921F4BA25DF2E /* Valet.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -731,7 +749,7 @@
 		};
 		7773F2B7A7AF536A59C629E34456501E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CF99442FA3BBF88891576BCAF4066FB /* NSAttributedString+CCLFormat.xcconfig */;
+			baseConfigurationReference = A9DEB01160B5587C622B46F94175B131 /* NSAttributedString+CCLFormat.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -750,7 +768,7 @@
 		};
 		919FAA2929EE9C5D42F4E864F99B6175 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F67E7E25CE8D0C2C51499D6DF9A4997 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 4F0779285F375636FE003F294A321424 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
@@ -859,7 +877,7 @@
 		};
 		F20F63B5FAD13F5C6C4AB0489DE66DD2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CF99442FA3BBF88891576BCAF4066FB /* NSAttributedString+CCLFormat.xcconfig */;
+			baseConfigurationReference = A9DEB01160B5587C622B46F94175B131 /* NSAttributedString+CCLFormat.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

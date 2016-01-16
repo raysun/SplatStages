@@ -453,11 +453,11 @@
 				TargetAttributes = {
 					047A5EC11BB5E09F00DD510D = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = F9VP3B7ZRQ;
+						DevelopmentTeam = 248F6JBWPR;
 					};
 					047B3FAB1BB79199005BF2D0 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = F9VP3B7ZRQ;
+						DevelopmentTeam = 248F6JBWPR;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -469,9 +469,12 @@
 					};
 					04EE0CBE1BA5D47D003BE6A9 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = F9VP3B7ZRQ;
+						DevelopmentTeam = 248F6JBWPR;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 							com.apple.Keychain = {
@@ -807,7 +810,7 @@
 				INFOPLIST_FILE = SplatStagesFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStagesFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raysun.SplatStages.SplatStagesFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -821,8 +824,8 @@
 			baseConfigurationReference = 1C49EFB404098308AADCDDC0 /* Pods-SplatStagesFramework.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -831,7 +834,7 @@
 				INFOPLIST_FILE = SplatStagesFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.SplatStagesFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raysun.SplatStages.SplatStagesFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -853,7 +856,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PODS_ROOT = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.SplatStagesToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raysun.SplatStages.SplatStagesToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -866,14 +869,14 @@
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SplatStagesToday/SplatStagesToday.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SplatStagesToday/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PODS_ROOT = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages.SplatStagesToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raysun.SplatStages.SplatStagesToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -974,7 +977,7 @@
 				INFOPLIST_FILE = SplatStages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raysun.SplatStages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -987,8 +990,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SplatStages/SplatStages.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"HEADER_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -999,7 +1002,7 @@
 				INFOPLIST_FILE = SplatStages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.oatmealdome.ios.SplatStages;
+				PRODUCT_BUNDLE_IDENTIFIER = com.raysun.SplatStages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

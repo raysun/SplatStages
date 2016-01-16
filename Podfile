@@ -5,6 +5,7 @@ xcodeproj 'SplatStages.xcodeproj'
 
 target 'SplatStages' do
 	pod 'MBProgressHUD', '~> 0.9.1'
+	pod 'OneSignal'
 end
 
 target 'SplatStagesFramework' do

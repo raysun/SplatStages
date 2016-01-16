@@ -17,6 +17,29 @@
 @implementation AppDelegate
 
 - (BOOL) application:(UIApplication*) application didFinishLaunchingWithOptions:(NSDictionary*) launchOptions {
+    /*
+    self.oneSignal = [[OneSignal alloc] initWithLaunchOptions:launchOptions
+                                                        appId:@"e029fb88-69a9-4291-8b71-25e6d3bd881e"
+                                           handleNotification:nil];
+     */
+    
+    self.oneSignal = [[OneSignal alloc]
+                      initWithLaunchOptions:launchOptions
+                      appId:@"e029fb88-69a9-4291-8b71-25e6d3bd881e"
+                      handleNotification:^(NSString* message, NSDictionary* additionalData, BOOL isActive) {
+                          NSLog(@"OneSignal Notification opened:\nMessage: %@", message);
+                          
+                          if (additionalData) {
+                              NSLog(@"additionalData: %@", additionalData);
+                              
+                              // Check for and read any custom values you added to the notification
+                              // This done with the "Additonal Data" section the dashbaord.
+                              // OR setting the 'data' field on our REST API.
+                              NSString* customKey = additionalData[@"customKey"];
+                              if (customKey)
+                                  NSLog(@"customKey: %@", customKey);
+                          }
+                      }];
     return YES;
 }
 
